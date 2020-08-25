@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 
-const ModernWorld = () => {
+import { setCurrentPath } from '../../../../actions/path';
+
+const ModernWorld = ({ setCurrentPath, location: pathname }) => {
+  useEffect(() => {
+    setCurrentPath(pathname);
+  }, []);
+
   return <div>Modern world</div>;
 };
 
-export default ModernWorld;
+export default connect(null, { setCurrentPath })(ModernWorld);

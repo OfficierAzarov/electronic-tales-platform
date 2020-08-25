@@ -1,0 +1,22 @@
+#navbar {
+  background-color: #121212;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: #6b6a6a 1px solid;
+}
+
+#navbar img {
+  width: 1.5em;
+  padding: 1em 0.8em;
+}
+
+#navbar .worlds {
+  justify-self: center;
+}
+
+#navbar .active {
+  background-color: pink;
+}

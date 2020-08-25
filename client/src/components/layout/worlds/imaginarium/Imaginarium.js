@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { setCurrentPath } from '../../../../actions/path';
 
-const Imaginarium = () => {
+const Imaginarium = ({ setCurrentPath, location: pathname }) => {
+  useEffect(() => {
+    setCurrentPath(pathname);
+  }, []);
+
   return <div>Imaginarium</div>;
 };
 
-export default Imaginarium;
+export default connect(null, { setCurrentPath })(Imaginarium);
