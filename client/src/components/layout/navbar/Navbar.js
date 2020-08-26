@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import './Navbar.css';
+import { ANCIENT_WORLD, MODERN_WORLD, IMAGINARIUM } from './paths';
 import ruins from '../../../resources/img/icons/ruins.png';
 
 const Navbar = ({ currentPath }) => {
@@ -14,19 +15,13 @@ const Navbar = ({ currentPath }) => {
 
   return (
     <div id="navbar">
-      <Link
-        to="/ancient-world"
-        className={`worlds ${isActive('/ancient-world')}`}
-      >
+      <Link to={ANCIENT_WORLD} className={`worlds ${isActive(ANCIENT_WORLD)}`}>
         <img src={ruins} alt="ancient world icon" />
       </Link>
-      <Link
-        to="/modern-world"
-        className={`worlds ${isActive('/modern-world')}`}
-      >
+      <Link to={MODERN_WORLD} className={`worlds ${isActive(MODERN_WORLD)}`}>
         <img src={ruins} alt="ancient world icon" name="modern-world" />
       </Link>
-      <Link to="/imaginarium" className={`worlds ${isActive('/imaginarium')}`}>
+      <Link to={IMAGINARIUM} className={`worlds ${isActive(IMAGINARIUM)}`}>
         <img src={ruins} alt="ancient world icon" name="imaginarium" />
       </Link>
     </div>
