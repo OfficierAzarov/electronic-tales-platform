@@ -1,7 +1,7 @@
 html,
 body {
   margin: 0;
-  passing: 0;
+  padding: 0;
 }
 
 body {
@@ -10,7 +10,6 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.full-height {
+  height: 100%;
 }

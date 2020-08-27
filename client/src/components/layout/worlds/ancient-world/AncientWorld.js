@@ -8,7 +8,7 @@ const AncientWorld = ({ setCurrentPath, location: pathname }) => {
     setCurrentPath(pathname);
   }, []);
 
-  return <div>Ancient world</div>;
+  return <div className="full-height">Ancient world</div>;
 };
 
 export default connect(null, { setCurrentPath })(AncientWorld);

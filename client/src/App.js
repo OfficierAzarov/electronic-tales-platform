@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 
+import './App.css';
 import Home from './components/layout/home/Home';
 import Navbar from './components/layout/navbar/Navbar';
 import AncientWorld from './components/layout/worlds/ancient-world/AncientWorld';
@@ -19,17 +20,15 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <Router>
-        <Fragment>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/ancient-world" component={AncientWorld} />
-            <Route exact path="/modern-world" component={ModernWorld} />
-            <Route exact path="/imaginarium" component={Imaginarium} />
-          </Switch>
+      <Fragment>
+        <section id="container">
+          <Home />
+          <ModernWorld />
+          <Imaginarium />
+          <AncientWorld />
           <Navbar />
-        </Fragment>
-      </Router>
+        </section>
+      </Fragment>
     </Provider>
   );
 };

@@ -5,7 +5,7 @@ import castle from '../../../resources/img/illustrations/castle.jpg';
 
 const Home = () => {
   return (
-    <div id="home">
+    <div id="home" className="full-height">
       <img src={castle} alt="Electronic Tales Castle" />
     </div>
   );
