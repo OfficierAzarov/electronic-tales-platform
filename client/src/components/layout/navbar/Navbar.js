@@ -1,11 +1,10 @@
 import React from 'react';
-
-import Scroll from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 
 import './Navbar.css';
 import ruins from '../../../resources/img/icons/ruins.png';
 
-const ScrollLink = Scroll.Link;
+// const ScrollLink = Scroll.Link;
 
 const Navbar = () => {
   return (
