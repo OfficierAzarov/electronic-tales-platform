@@ -17,7 +17,6 @@ nav .worlds {
   justify-self: center;
 }
 
-nav .active a {
+nav .active {
   background-color: pink;
-  border: solid 2px red;
 }
