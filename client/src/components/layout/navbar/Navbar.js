@@ -1,45 +1,45 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { setCurrentPath } from '../../../actions/path';
+
+import Scroll from 'react-scroll';
 
 import './Navbar.css';
-import { ANCIENT_WORLD, MODERN_WORLD, IMAGINARIUM, DISCORD } from './paths';
 import ruins from '../../../resources/img/icons/ruins.png';
 
-const Navbar = ({ setCurrentPath, currentPath }) => {
+const ScrollLink = Scroll.Link;
+
+const Navbar = () => {
   return (
-    <div id="navbar">
-      <img
-        src={ruins}
-        alt="ancient world icon"
-        onClick={() => {
-          setCurrentPath(ANCIENT_WORLD);
-        }}
-      />
-
-      <img
-        src={ruins}
-        alt="modern world icon"
-        onClick={() => {
-          setCurrentPath(MODERN_WORLD);
-        }}
-      />
-
-      <img
-        src={ruins}
-        alt="imaginarium"
-        onClick={() => {
-          setCurrentPath(IMAGINARIUM);
-        }}
-      />
-
+    <nav>
+      <ScrollLink
+        activeClass="active"
+        to="ancient-world"
+        spy={true}
+        smooth={true}
+        duration={500}
+      >
+        <img src={ruins} alt="ancient world icon" />
+      </ScrollLink>
+      <ScrollLink
+        activeClass="active"
+        to="modern-world"
+        spy={true}
+        smooth={true}
+        duration={500}
+      >
+        <img src={ruins} alt="modern world icon" />
+      </ScrollLink>
+      <ScrollLink
+        activeClass="active"
+        to="imaginarium"
+        spy={true}
+        smooth={true}
+        duration={500}
+      >
+        <img src={ruins} alt="imaginarium" />
+      </ScrollLink>
       <img src={ruins} alt="my space" />
-    </div>
+    </nav>
   );
 };
 
-const mapStateToProps = (state) => ({
-  currentPath: state.path.currentPath.pathname,
-});
-
-export default connect(mapStateToProps, { setCurrentPath })(Navbar);
+export default Navbar;

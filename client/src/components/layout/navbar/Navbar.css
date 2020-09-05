@@ -1,7 +1,6 @@
-#navbar {
+nav {
   background-color: #121212;
   width: 100%;
-  height: 10vh;
   position: fixed;
   bottom: 0;
   display: grid;
@@ -9,15 +8,16 @@
   border-top: #6b6a6a 1px solid;
 }
 
-#navbar img {
+nav img {
   width: 1.5em;
   padding: 1em 0.8em;
 }
 
-#navbar .worlds {
+nav .worlds {
   justify-self: center;
 }
 
-#navbar .active {
+nav .active a {
   background-color: pink;
+  border: solid 2px red;
 }
