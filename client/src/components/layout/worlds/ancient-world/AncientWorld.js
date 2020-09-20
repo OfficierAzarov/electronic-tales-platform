@@ -1,7 +1,13 @@
 import React from 'react';
 
+import './AncientWorld.css';
+
 const AncientWorld = () => {
-  return <div className="full-height">Ancient world</div>;
+  return (
+    <div>
+      <h1>Ancient world</h1>
+    </div>
+  );
 };
 
 export default AncientWorld;

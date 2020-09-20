@@ -1,7 +1,13 @@
 import React from 'react';
 
+import './ModernWorld.css';
+
 const ModernWorld = () => {
-  return <div className="full-height">Modern world</div>;
+  return (
+    <div>
+      <h1>Modern World</h1>
+    </div>
+  );
 };
 
 export default ModernWorld;
