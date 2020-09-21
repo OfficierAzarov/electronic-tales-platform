@@ -29,9 +29,9 @@ const App = () => {
           <Route path="/modern-world" component={ModernWorld}></Route>
           <Route path="/imaginarium" component={Imaginarium}></Route>
           <Route path="/ancient-world" component={AncientWorld}></Route>
-          <section id="main">
-            <Home />
-          </section>
+          {/* <section id="main"> */}
+          <Home />
+          {/* </section> */}
         </Switch>
         <Navbar />
       </Router>

@@ -11,6 +11,7 @@ nav {
 nav img {
   width: 1.5em;
   padding: 1em 0.8em;
+  cursor: pointer;
 }
 
 nav .worlds {

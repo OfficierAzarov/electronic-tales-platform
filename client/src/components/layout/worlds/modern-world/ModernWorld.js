@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import './ModernWorld.css';
+import Card from '.././../../card/Card';
 
 const ModernWorld = () => {
   return (
-    <div>
-      <h1>Modern World</h1>
-    </div>
+    <Fragment>
+      <Card />
+    </Fragment>
   );
 };
 
