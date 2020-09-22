@@ -14,7 +14,7 @@ import ModernWorld from './components/layout/worlds/modern-world/ModernWorld';
 import Imaginarium from './components/layout/worlds/imaginarium/Imaginarium';
 import AncientWorld from './components/layout/worlds/ancient-world/AncientWorld';
 
-import Navbar from './components/layout/navbar/Navbar';
+import Navbar from './components/navbar/Navbar';
 
 const App = () => {
   // const isMobileSmall = useMediaQuery({ query: '(max-device-width: 320px)' });

@@ -1,23 +1,23 @@
-#home {
+#home #header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#home img {
+#home #header img {
   width: 60%;
 }
 
-.full-height {
+#home .full-height {
   height: 100vh;
 }
 
 /* TO DO : juste a mock, change with actual style */
-.temporary-comestics {
+#home .temporary-comestics {
   padding-top: 3%;
 }
 
-.temporary-comestics h1 {
+#home .temporary-comestics h1 {
   text-align: center;
   padding: 1em;
 }

@@ -6,8 +6,8 @@ import castle from '../../../resources/img/illustrations/castle.jpg';
 
 const Home = () => {
   return (
-    <Fragment>
-      <div className="full-height temporary-comestics" id="home">
+    <div id="home">
+      <div className="full-height temporary-comestics" id="header">
         <img src={castle} alt="Electronic Tales Castle" />
       </div>
       <div className="full-height temporary-comestics" id="modern-world">
@@ -22,7 +22,7 @@ const Home = () => {
         <h1>Ancient World</h1>
         <Link to="/ancient-world">Enter</Link>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 
 import './Navbar.css';
-import ruins from '../../../resources/img/icons/ruins.png';
+import ruins from '../../resources/img/icons/ruins.png';
 
 const Navbar = () => {
   return (
