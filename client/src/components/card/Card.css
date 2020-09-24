@@ -1,4 +1,4 @@
-#card {
+.card {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -9,6 +9,6 @@
   padding: 1em 0em;
 }
 
-#card img {
+.card img {
   width: 10%;
 }
