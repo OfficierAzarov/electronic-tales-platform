@@ -11,7 +11,7 @@ const Card = ({ article, setCurrentArticle }) => {
   };
 
   return (
-    <Link to="">
+    <Link to={`/articles/${article.id}`}>
       <div class="card" onClick={handleClick}>
         <img src={`./img/icons/${article.thumbnail}`} />
         <div id="title">{article.title}</div>

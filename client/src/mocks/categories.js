@@ -10,7 +10,7 @@ export const categoriesSource = [
         thumbnail: 'gameboy.png',
       },
       {
-        id: '2',
+        id: '3',
         title: 'What is an IP address ?!',
         content:
           'An IP address is a way to show how smart you are by just running a command line.',
@@ -23,7 +23,7 @@ export const categoriesSource = [
     name: 'Buzzwords',
     articles: [
       {
-        id: '1',
+        id: '2',
         title: 'But how does it know ?!',
         content: 'Another lorem.',
         thumbnail: 'learning.png',

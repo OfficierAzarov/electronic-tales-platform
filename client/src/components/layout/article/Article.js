@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 
 import './Article.css';
 
-const Article = () => {
-  return <div></div>;
+const Article = ({ article }) => {
+  useEffect(() => {
+    console.log(article);
+  }, []);
+
+  return <div>This is an article {article.title}</div>;
 };
 
-export default Article;
+const mapStateToProps = (state) => ({
+  article: state.article.currentArticle,
+});
+
+export default connect(mapStateToProps)(Article);
