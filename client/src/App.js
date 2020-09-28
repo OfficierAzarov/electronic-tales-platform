@@ -29,9 +29,11 @@ const App = () => {
           <Route path="/modern-world" component={ModernWorld}></Route>
           <Route path="/imaginarium" component={Imaginarium}></Route>
           <Route path="/ancient-world" component={AncientWorld}></Route>
-          {/* <section id="main"> */}
+          {/* <Route
+            path="/modern-world/:category/:slug"
+            component={AncientWorld}
+          ></Route> */}
           <Home />
-          {/* </section> */}
         </Switch>
         <Navbar />
       </Router>

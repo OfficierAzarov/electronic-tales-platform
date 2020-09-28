@@ -3,19 +3,19 @@ import React, { Fragment } from 'react';
 import './CardsHub.css';
 import Card from '../card/Card';
 
-import { articlesSource } from '../../mocks/articles';
+import { useEffect } from 'react';
 
-const CardsHub = () => {
-  const cards = articlesSource.map((article) => {
-    return <Card article={article} />;
-  });
-
+const CardsHub = ({ category: { name, articles } }) => {
   return (
     <div id="cards-hub">
       <div id="hub-header">
-        <div>Too late to ask</div>
+        <div>{name}</div>
       </div>
-      <div id="hub-content">{cards}</div>
+      <div id="hub-content">
+        {articles.map((article) => (
+          <Card key={article.id} article={article} />
+        ))}
+      </div>
     </div>
   );
 };

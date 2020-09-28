@@ -1,8 +1,8 @@
 #cards-hub {
-  width: 90%;
   background-color: #333333;
   padding: 1em 0;
   border-radius: 2em;
+  margin-bottom: 2em;
 }
 
 #hub-header {
