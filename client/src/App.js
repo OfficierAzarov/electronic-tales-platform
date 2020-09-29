@@ -30,7 +30,7 @@ const App = () => {
           <Route path="/modern-world" component={ModernWorld}></Route>
           <Route path="/imaginarium" component={Imaginarium}></Route>
           <Route path="/ancient-world" component={AncientWorld}></Route>
-          <Route path="/articles/:id" component={Article}></Route>
+          <Route path="/articles/:slug" component={Article}></Route>
           <Home />
         </Switch>
         <Navbar />

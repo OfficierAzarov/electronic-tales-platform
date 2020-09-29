@@ -1,18 +1,12 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 
 import './Card.css';
-import { setCurrentArticle } from '../../actions/article';
 
-const Card = ({ article, setCurrentArticle }) => {
-  const handleClick = () => {
-    setCurrentArticle(article.id);
-  };
-
+const Card = ({ article }) => {
   return (
-    <Link to={`/articles/${article.id}`}>
-      <div class="card" onClick={handleClick}>
+    <Link to={`articles/${article.slug}`}>
+      <div class="card">
         <img src={`./img/icons/${article.thumbnail}`} />
         <div id="title">{article.title}</div>
       </div>
@@ -20,4 +14,4 @@ const Card = ({ article, setCurrentArticle }) => {
   );
 };
 
-export default connect(null, { setCurrentArticle })(Card);
+export default Card;

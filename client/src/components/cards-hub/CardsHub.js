@@ -3,8 +3,6 @@ import React, { Fragment } from 'react';
 import './CardsHub.css';
 import Card from '../card/Card';
 
-import { useEffect } from 'react';
-
 const CardsHub = ({ category: { name, articles } }) => {
   return (
     <div id="cards-hub">
