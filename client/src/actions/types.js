@@ -1,2 +1,4 @@
 export const GET_CATEGORIES = 'GET_CATEGORIES';
 export const SET_CURRENT_ARTICLE = 'SET_CURRENT_ARTICLE';
+export const SET_HOME = 'SET_HOME';
+export const CLEAR_HOME = 'CLEAR_HOME';

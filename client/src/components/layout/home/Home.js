@@ -1,10 +1,20 @@
 import React, { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setHomeAsCurrentPage } from '../../../actions/page';
+import { unsetHomeAsCurrentPage } from '../../../actions/page';
 
 import './Home.css';
 import castle from '../../../resources/img/illustrations/castle.jpg';
 
-const Home = () => {
+const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
+  useEffect(() => {
+    setHomeAsCurrentPage();
+    return () => {
+      unsetHomeAsCurrentPage();
+    };
+  }, []);
+
   return (
     <div id="home">
       <div className="full-height temporary-comestics" id="header">
@@ -26,4 +36,6 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default connect(null, { setHomeAsCurrentPage, unsetHomeAsCurrentPage })(
+  Home
+);

@@ -9,7 +9,6 @@ import { getCategories } from '../../../../actions/category';
 
 const ModernWorld = ({ categories, getCategories }) => {
   useEffect(() => {
-    // retrieve all categories
     getCategories();
   }, []);
 

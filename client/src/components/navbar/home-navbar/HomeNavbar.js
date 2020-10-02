@@ -1,26 +1,11 @@
 import React, { Fragment } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
 
-import { connect } from 'react-redux';
+import ruins from '../../../resources/img/icons/ruins.png';
 
-import './Navbar.css';
-
-import HomeNavbar from '../../components/navbar/home-navbar/HomeNavbar';
-import DefaultNavbar from '../../components/navbar/default-navbar/DefaultNavbar';
-
-const Navbar = ({ isCurrentPageHome }) => {
-  return <nav>{isCurrentPageHome ? <HomeNavbar /> : <DefaultNavbar />}</nav>;
-};
-
-const mapStateToProps = (state) => ({
-  isCurrentPageHome: state.page.isCurrentPageHome,
-});
-
-export default connect(mapStateToProps)(Navbar);
-
-{
-  /* 
-(<div>
-        <nav>
+const HomeNavbar = () => {
+  return (
+    <Fragment>
       <ScrollLink
         activeClass="active"
         to="modern-world"
@@ -49,5 +34,8 @@ export default connect(mapStateToProps)(Navbar);
         <img src={ruins} alt="ancient world icon" />
       </ScrollLink>
       <img src={ruins} alt="my space" />
-    </nav></div> */
-}
+    </Fragment>
+  );
+};
+
+export default HomeNavbar;

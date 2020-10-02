@@ -6,7 +6,7 @@ import './Card.css';
 const Card = ({ article }) => {
   return (
     <Link to={`articles/${article.slug}`}>
-      <div class="card">
+      <div className="card">
         <img src={`./img/icons/${article.thumbnail}`} />
         <div id="title">{article.title}</div>
       </div>
