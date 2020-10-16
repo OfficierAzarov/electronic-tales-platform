@@ -4,8 +4,13 @@ import './CardsHub.css';
 import Card from '../card/Card';
 
 const CardsHub = ({ category: { name, articles } }) => {
+  const dropCards = () => {
+    // do this and that
+  };
+
   return (
-    <div id="cards-hub">
+    // <div id="cards-hub" onClick={handleClick}>
+    <div id="cards-hub" onClick={dropCards}>
       <div id="hub-header">
         <div>{name}</div>
       </div>
