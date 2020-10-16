@@ -3,27 +3,25 @@ import { connect } from 'react-redux';
 
 import './RichLink.css'
 
-const RichLink = ({ contentId }) => {
+const RichLink = ({ richLinks, contentId }) => {
 
-
-    const retrieveSubstring = (contentId) => {
+    const process = (contentId) => {
         console.log(contentId);
-        return contentId + ' ';
-        // const substring = content.substring(content.lastIndexOf('[') + 1, content.lastIndexOf(']'));
-        // return substring;
+        const richLink = richLinks.find(link => link.reference === contentId);
+        console.log(richLink);
+        return richLink.reference + ' ';
     }
 
     return (
         <div className="rich-link">
-            { retrieveSubstring(contentId) }
+            { process(contentId) }
         </div>
     );
 };
 
-// const mapStateToProps = (state) => ({
-//     name = state.article.currentArticle.richLinks.name,
-//     content = state.article.currentArticle.richLinks.content
-// });
+const mapStateToProps = (state) => ({
+    richLinks: state.article.currentArticle.richLinks
+});
 
-export default (RichLink);
-// export default connect(mapStateToProps)(RichLink);
+// export default (RichLink);
+export default connect(mapStateToProps)(RichLink);

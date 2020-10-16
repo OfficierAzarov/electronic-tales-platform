@@ -4,21 +4,35 @@ import { connect } from 'react-redux';
 import RichLink from '../../../rich-link/RichLink';
 
 const ArticleContent = ({ articleContent }) => {
-
-  const processContent = (content) => {
     // TO DO : solve it
-    // content is undefined first, then it has the right value. Why?
-    if (content && content !== undefined) {
-      console.log(content);
-      const splittedContent = content.split(' ');
+    // string is undefined first, then it has the right value. Why?
+
+
+  const processContent = (string) => {
+    if (string && string !== undefined) {
+      const splittedContent = string.split(' ');
+
+      // const replacement = splittedContent.find(element => element.includes('].')).split(/(?<=\])/);
+      const toReplace = splittedContent.find(element => element.includes('].'));
+      console.log(splittedContent.indexOf(toReplace));
+      splittedContent[splittedContent.indexOf(toReplace)] = toReplace.split(/(?<=\])/);
+      
+      console.log(splittedContent.flat());
+      const finalSplittedContent = splittedContent.flat();
       const regex = /(?<=\[)(.*?)(?=\])/;
-      const enrichedSplittedContent = splittedContent.map(part => {
+      const enrichedSplittedContent = finalSplittedContent.map(part => {
         return part.match((regex)) ?
-          (<RichLink contentId={part}/>) : part + ' ';
+          (<RichLink contentId={stripString(part, '[', ']')}/>) : part + ' ';
       })
       console.log(enrichedSplittedContent);
       return enrichedSplittedContent;
     }
+  }
+
+  // Lorem ipsum [1] blabliblou et puis encore [2].
+
+  const stripString = (wordToStrip, firstCharacterBorder, secondCharacterBorder) => {
+    return wordToStrip.substring(wordToStrip.lastIndexOf(firstCharacterBorder) + 1, wordToStrip.lastIndexOf(secondCharacterBorder))
   }
 
   return <div>{processContent(articleContent)}</div>;

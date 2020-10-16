@@ -4,11 +4,16 @@ export const articlesSource = [
     title: 'What is a port ?',
     slug: 'what-is-a-port',
     content: 'Lorem ipsum [1] blabliblou et puis encore [2].',
-    richLinks: {
-      id: '1',
-      name: 'voila',
-      content: 'Je suis un soir'
-    },
+    richLinks: [
+      {
+        reference: '1',
+        content: 'Je suis un soir'
+      },
+      {
+        reference: '2',
+        content: 'Le plat pays'
+      }
+    ],
     thumbnail: 'gameboy.png',
     category: 'Too late to ask',
   },
@@ -17,6 +22,16 @@ export const articlesSource = [
     title: 'But how does it know ?!',
     slug: 'but-how-does-it-know',
     content: 'Another lorem.',
+    richLinks: [
+      {
+        reference: '1',
+        content: 'Je suis un soir'
+      },
+      {
+        reference: '2',
+        content: 'Le plat pays'
+      }
+    ],
     thumbnail: 'learning.png',
     category: 'Buzzwords',
   },
@@ -26,6 +41,16 @@ export const articlesSource = [
     slug: 'what-is-an-ip-address',
     content:
       'An IP address is a way to show how smart you are by just running a command line.',
+    richLinks: [
+        {
+          reference: '1',
+          content: 'Je suis un soir'
+        },
+        {
+          reference: '2',
+          content: 'Le plat pays'
+        }
+    ],
     thumbnail: 'chatcolor.png',
     category: 'Too late to ask',
   },
