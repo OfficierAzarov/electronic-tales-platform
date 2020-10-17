@@ -20,6 +20,7 @@ const ArticleContent = ({ articleContent }) => {
       for (let j = 0; j < splittedContent.length; j++) {
           for (let i  = 0; i < toReplace.length; i++) {
             if (toReplace[i] === splittedContent[j]) {
+              // regex : splits after "]", including it ; example : [2]. becomes ['[2]', '.']
               splittedContent[j] = toReplace[i].split(/(?<=\])/);
             }
         }
@@ -27,9 +28,9 @@ const ArticleContent = ({ articleContent }) => {
 
       const flatSplittedContent = splittedContent.flat();
 
-      const regex = /(?<=\[)(.*?)(?=\])/;
       const enrichedSplittedContent = flatSplittedContent.map(part => {
-        return part.match((regex)) ?
+        // regex : matches the pattern [something]
+        return part.match((/(?<=\[)(.*?)(?=\])/)) ?
           (<RichLink contentId={stripString(part, '[', ']')}/>) : part + ' ';
       })
 

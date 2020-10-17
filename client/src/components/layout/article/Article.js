@@ -6,6 +6,7 @@ import './Article.css';
 
 import Error from '../../error/Error';
 import ArticleContent from './article-content/ArticleContent';
+import Modal from '../../modal/Modal';
 import { setCurrentArticle } from '../../../actions/article';
 
 const Article = ({ match, setCurrentArticle, article }) => {
@@ -19,12 +20,14 @@ const Article = ({ match, setCurrentArticle, article }) => {
         <Fragment>
           <h1>{article.title}</h1>
           <ArticleContent/>
+          <Modal />
         </Fragment>
       ) : (
         <Error
           title="Aouch!"
           message="Looks like there's no article about this topic yet."
         />
+        
       )}
     </div>
   );

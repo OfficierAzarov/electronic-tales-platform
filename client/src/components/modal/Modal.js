@@ -1,12 +1,29 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import { connect } from 'react-redux';
+import { closeModal } from '../../actions/modal';
 
-const Modal = ({  }) => {
+import './Modal.css';
 
-    return (
-        <div>
-            
-        </div>
-    );
+const Modal = ({ modalContent, openModal, closeModal }) => {
+
+    const close = () => {
+        closeModal();
+    }
+
+    return <Fragment>
+        {openModal ?
+            (
+            <div className="modal">
+                <p className="close" onClick={() => close()}>x</p>
+                { modalContent }
+            </div>) : 
+            null}
+        </Fragment>
 };
 
-export default Modal;
+const mapStateToProps = (state) => ({
+    modalContent: state.modal.modalContent,
+    openModal : state.modal.openModal
+});
+
+export default connect(mapStateToProps, { closeModal })(Modal);

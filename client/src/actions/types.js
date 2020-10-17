@@ -2,3 +2,6 @@ export const GET_CATEGORIES = 'GET_CATEGORIES';
 export const SET_CURRENT_ARTICLE = 'SET_CURRENT_ARTICLE';
 export const SET_HOME = 'SET_HOME';
 export const CLEAR_HOME = 'CLEAR_HOME';
+export const OPEN_MODAL = 'OPEN_MODAL';
+export const CLOSE_MODAL = 'CLOSE_MODAL';
+export const SET_MODAL_CONTENT = 'SET_MODAL_CONTENT';
