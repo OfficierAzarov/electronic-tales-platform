@@ -3,7 +3,7 @@ export const articlesSource = [
     id: '1',
     title: 'What is a port ?',
     slug: 'what-is-a-port',
-    content: 'Lorem ipsum [1] blabliblou et puis encore [2].',
+    content: 'Lorem ipsum [1] blabliblou et puis encore [2]? Cependant, il se pourrait que [3].',
     richLinks: [
       {
         reference: '1',
@@ -12,6 +12,10 @@ export const articlesSource = [
       {
         reference: '2',
         content: 'Le plat pays'
+      },
+      {
+        reference: '3',
+        content: 'Akh troika!'
       }
     ],
     thumbnail: 'gameboy.png',

@@ -13,23 +13,30 @@ const ArticleContent = ({ articleContent }) => {
       const splittedContent = string.split(' ');
 
       // const replacement = splittedContent.find(element => element.includes('].')).split(/(?<=\])/);
-      const toReplace = splittedContent.find(element => element.includes('].'));
-      console.log(splittedContent.indexOf(toReplace));
-      splittedContent[splittedContent.indexOf(toReplace)] = toReplace.split(/(?<=\])/);
-      
-      console.log(splittedContent.flat());
-      const finalSplittedContent = splittedContent.flat();
+      // TO DO add ?, !, ...
+      const toReplace = splittedContent.filter(element => element.includes('].') || element.includes(']!') || element.includes(']?'));
+
+
+      for (let j = 0; j < splittedContent.length; j++) {
+          for (let i  = 0; i < toReplace.length; i++) {
+            if (toReplace[i] === splittedContent[j]) {
+              splittedContent[j] = toReplace[i].split(/(?<=\])/);
+            }
+        }
+      }
+
+      const flatSplittedContent = splittedContent.flat();
+
       const regex = /(?<=\[)(.*?)(?=\])/;
-      const enrichedSplittedContent = finalSplittedContent.map(part => {
+      const enrichedSplittedContent = flatSplittedContent.map(part => {
         return part.match((regex)) ?
           (<RichLink contentId={stripString(part, '[', ']')}/>) : part + ' ';
       })
-      console.log(enrichedSplittedContent);
+
       return enrichedSplittedContent;
     }
   }
 
-  // Lorem ipsum [1] blabliblou et puis encore [2].
 
   const stripString = (wordToStrip, firstCharacterBorder, secondCharacterBorder) => {
     return wordToStrip.substring(wordToStrip.lastIndexOf(firstCharacterBorder) + 1, wordToStrip.lastIndexOf(secondCharacterBorder))

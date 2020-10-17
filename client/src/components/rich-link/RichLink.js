@@ -9,7 +9,7 @@ const RichLink = ({ richLinks, contentId }) => {
         console.log(contentId);
         const richLink = richLinks.find(link => link.reference === contentId);
         console.log(richLink);
-        return richLink.reference + ' ';
+        return richLink.reference;
     }
 
     return (
