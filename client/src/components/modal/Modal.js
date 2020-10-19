@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react';
+import ReactMarkdown from 'react-markdown';
 import { connect } from 'react-redux';
 import { closeModal } from '../../actions/modal';
 
@@ -15,7 +16,7 @@ const Modal = ({ modalContent, openModal, closeModal }) => {
             (
             <div className="modal">
                 <p className="close" onClick={() => close()}>x</p>
-                { modalContent }
+                <ReactMarkdown children={ modalContent } />
             </div>) : 
             null}
         </Fragment>

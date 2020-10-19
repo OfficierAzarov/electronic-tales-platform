@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import Markdown from 'markdown-to-jsx';
 import { connect } from 'react-redux';
 
 import RichLink from '../../../rich-link/RichLink';
@@ -10,40 +12,24 @@ const ArticleContent = ({ articleContent }) => {
 
   const processContent = (string) => {
     if (string && string !== undefined) {
-      const splittedContent = string.split(' ');
-
-      // const replacement = splittedContent.find(element => element.includes('].')).split(/(?<=\])/);
-      // TO DO add ?, !, ...
-      const toReplace = splittedContent.filter(element => element.includes('].') || element.includes(']!') || element.includes(']?'));
-
-
-      for (let j = 0; j < splittedContent.length; j++) {
-          for (let i  = 0; i < toReplace.length; i++) {
-            if (toReplace[i] === splittedContent[j]) {
-              // regex : splits after "]", including it ; example : [2]. becomes ['[2]', '.']
-              splittedContent[j] = toReplace[i].split(/(?<=\])/);
-            }
-        }
-      }
-
-      const flatSplittedContent = splittedContent.flat();
-
-      const enrichedSplittedContent = flatSplittedContent.map(part => {
-        // regex : matches the pattern [something]
-        return part.match((/(?<=\[)(.*?)(?=\])/)) ?
-          (<RichLink contentId={stripString(part, '[', ']')}/>) : part + ' ';
+      const splittedContent = string.split(/\|(.*?)\|/);
+      console.log(splittedContent);
+      const htmlContent = splittedContent.map(part => {
+        return (part.includes('richlink')) ?
+          (<RichLink contentId={part}/>) : 
+          <ReactMarkdown>{part}</ReactMarkdown>
       })
-
-      return enrichedSplittedContent;
+      console.log(htmlContent);
+      return htmlContent;
     }
   }
 
 
-  const stripString = (wordToStrip, firstCharacterBorder, secondCharacterBorder) => {
-    return wordToStrip.substring(wordToStrip.lastIndexOf(firstCharacterBorder) + 1, wordToStrip.lastIndexOf(secondCharacterBorder))
-  }
-
-  return <div>{processContent(articleContent)}</div>;
+  return (
+    <div class="article-content">
+        {processContent(articleContent)}
+    </div>
+    );
 };
 
 const mapStateToProps = (state) => ({
@@ -51,10 +37,3 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps)(ArticleContent);
-
-
-// Lorem ipsum [info] bla bli blou
-
-// Lorem ipsum
-// Modale avec info
-// bla bli blou
