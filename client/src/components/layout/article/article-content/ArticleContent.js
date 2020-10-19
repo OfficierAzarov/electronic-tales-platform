@@ -1,7 +1,9 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import ReactMarkdown from 'react-markdown';
+import React from 'react';
+// import ReactMarkdownWithHtml from 'react-markdown/with-html';
 import Markdown from 'markdown-to-jsx';
 import { connect } from 'react-redux';
+
+import './ArticleContent.css';
 
 import RichLink from '../../../rich-link/RichLink';
 
@@ -17,7 +19,7 @@ const ArticleContent = ({ articleContent }) => {
       const htmlContent = splittedContent.map(part => {
         return (part.includes('richlink')) ?
           (<RichLink contentId={part}/>) : 
-          <ReactMarkdown>{part}</ReactMarkdown>
+      <Markdown>{part}</Markdown>
       })
       console.log(htmlContent);
       return htmlContent;
