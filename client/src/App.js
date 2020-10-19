@@ -26,13 +26,15 @@ const App = () => {
   return (
     <Provider store={store}>
       <Router>
-        <Switch>
-          <Route path="/modern-world" component={ModernWorld}></Route>
-          <Route path="/imaginarium" component={Imaginarium}></Route>
-          <Route path="/ancient-world" component={AncientWorld}></Route>
-          <Route path="/articles/:slug" component={Article}></Route>
-          <Home />
-        </Switch>
+        <section>
+          <Switch>
+            <Route path="/modern-world" component={ModernWorld}></Route>
+            <Route path="/imaginarium" component={Imaginarium}></Route>
+            <Route path="/ancient-world" component={AncientWorld}></Route>
+            <Route path="/articles/:slug" component={Article}></Route>
+            <Home />
+          </Switch>
+        </section>
         <Navbar />
       </Router>
     </Provider>

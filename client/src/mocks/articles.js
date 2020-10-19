@@ -3,7 +3,7 @@ export const articlesSource = [
     id: '1',
     title: 'What is a port ?',
     slug: 'what-is-a-port',
-    content: 'Lorem **ipsum** |richlink_1| <b>blabliblou</b> et puis encore |richlink_2|? Cependant, il se pourrait que |richlink_3|.<br>![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)<br> voilà.',
+    content: 'Lorem **ipsum** |richlink_1| <b>blabliblou</b>. In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be light: and there was light. Et puis encore |richlink_2|? Cependant, il se pourrait que |richlink_3|.<br>![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)<br> In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be light: and there was light. In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be light: and there was light.',
     richLinks: [
       {
         reference: 'richlink_1',
