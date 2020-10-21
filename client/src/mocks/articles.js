@@ -9,14 +9,14 @@ export const articlesSource = [
       {
         reference: "richlink_1",
         name: "ce 1er article",
-        content: "Je suis *un soir*",
+        content: "Je suis <b>un soir</b>",
         needsASpaceAfter: true,
       },
       {
         reference: "richlink_2",
         name: "ce 2e article",
         content:
-          "Le plat pays ![](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)",
+          "Le plat pays <img src='https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png'/>",
       },
       {
         reference: "richlink_3",

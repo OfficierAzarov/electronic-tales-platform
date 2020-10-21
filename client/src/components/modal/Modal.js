@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
-import ReactMarkdown from 'react-markdown';
 import { connect } from 'react-redux';
 import { closeModal } from '../../actions/modal';
+import { convertToCleanHtml } from '../../utils/Utils';
 
 import './Modal.css';
 
@@ -16,7 +16,7 @@ const Modal = ({ modalContent, openModal, closeModal }) => {
             (
             <div className="modal">
                 <p className="close" onClick={() => close()}>x</p>
-                <ReactMarkdown children={ modalContent } />
+                <p dangerouslySetInnerHTML={{__html: convertToCleanHtml(modalContent)}}></p>
             </div>) : 
             null}
         </Fragment>
