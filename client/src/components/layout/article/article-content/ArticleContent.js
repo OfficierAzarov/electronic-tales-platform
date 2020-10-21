@@ -18,7 +18,7 @@ const ArticleContent = ({ articleContent }) => {
       const htmlContent = splittedContent.map((part, index) => {
         return (part.includes('richlink')) ?
           (<RichLink contentId={part} key={index} />) : 
-          <div key={index} dangerouslySetInnerHTML={{__html: convertToCleanHtml(part)}}></div>
+          <p key={index} dangerouslySetInnerHTML={{__html: convertToCleanHtml(part)}}></p>
       })
       console.log(htmlContent);
       return htmlContent;
@@ -30,6 +30,7 @@ const ArticleContent = ({ articleContent }) => {
     <div className="article-content">
         {processContent(articleContent)}
     </div>
+    
     );
 };
 
