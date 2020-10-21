@@ -17,10 +17,10 @@ const ArticleContent = ({ articleContent }) => {
     if (string && string !== undefined) {
       const splittedContent = string.split(/\|(.*?)\|/);
       console.log(splittedContent);
-      const htmlContent = splittedContent.map(part => {
+      const htmlContent = splittedContent.map((part, index) => {
         return (part.includes('richlink')) ?
-          (<RichLink contentId={part}/>) : 
-          <Markdown>{convertToCleanHtml(part)}</Markdown>
+          (<RichLink contentId={part} key={index} />) : 
+          <Markdown key={index}>{convertToCleanHtml(part)}</Markdown>
       })
       console.log(htmlContent);
       return htmlContent;
@@ -29,7 +29,7 @@ const ArticleContent = ({ articleContent }) => {
 
 
   return (
-    <div class="article-content">
+    <div className="article-content">
         {processContent(articleContent)}
     </div>
     );
