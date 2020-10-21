@@ -1,5 +1,6 @@
 .article-content p {
   display: inline;
+  white-space: pre-wrap;
 }
 
 .article-content img {

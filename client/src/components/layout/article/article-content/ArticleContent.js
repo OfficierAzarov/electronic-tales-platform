@@ -1,8 +1,6 @@
 import React from 'react';
-// import ReactMarkdownWithHtml from 'react-markdown/with-html';
-import Markdown from 'markdown-to-jsx';
+import ReactMarkdown from 'react-markdown';
 import { connect } from 'react-redux';
-import { convertToCleanHtml } from '../../../../utils/Utils';
 
 import './ArticleContent.css';
 
@@ -20,7 +18,7 @@ const ArticleContent = ({ articleContent }) => {
       const htmlContent = splittedContent.map((part, index) => {
         return (part.includes('richlink')) ?
           (<RichLink contentId={part} key={index} />) : 
-          <Markdown key={index}>{convertToCleanHtml(part)}</Markdown>
+          <ReactMarkdown key={index} children={part}/>
       })
       console.log(htmlContent);
       return htmlContent;
