@@ -18,7 +18,7 @@ const ArticleContent = ({ articleContent }) => {
       const htmlContent = splittedContent.map((part, index) => {
         return (part.includes('richlink')) ?
           (<RichLink contentId={part} key={index} />) : 
-          <p key={index} dangerouslySetInnerHTML={{__html: convertToCleanHtml(part)}}></p>
+          <p key={index} dangerouslySetInnerHTML={{__html: convertToCleanHtml(part)}}></p> // TO DO : refactor into a component
       })
       console.log(htmlContent);
       return htmlContent;
