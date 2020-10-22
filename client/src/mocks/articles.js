@@ -22,7 +22,7 @@ export const articlesSource = [
         reference: "richlink_3",
         name: "ce 3e article",
         content:
-          "Akh troika! In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be light: and there was light.",
+          "Akh troika! In the beginning God created the heaven and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be light: and there was light. <br><br><iframe width=\"100\" height=\"100\" src=\"https://www.youtube.com/embed/VGK7iZ12tFc\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
       },
     ],
     thumbnail: "gameboy.png",

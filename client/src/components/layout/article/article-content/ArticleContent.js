@@ -1,10 +1,10 @@
 import React from 'react';
-import { convertToCleanHtml } from '../../../../utils/Utils'
 import { connect } from 'react-redux';
 
 import './ArticleContent.css';
 
 import RichLink from '../../../rich-link/RichLink';
+import HtmlContent from '../../../html-content/HtmlContent';
 
 const ArticleContent = ({ articleContent }) => {
     // TO DO : solve it
@@ -18,7 +18,7 @@ const ArticleContent = ({ articleContent }) => {
       const htmlContent = splittedContent.map((part, index) => {
         return (part.includes('richlink')) ?
           (<RichLink contentId={part} key={index} />) : 
-          <p key={index} dangerouslySetInnerHTML={{__html: convertToCleanHtml(part)}}></p> // TO DO : refactor into a component
+          <HtmlContent content={part} key={index}/>
       })
       console.log(htmlContent);
       return htmlContent;
