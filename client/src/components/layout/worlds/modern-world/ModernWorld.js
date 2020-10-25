@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
@@ -20,6 +21,8 @@ const ModernWorld = ({ categories, getCategories }) => {
           <CardHub category={category} key={category.id} />
         ))}
       </div>
+      {/* TO DO : change routing */}
+      <Link to="/swipe">Too late to ask</Link>
     </div>
   );
 };

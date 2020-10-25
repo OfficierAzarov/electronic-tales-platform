@@ -1,7 +1,7 @@
 export const categoriesSource = [
   {
     id: '1',
-    name: 'Too late to ask',
+    name: 'How doest it know?!',
     articles: [
       {
         id: '1',
