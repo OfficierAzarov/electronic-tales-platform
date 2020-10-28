@@ -13,7 +13,7 @@ const Swipe = ({questions, getQuestions}) => {
     }, []);
 
     const onSwipe = (direction) => {
-        console.log('You swiped: ' + direction)
+        console.log('You swiped this: ' + direction)
     }
        
     const onCardLeftScreen = (myIdentifier) => {
