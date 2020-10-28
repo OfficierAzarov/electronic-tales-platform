@@ -5,7 +5,7 @@ import Card from '../card/Card';
 
 const CardsHub = ({ category: { name, articles } }) => {
   const dropCards = () => {
-    // do this and that
+    // TO DO : animate
   };
 
   return (

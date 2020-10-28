@@ -1,16 +1,16 @@
-import React, { Fragment } from 'react';
-import TinderCard from 'react-tinder-card';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+
+import { getQuestions } from '../../../actions/question';
 
 import './Swipe.css';
+import SwipeCard from '../../swipe-card/SwipeCard';
 
-const Swipe = () => {
+const Swipe = ({questions, getQuestions}) => {
 
-
-    const questions = [
-        {text: 'blabla'},
-        {text: 'blibli'},
-        {text: 'bloblo'}
-    ]
+    useEffect(() => {
+        getQuestions();
+    }, []);
 
     const onSwipe = (direction) => {
         console.log('You swiped: ' + direction)
@@ -20,17 +20,14 @@ const Swipe = () => {
         console.log(myIdentifier + ' left the screen')
     }
 
-            // <div>
-
-            // </div>
     return (
         <div id="swipe">
             {
-                questions.map(question => <TinderCard onSwipe={onSwipe} onCardLeftScreen={() => onCardLeftScreen('fooBar')}>{question.text}</TinderCard>)
+                questions.map(question => 
+
+                        <SwipeCard/>
+                    </TinderCard>)
              }
-            {/* <h2>
-                What is a port?
-            </h2> */}
             <div id="buttons">
                 <div className="action-button">❌</div>
                 <div className="action-button">❤️</div>
@@ -39,4 +36,8 @@ const Swipe = () => {
     );
 };
 
-export default Swipe;
+const mapStateToProps = (state) => ({
+    questions: state.question.questions,
+  });
+
+export default connect(mapStateToProps, { getQuestions })(Swipe);

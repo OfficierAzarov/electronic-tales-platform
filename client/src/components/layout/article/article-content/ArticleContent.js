@@ -20,7 +20,6 @@ const ArticleContent = ({ articleContent }) => {
           (<RichLink contentId={part} key={index} />) : 
           <HtmlContent content={part} key={index}/>
       })
-      console.log(htmlContent);
       return htmlContent;
     }
   }
