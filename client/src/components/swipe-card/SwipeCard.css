@@ -1,0 +1,12 @@
+.swipe-card-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.swipe-card {
+  background-color: #333333;
+  padding: 2em;
+  margin: 2em;
+  border-radius: 2em;
+  position: absolute;
+}

@@ -12,27 +12,18 @@ const Swipe = ({questions, getQuestions}) => {
         getQuestions();
     }, []);
 
-    const onSwipe = (direction) => {
-        console.log('You swiped this: ' + direction)
-    }
-       
-    const onCardLeftScreen = (myIdentifier) => {
-        console.log(myIdentifier + ' left the screen')
-    }
-
     return (
         <div id="swipe">
             {
                 questions.map(question => 
-
-                        <SwipeCard/>
-                    </TinderCard>)
-             }
+                    <SwipeCard question={question}/>
+                )
+            }
             <div id="buttons">
                 <div className="action-button">❌</div>
                 <div className="action-button">❤️</div>
             </div>
-            </div>
+        </div>
     );
 };
 

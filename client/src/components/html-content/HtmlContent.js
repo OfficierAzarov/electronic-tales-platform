@@ -1,5 +1,5 @@
 import React from 'react';
-import { convertToCleanHtml } from '../../utils/Utils';
+import { convertToCleanHtml } from '../../utils/utils';
 
 import './HtmlContent.css';
 

@@ -2,11 +2,20 @@ export const questionsSource = [
     {
       id: '1',
       questionText: 'What is a port?',
+      thumbnail : 'gameboy.png',
       answer:
         {
           id: '1',
-          title: 'What is a port ?',
           content: 'A port is a lorem ipsum blabliblou.'
+        }
+    },
+    {
+      id: '2',
+      questionText: 'What is SSH?',
+      answer:
+        {
+          id: '1',
+          content: 'An SSH connection is a lorem ipsum blabliblou.'
         }
     }
   ];
