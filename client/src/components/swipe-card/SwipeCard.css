@@ -1,12 +1,28 @@
-.swipe-card-container {
+/* .swipe-card-wrapper {
   width: 90%;
-  margin: 0 auto;
-}
+} */
 
 .swipe-card {
   background-color: #333333;
   padding: 2em;
+  border-radius: 2em;
+  /* background-color: #333333;
+  padding: 2em;
   margin: 2em;
   border-radius: 2em;
+  position: absolute; */
   position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(15%);
+  margin: 3em auto 0 auto;
+  width: 60%;
+}
+
+.swipe-card-content {
+  text-align: center;
+}
+
+.swipe-card-content img {
+  margin: 3em 0;
 }

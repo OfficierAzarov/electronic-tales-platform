@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import { connect } from 'react-redux';
 
 import { getQuestions } from '../../../actions/question';
@@ -14,12 +14,14 @@ const Swipe = ({questions, getQuestions}) => {
 
     return (
         <div id="swipe">
+            <div className="swipe-cards-container">
             {
                 questions.map(question => 
-                    <SwipeCard question={question}/>
+                    <SwipeCard question={question} key={question.id}/>
                 )
             }
-            <div id="buttons">
+            </div>
+            <div id="swipe-buttons-container">
                 <div className="action-button">❌</div>
                 <div className="action-button">❤️</div>
             </div>
