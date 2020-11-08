@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import TinderCard from 'react-tinder-card';
 
 import './SwipeCard.css';
-import { IMAGES_URL } from '../../utils/urls';
-import { ICONS_IMAGES_URL } from '../../utils/urls';
+import { IMAGES_URL } from '../../utils/urls/urls';
+import { ICONS_IMAGES_URL } from '../../utils/urls/urls';
 
 const SwipeCard = ({ question }) => {
 
@@ -16,8 +16,19 @@ const SwipeCard = ({ question }) => {
     }
 
     return (
-        <Fragment>            
+        <Fragment>       
             <TinderCard
+            onSwipe={onSwipe} 
+            onCardLeftScreen={() => onCardLeftScreen('fooBar')}
+            className="swipe-card">
+                <div className="swipe-card-content">
+                    <h2>{question.questionText}</h2>
+                    <img src={`${IMAGES_URL}/${ICONS_IMAGES_URL}/${question.thumbnail}`}/>
+                </div>
+            </TinderCard>
+
+
+            {/* <TinderCard
             onSwipe={onSwipe} 
             onCardLeftScreen={() => onCardLeftScreen('fooBar')}>
                 <div className="swipe-card">
@@ -27,7 +38,7 @@ const SwipeCard = ({ question }) => {
                     </div>
                 </div>
                 
-            </TinderCard>
+            </TinderCard> */}
         </Fragment>
     );
 };

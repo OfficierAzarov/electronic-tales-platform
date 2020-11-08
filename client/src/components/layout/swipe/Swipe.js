@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 
 import { getQuestions } from '../../../actions/question';
@@ -8,13 +8,23 @@ import SwipeCard from '../../swipe-card/SwipeCard';
 
 const Swipe = ({questions, getQuestions}) => {
 
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [leftPosition, setLeftPosition] = useState(0);
+    const [swipeCardWidth, setSwipeCardWidth] = useState(0);
+
     useEffect(() => {
         getQuestions();
+        positionOnCenter(0.7);
     }, []);
+
+    const positionOnCenter = (wantedCardProportion) => {
+        setSwipeCardWidth(windowWidth*wantedCardProportion);
+        setLeftPosition(windowWidth/2-(windowWidth*wantedCardProportion/2));
+    }
 
     return (
         <div id="swipe">
-            <div className="swipe-cards-container">
+            <div id="swipe-cards-container" style={{ left: leftPosition, width: swipeCardWidth }}>
             {
                 questions.map(question => 
                     <SwipeCard question={question} key={question.id}/>

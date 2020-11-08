@@ -1,5 +1,5 @@
 import DOMPurify from 'dompurify';
-import { allowedVideoSourcesList } from '../config/allowedSourcesList';
+import { allowedVideoSourcesList } from '../../config/allowedSourcesList';
 
 DOMPurify.addHook('uponSanitizeElement', (node, data) => {
   console.log("inside hook");
