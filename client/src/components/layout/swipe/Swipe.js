@@ -10,28 +10,29 @@ const Swipe = ({questions, getQuestions}) => {
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [leftPosition, setLeftPosition] = useState(0);
-    const [swipeCardWidth, setSwipeCardWidth] = useState(0);
+    const [topPosition, setTopPosition] = useState(0);
+    const [divWidth, setDivWidth] = useState(0);
 
     useEffect(() => {
         getQuestions();
         positionOnCenter(0.7);
     }, []);
 
-    const positionOnCenter = (wantedCardProportion) => {
-        setSwipeCardWidth(windowWidth*wantedCardProportion);
-        setLeftPosition(windowWidth/2-(windowWidth*wantedCardProportion/2));
+    const positionOnCenter = (wantedDivProportion) => {
+        setDivWidth(windowWidth*wantedDivProportion);
+        setLeftPosition(windowWidth/2-(windowWidth*wantedDivProportion/2));
     }
 
     return (
         <div id="swipe">
-            <div id="swipe-cards-container" style={{ left: leftPosition, width: swipeCardWidth }}>
+            <div id="swipe-cards-container" style={{ left: leftPosition, width: divWidth }}>
             {
                 questions.map(question => 
                     <SwipeCard question={question} key={question.id}/>
                 )
             }
             </div>
-            <div id="swipe-buttons-container">
+            <div id="swipe-buttons-container" style={{ left: leftPosition, width: divWidth }}>
                 <div className="action-button">❌</div>
                 <div className="action-button">❤️</div>
             </div>

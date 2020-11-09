@@ -5,7 +5,7 @@
 
 #swipe-cards-container {
   position: absolute;
-  top: 10%;
+  top: 7%;
   left: 25%;
   width: 60%;
 }
@@ -13,6 +13,9 @@
 #swipe-buttons-container {
   display: flex;
   justify-content: center;
+  /* margin-top: 25em; */
+  position: absolute;
+  top: 68%;
 }
 
 #swipe-buttons-container .action-button {
