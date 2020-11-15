@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { connect } from 'react-redux';
+import { useHistory } from "react-router-dom";
 import TinderCard from 'react-tinder-card';
 
 import { getQuestions } from '../../../actions/question';
@@ -14,9 +15,10 @@ const Swipe = ({questions, getQuestions}) => {
         positionOnCenter(0.7);
     }, []);
 
-    
-    let cleftPostion;
-    let cdivWidth;
+    const history = useHistory();
+
+
+    // ****** Center elements on the page : beginning ******
 
     const [leftPosition, setLeftPosition] = useState(0);
     const [divWidth, setDivWidth] = useState(0);
@@ -26,6 +28,10 @@ const Swipe = ({questions, getQuestions}) => {
         setDivWidth(windowWidth*wantedDivProportion);
         setLeftPosition(windowWidth/2-(windowWidth*wantedDivProportion/2));
     }
+
+    // ****** Center elements on the page : end ******
+
+    // ****** TinderCard functions : beginning ******
     
     const alreadyRemoved = [];
     const cardRefs = Array(questions.length).fill(0).map(emptyElement => React.createRef());
@@ -45,6 +51,13 @@ const Swipe = ({questions, getQuestions}) => {
         }
     }
 
+    const onCardLeftScreen = (direction) => {
+        console.log(direction);
+        if (direction === 'right') history.push("/");
+    }
+
+    // ****** TinderCard functions : end ******
+
     return (
         <div id="swipe">
             <div id="swipe-cards-container" style={{ left: leftPosition, width: divWidth }}>
@@ -52,6 +65,7 @@ const Swipe = ({questions, getQuestions}) => {
                 questions.map((question, index) => 
                     <TinderCard
                     onSwipe={() => onSwipe(question.id)}
+                    onCardLeftScreen={(dir) => onCardLeftScreen(dir)}
                     className="swipe-card"
                     key={question.id}
                     ref={cardRefs[index]}>
