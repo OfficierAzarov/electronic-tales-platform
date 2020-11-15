@@ -3,22 +3,44 @@
   flex-direction: column;
 }
 
-#swipe-cards-container {
+#swipe #swipe-cards-container {
   position: absolute;
   top: 7%;
   left: 25%;
   width: 60%;
 }
 
-#swipe-buttons-container {
+#swipe .swipe-card {
+  position: absolute;
+  width: 100%;
+}
+
+#swipe .swipe-card-content {
+  background-color: #999999;
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em 0;
+}
+
+#swipe .swipe-card-content h2 {
+  text-align: center;
+}
+
+#swipe #swipe-buttons-container {
+  position: absolute;
+  top: 22em;
+}
+
+#swipe #swipe-buttons-container {
   display: flex;
   justify-content: center;
-  /* margin-top: 25em; */
   position: absolute;
   top: 68%;
 }
 
-#swipe-buttons-container .action-button {
+#swipe #swipe-buttons-container .action-button {
   padding: 2em;
   background-color: #333333;
   border-radius: 50%;

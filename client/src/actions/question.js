@@ -3,8 +3,6 @@ import { questionsSource } from '../mocks/questions';
 
 export const getQuestions = () => (dispatch) => {
   try {
-
-    console.log('bip');
     // TO DO : replace by actual DB source, will be await
     const res = questionsSource;
 
