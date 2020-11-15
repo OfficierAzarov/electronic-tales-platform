@@ -35,6 +35,7 @@ const Swipe = ({questions, getQuestions}) => {
     }
 
     const swipeAction = (direction) => {
+        // https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
         const questionsLeft = questions.filter(question => !alreadyRemoved.includes(question));
         if (questionsLeft.length) {
             const toRemove = questionsLeft[questionsLeft.length-1];
