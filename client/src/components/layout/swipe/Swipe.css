@@ -6,8 +6,8 @@
 #swipe #swipe-cards-container {
   position: absolute;
   top: 7%;
-  left: 25%;
-  width: 60%;
+  /* left: 25%;
+  width: 60%; */
 }
 
 #swipe .swipe-card {

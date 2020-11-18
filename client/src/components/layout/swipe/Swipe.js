@@ -7,31 +7,15 @@ import { getQuestions } from '../../../actions/question';
 
 import './Swipe.css';
 import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../utils/urls/urls';
+import { computeLeft, computeWidth } from '../../../utils/display/centerSomething';
 
 const Swipe = ({questions, getQuestions}) => {
 
     useEffect(() => {
         getQuestions();
-        positionOnCenter(0.7);
     }, []);
 
     const history = useHistory();
-
-
-    // ****** Center elements on the page : beginning ******
-
-    const [leftPosition, setLeftPosition] = useState(0);
-    const [divWidth, setDivWidth] = useState(0);
-    
-    const positionOnCenter = (wantedDivProportion) => {
-        const windowWidth = window.innerWidth;
-        setDivWidth(windowWidth*wantedDivProportion);
-        setLeftPosition(windowWidth/2-(windowWidth*wantedDivProportion/2));
-    }
-
-    // ****** Center elements on the page : end ******
-
-    // ****** TinderCard functions : beginning ******
     
     const alreadyRemoved = [];
     const cardRefs = Array(questions.length).fill(0).map(emptyElement => React.createRef());
@@ -56,11 +40,10 @@ const Swipe = ({questions, getQuestions}) => {
         if (direction === 'right') history.push("/");
     }
 
-    // ****** TinderCard functions : end ******
 
     return (
         <div id="swipe">
-            <div id="swipe-cards-container" style={{ left: leftPosition, width: divWidth }}>
+            <div id="swipe-cards-container" style={{ left: computeLeft(0.7), width: computeWidth(0.7)}}>
             {
                 questions.map((question, index) => 
                     <TinderCard
@@ -77,7 +60,7 @@ const Swipe = ({questions, getQuestions}) => {
                 )
             }
             </div>
-            <div id="swipe-buttons-container" style={{ left: leftPosition, width: divWidth }}>
+            <div id="swipe-buttons-container" style={{ left: computeLeft(0.7), width: computeWidth(0.7)}}>
                 <div className="action-button" onClick={() => swipeAction('left')}>❌</div>
                 <div className="action-button" onClick={() => swipeAction('right')}>❤️</div>
             </div>
