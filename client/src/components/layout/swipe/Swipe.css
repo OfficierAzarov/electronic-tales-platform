@@ -41,6 +41,7 @@
 }
 
 #swipe #swipe-buttons-container .action-button {
+  cursor: pointer;
   padding: 2em;
   background-color: #333333;
   border-radius: 50%;

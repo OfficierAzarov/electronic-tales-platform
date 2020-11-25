@@ -1,36 +1,44 @@
 import React, { useEffect, useState, useRef } from 'react';
+import store from '../../../store';
 import { connect } from 'react-redux';
 import { useHistory } from "react-router-dom";
 import TinderCard from 'react-tinder-card';
 
 import { getQuestions } from '../../../actions/question';
+import { removeAQuestion } from '../../../actions/question';
+import { setInitialLoading } from '../../../actions/question';
 
 import './Swipe.css';
 import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../utils/urls/urls';
 import { computeLeft, computeWidth } from '../../../utils/display/centerSomething';
 
-const Swipe = ({questions, getQuestions}) => {
+const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion, setInitialLoading }) => {
+
 
     useEffect(() => {
-        getQuestions();
+        if (initialLoading) {
+            getQuestions();
+            setInitialLoading(false);
+        }
     }, []);
 
     const history = useHistory();
-    
-    const alreadyRemoved = [];
+
     const cardRefs = Array(questions.length).fill(0).map(emptyElement => React.createRef());
 
+
     const onSwipe = (questionToRemove) => {
-        alreadyRemoved.push(questionToRemove);
+        removeAQuestion(questionToRemove);
     }
 
-    const swipeAction = (direction) => {
-        // https://github.com/3DJakob/react-tinder-card-demo/blob/master/src/examples/Advanced.js
-        const questionsLeft = questions.filter(question => !alreadyRemoved.includes(question));
-        if (questionsLeft.length) {
-            const toRemove = questionsLeft[questionsLeft.length-1];
-            const index = questions.indexOf(toRemove);
-            alreadyRemoved.push(toRemove);
+    const swipeActionFromButton = (direction) => {
+        console.log(cardRefs);
+        console.log(questions);
+        if (questions.length) {
+            const questiontoRemove = questions[questions.length-1];
+            const index = questions.indexOf(questiontoRemove);
+            console.log(index);
+            console.log(cardRefs[index]);
             cardRefs[index].current.swipe(direction);
         }
     }
@@ -47,7 +55,7 @@ const Swipe = ({questions, getQuestions}) => {
             {
                 questions.map((question, index) => 
                     <TinderCard
-                    onSwipe={() => onSwipe(question.id)}
+                    onSwipe={() => onSwipe(question)}
                     onCardLeftScreen={(dir) => onCardLeftScreen(dir)}
                     className="swipe-card"
                     key={question.id}
@@ -61,8 +69,8 @@ const Swipe = ({questions, getQuestions}) => {
             }
             </div>
             <div id="swipe-buttons-container" style={{ left: computeLeft(0.7), width: computeWidth(0.7)}}>
-                <div className="action-button" onClick={() => swipeAction('left')}>❌</div>
-                <div className="action-button" onClick={() => swipeAction('right')}>❤️</div>
+                <div className="action-button" onClick={() => swipeActionFromButton('left')}>❌</div>
+                <div className="action-button" onClick={() => swipeActionFromButton('right')}>❤️</div>
             </div>
         </div>
     );
@@ -70,6 +78,32 @@ const Swipe = ({questions, getQuestions}) => {
 
 const mapStateToProps = (state) => ({
     questions: state.question.questions,
+    initialLoading: state.question.initialLoading
   });
 
-export default connect(mapStateToProps, { getQuestions })(Swipe);
+export default connect(mapStateToProps, { getQuestions, setInitialLoading, removeAQuestion })(Swipe);
+
+
+    // const [leftQuestions, setLeftQuestions] = useState([]);
+
+    // const computeLeftQuestions = () => {
+    //     const currentState = store.getState();
+    //     const allQuestions = currentState.question.questions;
+    //     const removedQuestions = currentState.question.removedQuestions;
+
+    //     let leftQuestionsList = [];
+
+    //     if (allQuestions.length && removedQuestions.length) {
+    //         for (let i=0; i < allQuestions.length; i++) {
+    //             for (let j=0; j < removedQuestions.length; j++)
+    //                 if (allQuestions[i].id !== removedQuestions[j].id) {
+    //                     leftQuestionsList.push(allQuestions[i]);
+    //                 }
+    //         }
+    //         setLeftQuestions(leftQuestionsList);
+    //     } else {
+    //         setLeftQuestions(allQuestions);
+    //     }
+    // }
+    
+    // const alreadyRemoved = [];
