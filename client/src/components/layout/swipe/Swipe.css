@@ -6,8 +6,6 @@
 #swipe #swipe-cards-container {
   position: absolute;
   top: 7%;
-  /* left: 25%;
-  width: 60%; */
 }
 
 #swipe .swipe-card {
@@ -28,6 +26,17 @@
   text-align: center;
 }
 
+#swipe #no-cards-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#swipe #no-cards-left img {
+  width: 40%;
+  margin-top: 15%;
+}
+
 #swipe #swipe-buttons-container {
   position: absolute;
   top: 22em;
@@ -43,7 +52,10 @@
 #swipe #swipe-buttons-container .action-button {
   cursor: pointer;
   padding: 2em;
+  margin: 0 2em;
+}
+
+#swipe #swipe-buttons-container .swipe-button {
   background-color: #333333;
   border-radius: 50%;
-  margin: 0 2em;
 }
