@@ -69,8 +69,7 @@ const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion, setIni
                     <button className="action-button swipe-button" onClick={() => swipeActionFromButton('right')}>❤️</button>
                 </Fragment> :
                 <Fragment>
-                    <Link className="action-button basic-button" to="/home">Let's go home</Link>
-                    {/* <Link className="action-button basic-button">Suggest a new question +</Link> */}
+                    <button className="basic-button" onClick={() => history.goBack()}>Go back</button>
                 </Fragment>
             }
             </div> 
