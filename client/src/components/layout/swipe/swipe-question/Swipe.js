@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 import { Link, useHistory } from "react-router-dom";
 import TinderCard from 'react-tinder-card';
 
-import { getQuestions } from '../../../actions/question';
-import { removeAQuestion } from '../../../actions/question';
-import { setInitialLoading } from '../../../actions/question';
+import { getQuestions } from '../../../../actions/question';
+import { removeAQuestion } from '../../../../actions/question';
+import { setInitialLoading } from '../../../../actions/question';
 
 import './Swipe.css';
-import ghost from '../../../resources/img/icons/ghost.png';
-import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../utils/urls/urls';
-import { computeLeft, computeWidth } from '../../../utils/display/centerSomething';
+import ghost from '../../../../resources/img/icons/ghost.png';
+import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../../utils/urls/urls';
+import { computeLeft, computeWidth } from '../../../../utils/display/centerSomething';
 
 const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion, setInitialLoading }) => {
 
@@ -24,10 +24,6 @@ const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion, setIni
     const history = useHistory();
 
     const cardRefs = Array(questions.length).fill(0).map(emptyElement => React.createRef());
-
-    // const onSwipe = (questionToRemove) => {
-    //     removeAQuestion(questionToRemove);
-    // }
 
     const swipeActionFromButton = (direction) => {
         if (questions.length) {
@@ -72,7 +68,7 @@ const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion, setIni
                     <button className="action-button swipe-button" onClick={() => swipeActionFromButton('right')}>❤️</button>
                 </Fragment> :
                 <Fragment>
-                    <button className="action-button basic-button"><Link to="/home">Let's go home</Link></button>
+                    <Link className="action-button basic-button" to="/home">Let's go home</Link>
                     {/* <button className="action-button">Suggest a new question +</button> */}
                 </Fragment>
             }
