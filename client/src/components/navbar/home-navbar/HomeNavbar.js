@@ -3,7 +3,9 @@ import { Link as ScrollLink } from 'react-scroll';
 
 import './HomeNavbar.css';
 
-import ruins from '../../../resources/img/icons/ruins.png';
+import modernWorld from '../../../resources/img/icons/modern-world.png';
+import imaginarium from '../../../resources/img/icons/imaginarium.png';
+import ancientWorld from '../../../resources/img/icons/ancient-world.png';
 
 const HomeNavbar = () => {
   return (
@@ -15,7 +17,7 @@ const HomeNavbar = () => {
         smooth={true}
         duration={500}
       >
-        <img src={ruins} alt="modern world icon" />
+        <img src={modernWorld} alt="modern world icon" />
       </ScrollLink>
       <ScrollLink
         activeClass="active"
@@ -24,7 +26,7 @@ const HomeNavbar = () => {
         smooth={true}
         duration={500}
       >
-        <img src={ruins} alt="imaginarium" />
+        <img src={imaginarium} alt="imaginarium" />
       </ScrollLink>
       <ScrollLink
         activeClass="active"
@@ -33,7 +35,7 @@ const HomeNavbar = () => {
         smooth={true}
         duration={500}
       >
-        <img src={ruins} alt="ancient world icon" />
+        <img src={ancientWorld} alt="ancient world icon" />
       </ScrollLink>
     </Fragment>
   );
