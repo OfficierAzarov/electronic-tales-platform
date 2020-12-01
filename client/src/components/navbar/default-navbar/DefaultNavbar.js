@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
+import './DefaultNavbar.css';
+
 import ruins from '../../../resources/img/icons/ruins.png';
 
 const DefaultNavbar = () => {

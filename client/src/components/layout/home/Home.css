@@ -12,6 +12,10 @@
   height: 100vh;
 }
 
+#home #header img {
+  width: 60%;
+}
+
 /* TO DO : juste a mock, change with actual style */
 #home .temporary-comestics {
   padding-top: 3%;

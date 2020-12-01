@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 
+import './HomeNavbar.css';
+
 import ruins from '../../../resources/img/icons/ruins.png';
 
 const HomeNavbar = () => {
