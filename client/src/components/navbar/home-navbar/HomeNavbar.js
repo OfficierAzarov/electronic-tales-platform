@@ -33,7 +33,6 @@ const HomeNavbar = () => {
       >
         <img src={ruins} alt="ancient world icon" />
       </ScrollLink>
-      <img src={ruins} alt="my space" />
     </Fragment>
   );
 };

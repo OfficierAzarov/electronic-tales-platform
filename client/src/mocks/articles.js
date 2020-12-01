@@ -33,16 +33,13 @@ export const articlesSource = [
     title: "But how does it know ?!",
     slug: "but-how-does-it-know",
     content:
-      'In the **beginning God created** the <br>heaven</br> and the earth. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night. And the evening and the morning were the first day. And God said, Let there be a firmament in the midst of the waters, and let it divide the waters from the waters. ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1") And God made the firmament, and divided the waters which were under the firmament from the waters which were above the firmament: and it was so.Lorem ipsum [1] blabliblou et puis encore [2]? Cependant, il se pourrait que [3].',
+      'In the <b>beginning God created </b> the heaven and the |richlink_1|. And the earth was without form, and void; and darkness was upon the face of the deep. And the Spirit of God moved upon the face of the waters. And God said, Let there be light: and there was light. And God saw the light, that it was good: and God divided the light from the darkness. And God called the light Day, and the darkness he called Night.',
     richLinks: [
       {
-        reference: "1",
-        content: "Je suis un soir",
-      },
-      {
-        reference: "2",
-        content: "Le plat pays",
-      },
+        reference: "richlink_1",
+        name: "earth",
+        content: "Eart is roooound."
+      }
     ],
     thumbnail: "learning.png",
     category: "Buzzwords",

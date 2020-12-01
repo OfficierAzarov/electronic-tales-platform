@@ -1,18 +1,22 @@
 import React, { Fragment, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
 import './Article.css';
 
-import Error from '../../error/Error';
+import Error from '../error/Error';
 import ArticleContent from './article-content/ArticleContent';
-import Modal from '../../modal/Modal';
-import { setCurrentArticle } from '../../../actions/article';
+import Modal from '../modal/Modal';
+import { setCurrentArticle } from '../../actions/article';
 
 const Article = ({ match, setCurrentArticle, article }) => {
+
   useEffect(() => {
-    setCurrentArticle(match.params.slug);
+    setCurrentArticle(match.params.type, match.params.slug);
   }, []);
+
+  const history = useHistory();
 
   return (
     <div id="article-container">
@@ -29,6 +33,7 @@ const Article = ({ match, setCurrentArticle, article }) => {
         />
         
       )}
+      <button className="basic-button" onClick={() => history.goBack()}>Go back</button>
     </div>
   );
 };

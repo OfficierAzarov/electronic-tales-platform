@@ -13,8 +13,8 @@ import Home from './components/layout/home/Home';
 import ModernWorld from './components/layout/worlds/modern-world/ModernWorld';
 import Imaginarium from './components/layout/worlds/imaginarium/Imaginarium';
 import AncientWorld from './components/layout/worlds/ancient-world/AncientWorld';
-import Article from './components/layout/article/Article';
-import Swipe from './components/layout/swipe/swipe-question/Swipe';
+import Article from './components/article/Article';
+import Swipe from './components/layout/swipe/swipe-question/SwipeQuestion';
 
 import Navbar from './components/navbar/Navbar';
 
@@ -32,7 +32,7 @@ const App = () => {
             <Route path="/modern-world" component={ModernWorld}></Route>
             <Route path="/imaginarium" component={Imaginarium}></Route>
             <Route path="/ancient-world" component={AncientWorld}></Route>
-            <Route path="/articles/:slug" component={Article}></Route>
+            <Route path="/articles/:type/:slug" component={Article}></Route>
             <Route path="/swipe" component={Swipe}></Route>
             <Home />
           </Switch>

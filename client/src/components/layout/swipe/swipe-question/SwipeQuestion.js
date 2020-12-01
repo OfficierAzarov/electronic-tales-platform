@@ -7,7 +7,7 @@ import { getQuestions } from '../../../../actions/question';
 import { removeAQuestion } from '../../../../actions/question';
 import { setInitialLoading } from '../../../../actions/question';
 
-import './Swipe.css';
+import './SwipeQuestion.css';
 import ghost from '../../../../resources/img/icons/ghost.png';
 import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../../utils/urls/urls';
 import { computeLeft, computeWidth } from '../../../../utils/display/centerSomething';
@@ -35,7 +35,8 @@ const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion, setIni
 
     const onCardLeftScreen = (direction, questionToRemove) => {
         removeAQuestion(questionToRemove);
-        if (direction === 'right') history.push("/");
+        if (direction === 'right') 
+            history.push(`/articles/swipes/${questionToRemove.answer.slug}`);
     }
 
 
@@ -69,7 +70,7 @@ const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion, setIni
                 </Fragment> :
                 <Fragment>
                     <Link className="action-button basic-button" to="/home">Let's go home</Link>
-                    {/* <button className="action-button">Suggest a new question +</button> */}
+                    {/* <Link className="action-button basic-button">Suggest a new question +</Link> */}
                 </Fragment>
             }
             </div> 

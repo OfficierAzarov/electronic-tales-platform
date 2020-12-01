@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 
 import './ArticleContent.css';
 
-import RichLink from '../../../rich-link/RichLink';
-import HtmlContent from '../../../html-content/HtmlContent';
+import RichLink from '../../rich-link/RichLink';
+import HtmlContent from '../../html-content/HtmlContent';
 
 const ArticleContent = ({ articleContent }) => {
     // TO DO : solve it
@@ -23,7 +23,6 @@ const ArticleContent = ({ articleContent }) => {
       return htmlContent;
     }
   }
-
 
   return (
     <div className="article-content">
