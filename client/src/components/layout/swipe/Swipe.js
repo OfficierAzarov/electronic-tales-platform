@@ -12,7 +12,7 @@ import ghost from '../../../resources/img/icons/ghost.png';
 import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../utils/urls/urls';
 import { computeLeft, computeWidth } from '../../../utils/display/centerSomething';
 
-const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion, setInitialLoading }) => {
+export const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion, setInitialLoading }) => {
 
     useEffect(() => {
         if (initialLoading) {

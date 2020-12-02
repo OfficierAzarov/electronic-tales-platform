@@ -4,14 +4,18 @@ import Adapter from 'enzyme-adapter-react-16';
 import Provider from 'react-redux';
 import store from '../store';
  
-import Swipe from '../components/layout/swipe/Swipe';
+import { Swipe } from '../components/layout/swipe/Swipe';
 
 configure({ adapter: new Adapter() });
 
 const noQuestions = [];
 
-describe('displays no cards left if there are no questions', () => {
+it('displays a "no-cards-left" div if there are no questions', () => {
     const wrapper = shallow(<Swipe questions={noQuestions}/>);
+    expect(wrapper.find('#no-cards-left').exists()).toBeTruthy()
+})
 
-    expect(wrapper.find('#no-cards-left').exists);
+it('does not display a "swipe-cards-container" div if there are no questions', () => {
+    const wrapper = shallow(<Swipe questions={noQuestions}/>);
+    expect(wrapper.find('TinderCard').exists()).toBeFalsy();
 })
