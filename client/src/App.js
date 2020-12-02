@@ -14,7 +14,7 @@ import ModernWorld from './components/layout/worlds/modern-world/ModernWorld';
 import Imaginarium from './components/layout/worlds/imaginarium/Imaginarium';
 import AncientWorld from './components/layout/worlds/ancient-world/AncientWorld';
 import Article from './components/article/Article';
-import Swipe from './components/layout/swipe/swipe-question/SwipeQuestion';
+import Swipe from './components/layout/swipe/Swipe';
 
 import Navbar from './components/navbar/Navbar';
 

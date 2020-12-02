@@ -1,16 +1,16 @@
 import React, { Fragment, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import TinderCard from 'react-tinder-card';
 
-import { getQuestions } from '../../../../actions/question';
-import { removeAQuestion } from '../../../../actions/question';
-import { setInitialLoading } from '../../../../actions/question';
+import { getQuestions } from '../../../actions/question';
+import { removeAQuestion } from '../../../actions/question';
+import { setInitialLoading } from '../../../actions/question';
 
-import './SwipeQuestion.css';
-import ghost from '../../../../resources/img/icons/ghost.png';
-import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../../utils/urls/urls';
-import { computeLeft, computeWidth } from '../../../../utils/display/centerSomething';
+import './Swipe.css';
+import ghost from '../../../resources/img/icons/ghost.png';
+import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../utils/urls/urls';
+import { computeLeft, computeWidth } from '../../../utils/display/centerSomething';
 
 const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion, setInitialLoading }) => {
 
@@ -55,15 +55,15 @@ const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion, setIni
                             <img src={`${IMAGES_URL}/${ICONS_IMAGES_URL}/${question.thumbnail}`}/>
                         </div>
                     </TinderCard>
-                ) : <div id="no-cards-left">
+                ) : 
+                    <div id="no-cards-left">
                         <h2>There's no cards left!</h2>
                         <img src={ghost} alt="no cards left"/>
                     </div>
             }
             </div>
-            
-                <div id="swipe-buttons-container" style={{ left: computeLeft(0.7), width: computeWidth(0.7)}}>
-                {questions.length ? 
+            <div id="swipe-buttons-container" style={{ left: computeLeft(0.7), width: computeWidth(0.7)}}>
+            {questions.length ? 
                 <Fragment>
                     <button className="action-button swipe-button" onClick={() => swipeActionFromButton('left')}>❌</button>
                     <button className="action-button swipe-button" onClick={() => swipeActionFromButton('right')}>❤️</button>
