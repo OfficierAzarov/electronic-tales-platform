@@ -12,10 +12,6 @@ const noQuestions = [];
 
 it('displays a "no-cards-left" div if there are no questions', () => {
     const wrapper = shallow(<Swipe questions={noQuestions}/>);
-    expect(wrapper.find('#no-cards-left').exists()).toBeTruthy()
-})
-
-it('does not display a "swipe-cards-container" div if there are no questions', () => {
-    const wrapper = shallow(<Swipe questions={noQuestions}/>);
     expect(wrapper.find('TinderCard').exists()).toBeFalsy();
-})
+    expect(wrapper.find('#no-cards-left').exists()).toBeTruthy();
+});
