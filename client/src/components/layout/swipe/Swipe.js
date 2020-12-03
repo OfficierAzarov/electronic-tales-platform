@@ -42,9 +42,9 @@ export const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion,
 
     return (
         <div id="swipe">
-            <div id="swipe-cards-container" style={{ left: computeLeft(0.7), width: computeWidth(0.7)}}>
             {questions.length ?
-                questions.map((question, index) => 
+                <div id="swipe-cards-container" style={{ left: computeLeft(0.7), width: computeWidth(0.7)}}>
+                {questions.map((question, index) => 
                     <TinderCard
                     onCardLeftScreen={(dir) => onCardLeftScreen(dir, question)}
                     className="swipe-card"
@@ -54,14 +54,15 @@ export const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion,
                             <h2>{question.questionText}</h2>
                             <img src={`${IMAGES_URL}/${ICONS_IMAGES_URL}/${question.thumbnail}`}/>
                         </div>
-                    </TinderCard>
-                ) : 
+                    </TinderCard>)
+                }
+                </div>
+                 : 
                     <div id="no-cards-left">
                         <h2>There's no cards left!</h2>
                         <img src={ghost} alt="no cards left"/>
                     </div>
             }
-            </div>
             <div id="swipe-buttons-container" style={{ left: computeLeft(0.7), width: computeWidth(0.7)}}>
             {questions.length ? 
                 <Fragment>
