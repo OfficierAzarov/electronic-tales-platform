@@ -10,7 +10,7 @@ const Modal = ({ modalContent, openModal, closeModal }) => {
     // Source: https://stackoverflow.com/a/42234988
     const useOutsideCloser = (ref) => {        
         useEffect(() => {
-            function handleClickOutside(event) {
+            const handleClickOutside = (event) => {
                 if (ref.current && !ref.current.contains(event.target)) {
                     close();
                 }
