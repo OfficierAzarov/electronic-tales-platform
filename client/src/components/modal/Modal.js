@@ -8,7 +8,7 @@ import HtmlContent from '../html-content/HtmlContent';
 const Modal = ({ modalContent, openModal, closeModal }) => {
     
     // Source: https://stackoverflow.com/a/42234988
-    function useOutsideCloser(ref) {        
+    const useOutsideCloser = (ref) => {        
         useEffect(() => {
             function handleClickOutside(event) {
                 if (ref.current && !ref.current.contains(event.target)) {

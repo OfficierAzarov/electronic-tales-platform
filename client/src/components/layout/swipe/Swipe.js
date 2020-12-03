@@ -66,11 +66,11 @@ export const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion,
             <div id="swipe-buttons-container" style={{ left: computeLeft(0.7), width: computeWidth(0.7)}}>
             {questions.length ? 
                 <Fragment>
-                    <button className="action-button swipe-button" onClick={() => swipeActionFromButton('left')}>❌</button>
-                    <button className="action-button swipe-button" onClick={() => swipeActionFromButton('right')}>❤️</button>
+                    <button id="swipe-left-action" className="action-button swipe-button" onClick={() => swipeActionFromButton('left')}>❌</button>
+                    <button id="swipe-right-action" className="action-button swipe-button" onClick={() => swipeActionFromButton('right')}>❤️</button>
                 </Fragment> :
                 <Fragment>
-                    <button className="basic-button" onClick={() => history.goBack()}>Go back</button>
+                    <button id="go-back" className="basic-button" onClick={() => history.goBack()}>Go back</button>
                 </Fragment>
             }
             </div> 

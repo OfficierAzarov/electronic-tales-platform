@@ -10,15 +10,25 @@ configure({ adapter: new Adapter() });
 const noQuestions = [];
 const questions = questionsSource;
 
-it('displays "#swipe-cards-container" div if there are questions', () => {
+it('displays swipe if there are questions', () => {
     const wrapper = shallow(<Swipe questions={questions}/>);
-    expect(wrapper.find('#no-cards-left').exists()).toBeFalsy();
+
     expect(wrapper.find('#swipe-cards-container').exists()).toBeTruthy();
+    expect(wrapper.find('#swipe-left-action').exists()).toBeTruthy();
+    expect(wrapper.find('#swipe-right-action').exists()).toBeTruthy();
+
+    expect(wrapper.find('#no-cards-left').exists()).toBeFalsy();
+    expect(wrapper.find('#go-back').exists()).toBeFalsy();
 });
 
-it('displays a "no-cards-left" div if there are no questions', () => {
+it('displays no swipe if there are no questions', () => {
     const wrapper = shallow(<Swipe questions={noQuestions}/>);
+
     expect(wrapper.find('#swipe-cards-container').exists()).toBeFalsy();
+    expect(wrapper.find('#swipe-left-action').exists()).toBeFalsy();
+    expect(wrapper.find('#swipe-right-action').exists()).toBeFalsy();
+
     expect(wrapper.find('#no-cards-left').exists()).toBeTruthy();
+    expect(wrapper.find('#go-back').exists()).toBeTruthy();
 });
 
