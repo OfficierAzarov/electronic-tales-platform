@@ -2,8 +2,8 @@ import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
  
-import { Swipe } from '../components/layout/swipe/Swipe';
-import { questionsSource } from '../mocks/questions';
+import { Swipe } from '../swipe/Swipe';
+import { questionsSource } from '../../mocks/questions';
 
 configure({ adapter: new Adapter() });
 

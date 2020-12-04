@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 import './Card.css';
-import { IMAGES_URL } from '../../utils/urls/urls';
-import { ICONS_IMAGES_URL } from '../../utils/urls/urls';
+import { IMAGES_URL } from '../../../utils/urls/urls';
+import { ICONS_IMAGES_URL } from '../../../utils/urls/urls';
 
 const Card = ({ article }) => {
 

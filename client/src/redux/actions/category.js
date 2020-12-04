@@ -1,5 +1,5 @@
 import { GET_CATEGORIES } from './types';
-import { categoriesSource } from '../mocks/categories';
+import { categoriesSource } from '../../mocks/categories';
 
 export const getCategories = () => (dispatch) => {
   try {

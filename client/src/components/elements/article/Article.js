@@ -5,10 +5,10 @@ import { PropTypes } from 'prop-types';
 
 import './Article.css';
 
-import Error from '../error/Error';
+import Error from '../elements/error/Error';
 import ArticleContent from './article-content/ArticleContent';
-import Modal from '../modal/Modal';
-import { setCurrentArticle } from '../../actions/article';
+import Modal from '../elements/modal/Modal';
+import { setCurrentArticle } from '../../redux/actions/article';
 
 const Article = ({ match, setCurrentArticle, article }) => {
 

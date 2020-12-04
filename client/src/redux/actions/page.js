@@ -1,5 +1,4 @@
-import { SET_HOME } from './types';
-import { CLEAR_HOME } from './types';
+import { SET_HOME, CLEAR_HOME } from './types';
 
 export const setHomeAsCurrentPage = () => (dispatch) => {
   dispatch({

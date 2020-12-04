@@ -1,5 +1,5 @@
 import { GET_QUESTIONS, REMOVE_QUESTION, SET_INITIAL_LOADING } from './types';
-import { questionsSource } from '../mocks/questions';
+import { questionsSource } from '../../mocks/questions';
 
 export const getQuestions = () => (dispatch) => {
   try {

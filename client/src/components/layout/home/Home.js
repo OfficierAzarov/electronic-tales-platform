@@ -1,8 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setHomeAsCurrentPage } from '../../../actions/page';
-import { unsetHomeAsCurrentPage } from '../../../actions/page';
+import { setHomeAsCurrentPage, unsetHomeAsCurrentPage } from '../../../redux/actions/page';
 
 import './Home.css';
 import castle from '../../../resources/img/illustrations/castle.jpg';

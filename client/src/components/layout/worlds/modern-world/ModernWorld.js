@@ -6,7 +6,7 @@ import { PropTypes } from 'prop-types';
 import './ModernWorld.css';
 import CardHub from '../../../cards-hub/CardsHub';
 
-import { getCategories } from '../../../../actions/category';
+import { getCategories } from '../../../../redux/actions/category';
 
 const ModernWorld = ({ categories, getCategories }) => {
   useEffect(() => {

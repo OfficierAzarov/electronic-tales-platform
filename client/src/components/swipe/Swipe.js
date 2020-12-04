@@ -3,12 +3,10 @@ import { connect } from 'react-redux';
 import { useHistory } from "react-router-dom";
 import TinderCard from 'react-tinder-card';
 
-import { getQuestions } from '../../../actions/question';
-import { removeAQuestion } from '../../../actions/question';
-import { setInitialLoading } from '../../../actions/question';
+import { getQuestions, removeAQuestion, setInitialLoading } from '../../../redux/actions/question';
 
 import './Swipe.css';
-import ghost from '../../../resources/img/icons/ghost.png';
+import ghost from '../../resources/img/icons/ghost.png';
 import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../utils/urls/urls';
 import { computeLeft, computeWidth } from '../../../utils/display/centerSomething';
 

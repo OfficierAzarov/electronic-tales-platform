@@ -1,17 +1,14 @@
 import { SET_CURRENT_ARTICLE } from './types';
 
-import { articlesSource } from '../mocks/articles';
-import { questionsSource } from '../mocks/questions';
+import { articlesSource } from '../../mocks/articles';
+import { questionsSource } from '../../mocks/questions';
 
-export const setCurrentArticle = (type, slug) => (dispatch) => {
-
-  console.log(type);
+export const setCurrentArticle = (originOfCall, slug) => (dispatch) => {
 
   let res;
 
-  switch (type) {
+  switch (originOfCall) {
     case 'regular-articles':
-      console.log('biiii^p');
       res = articlesSource.find((article) => article.slug === slug);
       break;
     case 'swipes':

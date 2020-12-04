@@ -1,11 +1,11 @@
-import React, { Fragment, useRef, useEffect } from 'react';
+import React from 'react';
 // import { useMediaQuery } from 'react-responsive';
 import { Element } from 'react-scroll';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Redux
 import { Provider } from 'react-redux';
-import store from './store';
+import store from './redux/store';
 
 import './App.css';
 
@@ -14,7 +14,7 @@ import ModernWorld from './components/layout/worlds/modern-world/ModernWorld';
 import Imaginarium from './components/layout/worlds/imaginarium/Imaginarium';
 import AncientWorld from './components/layout/worlds/ancient-world/AncientWorld';
 import Article from './components/article/Article';
-import Swipe from './components/layout/swipe/Swipe';
+import Swipe from './components/elements/swipe/Swipe';
 
 import Navbar from './components/navbar/Navbar';
 

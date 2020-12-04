@@ -1,5 +1,4 @@
-import { OPEN_MODAL, CLOSE_MODAL } from './types';
-import { SET_MODAL_CONTENT } from './types';
+import { OPEN_MODAL, CLOSE_MODAL, SET_MODAL_CONTENT } from './types';
 
 export const setModalContent = (content) => (dispatch) => {
   dispatch({
