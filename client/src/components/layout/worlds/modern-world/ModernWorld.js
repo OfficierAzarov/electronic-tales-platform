@@ -9,6 +9,7 @@ import CardHub from '../../../elements/cards-hub/CardsHub';
 import { getCategories } from '../../../../redux/actions/category';
 
 const ModernWorld = ({ categories, getCategories }) => {
+  
   useEffect(() => {
     getCategories();
   }, []);

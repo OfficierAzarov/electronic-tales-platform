@@ -12,6 +12,8 @@ import { computeLeft, computeWidth } from '../../../utils/display/centerSomethin
 
 export const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion, setInitialLoading }) => {
 
+    const history = useHistory();
+
     useEffect(() => {
         if (initialLoading) {
             getQuestions();
@@ -19,7 +21,6 @@ export const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion,
         }
     }, []);
 
-    const history = useHistory();
 
     const cardRefs = Array(questions.length).fill(0).map(emptyElement => React.createRef());
 
@@ -34,7 +35,7 @@ export const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion,
     const onCardLeftScreen = (direction, questionToRemove) => {
         removeAQuestion(questionToRemove);
         if (direction === 'right') 
-            history.push(`/articles/swipes/${questionToRemove.answer.slug}`);
+            history.push(`/articles/swipe-answer/${questionToRemove.answer.slug}`);
     }
 
 
@@ -61,18 +62,18 @@ export const Swipe = ({getQuestions, initialLoading, questions, removeAQuestion,
                         <img src={ghost} alt="no cards left"/>
                     </div>
             }
-            <div id="swipe-buttons-container" style={{ left: computeLeft(0.7), width: computeWidth(0.7)}}>
+           
             {questions.length ? 
-                <Fragment>
+                 <div id="swipe-buttons-container" style={{ left: computeLeft(0.7), width: computeWidth(0.7)}}>
                     <button id="swipe-left-action" className="action-button swipe-button" onClick={() => swipeActionFromButton('left')}>❌</button>
                     <button id="swipe-right-action" className="action-button swipe-button" onClick={() => swipeActionFromButton('right')}>❤️</button>
-                </Fragment> :
-                <Fragment>
-                    <button id="go-back" className="basic-button" onClick={() => history.goBack()}>Go back</button>
-                </Fragment>
+                </div> :
+                <div id="no-swipe-buttons-container">
+                    <button className="basic-button" onClick={() => history.goBack()}>Go back</button>
+                    <button id="suggest-a-question" className="basic-button">Suggest<br/> a&nbsp;new question</button>
+                </div>
             }
-            </div> 
-        </div>
+        </div> 
     );
 };
 

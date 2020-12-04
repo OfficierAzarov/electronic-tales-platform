@@ -13,7 +13,7 @@ import { setCurrentArticle } from '../../../redux/actions/article';
 const Article = ({ match, setCurrentArticle, article }) => {
 
   useEffect(() => {
-    setCurrentArticle(match.params.type, match.params.slug);
+    // setCurrentArticle(match.params.type, match.params.slug);
   }, []);
 
   const history = useHistory();
@@ -39,14 +39,12 @@ const Article = ({ match, setCurrentArticle, article }) => {
 };
 
 Article.propTypes = {
-  // TO DO : solve it !
-  // Problem : currentArticle is undefined until the useEffect call
-  // currentArticle: PropTypes.object.isRequired,
+  article: PropTypes.object.isRequired,
   setCurrentArticle: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  article: state.article.currentArticle,
+  article: state.article.currentArticle
 });
 
 export default connect(mapStateToProps, { setCurrentArticle })(Article);

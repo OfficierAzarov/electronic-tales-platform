@@ -34,7 +34,7 @@
 
 #swipe #no-cards-left img {
   width: 40%;
-  margin-top: 15%;
+  margin: 30% 0;
 }
 
 #swipe #swipe-buttons-container {
@@ -58,4 +58,13 @@
 #swipe #swipe-buttons-container .swipe-button {
   background-color: #333333;
   border-radius: 50%;
+}
+
+#swipe #no-swipe-buttons-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#swipe #no-swipe-buttons-container #suggest-a-question {
+  /* width: 30%; */
 }

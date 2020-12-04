@@ -7,6 +7,7 @@ import './Home.css';
 import castle from '../../../resources/img/illustrations/castle.jpg';
 
 const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
+  
   useEffect(() => {
     setHomeAsCurrentPage();
     return () => {
