@@ -6,7 +6,7 @@ import TinderCard from 'react-tinder-card';
 import { getQuestions, removeAQuestion, setInitialLoading } from '../../../redux/actions/question';
 
 import './Swipe.css';
-import ghost from '../../resources/img/icons/ghost.png';
+import ghost from '../../../resources/img/icons/ghost.png';
 import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../utils/urls/urls';
 import { computeLeft, computeWidth } from '../../../utils/display/centerSomething';
 

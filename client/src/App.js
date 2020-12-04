@@ -1,6 +1,5 @@
 import React from 'react';
 // import { useMediaQuery } from 'react-responsive';
-import { Element } from 'react-scroll';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Redux
@@ -13,10 +12,10 @@ import Home from './components/layout/home/Home';
 import ModernWorld from './components/layout/worlds/modern-world/ModernWorld';
 import Imaginarium from './components/layout/worlds/imaginarium/Imaginarium';
 import AncientWorld from './components/layout/worlds/ancient-world/AncientWorld';
-import Article from './components/article/Article';
+import Article from './components/elements/article/Article';
 import Swipe from './components/elements/swipe/Swipe';
 
-import Navbar from './components/navbar/Navbar';
+import Navbar from './components/elements/navbar/Navbar';
 
 const App = () => {
   // const isMobileSmall = useMediaQuery({ query: '(max-device-width: 320px)' });

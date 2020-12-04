@@ -3,9 +3,9 @@ import { Link as ScrollLink } from 'react-scroll';
 
 import './HomeNavbar.css';
 
-import modernWorld from '../../../resources/img/icons/modern-world.png';
-import imaginarium from '../../../resources/img/icons/imaginarium.png';
-import ancientWorld from '../../../resources/img/icons/ancient-world.png';
+import modernWorld from '../../../../resources/img/icons/modern-world.png';
+import imaginarium from '../../../../resources/img/icons/imaginarium.png';
+import ancientWorld from '../../../../resources/img/icons/ancient-world.png';
 
 const HomeNavbar = () => {
   return (

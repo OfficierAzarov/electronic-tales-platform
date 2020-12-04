@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 
 import './Navbar.css';
 
-import HomeNavbar from '../elements/navbar/home-navbar/HomeNavbar';
-import DefaultNavbar from '../elements/navbar/default-navbar/DefaultNavbar';
+import HomeNavbar from './home-navbar/HomeNavbar';
+import DefaultNavbar from './default-navbar/DefaultNavbar';
 
 const Navbar = ({ isCurrentPageHome }) => {
   return <nav>{isCurrentPageHome ? <HomeNavbar /> : <DefaultNavbar />}</nav>;

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
 import './ModernWorld.css';
-import CardHub from '../../../cards-hub/CardsHub';
+import CardHub from '../../../elements/cards-hub/CardsHub';
 
 import { getCategories } from '../../../../redux/actions/category';
 
