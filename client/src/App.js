@@ -8,6 +8,7 @@ import store from './redux/store';
 
 import './App.css';
 
+import SafeSpace from './components/layout/safe-space/SafeSpace';
 import Home from './components/layout/home/Home';
 import ModernWorld from './components/layout/worlds/modern-world/ModernWorld';
 import Imaginarium from './components/layout/worlds/imaginarium/Imaginarium';
@@ -28,6 +29,7 @@ const App = () => {
       <Router>
         <section>
           <Switch>
+            <Route path="/safe-space" component={SafeSpace}></Route>
             <Route path="/modern-world" component={ModernWorld}></Route>
             <Route path="/imaginarium" component={Imaginarium}></Route>
             <Route path="/ancient-world" component={AncientWorld}></Route>

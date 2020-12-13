@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setHomeAsCurrentPage, unsetHomeAsCurrentPage } from '../../../redux/actions/page';
@@ -17,18 +17,22 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
 
   return (
     <div id="home">
-      <div className="full-height temporary-comestics" id="header">
+      <div className="full-height temporary-comestics home-door" id="header">
         <img src={castle} alt="Electronic Tales Castle" />
       </div>
-      <div className="full-height temporary-comestics" id="modern-world">
+      <div className="full-height temporary-comestics home-door" id="home-safe-space">
+        <h1>Dégommons le syndrome de l'imposteur ensemble.</h1>
+        <Link to="/safe-space">Allons-y !</Link>
+      </div>
+      <div className="full-height temporary-comestics home-door" id="home-modern-world">
         <h1>Modern World</h1>
         <Link to="/modern-world">Enter</Link>
       </div>
-      <div className="full-height temporary-comestics" id="imaginarium">
+      <div className="full-height temporary-comestics home-door" id="home-imaginarium">
         <h1>Imaginarium</h1>
         <Link to="/imaginarium">Enter</Link>
       </div>
-      <div className="full-height temporary-comestics" id="ancient-world">
+      <div className="full-height temporary-comestics home-door" id="home-ancient-world">
         <h1>Ancient World</h1>
         <Link to="/ancient-world">Enter</Link>
       </div>
