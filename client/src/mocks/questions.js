@@ -10,7 +10,7 @@ export const questionsSource =
         title: "What is a backdoor?",
         slug: "what-is-a-backdoor",
         content:
-          '<p>The SSH protocol is |richlink_1| that makes it easy to |richlink_2|. also, |richlink_3|.</p><br><br><p>More features are :</p><ul><li>Computing</li><li>Monitoring</li><li>Processing 🚀</li></ul>',
+          '<p>Backdoors are |richlink_1| that makes it easy to |richlink_2|. also, |richlink_3|.</p><br><br><p>More features are :</p><ul><li>Computing</li><li>Monitoring</li><li>Processing 🚀</li></ul>',
         richLinks: [
         {
           reference: "richlink_1",

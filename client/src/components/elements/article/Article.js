@@ -13,7 +13,7 @@ import { setCurrentArticle } from '../../../redux/actions/article';
 const Article = ({ match, setCurrentArticle, article }) => {
 
   useEffect(() => {
-    // setCurrentArticle(match.params.type, match.params.slug);
+    setCurrentArticle(match.params.type, match.params.slug);
   }, []);
 
   const history = useHistory();
