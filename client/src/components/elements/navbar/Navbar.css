@@ -16,10 +16,18 @@ nav svg {
   cursor: pointer;
 }
 
+nav svg g path {
+  fill: whitesmoke;
+}
+
 nav .worlds {
   justify-self: center;
 }
 
 nav .active {
   background-color: aqua;
+}
+
+.active svg g path {
+  fill: pink;
 }

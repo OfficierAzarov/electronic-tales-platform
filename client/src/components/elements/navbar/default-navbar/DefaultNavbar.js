@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import './DefaultNavbar.css';
 
+import { ReactComponent as SafeSpace } from '../../../../resources/img/icons/safe-space.svg';
 import safeSpace from '../../../../resources/img/icons/safe-space.svg';
 import home from '../../../../resources/img/icons/home.png';
 import modernWorld from '../../../../resources/img/icons/modern-world.png';
@@ -16,7 +17,8 @@ const DefaultNavbar = () => {
         <img src={home} alt="home icon" />
       </NavLink>
       <NavLink exact to="/safe-space" activeClassName="active">
-        <img src={safeSpace} alt="safe space icon" className="svg"/>
+        <SafeSpace />
+        {/* <img src={safeSpace} alt="safe space icon" /> */}
       </NavLink>
       <NavLink exact to="/modern-world" activeClassName="active">
         <img src={modernWorld} alt="modern world icon" />
