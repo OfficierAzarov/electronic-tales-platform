@@ -16,7 +16,7 @@ nav svg {
   cursor: pointer;
 }
 
-nav svg g path {
+nav svg {
   fill: whitesmoke;
 }
 
@@ -25,9 +25,9 @@ nav .worlds {
 }
 
 nav .active {
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
-.active svg g path {
+.active svg {
   fill: pink;
 }

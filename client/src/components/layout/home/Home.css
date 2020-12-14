@@ -19,9 +19,14 @@
 /* TO DO : juste a mock, change with actual style */
 #home .temporary-comestics {
   padding-top: 3%;
+  padding-bottom: 3%;
 }
 
 #home .temporary-comestics h1 {
   text-align: center;
   padding: 1em;
+}
+
+#home #home-safe-space {
+  background-color: cadetblue;
 }
