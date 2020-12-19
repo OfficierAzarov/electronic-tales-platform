@@ -22,11 +22,11 @@
   padding-bottom: 3%;
 }
 
-#home .temporary-comestics h1 {
+#home .temporary-comestics {
   text-align: center;
   padding: 1em;
 }
 
-#home #home-safe-space {
-  background-color: cadetblue;
+#home p {
+  width: 80%;
 }

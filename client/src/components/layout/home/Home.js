@@ -22,7 +22,12 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
       </div>
       <div className="full-height temporary-comestics home-door" id="home-safe-space">
         <h1>Dégommons le syndrome de l'imposteur ensemble.</h1>
-        <Link to="/safe-space">Allons-y !</Link>
+        <p>
+          Développeur·euse junior, tu ne te sens pas toujours à ta place dans le milieu de la tech&nbsp;?<br/><br/> Tu as l'impression de ne pas être à la hauteur&nbsp;?<br/><br/>De ne pas assez bien coder, de ne pas connaître assez de technos, de ne pas être assez geek&nbsp;?<br/><br/>
+          Tu souffres peut-être du syndrome de l'imposteur, un mal répandu chez les développeur·euses.<br/><br/>
+          À Electronic Tales, nous pensons que ce n'est pas une fatalité.
+        </p>
+        <Link className="basic-button" to="/safe-space">Viens, on en parle.</Link>
       </div>
       <div className="full-height temporary-comestics home-door" id="home-modern-world">
         <h1>Modern World</h1>
