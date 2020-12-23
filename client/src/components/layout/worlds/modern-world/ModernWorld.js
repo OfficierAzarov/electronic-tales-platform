@@ -15,7 +15,9 @@ const ModernWorld = ({ categories, getCategories }) => {
 
   return (
     <div id="modern-world">
-      <h1>Modern World</h1>
+      <div className="world-title-wrapper">
+        <h2 className="world-title">Modern World</h2>
+      </div>      
       <div className="image-card">
         <p className="title">Too late to ask</p>
         <img />A cool animation/image of swipping

@@ -4,6 +4,10 @@
   align-items: center;
 }
 
-#modern-world h1 {
-  margin-bottom: 2em;
+.world-title {
+  color: white;
+  font-weight: 300;
+  font-size: 2rem;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em, rgb(0, 255, 255) 0px 0px 1.6em;
 }
