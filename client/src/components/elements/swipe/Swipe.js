@@ -70,7 +70,7 @@ export const Swipe = ({
               <div className="swipe-card-content">
                 <h2>{question.questionText}</h2>
                 <img
-                  src={`${IMAGES_URL}/${ICONS_IMAGES_URL}/${question.thumbnail}`}
+                  src={`../${IMAGES_URL}/${ICONS_IMAGES_URL}/${question.thumbnail}`}
                 />
               </div>
             </TinderCard>

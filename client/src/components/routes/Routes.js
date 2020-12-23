@@ -16,13 +16,13 @@ const Routes = () => {
         <Route exact path="/safe-space" component={SafeSpace}></Route>
         <Route exact path="/imaginarium" component={Imaginarium}></Route>
         <Route exact path="/modern-world" component={ModernWorld}></Route>
-        <Route exact path="/ancient-world" component={AncientWorld}></Route>
         <Route
           exact
           path="/modern-world/articles/:type/:slug"
           component={Article}
         ></Route>
         <Route exact path="/modern-world/swipe" component={Swipe}></Route>
+        <Route exact path="/ancient-world" component={AncientWorld}></Route>
       </Switch>
     </section>
   );

@@ -6,7 +6,6 @@ import { IMAGES_URL } from '../../../utils/urls/urls';
 import { ICONS_IMAGES_URL } from '../../../utils/urls/urls';
 
 const Card = ({ article }) => {
-  // TO DO ! /modern-world/articles/:slug
   return (
     <Link to={`/modern-world/articles/regular-articles/${article.slug}`}>
       <div className="card">

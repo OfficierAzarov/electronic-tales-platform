@@ -16,12 +16,10 @@ const ModernWorld = ({ categories, getCategories }) => {
   return (
     <div id="modern-world">
       <h1>Modern World</h1>
-      <div className="image-card">
+      <div>
         <p className="title">Too late to ask</p>
-        <img />A cool animation/image of swipping
         <Link to="/modern-world/swipe">Let's go for a swipe!</Link>
       </div>
-      Cool reading animation/image
       {categories.map((category) => (
         <CardHub category={category} key={category.id} />
       ))}
