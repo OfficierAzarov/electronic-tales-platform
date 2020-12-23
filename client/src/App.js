@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 // import { useMediaQuery } from 'react-responsive';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -8,15 +8,9 @@ import store from './redux/store';
 
 import './App.css';
 
-import SafeSpace from './components/layout/safe-space/SafeSpace';
-import Home from './components/layout/home/Home';
-import ModernWorld from './components/layout/worlds/modern-world/ModernWorld';
-import Imaginarium from './components/layout/worlds/imaginarium/Imaginarium';
-import AncientWorld from './components/layout/worlds/ancient-world/AncientWorld';
-import Article from './components/elements/article/Article';
-import Swipe from './components/elements/swipe/Swipe';
-
 import Navbar from './components/elements/navbar/Navbar';
+import Routes from './components/routes/Routes';
+import Home from './components/layout/home/Home';
 
 const App = () => {
   // const isMobileSmall = useMediaQuery({ query: '(max-device-width: 320px)' });
@@ -27,18 +21,13 @@ const App = () => {
   return (
     <Provider store={store}>
       <Router>
-        <section>
+        <Fragment>
           <Switch>
-            <Route path="/safe-space" component={SafeSpace}></Route>
-            <Route path="/modern-world" component={ModernWorld}></Route>
-            <Route path="/imaginarium" component={Imaginarium}></Route>
-            <Route path="/ancient-world" component={AncientWorld}></Route>
-            <Route path="/articles/:type/:slug" component={Article}></Route>
-            <Route path="/swipe" component={Swipe}></Route>
-            <Home />
+            <Route exact path="/" component={Home} />
+            <Route component={Routes} />
           </Switch>
-        </section>
-        <Navbar />
+          <Navbar />
+        </Fragment>
       </Router>
     </Provider>
   );

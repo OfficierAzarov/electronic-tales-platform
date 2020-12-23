@@ -26,3 +26,8 @@ a {
   flex-direction: column;
   align-items: center;
 }
+
+.image-card {
+  background-color: #888888;
+  border-radius: 2em;
+}

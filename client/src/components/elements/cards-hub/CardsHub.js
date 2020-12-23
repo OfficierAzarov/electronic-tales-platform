@@ -9,12 +9,11 @@ const CardsHub = ({ category: { name, articles } }) => {
   };
 
   return (
-    // <div id="cards-hub" onClick={handleClick}>
-    <div id="cards-hub" onClick={dropCards}>
-      <div id="hub-header">
-        <div>{name}</div>
+    <div className="cards-hub" onClick={dropCards}>
+      <div className="hub-header">
+        <p>{name}</p>
       </div>
-      <div id="hub-content">
+      <div className="hub-content">
         {articles.map((article) => (
           <Card key={article.id} article={article} />
         ))}
