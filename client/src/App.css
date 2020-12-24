@@ -31,3 +31,15 @@ a {
   background-color: #888888;
   border-radius: 2em;
 }
+
+/* For react-animated-css library elements */
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.minimal-height {
+  height: 1em;
+}
