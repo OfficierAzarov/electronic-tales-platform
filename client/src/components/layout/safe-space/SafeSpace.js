@@ -4,6 +4,7 @@ import { Animated } from 'react-animated-css';
 import './SafeSpace.css';
 
 import { ReactComponent as FakeIcon } from '../../../resources/img/icons/safe-space.svg';
+import Quote from '../../elements/quote/Quote';
 
 export default function SafeSpace() {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,7 +41,12 @@ export default function SafeSpace() {
           <FakeIcon />
         </div>
       </Animated>
-      <Animated
+      <Quote isVisible={isVisible} />
+      <Quote isVisible={isVisible} />
+      <Quote isVisible={isVisible} />
+      <Quote isVisible={isVisible} />
+      <Quote isVisible={isVisible} />
+      {/* <Animated
         animationIn="bounceInUp"
         animationOutDuration={0}
         animationInDuration={1000}
@@ -88,6 +94,30 @@ export default function SafeSpace() {
           <p>Monday H.</p>
         </div>
       </Animated>
+      <Animated
+        animationIn="bounceInUp"
+        animationOutDuration={0}
+        animationInDuration={1000}
+        animationInDelay={600}
+        isVisible={isVisible}
+      >
+        <div className="quote">
+          <q>Je vais au salon la boule au ventre.</q>
+          <p>Monday H.</p>
+        </div>
+      </Animated>
+      <Animated
+        animationIn="bounceInUp"
+        animationOutDuration={0}
+        animationInDuration={1000}
+        animationInDelay={600}
+        isVisible={isVisible}
+      >
+        <div className="quote">
+          <q>Je vais au salon la boule au ventre.</q>
+          <p>Monday H.</p>
+        </div>
+      </Animated> */}
     </div>
   );
 }
