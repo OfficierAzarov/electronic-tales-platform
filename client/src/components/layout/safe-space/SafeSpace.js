@@ -29,6 +29,7 @@ export default function SafeSpace() {
       </Animated>
       <Animated
         animationIn="bounceInUp"
+        animationOutDuration={0}
         animationInDuration={1000}
         animationInDelay={400}
         isVisible={isVisible}
@@ -41,6 +42,7 @@ export default function SafeSpace() {
       </Animated>
       <Animated
         animationIn="bounceInUp"
+        animationOutDuration={0}
         animationInDuration={1000}
         animationInDelay={600}
         isVisible={isVisible}
@@ -52,6 +54,7 @@ export default function SafeSpace() {
       </Animated>
       <Animated
         animationIn="bounceInUp"
+        animationOutDuration={0}
         animationInDuration={1000}
         animationInDelay={600}
         isVisible={isVisible}
@@ -63,6 +66,7 @@ export default function SafeSpace() {
       </Animated>
       <Animated
         animationIn="bounceInUp"
+        animationOutDuration={0}
         animationInDuration={1000}
         animationInDelay={600}
         isVisible={isVisible}
@@ -74,6 +78,7 @@ export default function SafeSpace() {
       </Animated>
       <Animated
         animationIn="bounceInUp"
+        animationOutDuration={0}
         animationInDuration={1000}
         animationInDelay={600}
         isVisible={isVisible}
