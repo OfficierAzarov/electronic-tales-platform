@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Animated } from 'react-animated-css';
 
 import './SafeSpace.css';
@@ -8,12 +8,15 @@ import { ReactComponent as FakeIcon } from '../../../resources/img/icons/safe-sp
 export default function SafeSpace() {
   const [isVisible, setIsVisible] = useState(false);
 
+  useEffect(() => {});
+
   const move = () => {
+    console.log('dzouigi');
     setIsVisible(true);
   };
 
   return (
-    <div id="safe-space" onScroll={move}>
+    <div id="safe-space">
       <Animated
         animationOut="fadeOut"
         animationOutDuration={500}
@@ -26,7 +29,6 @@ export default function SafeSpace() {
       </Animated>
       <Animated
         animationIn="bounceInUp"
-        animationOut="fadeOutDown"
         animationInDuration={1000}
         animationInDelay={400}
         isVisible={isVisible}
@@ -35,6 +37,50 @@ export default function SafeSpace() {
           <FakeIcon />
           <FakeIcon />
           <FakeIcon />
+        </div>
+      </Animated>
+      <Animated
+        animationIn="bounceInUp"
+        animationInDuration={1000}
+        animationInDelay={600}
+        isVisible={isVisible}
+      >
+        <div className="quote">
+          <q>Je vais au salon la boule au ventre.</q>
+          <p>Monday H.</p>
+        </div>
+      </Animated>
+      <Animated
+        animationIn="bounceInUp"
+        animationInDuration={1000}
+        animationInDelay={600}
+        isVisible={isVisible}
+      >
+        <div className="quote">
+          <q>Je vais au salon la boule au ventre.</q>
+          <p>Monday H.</p>
+        </div>
+      </Animated>
+      <Animated
+        animationIn="bounceInUp"
+        animationInDuration={1000}
+        animationInDelay={600}
+        isVisible={isVisible}
+      >
+        <div className="quote">
+          <q>Je vais au salon la boule au ventre.</q>
+          <p>Monday H.</p>
+        </div>
+      </Animated>
+      <Animated
+        animationIn="bounceInUp"
+        animationInDuration={1000}
+        animationInDelay={600}
+        isVisible={isVisible}
+      >
+        <div className="quote">
+          <q>Je vais au salon la boule au ventre.</q>
+          <p>Monday H.</p>
         </div>
       </Animated>
     </div>
