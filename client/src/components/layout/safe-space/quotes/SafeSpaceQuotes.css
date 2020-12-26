@@ -1,6 +1,6 @@
 #safe-space {
-  /* height: 90vh; */
-  background-image: url('../../../resources/img/mocks/safe-space.jpg');
+  min-height: 90vh;
+  background-image: url('../../../../resources//img/mocks/safe-space.jpg');
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -34,8 +34,4 @@
   border-radius: 0.5em;
   display: flex;
   flex-direction: column;
-}
-
-#safe-space .quote p {
-  align-self: flex-end;
 }

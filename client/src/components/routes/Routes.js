@@ -1,8 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Home from '../layout/home/Home';
-import SafeSpace from '../layout/safe-space/SafeSpace';
+import SafeSpaceQuotes from '../layout/safe-space/quotes/SafeSpaceQuotes';
 import ModernWorld from '../layout/worlds/modern-world/ModernWorld';
 import Imaginarium from '../layout/worlds/imaginarium/Imaginarium';
 import AncientWorld from '../layout/worlds/ancient-world/AncientWorld';
@@ -13,7 +12,7 @@ const Routes = () => {
   return (
     <section>
       <Switch>
-        <Route exact path="/safe-space" component={SafeSpace}></Route>
+        <Route exact path="/safe-space" component={SafeSpaceQuotes}></Route>
         <Route exact path="/imaginarium" component={Imaginarium}></Route>
         <Route exact path="/modern-world" component={ModernWorld}></Route>
         <Route

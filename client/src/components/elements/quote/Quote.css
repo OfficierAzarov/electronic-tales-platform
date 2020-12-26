@@ -5,8 +5,13 @@
   border-radius: 0.5em;
   display: flex;
   flex-direction: column;
+  width: 17em;
 }
 
-.quote p {
+.quote p:first-of-type {
+  align-self: flex-start;
+}
+
+.quote p:last-of-type {
   align-self: flex-end;
 }

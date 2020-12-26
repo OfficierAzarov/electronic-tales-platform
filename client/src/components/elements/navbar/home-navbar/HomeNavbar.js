@@ -3,11 +3,10 @@ import { Link as ScrollLink } from 'react-scroll';
 
 import './HomeNavbar.css';
 
-import { ReactComponent as SafeSpace } from '../../../../resources/img/icons/safe-space.svg';
-import { ReactComponent as ModernWorld } from '../../../../resources/img/icons/modern-world.svg';
-import { ReactComponent as Imaginarium } from '../../../../resources/img/icons/imaginarium.svg';
-import { ReactComponent as AncientWorld }  from '../../../../resources/img/icons/ancient-world.svg';
-
+import { ReactComponent as SafeSpaceIcon } from '../../../../resources/img/icons/safe-space.svg';
+import { ReactComponent as ModernWorldIcon } from '../../../../resources/img/icons/modern-world.svg';
+import { ReactComponent as ImaginariumIcon } from '../../../../resources/img/icons/imaginarium.svg';
+import { ReactComponent as AncientWorldIcon } from '../../../../resources/img/icons/ancient-world.svg';
 
 const HomeNavbar = () => {
   return (
@@ -19,7 +18,7 @@ const HomeNavbar = () => {
         smooth={true}
         duration={500}
       >
-        <SafeSpace />
+        <SafeSpaceIcon />
       </ScrollLink>
       <ScrollLink
         activeClass="active"
@@ -28,7 +27,7 @@ const HomeNavbar = () => {
         smooth={true}
         duration={500}
       >
-        <ModernWorld />
+        <ModernWorldIcon />
         {/* <img src={modernWorld} alt="modern world icon" /> */}
       </ScrollLink>
       <ScrollLink
@@ -38,7 +37,7 @@ const HomeNavbar = () => {
         smooth={true}
         duration={500}
       >
-        <Imaginarium />
+        <ImaginariumIcon />
         {/* <img src={imaginarium} alt="imaginarium" /> */}
       </ScrollLink>
       <ScrollLink
@@ -48,7 +47,7 @@ const HomeNavbar = () => {
         smooth={true}
         duration={500}
       >
-        <AncientWorld />
+        <AncientWorldIcon />
         {/* <img src={ancientWorld} alt="ancient world icon" /> */}
       </ScrollLink>
     </Fragment>

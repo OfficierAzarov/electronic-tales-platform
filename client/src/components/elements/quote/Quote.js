@@ -3,9 +3,7 @@ import { Animated } from 'react-animated-css';
 
 import './Quote.css';
 
-const Quote = ({ isVisible }) => {
-  // const [isVisible, setIsVisible] = useState(false);
-
+const Quote = ({ isVisible, quote }) => {
   return (
     <Animated
       animationIn="bounceInUp"
@@ -13,10 +11,14 @@ const Quote = ({ isVisible }) => {
       animationInDuration={1000}
       animationInDelay={600}
       isVisible={isVisible}
+      className="flex"
     >
       <div className="quote">
-        <q>Je vais au salon la boule au ventre.</q>
-        <p>Monday H.</p>
+        <p>{quote.category}</p>
+        <q>{quote.content}</q>
+        <p>
+          {quote.author}, {quote.date}
+        </p>
       </div>
     </Animated>
   );
