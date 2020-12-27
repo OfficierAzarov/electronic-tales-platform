@@ -5,20 +5,28 @@ import './SafeSpace.css';
 
 import { ReactComponent as FakeIcon } from '../../../resources/img/icons/safe-space.svg';
 import SafeSpaceQuotes from './quotes/SafeSpaceQuotes';
+import SafeSpaceDiscord from './discord/SafeSpaceDiscord';
 
 const SafeSpace = () => {
   const [isMiniNavVisible, setIsMiniNavVisible] = useState(false);
   const [whatToShow, setWhatToShow] = useState('');
   const [activeIcon, setActiveIcon] = useState('');
+  const [delay, setDelay] = useState(0);
 
   const showNav = () => {
     setIsMiniNavVisible(true);
   };
 
-  const show = (subSpace) => {
+  const show = (subSpace, e) => {
     setActiveIcon(subSpace);
     showNav();
     setWhatToShow(subSpace);
+    configureDelay(e);
+  };
+
+  const configureDelay = (e) => {
+    setDelay(0);
+    if (e.target.id === 'swipe-up') setDelay(800);
   };
 
   return (
@@ -32,22 +40,26 @@ const SafeSpace = () => {
       >
         <div id="mini-nav">
           <FakeIcon
-            onClick={() => show('add-quote')}
+            onClick={(e) => show('add-quote', e)}
             className={activeIcon === 'add-quote' ? 'active-icon' : ''}
           />
           <FakeIcon
-            onClick={() => show('quotes')}
+            onClick={(e) => show('quotes', e)}
             className={activeIcon === 'quotes' ? 'active-icon' : ''}
           />
           <FakeIcon
-            onClick={() => show('discord')}
+            onClick={(e) => show('discord', e)}
             className={activeIcon === 'discord' ? 'active-icon' : ''}
           />
         </div>
       </Animated>
       <SafeSpaceQuotes
         isVisible={whatToShow === 'quotes' ? true : false}
-        delay={800}
+        delay={delay}
+      />
+      <SafeSpaceDiscord
+        isVisible={whatToShow === 'discord' ? true : false}
+        delay={delay}
       />
       <Animated
         animationOut="fadeOut"
@@ -55,7 +67,7 @@ const SafeSpace = () => {
         isVisible={whatToShow === '' ? true : false}
         className="flex minimal-height"
       >
-        <div id="swipe-up" onClick={() => show('quotes')}>
+        <div id="swipe-up" onClick={(e) => show('quotes', e)}>
           Swipe up
         </div>
       </Animated>
