@@ -3,13 +3,13 @@ import { Animated } from 'react-animated-css';
 
 import './Quote.css';
 
-const Quote = ({ isVisible, quote }) => {
+const Quote = ({ isVisible, delay, quote }) => {
   return (
     <Animated
       animationIn="bounceInUp"
       animationOutDuration={0}
       animationInDuration={1000}
-      animationInDelay={600}
+      animationInDelay={delay}
       isVisible={isVisible}
       className="flex"
     >

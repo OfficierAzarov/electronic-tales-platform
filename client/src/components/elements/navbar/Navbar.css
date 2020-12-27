@@ -24,10 +24,6 @@ nav .worlds {
   justify-self: center;
 }
 
-nav .active {
-  /* background-color: aqua; */
-}
-
 .active svg {
   fill: pink;
 }

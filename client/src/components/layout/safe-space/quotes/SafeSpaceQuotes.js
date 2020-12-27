@@ -6,47 +6,22 @@ import { Animated } from 'react-animated-css';
 import './SafeSpaceQuotes.css';
 
 import { getQuotes } from '../../../../redux/actions/quote';
-import { ReactComponent as FakeIcon } from '../../../../resources/img/icons/safe-space.svg';
 import Quote from '../../../elements/quote/Quote';
 
-const SafeSpaceQuotes = ({ quotes, getQuotes }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
+const SafeSpaceQuotes = ({ isVisible, quotes, getQuotes, delay }) => {
   useEffect(() => {
     getQuotes();
   });
 
-  const move = () => {
-    setIsVisible(true);
-  };
-
   return (
-    <div id="safe-space">
-      <Animated
-        animationOut="fadeOut"
-        animationOutDuration={500}
-        isVisible={!isVisible}
-        className="flex minimal-height"
-      >
-        <div id="swipe-up" onClick={move}>
-          Swipe up
-        </div>
-      </Animated>
-      <Animated
-        animationIn="bounceInUp"
-        animationOutDuration={0}
-        animationInDuration={1000}
-        animationInDelay={400}
-        isVisible={isVisible}
-      >
-        <div id="mini-nav">
-          <FakeIcon />
-          <FakeIcon />
-          <FakeIcon />
-        </div>
-      </Animated>
+    <div id="safe-space-quotes">
       {quotes.map((quote) => (
-        <Quote quote={quote} isVisible={isVisible} key={quote.id} />
+        <Quote
+          quote={quote}
+          isVisible={isVisible}
+          delay={delay}
+          key={quote.id}
+        />
       ))}
     </div>
   );
