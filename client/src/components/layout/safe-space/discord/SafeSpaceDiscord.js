@@ -5,7 +5,9 @@ import './SafeSpaceDiscord.css';
 import discord from '../../../../resources/img/icons/discord.png';
 
 const SafeSpaceDiscord = ({ isVisible }) => {
-  return <Fragment>{isVisible && <img src={discord} />}</Fragment>;
+  return (
+    <div id="safe-space-discord">{isVisible && <img src={discord} />}</div>
+  );
 };
 
 export default SafeSpaceDiscord;

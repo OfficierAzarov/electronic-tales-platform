@@ -1,22 +1,7 @@
-#safe-space #mini-nav {
-  margin: 0.5em 0;
-  background-color: #333333;
-  padding: 1em 0.8em;
-  border-radius: 2em;
-  display: flex;
+#safe-space-quotes {
+  display: none;
 }
 
-#safe-space #mini-nav svg {
-  width: 2.5em;
-  height: 2.5em;
-  padding: 0 1.8em;
-}
-
-#safe-space .quote {
-  margin-top: 1em;
-  background-color: #000000bd;
-  padding: 1em;
-  border-radius: 0.5em;
-  display: flex;
-  flex-direction: column;
+#safe-space-quotes.visible {
+  display: block;
 }

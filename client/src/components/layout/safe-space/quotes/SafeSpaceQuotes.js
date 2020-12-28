@@ -14,7 +14,7 @@ const SafeSpaceQuotes = ({ isVisible, quotes, getQuotes, delay }) => {
   });
 
   return (
-    <div id="safe-space-quotes">
+    <div id="safe-space-quotes" className={isVisible ? 'visible' : null}>
       {quotes.map((quote) => (
         <Quote
           quote={quote}
