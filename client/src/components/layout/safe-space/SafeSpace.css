@@ -1,6 +1,7 @@
 #safe-space {
   min-height: 90vh;
   background-image: url('../../../resources/img/mocks/safe-space.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -11,7 +12,7 @@
 #safe-space #swipe-up {
   background-color: #000000;
   padding: 2em;
-  /* transform: translateY(-20em); */
+  transform: translateY(-20em);
 }
 
 #safe-space #mini-nav {
@@ -26,15 +27,6 @@
   width: 2.5em;
   height: 2.5em;
   padding: 0 1.8em;
-}
-
-#safe-space .quote {
-  margin-top: 1em;
-  background-color: #000000bd;
-  padding: 1em;
-  border-radius: 0.5em;
-  display: flex;
-  flex-direction: column;
 }
 
 .active-icon {

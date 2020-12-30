@@ -1,25 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Animated } from 'react-animated-css';
+
+import { computeTop } from '../../../utils/display/positionFab';
 
 import './SafeSpace.css';
 
 import { ReactComponent as FakeIcon } from '../../../resources/img/icons/safe-space.svg';
 import SafeSpaceQuotes from './quotes/SafeSpaceQuotes';
-import SafeSpaceDiscord from './discord/SafeSpaceDiscord';
+import SafeSpaceChat from './chat/SafeSpaceChat';
+import Fab from '../../elements/fab/Fab';
 
 const SafeSpace = () => {
-  const [isMiniNavVisible, setIsMiniNavVisible] = useState(false);
   const [whatToShow, setWhatToShow] = useState('');
   const [activeIcon, setActiveIcon] = useState('');
   const [delay, setDelay] = useState(0);
+  const [componentHeight, setComponentHeight] = useState(0);
 
-  const showNav = () => {
-    setIsMiniNavVisible(true);
-  };
+  useEffect(() => {
+    // computeTop is used as a parameter for computeTop()
+    setComponentHeight(document.getElementById('safe-space').clientHeight);
+  }, []);
 
   const show = (subSpace, e) => {
     setActiveIcon(subSpace);
-    showNav();
     setWhatToShow(subSpace);
     configureDelay(e);
   };
@@ -36,20 +39,16 @@ const SafeSpace = () => {
         animationOutDuration={0}
         animationInDuration={1000}
         animationInDelay={400}
-        isVisible={isMiniNavVisible}
+        isVisible={whatToShow !== '' ? true : false}
       >
         <div id="mini-nav">
-          <FakeIcon
-            onClick={(e) => show('add-quote', e)}
-            className={activeIcon === 'add-quote' ? 'active-icon' : ''}
-          />
           <FakeIcon
             onClick={(e) => show('quotes', e)}
             className={activeIcon === 'quotes' ? 'active-icon' : ''}
           />
           <FakeIcon
-            onClick={(e) => show('discord', e)}
-            className={activeIcon === 'discord' ? 'active-icon' : ''}
+            onClick={(e) => show('chat', e)}
+            className={activeIcon === 'chat' ? 'active-icon' : ''}
           />
         </div>
       </Animated>
@@ -57,8 +56,8 @@ const SafeSpace = () => {
         isVisible={whatToShow === 'quotes' ? true : false}
         delay={delay}
       />
-      <SafeSpaceDiscord
-        isVisible={whatToShow === 'discord' ? true : false}
+      <SafeSpaceChat
+        isVisible={whatToShow === 'chat' ? true : false}
         delay={delay}
       />
       <Animated
@@ -70,6 +69,21 @@ const SafeSpace = () => {
         <div id="swipe-up" onClick={(e) => show('quotes', e)}>
           Swipe up
         </div>
+      </Animated>
+      <Animated
+        animationIn="bounceInUp"
+        animationOutDuration={0}
+        animationInDuration={1000}
+        animationInDelay={delay + 400}
+        isVisible={whatToShow === 'quotes' ? true : false}
+        style={{ position: 'fixed' }}
+      >
+        <Fab
+          isVisible={whatToShow === 'quotes' ? true : false}
+          delay={delay}
+          leftPosition={'7.3em'}
+          topPosition={computeTop(componentHeight)}
+        />
       </Animated>
     </div>
   );

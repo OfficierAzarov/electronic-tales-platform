@@ -21,6 +21,7 @@
     "react-scroll": "^1.8.1",
     "react-scroll-into-view": "^1.8.2",
     "react-tinder-card": "^1.3.1",
+    "react-tiny-fab": "^4.0.2",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-mock-store": "^1.5.4",

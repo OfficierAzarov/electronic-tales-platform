@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import SafeSpace from '../layout/safe-space/SafeSpace';
 import ModernWorld from '../layout/worlds/modern-world/ModernWorld';

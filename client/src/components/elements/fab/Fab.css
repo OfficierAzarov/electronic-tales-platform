@@ -1,0 +1,15 @@
+.fab {
+  opacity: 0.9;
+  position: fixed;
+  display: none;
+  margin-bottom: 2em;
+}
+
+.fab svg {
+  width: 3.2em;
+  fill: #ff4093;
+}
+
+.fab.visible {
+  display: block;
+}
