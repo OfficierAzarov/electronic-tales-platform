@@ -2,7 +2,6 @@
   opacity: 0.9;
   position: fixed;
   display: none;
-  margin-bottom: 2em;
 }
 
 .fab svg {
@@ -11,5 +10,18 @@
 }
 
 .fab.visible {
-  display: block;
+  display: flex;
+}
+
+.fab.rotating {
+  animation: rotate 1s ease;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
 }
