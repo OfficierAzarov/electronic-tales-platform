@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Animated } from 'react-animated-css';
 
-import { computeTop } from '../../../utils/display/positionFab';
+import { computeTop, computeLeft } from '../../../utils/display/positionFab';
 
 import './SafeSpace.css';
 
@@ -15,11 +15,28 @@ const SafeSpace = () => {
   const [activeIcon, setActiveIcon] = useState('');
   const [delay, setDelay] = useState(0);
   const [componentHeight, setComponentHeight] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0);
 
   useEffect(() => {
     // computeTop is used as a parameter for computeTop()
+    // console.log(window.innerHeight);
+    setWindowHeight(window.innerHeight);
     setComponentHeight(document.getElementById('safe-space').clientHeight);
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    if (window.innerHeight !== windowHeight) {
+    }
+    console.log('bip scroll');
+    console.log(window.innerHeight);
+  };
 
   const show = (subSpace, e) => {
     setActiveIcon(subSpace);
@@ -70,21 +87,20 @@ const SafeSpace = () => {
           Swipe up
         </div>
       </Animated>
-      <Animated
+      {/* <Animated
         animationIn="bounceInUp"
-        animationOutDuration={0}
+        animationOutDuration={0} 
         animationInDuration={1000}
         animationInDelay={delay + 400}
         isVisible={whatToShow === 'quotes' ? true : false}
-        style={{ position: 'fixed' }}
-      >
-        <Fab
-          isVisible={whatToShow === 'quotes' ? true : false}
-          delay={delay}
-          leftPosition={'7.3em'}
-          topPosition={computeTop(componentHeight)}
-        />
-      </Animated>
+      > */}
+      <Fab
+        isVisible={whatToShow === 'quotes' ? true : false}
+        delay={delay + 400}
+        bottomPosition={'12vh'}
+        leftPosition={'82vw'}
+      />
+      {/* </Animated> */}
     </div>
   );
 };

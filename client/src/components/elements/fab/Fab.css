@@ -1,6 +1,5 @@
 .fab {
   opacity: 0.9;
-  position: fixed;
   display: none;
 }
 
@@ -10,7 +9,7 @@
 }
 
 .fab.visible {
-  display: flex;
+  display: block;
 }
 
 .fab.rotating {

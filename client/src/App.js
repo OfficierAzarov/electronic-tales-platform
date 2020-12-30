@@ -21,13 +21,11 @@ const App = () => {
   return (
     <Provider store={store}>
       <Router>
-        <Fragment>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route component={Routes} />
-          </Switch>
-          <Navbar />
-        </Fragment>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route component={Routes} />
+        </Switch>
+        <Navbar />
       </Router>
     </Provider>
   );

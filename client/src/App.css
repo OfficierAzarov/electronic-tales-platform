@@ -1,5 +1,11 @@
 section {
-  padding-bottom: 4em;
+  overflow: scroll;
+  height: 90vh;
+  padding-bottom: 10vh;
+}
+
+#phantom {
+  height: 10vh;
 }
 
 button {

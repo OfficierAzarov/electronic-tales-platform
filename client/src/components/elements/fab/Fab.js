@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { bounce } from 'react-animations';
+import { Animated } from 'react-animated-css';
 
 import './Fab.css';
 
 import { ReactComponent as AddAction } from '../../../resources/img/icons/add.svg';
 
-const Fab = ({ isVisible, leftPosition, topPosition }) => {
+const Fab = ({ isVisible, delay, bottomPosition, leftPosition }) => {
   const [isRotating, setIsRotating] = useState(false);
 
   const handleClick = () => {
@@ -13,14 +13,25 @@ const Fab = ({ isVisible, leftPosition, topPosition }) => {
     setIsRotating(true);
   };
 
+  const terminate = () => {};
+
   return (
     <div
+      style={{ position: 'fixed', bottom: bottomPosition, left: leftPosition }}
       className={`fab  ${isVisible ? 'visible' : 'fab'} 
-              ${isRotating ? 'rotating' : ''}`}
-      style={{ left: leftPosition, top: topPosition }}
+    ${isRotating ? 'rotating' : ''}`}
       onClick={() => handleClick()}
     >
-      <AddAction />
+      <Animated
+        animationIn="bounceInUp"
+        animationOutDuration={0}
+        animationInDuration={1000}
+        animationInDelay={delay + 400}
+        isVisible={isVisible}
+        style={{ display: 'flex' }}
+      >
+        <AddAction />
+      </Animated>
     </div>
   );
 };
