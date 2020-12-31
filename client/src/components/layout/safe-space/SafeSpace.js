@@ -1,42 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Animated } from 'react-animated-css';
 
-import { computeTop, computeLeft } from '../../../utils/display/positionFab';
-
 import './SafeSpace.css';
 
 import { ReactComponent as FakeIcon } from '../../../resources/img/icons/safe-space.svg';
 import SafeSpaceQuotes from './quotes/SafeSpaceQuotes';
 import SafeSpaceChat from './chat/SafeSpaceChat';
+import AddQuote from './add-quote/AddQuote';
 import Fab from '../../elements/fab/Fab';
 
 const SafeSpace = () => {
   const [whatToShow, setWhatToShow] = useState('');
   const [activeIcon, setActiveIcon] = useState('');
   const [delay, setDelay] = useState(0);
-  const [componentHeight, setComponentHeight] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(0);
-
-  useEffect(() => {
-    // computeTop is used as a parameter for computeTop()
-    // console.log(window.innerHeight);
-    setWindowHeight(window.innerHeight);
-    setComponentHeight(document.getElementById('safe-space').clientHeight);
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const handleScroll = () => {
-    if (window.innerHeight !== windowHeight) {
-    }
-    console.log('bip scroll');
-    console.log(window.innerHeight);
-  };
 
   const show = (subSpace, e) => {
     setActiveIcon(subSpace);
@@ -73,6 +49,7 @@ const SafeSpace = () => {
         isVisible={whatToShow === 'quotes' ? true : false}
         delay={delay}
       />
+      <AddQuote isVisible={whatToShow === 'add-quote' ? true : false} />
       <SafeSpaceChat
         isVisible={whatToShow === 'chat' ? true : false}
         delay={delay}
@@ -87,20 +64,14 @@ const SafeSpace = () => {
           Swipe up
         </div>
       </Animated>
-      {/* <Animated
-        animationIn="bounceInUp"
-        animationOutDuration={0} 
-        animationInDuration={1000}
-        animationInDelay={delay + 400}
-        isVisible={whatToShow === 'quotes' ? true : false}
-      > */}
-      <Fab
-        isVisible={whatToShow === 'quotes' ? true : false}
-        delay={delay + 400}
-        bottomPosition={'12vh'}
-        leftPosition={'82vw'}
-      />
-      {/* </Animated> */}
+      <div onClick={(e) => show('add-quote', e)}>
+        <Fab
+          isVisible={whatToShow === 'quotes' ? true : false}
+          delay={delay + 200}
+          bottomPosition={'12vh'}
+          leftPosition={'82vw'}
+        />
+      </div>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 #safe-space {
   min-height: 90vh;
   background-image: url('../../../resources/img/mocks/safe-space.jpg');
-  background-size: cover;
+  /* background-size: cover; */
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;

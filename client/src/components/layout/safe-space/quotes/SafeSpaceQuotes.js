@@ -8,7 +8,6 @@ import './SafeSpaceQuotes.css';
 
 import { getQuotes } from '../../../../redux/actions/quote';
 import Quote from '../../../elements/quote/Quote';
-import Fab from '../../../elements/fab/Fab';
 
 const SafeSpaceQuotes = ({ isVisible, quotes, getQuotes, delay }) => {
   useEffect(() => {
