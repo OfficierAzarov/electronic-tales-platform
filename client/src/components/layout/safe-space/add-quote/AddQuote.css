@@ -1,0 +1,22 @@
+#safe-space-add-quote {
+  min-height: 90vh;
+  background-image: url('../../../../resources//img/mocks/safe-space.jpg');
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+#safe-space-add-quote #actions-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#safe-space-add-quote #go-back {
+  margin: 1em 0 0 1em;
+}
+
+#safe-space-add-quote #add-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}

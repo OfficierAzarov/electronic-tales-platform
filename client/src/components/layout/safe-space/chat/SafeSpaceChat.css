@@ -1,0 +1,9 @@
+#safe-space-chat {
+  min-height: 90vh;
+  background-image: url('../../../../resources//img/mocks/safe-space.jpg');
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,13 @@
+.mini-nav {
+  margin: 0.5em 0;
+  background-color: #333333;
+  padding: 0.8em;
+  border-radius: 2em;
+  display: flex;
+}
+
+.mini-nav svg {
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0 1.8em;
+}

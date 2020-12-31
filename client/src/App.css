@@ -49,3 +49,7 @@ a {
 .minimal-height {
   height: 1em;
 }
+
+.active svg {
+  fill: pink;
+}

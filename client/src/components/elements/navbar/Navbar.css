@@ -24,7 +24,3 @@ nav svg {
 nav .worlds {
   justify-self: center;
 }
-
-.active svg {
-  fill: pink;
-}

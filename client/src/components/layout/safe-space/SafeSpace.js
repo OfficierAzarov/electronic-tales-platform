@@ -1,51 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Animated } from 'react-animated-css';
+import { Link } from 'react-router-dom';
 
 import './SafeSpace.css';
 
-import { ReactComponent as FakeIcon } from '../../../resources/img/icons/safe-space.svg';
+import MiniNav from '../../elements/mini-nav/MiniNav';
+
 import SafeSpaceQuotes from './quotes/SafeSpaceQuotes';
 import SafeSpaceChat from './chat/SafeSpaceChat';
 import AddQuote from './add-quote/AddQuote';
 import Fab from '../../elements/fab/Fab';
 
 const SafeSpace = () => {
-  const [whatToShow, setWhatToShow] = useState('');
-  const [activeIcon, setActiveIcon] = useState('');
-  const [delay, setDelay] = useState(0);
-
-  const show = (subSpace, e) => {
-    setActiveIcon(subSpace);
-    setWhatToShow(subSpace);
-    configureDelay(e);
-  };
-
-  const configureDelay = (e) => {
-    setDelay(0);
-    if (e.target.id === 'swipe-up') setDelay(800);
-  };
-
   return (
     <div id="safe-space">
-      <Animated
-        animationIn="bounceInUp"
-        animationOutDuration={0}
-        animationInDuration={1000}
-        animationInDelay={400}
-        isVisible={whatToShow !== '' ? true : false}
-      >
-        <div id="mini-nav">
-          <FakeIcon
-            onClick={(e) => show('quotes', e)}
-            className={activeIcon === 'quotes' ? 'active-icon' : ''}
-          />
-          <FakeIcon
-            onClick={(e) => show('chat', e)}
-            className={activeIcon === 'chat' ? 'active-icon' : ''}
-          />
-        </div>
-      </Animated>
-      <SafeSpaceQuotes
+      <Link to="/safe-space/quotes">
+        <Animated
+          animationOut="fadeOut"
+          animationOutDuration={500}
+          isVisible={true}
+          className="flex minimal-height"
+        >
+          <div id="swipe-up">Swipe up</div>
+        </Animated>
+      </Link>
+      {/* <SafeSpaceQuotes
         isVisible={whatToShow === 'quotes' ? true : false}
         delay={delay}
       />
@@ -71,7 +50,7 @@ const SafeSpace = () => {
           bottomPosition={'12vh'}
           leftPosition={'82vw'}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
