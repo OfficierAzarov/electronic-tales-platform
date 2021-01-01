@@ -11,8 +11,21 @@
   align-items: center;
 }
 
+#add form textarea,
+#add form input {
+  border-radius: 1.5em;
+}
+
+#add form textarea:focus,
+#add form input:focus {
+  outline: none;
+}
+
 #add form label {
   display: flex;
+}
+
+#add #label-for-quote {
   flex-direction: column;
   text-align: center;
 }
@@ -22,12 +35,21 @@
   height: 10em;
   align-self: center;
   margin: 2em 0 0 0;
-  border-radius: 1.5em;
   padding: 1em;
 }
 
 #add form textarea:focus {
-  outline: none;
+}
+
+#add form #label-for-name {
+  margin-top: 2em;
+  width: 100%;
+  justify-content: center;
+}
+
+#add form input[name='name'] {
+  width: 60%;
+  padding: 0.5em 1em;
 }
 
 #add form input[type='submit'] {

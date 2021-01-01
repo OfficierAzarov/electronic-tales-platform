@@ -9,3 +9,4 @@ export const GET_QUESTIONS = 'GET_QUESTIONS';
 export const REMOVE_QUESTION = 'REMOVE_QUESTION';
 export const SET_INITIAL_LOADING = 'SET_INITIAL_LOADING';
 export const GET_QUOTES = 'GET_QUOTES';
+export const ADD_QUOTE = 'ADD_QUOTE';

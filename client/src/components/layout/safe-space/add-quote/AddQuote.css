@@ -3,7 +3,7 @@
   background-image: url('../../../../resources//img/mocks/safe-space.jpg');
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 #safe-space-add-quote #actions-container {

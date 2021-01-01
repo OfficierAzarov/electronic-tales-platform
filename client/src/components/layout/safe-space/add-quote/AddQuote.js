@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Animated } from 'react-animated-css';
 import { useHistory } from 'react-router-dom';
 
@@ -9,6 +9,10 @@ import Add from '../../../elements/add/Add';
 
 const AddQuote = () => {
   const history = useHistory();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   return (
     <div id="safe-space-add-quote">
