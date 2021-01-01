@@ -10,9 +10,7 @@ import './Add.css';
 
 import { ReactComponent as GoBack } from '../../../resources/img/icons/left-arrow.svg';
 
-const Add = ({ addQuote, tellResult }) => {
-  const [isVisible, setIsVisible] = useState(true);
-
+const Add = ({ addQuote, tellResult, isVisible }) => {
   const history = useHistory();
 
   const [formData, setFormData] = useState({
@@ -32,17 +30,10 @@ const Add = ({ addQuote, tellResult }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     addQuote(formData).then(onSucces);
-    // TO DO : add a toaster or something to tell user their quote has been sent
-
-    // setTimeout(() => history.goBack(), 1000);
   };
 
   const onSucces = () => {
     tellResult('success');
-  };
-
-  const disappear = () => {
-    setIsVisible(false);
   };
 
   return (
