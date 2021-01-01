@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 import './AddQuote.css';
 
+import { ReactComponent as GoBack } from '../../../../resources/img/icons/left-arrow.svg';
 import Add from '../../../elements/add/Add';
 
 const AddQuote = () => {
@@ -18,12 +19,8 @@ const AddQuote = () => {
         isVisible={true}
       >
         <div id="actions-container">
-          <div
-            id="go-back"
-            className="mini-nav"
-            onClick={() => history.goBack()}
-          >
-            Go back
+          <div id="go-back" onClick={() => history.goBack()}>
+            <GoBack />
           </div>
         </div>
       </Animated>

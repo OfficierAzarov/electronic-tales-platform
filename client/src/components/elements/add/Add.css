@@ -26,6 +26,10 @@
   padding: 1em;
 }
 
+#add form textarea:focus {
+  outline: none;
+}
+
 #add form input[type='submit'] {
   margin-top: 2em;
   padding: 0.8em 1.2em;

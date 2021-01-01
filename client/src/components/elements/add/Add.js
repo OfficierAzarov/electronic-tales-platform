@@ -19,7 +19,7 @@ const Add = () => {
       <form onSubmit={handleSubmit}>
         <label>
           Tu veux partager une expérience ? <br /> Le mic est à toi !
-          <textarea value={value} onChange={handleChange} />
+          <textarea value={value} autoFocus="true" onChange={handleChange} />
         </label>
         <input type="submit" value="Partager" />
       </form>

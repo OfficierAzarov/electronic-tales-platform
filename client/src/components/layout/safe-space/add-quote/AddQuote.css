@@ -13,6 +13,16 @@
 
 #safe-space-add-quote #go-back {
   margin: 1em 0 0 1em;
+  background-color: #333333;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+}
+
+#safe-space-add-quote #go-back svg {
+  fill: #ffffff;
+  width: 1.5em;
+  height: 1.5em;
+  padding: 0;
 }
 
 #safe-space-add-quote #add-container {
