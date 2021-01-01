@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
@@ -11,10 +11,16 @@ import Quote from '../../../elements/quote/Quote';
 import MiniNav from '../../../elements/mini-nav/MiniNav';
 import Fab from '../../../elements/fab/Fab';
 
-const SafeSpaceQuotes = ({ quotes, getQuotes, delay }) => {
+const SafeSpaceQuotes = ({ quotes, getQuotes }) => {
+  const history = useHistory();
+
   useEffect(() => {
     getQuotes();
   });
+
+  const handleClick = () => {
+    setTimeout(() => history.push('/safe-space/add-quote'), 400);
+  };
 
   return (
     <div id="safe-space-quotes">
@@ -23,9 +29,9 @@ const SafeSpaceQuotes = ({ quotes, getQuotes, delay }) => {
         // index * x => just a stupid hack to make a delay of X ms for each quote
         <Quote quote={quote} delay={index * 200} key={quote.id} />
       ))}
-      <Link to="/safe-space/add-quote">
+      <div onClick={handleClick}>
         <Fab />
-      </Link>
+      </div>
     </div>
   );
 };

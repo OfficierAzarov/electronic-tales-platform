@@ -16,10 +16,10 @@ export const getQuotes = () => (dispatch) => {
   }
 };
 
-export const addQuote = (formData) => (dispatch) => {
+export const addQuote = (formData) => async (dispatch) => {
   try {
     // TO DO : replace by actual DB source, will be await
-    const res = 'a dumb response';
+    const res = await fetch('dumbFetch');
 
     dispatch({
       type: ADD_QUOTE,

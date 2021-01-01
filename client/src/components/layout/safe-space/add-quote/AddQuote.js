@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { Animated } from 'react-animated-css';
 import { useHistory } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './AddQuote.css';
 
-import { ReactComponent as GoBack } from '../../../../resources/img/icons/left-arrow.svg';
 import Add from '../../../elements/add/Add';
 
 const AddQuote = () => {
@@ -14,30 +14,40 @@ const AddQuote = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
+  const notify = (resultMessage) =>
+    toast.success(resultMessage, {
+      position: 'top-center',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      onClose: () => history.goBack(),
+    });
+
+  const handleResultFromChild = (actionResult) => {
+    if (actionResult === 'success') {
+    }
+    notify("C'est dans la boîte 🥡 Merci !");
+  };
+
   return (
     <div id="safe-space-add-quote">
-      <Animated
-        animationIn="bounceInLeft"
-        animationInDuration={600}
-        animationInDelay={400}
-        isVisible={true}
-      >
-        <div id="actions-container">
-          <div id="go-back" onClick={() => history.goBack()}>
-            <GoBack />
-          </div>
-        </div>
-      </Animated>
-      <Animated
-        animationIn="bounceInLeft"
-        animationInDuration={600}
-        animationInDelay={0}
-        isVisible={true}
-      >
-        <div id="add-container">
-          <Add />
-        </div>
-      </Animated>
+      <div>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+        <Add tellResult={handleResultFromChild} />
+      </div>
     </div>
   );
 };

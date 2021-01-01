@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Animated } from 'react-animated-css';
 import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
@@ -7,7 +8,11 @@ import { addQuote } from '../../../redux/actions/quote';
 
 import './Add.css';
 
-const Add = ({ addQuote }) => {
+import { ReactComponent as GoBack } from '../../../resources/img/icons/left-arrow.svg';
+
+const Add = ({ addQuote, tellResult }) => {
+  const [isVisible, setIsVisible] = useState(true);
+
   const history = useHistory();
 
   const [formData, setFormData] = useState({
@@ -26,35 +31,70 @@ const Add = ({ addQuote }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addQuote(formData);
+    addQuote(formData).then(onSucces);
     // TO DO : add a toaster or something to tell user their quote has been sent
-    history.goBack();
+
+    // setTimeout(() => history.goBack(), 1000);
+  };
+
+  const onSucces = () => {
+    tellResult('success');
+  };
+
+  const disappear = () => {
+    setIsVisible(false);
   };
 
   return (
-    <div id="add">
-      <form onSubmit={handleSubmit}>
-        <label id="label-for-quote" htmlFor="quote">
-          Tu veux partager une expérience ? <br /> Le mic est à toi !
-          <textarea
-            name="quote"
-            value={quote}
-            onChange={handleChange}
-            placeholder="Il était une fois..."
-            required
-          />
-        </label>
-        <label id="label-for-name" htmlFor="name">
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={handleChange}
-            placeholder="Ton nom préferé"
-          />
-        </label>
-        <input type="submit" value="Partager" className="basic-button" />
-      </form>
+    <div id="add-container">
+      <Animated
+        animationIn="bounceInLeft"
+        animationOut="bounceOutLeft"
+        animationInDelay={200}
+        animationInDuration={600}
+        animationOutDelay={300}
+        isVisible={isVisible}
+        className="flex-start"
+      >
+        <div id="actions-container">
+          <div id="go-back" onClick={() => history.goBack()}>
+            <GoBack />
+          </div>
+        </div>
+      </Animated>
+      <Animated
+        animationIn="bounceInLeft"
+        animationOut="bounceOutLeft"
+        animationInDuration={600}
+        animationInDelay={0}
+        isVisible={isVisible}
+        className="flex"
+      >
+        <div id="add-form-container">
+          <form onSubmit={handleSubmit}>
+            <label id="label-for-quote" htmlFor="quote">
+              Tu veux partager une expérience ? <br /> Le mic est à toi !
+              <textarea
+                name="quote"
+                value={quote}
+                onChange={handleChange}
+                placeholder="Il était une fois..."
+                required
+              />
+            </label>
+            <label id="label-for-name" htmlFor="name">
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={handleChange}
+                placeholder="Ton nom préferé"
+              />
+            </label>
+            <input type="submit" value="Partager" className="basic-button" />
+          </form>
+        </div>
+      </Animated>
     </div>
   );
 };

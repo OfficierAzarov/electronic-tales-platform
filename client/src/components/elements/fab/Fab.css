@@ -17,37 +17,8 @@
 }
 
 .fab.rotating {
-  animation: rotate 1s ease;
+  animation: rotate 0.6s ease;
 }
-
-/* .fab.moving {
-  animation: move 1s ease;
-}
-
-.fab.disappearing {
-  animation: disappear 1s ease;
-  animation-fill-mode: forwards;
-} */
-
-/* @keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes move {
-  0% {
-    bottom: 12vh;
-    left: 47vh;
-  }
-  100% {
-    bottom: 17vh;
-    left: 10vh;
-  }
-} */
 
 @keyframes rotate {
   0% {

@@ -1,36 +1,64 @@
-#add {
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 3em 2em;
-  border-radius: 2em;
-  width: 75%;
-}
-
-#add form {
+#add-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#add form textarea,
-#add form input {
+#add-container .flex-start {
+  align-self: flex-start;
+}
+
+#add-container #actions-container {
+  margin-bottom: 0.5em;
+}
+
+#add-container #go-back {
+  margin: 1em 0 0 1em;
+  background-color: #333333;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+}
+
+#add-container #go-back svg {
+  fill: #ffffff;
+  width: 1em;
+  height: 1em;
+  padding: 0;
+}
+
+#add-form-container {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 2.5em 2em;
+  border-radius: 2em;
+  width: 80%;
+}
+
+#add-form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#add-form-container form textarea,
+#add-form-container form input {
   border-radius: 1.5em;
 }
 
-#add form textarea:focus,
-#add form input:focus {
+#add-form-container form textarea:focus,
+#add-form-container form input:focus {
   outline: none;
 }
 
-#add form label {
+#add-form-container form label {
   display: flex;
 }
 
-#add #label-for-quote {
+#add-form-container #label-for-quote {
   flex-direction: column;
   text-align: center;
 }
 
-#add form textarea {
+#add-form-container form textarea {
   width: 16em;
   height: 10em;
   align-self: center;
@@ -38,21 +66,18 @@
   padding: 1em;
 }
 
-#add form textarea:focus {
-}
-
-#add form #label-for-name {
+#add-form-container form #label-for-name {
   margin-top: 2em;
   width: 100%;
   justify-content: center;
 }
 
-#add form input[name='name'] {
+#add-form-container form input[name='name'] {
   width: 60%;
   padding: 0.5em 1em;
 }
 
-#add form input[type='submit'] {
+#add-form-container form input[type='submit'] {
   margin-top: 2em;
   padding: 0.8em 1.2em;
   border-radius: 2em;
