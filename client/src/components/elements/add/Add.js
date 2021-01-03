@@ -10,7 +10,7 @@ import './Add.css';
 
 import { ReactComponent as GoBack } from '../../../resources/img/icons/left-arrow.svg';
 
-const Add = ({ addQuote, tellResult, isVisible }) => {
+const Add = ({ addQuote, tellResult, isVisible, tellVisibilityChange }) => {
   const history = useHistory();
 
   const [formData, setFormData] = useState({
@@ -48,7 +48,13 @@ const Add = ({ addQuote, tellResult, isVisible }) => {
         className="flex-start"
       >
         <div id="actions-container">
-          <div id="go-back" onClick={() => history.goBack()}>
+          <div
+            id="go-back"
+            onClick={() => {
+              tellVisibilityChange(false);
+              setTimeout(() => history.goBack(), 600);
+            }}
+          >
             <GoBack />
           </div>
         </div>

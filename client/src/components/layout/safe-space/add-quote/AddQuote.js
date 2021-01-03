@@ -18,8 +18,16 @@ const AddQuote = () => {
 
   const handleResultFromChild = (actionResult) => {
     if (actionResult === 'success') {
+      notify("C'est dans la boîte 🥡 Merci !");
+    } else {
+      notify(
+        "Oops, il y a un grumeau dans les tuyaux ! On prévient les devs d'Electronic Tales tout de suite !"
+      );
     }
-    notify("C'est dans la boîte 🥡 Merci !");
+  };
+
+  const handleVisibilityChangeFromChild = (isVisibleFromChild) => {
+    setIsFormVisible(isVisibleFromChild);
   };
 
   const notify = (resultMessage) =>
@@ -51,7 +59,11 @@ const AddQuote = () => {
           draggable
           pauseOnHover
         />
-        <Add isVisible={isFormVisible} tellResult={handleResultFromChild} />
+        <Add
+          isVisible={isFormVisible}
+          tellResult={handleResultFromChild}
+          tellVisibilityChange={handleVisibilityChangeFromChild}
+        />
       </div>
     </div>
   );
