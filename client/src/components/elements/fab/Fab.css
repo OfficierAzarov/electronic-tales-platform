@@ -2,9 +2,8 @@
   opacity: 0.9;
   position: fixed;
   bottom: 12vh;
-  left: 47vh;
+  right: 5vw;
   cursor: pointer;
-  /* display: none; */
 }
 
 .fab svg {
