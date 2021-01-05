@@ -1,0 +1,103 @@
+.st0 {
+  fill: #3f3f3e;
+}
+
+.st1 {
+  fill: #f2c54a;
+}
+
+.st2 {
+  fill: #4aedf3;
+}
+
+.st3 {
+  fill: #f27849;
+}
+
+.st4 {
+  fill: #49e8ee;
+}
+
+.st5 {
+  fill: #ee7749;
+}
+
+.st6 {
+  fill: #8cd16e;
+}
+
+.st7 {
+  fill: #403f3e;
+}
+
+.st8 {
+  fill: #1a1714;
+}
+
+.st9 {
+  fill: #1e1915;
+}
+
+.st10 {
+  fill: #181614;
+}
+
+.st11 {
+  fill: #211c1d;
+}
+
+.st12 {
+  fill: #161b16;
+}
+
+.st13 {
+  fill: #8fd870;
+}
+
+.st14 {
+  fill: #d68398;
+}
+
+.st15 {
+  fill: #241e1f;
+}
+
+.st16 {
+  fill: #d08094;
+}
+
+.st17 {
+  /* display: none; */
+}
+
+.st18 {
+  display: inline;
+  fill: #8fd870;
+}
+
+.st19 {
+  display: inline;
+  fill: #161b16;
+}
+
+.st20 {
+  display: inline;
+  fill: #211c1d;
+}
+
+#pink {
+  cursor: pointer;
+}
+
+.svg-visible {
+  display: block;
+  /* opacity: 1; */
+  /* transition: opacity 1s; */
+  /* transform: scale(1, 1); */
+}
+
+.svg-not-visible {
+  display: none;
+  /* opacity: 0; */
+  /* transition: opacity 0.5s; */
+}

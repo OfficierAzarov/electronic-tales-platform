@@ -10,6 +10,7 @@ import Article from '../elements/article/Article';
 import Swipe from '../elements/swipe/Swipe';
 import SafeSpaceChat from '../layout/safe-space/chat/SafeSpaceChat';
 import AddQuote from '../layout/safe-space/add-quote/AddQuote';
+import InteractiveImage from '../interactive-images/InteractiveImage';
 
 const Routes = () => {
   return (
@@ -24,6 +25,7 @@ const Routes = () => {
         <Route exact path="/safe-space/add-quote" component={AddQuote}></Route>
         <Route exact path="/safe-space/chat" component={SafeSpaceChat}></Route>
         <Route exact path="/imaginarium" component={Imaginarium}></Route>
+        <Route exact path="/roadmap" component={InteractiveImage}></Route>
         <Route exact path="/modern-world" component={ModernWorld}></Route>
         <Route
           exact
