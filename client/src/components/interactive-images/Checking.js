@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import './Checking.css';
 
@@ -8,6 +9,7 @@ const Checking = ({ handleClick, isVisible }) => {
       id="checking"
       className={isVisible ? 'svg-visible' : 'svg-not-visible'}
     >
+      <button onClick={() => handleClick('dirtyRoadmap')}>Go back</button>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         x="0"
