@@ -8,16 +8,15 @@ import './ReadingTime.css';
 const ReadingTime = ({ articleContent }) => {
   const readingTime = require('reading-time');
 
-  const [stats, setStats] = useState(0);
-  const [funnyThing, setFunnyThing] = useState([]);
+  // const [stats, setStats] = useState(0);
+  // const [funnyThing, setFunnyThing] = useState([]);
 
-  useEffect(() => {
-    console.log(articleContent);
-    if (articleContent && articleContent != undefined) {
-      setStats(readingTime(articleContent));
-      setFunnyThing(randomlyPickAFunnyThing(funnyThingsList));
-    }
-  }, [articleContent]);
+  // useEffect(() => {
+  //   // if (articleContent && articleContent != undefined && articleContent != '') {
+  //   setStats(readingTime(articleContent));
+  //   setFunnyThing(randomlyPickAFunnyThing(funnyThingsList));
+  //   // }
+  // }, []);
 
   const funnyThingsList = [
     {
@@ -50,36 +49,37 @@ const ReadingTime = ({ articleContent }) => {
     },
   ];
 
-  const convertTimeToFunActions = (readingTime, funThing) => {
-    const percentageOfTheFunActionDuration =
-      (readingTime / funThing.timeToConsumeTheFunThingInMinutes).toFixed(1) * 100;
+  // const convertTimeToFunActions = (readingTime, funThing) => {
+  //   const percentageOfTheFunActionDuration =
+  //     (readingTime / funThing.timeToConsumeTheFunThingInMinutes).toFixed(1) * 100;
 
-    return `
-      ${funThing.consumingAction} ${percentageOfTheFunActionDuration} % 
-      d'${funThing.gender === 'feminin' ? 'une' : 'un'} ${funThing.emoji}`;
-  };
+  //   return `
+  //     ${funThing.consumingAction} ${percentageOfTheFunActionDuration} %
+  //     d'${funThing.gender === 'feminin' ? 'une' : 'un'} ${funThing.emoji}`;
+  // };
 
   const randomlyPickAFunnyThing = (funnyThings) => {
-    const randomInteger = getRandomIntegerFromAGivenRange(0, funnyThings.length);
+    const randomInteger = getRandomIntegerFromAGivenRange(0, funnyThings.length - 1);
     return funnyThings[randomInteger];
   };
 
-  return (
-    <div id="reading-time">
-      <Fragment>
-        🕑 Lecture : {stats.minutes} minutes, <br />
-        soit le temps de {convertTimeToFunActions(stats.minutes, funnyThing)}.
-      </Fragment>
-    </div>
-  );
+  const generateReadingTimeSentence = () => {
+    const stats = readingTime(articleContent);
+    const funnyThing = randomlyPickAFunnyThing(funnyThingsList);
+    console.log(funnyThing);
+    const percentageOfTheFunActionDuration =
+      (stats.minutes / funnyThing.timeToConsumeTheFunThingInMinutes).toFixed(1) * 100;
+
+    return `🕑 Lecture : ${stats.minutes} minutes,
+        soit le temps de ${funnyThing.consumingAction} ${percentageOfTheFunActionDuration} % 
+        d'${funnyThing.gender === 'feminin' ? 'une' : 'un'} ${funnyThing.emoji}`;
+  };
+
+  return <div id="reading-time">{generateReadingTimeSentence()}</div>;
 };
 
 ReadingTime.propTypes = {
   articleContent: PropTypes.string.isRequired,
 };
-
-// const mapStateToProps = (state) => ({
-//   articleContent: state.article.currentArticle.content,
-// });
 
 export default ReadingTime;

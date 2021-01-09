@@ -1,7 +1,15 @@
 import { SET_CURRENT_ARTICLE } from '../actions/types';
 
 const initialState = {
-  currentArticle: {},
+  currentArticle: {
+    id: '',
+    title: '',
+    slug: '',
+    content: '',
+    richLinks: [],
+    thumbnail: '',
+    category: '',
+  },
 };
 
 export default function (state = initialState, action) {
