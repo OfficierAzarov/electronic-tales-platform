@@ -1,51 +1,85 @@
 import React, { useState, useEffect, Fragment } from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { getRandomIntegerFromAGivenRange } from '../../../utils/maths/maths';
+
+import './ReadingTime.css';
 
 const ReadingTime = ({ articleContent }) => {
   const readingTime = require('reading-time');
 
-  const [stats, setStats] = useState(null);
-
-  const convertTimeToFunThings = (
-    time,
-    funThing,
-    timeToConsumeTheFunThingInMinutes
-  ) => {
-    const timeEquivalent = (time / timeToConsumeTheFunThingInMinutes).toFixed(
-      1
-    );
-    return `${timeEquivalent} ${getTheRightEmoji(funThing)}`;
-  };
-
-  const getTheRightEmoji = (funThing) => {
-    switch (funThing) {
-      case 'burger':
-        return '🍔';
-    }
-  };
+  const [stats, setStats] = useState(0);
+  const [funnyThing, setFunnyThing] = useState([]);
 
   useEffect(() => {
     console.log(articleContent);
     if (articleContent && articleContent != undefined) {
       setStats(readingTime(articleContent));
+      setFunnyThing(randomlyPickAFunnyThing(funnyThingsList));
     }
-    console.log(stats);
   }, [articleContent]);
 
+  const funnyThingsList = [
+    {
+      consumingAction: 'croquer',
+      gender: 'masculin',
+      name: 'burger',
+      emoji: '🍔',
+      timeToConsumeTheFunThingInMinutes: 5,
+    },
+    {
+      consumingAction: 'siroter',
+      name: 'café',
+      emoji: '☕',
+      gender: 'masculin',
+      timeToConsumeTheFunThingInMinutes: 1,
+    },
+    {
+      consumingAction: 'glouper',
+      name: 'doughnut',
+      emoji: '🍩',
+      gender: 'masculin',
+      timeToConsumeTheFunThingInMinutes: 2,
+    },
+    {
+      consumingAction: 'crisper',
+      name: 'frites',
+      emoji: '🍟',
+      gender: 'feminin',
+      timeToConsumeTheFunThingInMinutes: 2,
+    },
+  ];
+
+  const convertTimeToFunActions = (readingTime, funThing) => {
+    const percentageOfTheFunActionDuration =
+      (readingTime / funThing.timeToConsumeTheFunThingInMinutes).toFixed(1) * 100;
+
+    return `
+      ${funThing.consumingAction} ${percentageOfTheFunActionDuration} % 
+      d'${funThing.gender === 'feminin' ? 'une' : 'un'} ${funThing.emoji}`;
+  };
+
+  const randomlyPickAFunnyThing = (funnyThings) => {
+    const randomInteger = getRandomIntegerFromAGivenRange(0, funnyThings.length);
+    return funnyThings[randomInteger];
+  };
+
   return (
-    <Fragment>
-      {stats && stats !== undefined ? (
-        <Fragment>
-          Temps de lecture : {stats.minutes} minutes, soit{' '}
-          {convertTimeToFunThings(stats.minutes, 'burger', 5)}
-        </Fragment>
-      ) : null}
-    </Fragment>
+    <div id="reading-time">
+      <Fragment>
+        🕑 Lecture : {stats.minutes} minutes, <br />
+        soit le temps de {convertTimeToFunActions(stats.minutes, funnyThing)}.
+      </Fragment>
+    </div>
   );
 };
 
-// ReadingTime.propTypes = {
-//   articleContent: PropTypes.object.isRequired,
-// };
+ReadingTime.propTypes = {
+  articleContent: PropTypes.string.isRequired,
+};
+
+// const mapStateToProps = (state) => ({
+//   articleContent: state.article.currentArticle.content,
+// });
 
 export default ReadingTime;
