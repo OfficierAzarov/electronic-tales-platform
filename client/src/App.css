@@ -1,3 +1,26 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #121212;
+  color: #e9e9e9;
+  font-family: 'Raleway', sans-serif;
+}
+
+h2, 
+h3 {
+  font-family: 'Dosis', sans-serif;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: #e9e9e9;
+}
+
 section {
   padding-bottom: 4em;
 }
@@ -5,11 +28,6 @@ section {
 button {
   border: none;
   outline: none;
-}
-
-a {
-  text-decoration: none;
-  color: #e9e9e9;
 }
 
 .basic-button {
@@ -27,7 +45,8 @@ a {
   align-items: center;
 }
 
-.image-card {
-  background-color: #888888;
-  border-radius: 2em;
+/*============= LAYOUT =============*/
+
+.container {
+  margin: 0 1rem;
 }
