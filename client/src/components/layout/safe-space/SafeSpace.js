@@ -4,13 +4,6 @@ import { Link } from 'react-router-dom';
 
 import './SafeSpace.css';
 
-// import MiniNav from '../../elements/mini-nav/MiniNav';
-
-// import SafeSpaceQuotes from './quotes/SafeSpaceQuotes';
-// import SafeSpaceChat from './chat/SafeSpaceChat';
-// import AddQuote from './add-quote/AddQuote';
-// import Fab from '../../elements/fab/Fab';
-
 const SafeSpace = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
