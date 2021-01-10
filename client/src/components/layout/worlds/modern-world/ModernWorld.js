@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
+import Emoji from 'a11y-react-emoji';
 
 import './ModernWorld.css';
 import CardHub from '../../../elements/cards-hub/CardsHub';
@@ -26,7 +27,7 @@ const ModernWorld = ({ categories, getCategories }) => {
         <div className="card-content">
           <img src={Hands} alt="Some hands swiping" loading="lazy" className="card-img" />
           <Link to="/modern-world/swipe" className="card-cta">
-            Let's go for a swipe! 🔥
+            Let's go for a swipe <Emoji symbol="🔥" label="tinder fire" />
           </Link>
         </div>
       </div>

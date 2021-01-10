@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import Emoji from 'a11y-react-emoji';
 import { getRandomIntegerFromAGivenRange } from '../../../utils/maths/maths';
 
 import './ReadingTime.css';
@@ -49,9 +50,16 @@ const ReadingTime = ({ articleContent }) => {
     const percentageOfTheFunActionDuration =
       (stats.minutes / funnyThing.timeToConsumeTheFunThingInMinutes).toFixed(1) * 100;
 
-    return `🕑 Lecture : ${stats.minutes} minutes,
-        soit le temps de ${funnyThing.consumingAction} ${percentageOfTheFunActionDuration} % 
-        d'${funnyThing.gender === 'feminin' ? 'une' : 'un'} ${funnyThing.emoji}.`;
+    return (
+      <Fragment>
+        <p>
+          <Emoji symbol="🕑" label="clock" /> Lecture&nbsp;: {stats.minutes} minutes, <br /> soit le
+          temps de {funnyThing.consumingAction} {percentageOfTheFunActionDuration} % d'
+          {funnyThing.gender === 'feminin' ? 'une' : 'un '}{' '}
+          <Emoji symbol={funnyThing.emoji} label={funnyThing.name} />
+        </p>
+      </Fragment>
+    );
   };
 
   return <div id="reading-time">{generateReadingTimeSentence()}</div>;

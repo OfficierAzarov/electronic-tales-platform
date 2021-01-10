@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "a11y-react-emoji": "^1.1.2",
     "animate.css": "^3.7.2",
     "dompurify": "^2.1.1",
     "markdown-to-jsx": "^7.0.1",
