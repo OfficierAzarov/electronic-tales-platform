@@ -7,12 +7,12 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Box sizing rules */
+/* Box sizing rules
 *,
 *::before,
 *::after {
 box-sizing: border-box;
-}
+} */
 
 /* Remove focus for mouse users */
 :focus:not(:focus-visible) {
