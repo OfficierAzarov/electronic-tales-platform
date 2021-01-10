@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-section {
-  overflow: scroll;
-  height: 90vh;
-  padding-bottom: 10vh;
-}
-
-#phantom {
-  height: 10vh;
-||||||| ed960cf
-section {
-  padding-bottom: 4em;
-=======
 html,
 body {
   margin: 0;
   padding: 0;
->>>>>>> f8264c8ab7ddb1756d4ae5cd016bf153bc286c72
 }
 
 body {
@@ -24,7 +10,7 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
-h2, 
+h2,
 h3 {
   font-family: 'Dosis', sans-serif;
   text-transform: uppercase;
