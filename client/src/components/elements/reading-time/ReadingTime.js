@@ -44,6 +44,11 @@ const ReadingTime = ({ articleContent }) => {
     return funnyThings[randomInteger];
   };
 
+  const displayTimeInAReadableWay = (readingTime) => {
+    if (readingTime < 1) return `moins d'une minute`;
+    return `${readingTime} minutes`;
+  };
+
   const generateReadingTimeSentence = () => {
     const stats = readingTime(articleContent);
     const funnyThing = randomlyPickAFunnyThing(funnyThingsList);
@@ -53,8 +58,9 @@ const ReadingTime = ({ articleContent }) => {
     return (
       <Fragment>
         <p>
-          <Emoji symbol="🕑" label="clock" /> Lecture&nbsp;: {stats.minutes} minutes, <br /> soit le
-          temps de {funnyThing.consumingAction} {percentageOfTheFunActionDuration} % d'
+          <Emoji symbol="🕑" label="clock" /> Lecture&nbsp;:{' '}
+          {displayTimeInAReadableWay(stats.minutes)}, <br /> soit le temps de{' '}
+          {funnyThing.consumingAction} {percentageOfTheFunActionDuration} % d'
           {funnyThing.gender === 'feminin' ? 'une' : 'un '}{' '}
           <Emoji symbol={funnyThing.emoji} label={funnyThing.name} />
         </p>

@@ -11,28 +11,22 @@ import Swipe from '../elements/swipe/Swipe';
 import SafeSpaceChat from '../layout/safe-space/chat/SafeSpaceChat';
 import AddQuote from '../layout/safe-space/add-quote/AddQuote';
 import InteractiveImage from '../interactive-images/InteractiveImage';
+import SwipeAddQuestion from '../elements/swipe/swipe-add-question/SwipeAddQuestion';
 
 const Routes = () => {
   return (
     <section>
       <Switch>
         <Route exact path="/safe-space" component={SafeSpace}></Route>
-        <Route
-          exact
-          path="/safe-space/quotes"
-          component={SafeSpaceQuotes}
-        ></Route>
+        <Route exact path="/safe-space/quotes" component={SafeSpaceQuotes}></Route>
         <Route exact path="/safe-space/add-quote" component={AddQuote}></Route>
         <Route exact path="/safe-space/chat" component={SafeSpaceChat}></Route>
         <Route exact path="/imaginarium" component={Imaginarium}></Route>
         <Route exact path="/roadmap" component={InteractiveImage}></Route>
         <Route exact path="/modern-world" component={ModernWorld}></Route>
-        <Route
-          exact
-          path="/modern-world/articles/:type/:slug"
-          component={Article}
-        ></Route>
+        <Route exact path="/modern-world/articles/:type/:slug" component={Article}></Route>
         <Route exact path="/modern-world/swipe" component={Swipe}></Route>
+        <Route exact path="/modern-world/swipe/add-question" component={SwipeAddQuestion}></Route>
         <Route exact path="/ancient-world" component={AncientWorld}></Route>
       </Switch>
     </section>

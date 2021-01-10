@@ -1,7 +1,7 @@
-#safe-space-add-quote {
-  /* min-height: 90vh;
+#form-page {
+  min-height: 90vh;
   background-image: url('../../../../resources//img/mocks/safe-space.jpg');
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; */
+  justify-content: flex-start;
 }

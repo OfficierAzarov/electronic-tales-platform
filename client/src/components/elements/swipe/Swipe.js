@@ -3,19 +3,12 @@ import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import TinderCard from 'react-tinder-card';
 
-import {
-  getQuestions,
-  removeAQuestion,
-  setInitialLoading,
-} from '../../../redux/actions/question';
+import { getQuestions, removeAQuestion, setInitialLoading } from '../../../redux/actions/question';
 
 import './Swipe.css';
 import ghost from '../../../resources/img/icons/ghost.png';
 import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../utils/urls/urls';
-import {
-  computeLeft,
-  computeWidth,
-} from '../../../utils/display/centerSomething';
+import { computeLeft, computeWidth } from '../../../utils/display/centerSomething';
 
 export const Swipe = ({
   getQuestions,
@@ -33,6 +26,10 @@ export const Swipe = ({
     }
   }, []);
 
+  const handleClick = () => {
+    setTimeout(() => history.push('/modern-world/swipe/add-question'), 400);
+  };
+
   const cardRefs = Array(questions.length)
     .fill(0)
     .map((emptyElement) => React.createRef());
@@ -48,9 +45,7 @@ export const Swipe = ({
   const onCardLeftScreen = (direction, questionToRemove) => {
     removeAQuestion(questionToRemove);
     if (direction === 'right')
-      history.push(
-        `/modern-world/articles/swipe-answer/${questionToRemove.answer.slug}`
-      );
+      history.push(`/modern-world/articles/swipe-answer/${questionToRemove.answer.slug}`);
   };
 
   return (
@@ -69,9 +64,7 @@ export const Swipe = ({
             >
               <div className="swipe-card-content">
                 <h2>{question.questionText}</h2>
-                <img
-                  src={`../${IMAGES_URL}/${ICONS_IMAGES_URL}/${question.thumbnail}`}
-                />
+                <img src={`../${IMAGES_URL}/${ICONS_IMAGES_URL}/${question.thumbnail}`} />
               </div>
             </TinderCard>
           ))}
@@ -108,7 +101,7 @@ export const Swipe = ({
           <button className="basic-button" onClick={() => history.goBack()}>
             Go back
           </button>
-          <button id="suggest-a-question" className="basic-button">
+          <button id="suggest-a-question" className="basic-button" onClick={handleClick}>
             Suggest
             <br /> a&nbsp;new question
           </button>

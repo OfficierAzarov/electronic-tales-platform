@@ -67,3 +67,62 @@ button {
 .active svg {
   fill: pink;
 }
+
+/* Eli's adds */
+
+.form-container {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 2.5em 2em;
+  border-radius: 2em;
+  width: 80%;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container form textarea,
+.form-container form input {
+  border-radius: 1.5em;
+}
+
+.form-container form textarea:focus,
+.form-container form input:focus {
+  outline: none;
+}
+
+.form-container form label {
+  display: flex;
+}
+
+.form-container .label-for-quote {
+  flex-direction: column;
+  text-align: center;
+}
+
+.form-container form textarea {
+  width: 16em;
+  height: 10em;
+  align-self: center;
+  margin: 2em 0 0 0;
+  padding: 1em;
+}
+
+.form-container form .label-for-name {
+  margin-top: 2em;
+  width: 100%;
+  justify-content: center;
+}
+
+.form-container form input[name='name'] {
+  width: 60%;
+  padding: 0.5em 1em;
+}
+
+.form-container form input[type='submit'] {
+  margin-top: 2em;
+  padding: 0.8em 1.2em;
+  border-radius: 2em;
+}
