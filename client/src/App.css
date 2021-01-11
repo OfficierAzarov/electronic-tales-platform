@@ -201,6 +201,11 @@ button {
   background-color: #ff4093;
 }
 
+.form-container .react-toggle-track,
+.form-container .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+  background-color: #444444;
+}
+
 .form-container
   .custom-toggle.react-toggle--checked:hover:not(.react-toggle--disabled)
   .react-toggle-track {
