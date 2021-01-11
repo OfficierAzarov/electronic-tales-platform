@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { sanitizeWithExceptionsForVideos } from '../../../../utils/data-processing/sanitize';
+import { sanitizeWithExceptionsForVideos } from '../../../../../utils/data-processing/sanitize';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
@@ -34,7 +34,7 @@ const AddTLTAQuestion = ({ tellResult }) => {
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         <label className="label-for-quote" htmlFor="question">
-          Tu as un too late to ask à partager ?
+          Tu as un too late to ask à partager&nbsp;?
           <textarea
             name="question"
             value={question}
@@ -53,7 +53,8 @@ const AddTLTAQuestion = ({ tellResult }) => {
             required
           />
         </label>
-        <label className="label-for-name" htmlFor="name">
+        <label htmlFor="name">
+          Ton nom ?
           <input
             type="text"
             name="name"

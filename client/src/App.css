@@ -160,30 +160,22 @@ button {
 
 .form-container form label {
   display: flex;
-}
-
-.form-container .label-for-quote {
   flex-direction: column;
   text-align: center;
+  margin: 1em 0;
 }
 
 .form-container form textarea {
   width: 16em;
   height: 10em;
   align-self: center;
-  margin: 2em 0 0 0;
   padding: 1em;
+  margin-top: 1em;
 }
 
-.form-container form .label-for-name {
-  margin-top: 2em;
-  width: 100%;
-  justify-content: center;
-}
-
-.form-container form input[name='name'] {
-  width: 60%;
+.form-container form input {
   padding: 0.5em 1em;
+  margin-top: 1em;
 }
 
 .form-container form input[type='submit'] {

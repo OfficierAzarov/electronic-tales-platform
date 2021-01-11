@@ -5,7 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import './FormPage.css';
 
-import FormWrapper from '../../form/form-wrapper/FormWrapper';
+import FormWrapper from '../form-wrapper/FormWrapper';
 
 const FormPage = ({ children, tellResult }) => {
   const [isFormVisible, setIsFormVisible] = useState(true);

@@ -5,7 +5,7 @@ import { PropTypes } from 'prop-types';
 
 import './FormWrapper.css';
 
-import { ReactComponent as GoBack } from '../../../../resources/img/icons/left-arrow.svg';
+import { ReactComponent as GoBack } from '../../../../../resources/img/icons/left-arrow.svg';
 
 const Add = ({ children, isVisible, tellVisibilityChange }) => {
   const history = useHistory();

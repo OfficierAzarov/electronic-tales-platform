@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { sanitizeWithExceptionsForVideos } from '../../../../utils/data-processing/sanitize';
+import { sanitizeWithExceptionsForVideos } from '../../../../../utils/data-processing/sanitize';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
-import { addQuote } from '../../../../redux/actions/quote';
+import { addQuote } from '../../../../../redux/actions/quote';
 
 const AddQuoteForm = ({ addQuote, tellResult }) => {
   const [formData, setFormData] = useState({
