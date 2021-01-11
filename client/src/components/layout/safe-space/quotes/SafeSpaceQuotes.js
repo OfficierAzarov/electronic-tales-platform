@@ -27,7 +27,7 @@ const SafeSpaceQuotes = ({ quotes, getQuotes }) => {
       <MiniNav isVisible={true} />
       {quotes.map((quote, index) => (
         // index * x => just a stupid hack to make a delay of X ms for each quote
-        <Quote quote={quote} delay={index * 200} key={quote.id} />
+        <Quote quote={quote} key={quote.id} delay={index * 200} />
       ))}
       <div onClick={handleClick}>
         <Fab />

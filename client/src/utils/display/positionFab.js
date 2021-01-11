@@ -4,7 +4,6 @@ export const computeTop = (componentHeight) => {
 };
 
 export const computeLeft = () => {
-  console.log(window.innerWidth);
   const left = window.innerWidth * 0.82;
   return left;
 };

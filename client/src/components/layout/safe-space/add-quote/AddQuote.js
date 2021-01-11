@@ -13,23 +13,6 @@ const AddQuote = () => {
     <FormPage>
       <AddQuoteForm />
     </FormPage>
-
-    // <div id="safe-space-add-quote">
-    //   <ToastContainer
-    //     position="top-center"
-    //     autoClose={5000}
-    //     hideProgressBar={false}
-    //     newestOnTop={false}
-    //     closeOnClick
-    //     rtl={false}
-    //     pauseOnFocusLoss
-    //     draggable
-    //     pauseOnHover
-    //   />
-    //   <FormWrapper isVisible={isFormVisible} tellVisibilityChange={handleVisibilityChangeFromChild}>
-    //     <AddQuoteForm tellResult={handleResultFromChild} />
-    //   </FormWrapper>
-    // </div>
   );
 };
 

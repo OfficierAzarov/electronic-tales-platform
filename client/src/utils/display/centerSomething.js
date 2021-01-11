@@ -5,9 +5,7 @@ export const computeWidth = (wantedHTMLElementProportion) => {
 };
 
 export const computeLeft = (wantedHTMLElementProportion) => {
-  console.log('inside computeLeft');
   const windowWidth = window.innerWidth;
-  const left =
-    windowWidth / 2 - (windowWidth * wantedHTMLElementProportion) / 2;
+  const left = windowWidth / 2 - (windowWidth * wantedHTMLElementProportion) / 2;
   return left;
 };

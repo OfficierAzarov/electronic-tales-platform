@@ -14,9 +14,7 @@ const Fab = ({ isVisible, delay }) => {
   }, []);
 
   const handleClick = () => {
-    console.log('always');
     if (!hasBeenClicked) {
-      console.log('only when not clicked yet');
       setIsRotating(true);
       setHasBeenClicked(true);
     }
@@ -25,10 +23,7 @@ const Fab = ({ isVisible, delay }) => {
   const terminate = () => {};
 
   return (
-    <div
-      className={`fab ${isRotating ? 'rotating' : ''}`}
-      onClick={() => handleClick()}
-    >
+    <div className={`fab ${isRotating ? 'rotating' : ''}`} onClick={() => handleClick()}>
       <Animated
         animationIn="bounceInUp"
         animationOut="fadeOut"
