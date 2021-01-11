@@ -28,7 +28,6 @@ const HomeNavbar = () => {
         duration={500}
       >
         <ModernWorldIcon />
-        {/* <img src={modernWorld} alt="modern world icon" /> */}
       </ScrollLink>
       <ScrollLink
         activeClass="active-navbar-icon"
@@ -38,7 +37,6 @@ const HomeNavbar = () => {
         duration={500}
       >
         <ImaginariumIcon />
-        {/* <img src={imaginarium} alt="imaginarium" /> */}
       </ScrollLink>
       <ScrollLink
         activeClass="active-navbar-icon"
@@ -48,7 +46,6 @@ const HomeNavbar = () => {
         duration={500}
       >
         <AncientWorldIcon />
-        {/* <img src={ancientWorld} alt="ancient world icon" /> */}
       </ScrollLink>
     </Fragment>
   );
