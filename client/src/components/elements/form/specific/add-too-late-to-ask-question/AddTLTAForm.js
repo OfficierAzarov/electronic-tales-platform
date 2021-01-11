@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { sanitizeWithExceptionsForVideos } from '../../../../../utils/data-processing/sanitize';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
+import Toggle from 'react-toggle';
+import 'react-toggle/style.css';
+import Emoji from 'a11y-react-emoji';
 
 const AddTLTAQuestion = ({ tellResult }) => {
   const [formData, setFormData] = useState({
@@ -9,6 +12,8 @@ const AddTLTAQuestion = ({ tellResult }) => {
     question: '',
     answer: '',
   });
+
+  const [iHaveAnswer, setIHaveAnswer] = useState(false);
 
   const { name, question, answer } = formData;
 
@@ -30,11 +35,15 @@ const AddTLTAQuestion = ({ tellResult }) => {
     tellResult('success');
   };
 
+  const handleIHaveAnswerChange = () => {
+    setIHaveAnswer(!iHaveAnswer);
+  };
+
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
-        <label className="label-for-quote" htmlFor="question">
-          Tu as un too late to ask à partager&nbsp;?
+        <label htmlFor="question">
+          Un too late to ask à partager&nbsp;?
           <textarea
             name="question"
             value={question}
@@ -43,13 +52,26 @@ const AddTLTAQuestion = ({ tellResult }) => {
             required
           />
         </label>
-        <label className="label-for-quote" htmlFor="answer">
-          Tu as un too late to ask à partager ?
+        {/* For design, see : http://aaronshaf.github.io/react-toggle/ */}
+        <label className="toggle-label">
+          <Toggle
+            defaultChecked={iHaveAnswer}
+            className="custom-toggle"
+            onChange={handleIHaveAnswerChange}
+            // icons are ugly positioned, so I leave it this way for now
+            // icons={{
+            //   checked: <Emoji symbol="🕑" label="clock" />,
+            //   unchecked: <Emoji symbol="🕑" label="clock" />,
+            // }}
+          />
+          <span>J'ai une réponse à proposer</span>
+        </label>
+        <label htmlFor="answer" className={iHaveAnswer ? '' : 'optional-input-is-not-visible'}>
           <textarea
             name="answer"
             value={answer}
             onChange={handleChange}
-            placeholder="Je me suis toujours demandé·e..."
+            placeholder="En fait, c'est simple ! C'est juste..."
             required
           />
         </label>
@@ -67,6 +89,10 @@ const AddTLTAQuestion = ({ tellResult }) => {
       </form>
     </div>
   );
+};
+
+AddTLTAQuestion.propTypes = {
+  tellResult: PropTypes.func.isRequired,
 };
 
 export default connect(null)(AddTLTAQuestion);

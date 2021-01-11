@@ -158,7 +158,7 @@ button {
   outline: none;
 }
 
-.form-container form label {
+.form-container form label:not(.toggle-label) {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -182,4 +182,27 @@ button {
   margin-top: 2em;
   padding: 0.8em 1.2em;
   border-radius: 2em;
+}
+
+.form-container .optional-input-is-not-visible {
+  /* Forgive me, MondayHazard <3 */
+  display: none !important;
+}
+
+.form-container .toggle-label {
+  display: flex;
+}
+
+.form-container .custom-toggle {
+  margin-right: 0.5em;
+}
+
+.form-container .react-toggle--checked .react-toggle-track {
+  background-color: #ff4093;
+}
+
+.form-container
+  .custom-toggle.react-toggle--checked:hover:not(.react-toggle--disabled)
+  .react-toggle-track {
+  background-color: #ff4093;
 }
