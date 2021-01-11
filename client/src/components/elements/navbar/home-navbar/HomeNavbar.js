@@ -12,7 +12,7 @@ const HomeNavbar = () => {
   return (
     <Fragment>
       <ScrollLink
-        activeClass="active"
+        activeClass="active-navbar-icon"
         to="home-safe-space"
         spy={true}
         smooth={true}
@@ -21,7 +21,7 @@ const HomeNavbar = () => {
         <SafeSpaceIcon />
       </ScrollLink>
       <ScrollLink
-        activeClass="active"
+        activeClass="active-navbar-icon"
         to="home-modern-world"
         spy={true}
         smooth={true}
@@ -31,7 +31,7 @@ const HomeNavbar = () => {
         {/* <img src={modernWorld} alt="modern world icon" /> */}
       </ScrollLink>
       <ScrollLink
-        activeClass="active"
+        activeClass="active-navbar-icon"
         to="home-imaginarium"
         spy={true}
         smooth={true}
@@ -41,7 +41,7 @@ const HomeNavbar = () => {
         {/* <img src={imaginarium} alt="imaginarium" /> */}
       </ScrollLink>
       <ScrollLink
-        activeClass="active"
+        activeClass="active-navbar-icon"
         to="home-ancient-world"
         spy={true}
         smooth={true}

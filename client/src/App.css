@@ -46,27 +46,92 @@ button {
   align-items: center;
 }
 
+.active-navbar-icon svg {
+  fill: pink;
+}
+
 /*============= LAYOUT =============*/
 
 .container {
   margin: 0 1rem;
 }
 
-/* For react-animated-css library elements */
+/*============= COMPONENTS =============*/
 
-.flex {
+/*** WORLD TITLE ***/
+
+.line-title-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  width: 100%;
+}
+
+.world-title-wrapper {
+  justify-content: flex-end;
+}
+
+.world-title-wrapper::before {
+  content: '';
+  flex: 1 1 auto;
+  border-bottom: solid 1px rgb(153, 243, 255);
+}
+
+.category-title-wrapper {
+  justify-content: flex-start;
+}
+
+.category-title-wrapper::after {
+  content: '';
+  flex: 1 1 auto;
+  border-bottom: solid 1px rgb(204, 134, 161);
+}
+
+.world-title {
+  flex: 0 1 auto;
+  padding-left: 1rem;
+  color: rgb(153, 243, 255);
+  font-weight: 300;
+  font-size: 1.6rem;
+  /* text-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em, rgb(0, 255, 255) 0px 0px 1.6em; */
+}
+
+.title {
+  flex: 0 1 auto;
+  padding-right: 1rem;
+  color: rgb(204, 134, 161);
+  font-weight: 400;
+  font-size: 2.5rem;
+  /* text-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em, rgb(0, 255, 255) 0px 0px 1.6em; */
+}
+
+/*** WORLD CARD ***/
+
+.w-cat-card-content {
+  padding: 0.5rem;
+  border: 1px solid rgb(204, 134, 161);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
   align-items: center;
 }
 
-.minimal-height {
-  height: 1em;
+.w-cat-card-img {
+  border-radius: 1rem;
+  width: 40%;
+  text-align: center;
 }
 
-.active svg {
-  fill: pink;
+.w-cat-card-cta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  width: 55%;
+  text-align: center;
 }
+
+/*============= FORMS =============*/
 
 /* Eli's adds */
 

@@ -8,10 +8,10 @@ import { ReactComponent as FakeIcon } from '../../../resources/img/icons/safe-sp
 const MiniNav = () => {
   return (
     <div className="mini-nav">
-      <NavLink to="/safe-space/quotes" activeClassName="active">
+      <NavLink to="/safe-space/quotes" activeClassName="active-navbar-icon">
         <FakeIcon />
       </NavLink>
-      <NavLink to="/safe-space/chat" activeClassName="active">
+      <NavLink to="/safe-space/chat" activeClassName="active-navbar-icon">
         <FakeIcon />
       </NavLink>
     </div>

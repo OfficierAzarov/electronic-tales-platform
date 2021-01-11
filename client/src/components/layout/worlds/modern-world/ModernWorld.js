@@ -17,22 +17,23 @@ const ModernWorld = ({ categories, getCategories }) => {
 
   return (
     <div id="modern-world" className="world-page container">
-      <div className="world-title-wrapper">
+      <div className="line-title-wrapper world-title-wrapper">
         <h2 className="world-title">Modern World</h2>
       </div>
       <div className="image-card">
-        <div className="title-wrapper">
+        <div className="line-title-wrapper category-title-wrapper">
           <h3 className="title">Too late to ask</h3>
         </div>
-        <div className="card-content">
-          <img src={Hands} alt="Some hands swiping" loading="lazy" className="card-img" />
-          <Link to="/modern-world/swipe" className="card-cta">
+        <div className="w-cat-card-content">
+          {/* <div className="hot-label">Hot</div> */}
+          <img src={Hands} alt="Some hands swiping" loading="lazy" className="w-cat-card-img" />
+          <Link to="/modern-world/swipe" className="w-cat-card-cta">
             Let's go for a swipe <Emoji symbol="🔥" label="tinder fire" />
           </Link>
         </div>
       </div>
-      {categories.map((category) => (
-        <CardHub category={category} key={category.id} />
+      {categories.map((category, index) => (
+        <CardHub category={category} key={category.id} id={`category-${index}`} />
       ))}
     </div>
   );
