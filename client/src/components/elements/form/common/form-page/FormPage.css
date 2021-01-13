@@ -1,5 +1,6 @@
 #form-page {
   min-height: 90vh;
+  background-color: #246b7c;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

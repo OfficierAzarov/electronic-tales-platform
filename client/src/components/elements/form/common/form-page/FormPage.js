@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -7,7 +8,7 @@ import './FormPage.css';
 
 import FormWrapper from '../form-wrapper/FormWrapper';
 
-const FormPage = ({ children, tellResult }) => {
+const FormPage = ({ children, backgroundImage }) => {
   const [isFormVisible, setIsFormVisible] = useState(true);
 
   const history = useHistory();
@@ -46,7 +47,8 @@ const FormPage = ({ children, tellResult }) => {
     });
 
   return (
-    <div id="form-page">
+    // <div id="form-page" style={{ 'background-image': backgroundImage }}>
+    <div id="form-page" style={{ backgroundImage: 'url(' + backgroundImage + ')' }}>
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -63,6 +65,10 @@ const FormPage = ({ children, tellResult }) => {
       </FormWrapper>
     </div>
   );
+};
+
+FormPage.propTypes = {
+  backgroundImage: PropTypes.string,
 };
 
 export default FormPage;
