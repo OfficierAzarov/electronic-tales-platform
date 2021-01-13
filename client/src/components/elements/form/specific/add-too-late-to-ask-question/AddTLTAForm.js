@@ -54,17 +54,26 @@ const AddTLTAQuestion = ({ tellResult }) => {
         </label>
         {/* For design, see : http://aaronshaf.github.io/react-toggle/ */}
         <label className="toggle-label">
+          <span style={{ fontWeight: iHaveAnswer ? '300' : '700' }}>
+            Je veux que la team d'Electronic Tales réponde
+          </span>
           <Toggle
             defaultChecked={iHaveAnswer}
             className="custom-toggle"
             onChange={handleIHaveAnswerChange}
+            icons={{
+              checked: '',
+              unchecked: '',
+            }}
             // icons are ugly positioned, so I leave it this way for now
             // icons={{
             //   checked: <Emoji symbol="🕑" label="clock" />,
             //   unchecked: <Emoji symbol="🕑" label="clock" />,
             // }}
           />
-          <span>J'ai une réponse à proposer</span>
+          <span style={{ fontWeight: iHaveAnswer ? '700' : '300' }}>
+            Je veux proposer une réponse
+          </span>
         </label>
         <label htmlFor="answer" className={iHaveAnswer ? '' : 'optional-input-is-not-visible'}>
           <textarea

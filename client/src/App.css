@@ -193,6 +193,11 @@ button {
   display: flex;
 }
 
+.form-container .toggle-label span {
+  font-size: 0.7em;
+  width: 60%;
+}
+
 .form-container .custom-toggle {
   margin-right: 0.5em;
 }
