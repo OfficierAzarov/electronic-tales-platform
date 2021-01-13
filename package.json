@@ -1,0 +1,40 @@
+{
+  "name": "electronic-tales",
+  "version": "1.0.0",
+  "description": "Electronic Tales is a social learning platform for junior devs who don't have an engineer's degree, don't disassemble computers every weekend and didn't start coding when they were 5.",
+  "main": "index.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.3",
+    "enzyme": "^3.11.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.9.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.11"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OfficierAzarov/electronic-tales-platform.git"
+  },
+  "keywords": [
+    "electronic",
+    "tals",
+    "learning",
+    "developers",
+    "junior"
+  ],
+  "author": "Officier Azarov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OfficierAzarov/electronic-tales-platform/issues"
+  },
+  "homepage": "https://github.com/OfficierAzarov/electronic-tales-platform#readme"
+}
