@@ -5,12 +5,13 @@ import 'react-toastify/dist/ReactToastify.css';
 
 import './AddQuote.css';
 
+import safeSpaceBackground from '../../../../resources/img/mocks/safe-space.jpg';
 import FormPage from '../../../elements/form/common/form-page/FormPage';
 import AddQuoteForm from '../../../elements/form/specific/add-quote/AddQuoteForm';
 
 const AddQuote = () => {
   return (
-    <FormPage>
+    <FormPage backgroundImage={safeSpaceBackground}>
       <AddQuoteForm />
     </FormPage>
   );

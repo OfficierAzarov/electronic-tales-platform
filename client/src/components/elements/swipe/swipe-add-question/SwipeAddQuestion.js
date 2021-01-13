@@ -6,7 +6,9 @@ import AddTLTAQuestion from '../../form/specific/add-too-late-to-ask-question/Ad
 
 const SwipeAddQuestion = () => {
   return (
-    <FormPage backgroundImage={safeSpaceBackground}>
+    // You can add a backgroundImage to FormPage as a prop if needed
+    // ex :  <FormPage backgroundImage={nameOfYourImage}>
+    <FormPage>
       <AddTLTAQuestion />
     </FormPage>
   );
