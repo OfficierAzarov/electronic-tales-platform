@@ -5,10 +5,12 @@ import { PropTypes } from 'prop-types';
 
 import './FormWrapper.css';
 
+import GoBackButton from '../../../buttons/go-back/GoBackButton';
+
 import { ReactComponent as GoBack } from '../../../../../resources/img/icons/left-arrow.svg';
 
 const Add = ({ children, isVisible, tellVisibilityChange }) => {
-  const history = useHistory();
+  // const history = useHistory();
 
   return (
     <div id="form-wrapper">
@@ -21,16 +23,13 @@ const Add = ({ children, isVisible, tellVisibilityChange }) => {
         isVisible={isVisible}
         className="flex-start"
       >
-        <div id="actions-container">
-          <div
-            id="go-back"
-            onClick={() => {
-              tellVisibilityChange(false);
-              setTimeout(() => history.goBack(), 600);
-            }}
-          >
-            <GoBack />
-          </div>
+        <div
+          id="actions-container"
+          onClick={() => {
+            tellVisibilityChange(false);
+          }}
+        >
+          <GoBackButton timeOut={600} />
         </div>
       </Animated>
       <Animated

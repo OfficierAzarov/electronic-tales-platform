@@ -43,7 +43,7 @@ const AddTLTAQuestion = ({ tellResult }) => {
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         <label htmlFor="question">
-          Un too late to ask à partager&nbsp;?
+          Tu as une question too late to ask à partager&nbsp;?
           <textarea
             name="question"
             value={question}

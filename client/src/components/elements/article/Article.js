@@ -10,6 +10,7 @@ import ArticleContent from './article-content/ArticleContent';
 import Modal from '../modal/Modal';
 import { setCurrentArticle } from '../../../redux/actions/article';
 import ReadingTime from '../reading-time/ReadingTime';
+import GoBackButton from '../buttons/go-back/GoBackButton';
 
 const Article = ({ match, setCurrentArticle, article }) => {
   useEffect(() => {
@@ -19,9 +20,12 @@ const Article = ({ match, setCurrentArticle, article }) => {
 
   return (
     <div id="article-container">
+      <div id="article-head">
+        <GoBackButton />
+        <ReadingTime articleContent={article.content} />
+      </div>
       {article && article !== undefined ? (
         <Fragment>
-          <ReadingTime articleContent={article.content} />
           <h1>{article.title}</h1>
           <ArticleContent articleContent={article.content} />
           <Modal />
@@ -29,9 +33,6 @@ const Article = ({ match, setCurrentArticle, article }) => {
       ) : (
         <Error title="Aouch!" message="Looks like there's no article about this topic yet." />
       )}
-      <button className="basic-button" onClick={() => history.goBack()}>
-        Go back
-      </button>
     </div>
   );
 };

@@ -202,12 +202,12 @@ button {
   margin-right: 0.5em;
 }
 
-.form-container .react-toggle--checked .react-toggle-track {
+.form-container .custom-toggle.react-toggle--checked .react-toggle-track {
   background-color: #ff4093;
 }
 
-.form-container .react-toggle-track,
-.form-container .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+.form-container .custom-toggle.react-toggle-track,
+.form-container .custom-toggle.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
   background-color: #444444;
 }
 

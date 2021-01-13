@@ -1,0 +1,13 @@
+#go-back-button {
+  margin: 1em 0 0 1em;
+  background-color: #333333;
+  padding: 0.5em 1em;
+  border-radius: 1em;
+}
+
+#go-back-button svg {
+  fill: #ffffff;
+  width: 1em;
+  height: 1em;
+  padding: 0;
+}
