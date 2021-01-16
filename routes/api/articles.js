@@ -1,11 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-// @route   POST api/articles
-// @desc    Add article
+// @route   GET api/articles
+// @desc    Get all article
 // @access  Public
-router.post('/', (req, res) => {
-  console.log(req.body);
+router.post('/articles', (req, res) => {
+  try {
+  } catch (error) {}
+
   res.send('Articles route');
 });
 
