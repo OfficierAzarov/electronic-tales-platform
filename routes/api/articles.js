@@ -1,14 +1,54 @@
 const express = require('express');
 const router = express.Router();
+const ArticleEntity = require('../../models/Article');
 
 // @route   GET api/articles
-// @desc    Get all article
+// @desc    Get all articles
 // @access  Public
-router.post('/articles', (req, res) => {
+router.get('/', async (req, res) => {
   try {
-  } catch (error) {}
+    const articles = await ArticleEntity.find();
+    res.json(articles);
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).send('Server error');
+  }
+});
 
-  res.send('Articles route');
+// @route   POST api/posts/toolatetoasks
+// @desc    Test route
+// @access  Public
+router.post('/', async (req, res) => {
+  // const validationErrors = validationResult(req);
+  // if (!validationErrors.isEmpty()) {
+  //   return res.status(400).json({ errors: validationErrors.array() });
+  // }
+  // console.log(req.body);
+  const { title, slug, content, richLinks, thumbnail, category } = req.body;
+  console.log(req.body);
+  try {
+    // check if tooLateToAskPost already exists
+    // let article = await ArticleEntity.findOne({ question });
+    // if (tooLateToAskPost) {
+    //   return res.status(400).json({ errors: [{ msg: 'The question has already been posted' }] });
+    // }
+
+    // create the new tooLateToAskPost
+    article = new ArticleEntity({
+      title,
+      slug,
+      content,
+      richLinks,
+      thumbnail,
+      category,
+    });
+
+    await article.save();
+    res.send('Your article has been saved.');
+  } catch (error) {
+    console.log(`Aouch... ${error.msg}`);
+    res.status(500).send('Server error');
+  }
 });
 
 module.exports = router;

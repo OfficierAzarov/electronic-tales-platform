@@ -3,15 +3,15 @@ const mongoose = require('mongoose');
 const ArticleSchema = new mongoose.Schema({
   title: {
     type: String,
-    requird: true,
+    required: true,
   },
   slug: {
     type: String,
-    requird: true,
+    required: true,
   },
   content: {
     type: String,
-    requird: true,
+    required: true,
   },
   richLinks: [
     {
@@ -25,4 +25,4 @@ const ArticleSchema = new mongoose.Schema({
   category: String,
 });
 
-module.exports = Article = mongoose.model('article', ArticleSchema);
+module.exports = ArticleEntity = mongoose.model('article', ArticleSchema);
