@@ -1,7 +1,13 @@
-import { GET_CATEGORIES } from '../actions/types';
+import { GET_CATEGORIES, CATEGORIES_ERROR } from '../actions/types';
 
 const initialState = {
-  categories: [],
+  categories: [
+    {
+      _id: '',
+      name: '',
+      articles: [],
+    },
+  ],
 };
 
 export default function (state = initialState, action) {
@@ -11,6 +17,11 @@ export default function (state = initialState, action) {
       return {
         ...state,
         categories: payload,
+      };
+    case CATEGORIES_ERROR:
+      return {
+        ...state,
+        error: payload,
       };
     default:
       return state;

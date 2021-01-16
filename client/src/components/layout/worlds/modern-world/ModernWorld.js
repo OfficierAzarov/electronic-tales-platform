@@ -13,7 +13,7 @@ import { getCategories } from '../../../../redux/actions/category';
 const ModernWorld = ({ categories, getCategories }) => {
   useEffect(() => {
     getCategories();
-  }, []);
+  }, [getCategories]);
 
   return (
     <div id="modern-world" className="world-page container">
@@ -32,9 +32,9 @@ const ModernWorld = ({ categories, getCategories }) => {
           </Link>
         </div>
       </div>
-      {categories.map((category, index) => (
-        <CardHub category={category} key={category.id} id={`category-${index}`} />
-      ))}
+      {categories.map((category, index) => {
+        return <CardHub key={category._id} category={category} id={`category-${index}`} />;
+      })}
     </div>
   );
 };

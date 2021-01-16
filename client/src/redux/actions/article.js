@@ -3,7 +3,7 @@ import { SET_CURRENT_ARTICLE } from './types';
 import { articlesSource } from '../../mocks/articles';
 import { questionsSource } from '../../mocks/questions';
 
-export const setCurrentArticle = (type, slug) => (dispatch) => {
+export const setCurrentArticle = (type, slug) => async (dispatch) => {
   let res;
 
   try {

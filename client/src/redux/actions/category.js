@@ -1,17 +1,18 @@
-import { GET_CATEGORIES } from './types';
-import { categoriesSource } from '../../mocks/categories';
+import { GET_CATEGORIES, CATEGORIES_ERROR } from './types';
+import api from '../../utils/urls/api';
 
-export const getCategories = () => (dispatch) => {
+export const getCategories = () => async (dispatch) => {
   try {
-    // TO DO : replace by actual DB source, will be await
-    const res = categoriesSource;
+    const res = await api.get('/categories');
 
     dispatch({
       type: GET_CATEGORIES,
-      payload: res,
+      payload: res.data,
     });
   } catch (err) {
-    // TO DO : replace by an error reducer
-    console.log(err.message);
+    dispatch({
+      type: CATEGORIES_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
   }
 };

@@ -15,7 +15,7 @@ const CardsHub = ({ category: { name, articles }, id }) => {
       </div>
       <div className="w-cat-card-content hub-content">
         {articles.map((article) => (
-          <Card article={article} key={article.id} />
+          <Card article={article} key={article._id} />
         ))}
       </div>
     </div>
