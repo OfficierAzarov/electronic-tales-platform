@@ -1,11 +1,10 @@
-import { SET_CURRENT_ARTICLE } from './types';
-
+import { SET_CURRENT_ARTICLE, GET_ALL_ARTICLES_INFOS, ARTICLES_ERROR } from './types';
 import { articlesSource } from '../../mocks/articles';
 import { questionsSource } from '../../mocks/questions';
+import api from '../../utils/urls/api';
 
 export const setCurrentArticle = (type, slug) => async (dispatch) => {
   let res;
-
   try {
     switch (type) {
       case 'regular-articles':
@@ -25,8 +24,24 @@ export const setCurrentArticle = (type, slug) => async (dispatch) => {
       type: SET_CURRENT_ARTICLE,
       payload: res,
     });
-  } catch (err) {
+  } catch (error) {
     // TO DO : replace by an error reducer
-    console.log(err.message);
+    console.log(error.message);
+  }
+};
+
+export const getAllArticlesInfos = () => async (dispatch) => {
+  try {
+    const res = await api.get('/articles/infos');
+    dispatch({
+      type: GET_ALL_ARTICLES_INFOS,
+      payload: res.data,
+    });
+  } catch (error) {
+    console.log('oups');
+    // dispatch({
+    //   type: ARTICLES_ERROR,
+    //   payload: { msg: error.response.statusText, status: error.response.status },
+    // });
   }
 };

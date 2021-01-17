@@ -9,10 +9,10 @@ export const getCategories = () => async (dispatch) => {
       type: GET_CATEGORIES,
       payload: res.data,
     });
-  } catch (err) {
+  } catch (error) {
     dispatch({
       type: CATEGORIES_ERROR,
-      payload: { msg: err.response.statusText, status: err.response.status },
+      payload: { msg: error.response.statusText, status: error.response.status },
     });
   }
 };

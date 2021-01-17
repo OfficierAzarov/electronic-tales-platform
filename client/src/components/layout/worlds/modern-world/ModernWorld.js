@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
@@ -8,12 +8,33 @@ import './ModernWorld.css';
 import CardHub from '../../../elements/cards-hub/CardsHub';
 import Hands from './../../../../resources/img/icons/swipe-hands.png';
 
-import { getCategories } from '../../../../redux/actions/category';
+import { groupBy } from '../../../../utils/data-sorting/groupBy';
+import { getAllArticlesInfos } from '../../../../redux/actions/article';
 
-const ModernWorld = ({ categories, getCategories }) => {
+const ModernWorld = ({ articles, getAllArticlesInfos }) => {
   useEffect(() => {
-    getCategories();
-  }, [getCategories]);
+    getAllArticlesInfos();
+  }, []);
+
+  const computeCategories = (articles) => {
+    if (articles.length != 0) {
+      let categories = groupBy(articles, 'category');
+      const componentsToReturn = [];
+      for (let i = 0; i < Object.keys(categories).length; i++) {
+        const categoryName = Object.keys(categories)[i];
+        const categoryArticles = categories[Object.keys(categories)[i]];
+        componentsToReturn.push(
+          <CardHub
+            key={i}
+            categoryName={categoryName}
+            categoryArticles={categoryArticles}
+            id={`category-${i}`}
+          />
+        );
+      }
+      return componentsToReturn;
+    }
+  };
 
   return (
     <div id="modern-world" className="world-page container">
@@ -32,20 +53,21 @@ const ModernWorld = ({ categories, getCategories }) => {
           </Link>
         </div>
       </div>
-      {categories.map((category, index) => {
+      {computeCategories(articles)}
+      {/* {articles.map((category, index) => {
         return <CardHub key={category._id} category={category} id={`category-${index}`} />;
-      })}
+      })} */}
     </div>
   );
 };
 
 ModernWorld.propTypes = {
-  categories: PropTypes.array.isRequired,
-  getCategories: PropTypes.func.isRequired,
+  articles: PropTypes.array.isRequired,
+  getAllArticlesInfos: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  categories: state.category.categories,
+  articles: state.article.allArticles,
 });
 
-export default connect(mapStateToProps, { getCategories })(ModernWorld);
+export default connect(mapStateToProps, { getAllArticlesInfos })(ModernWorld);
