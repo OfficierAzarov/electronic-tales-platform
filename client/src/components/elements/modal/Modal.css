@@ -2,7 +2,7 @@
   padding: 2em;
   margin: 2em;
   border: solid 1px #666666;
-  position: absolute;
+  position: fixed;
   top: 25%;
   background-color: #222222;
   border-radius: 1em;
