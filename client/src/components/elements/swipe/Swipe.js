@@ -8,7 +8,7 @@ import { getQuestions, removeAQuestion, setInitialLoading } from '../../../redux
 import './Swipe.css';
 import ghost from '../../../resources/img/icons/ghost.png';
 import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../utils/urls/urls';
-import { computeLeft, computeWidth } from '../../../utils/display/centerSomething';
+import { computeLeft, computeWidth, computeHeight } from '../../../utils/display/centerSomething';
 
 export const Swipe = ({
   getQuestions,
@@ -50,29 +50,48 @@ export const Swipe = ({
   const onCardLeftScreen = (direction, questionToRemove) => {
     removeAQuestion(questionToRemove);
     setDisable(false);
-    // button.disabled = false;
     if (direction === 'right')
       history.push(`/modern-world/articles/swipe-answers/${questionToRemove.answer.slug}`);
   };
 
-  const onSwipe = () => {};
+  const computeTop = (wantedSpaceBetweenButtonsAndNav) => {
+    const windowHeight = window.innerHeight;
+    // onePercentOfWindowHeight = 1 vh
+    const onePercentOfWindowHeight = windowHeight / 100;
+    // navHeight = 10 vh, as defined in css
+    const navHeight = 10 * onePercentOfWindowHeight;
+    // buttonsContainerHeight = 10 vh, as defined in css
+    const buttonsContainerHeight = 10 * onePercentOfWindowHeight;
+    const sectionHeight = windowHeight - navHeight;
+
+    const top = sectionHeight - buttonsContainerHeight - wantedSpaceBetweenButtonsAndNav;
+
+    return top;
+  };
 
   return (
     <div id="swipe">
       {questions.length ? (
         <div
           id="swipe-cards-container"
-          style={{ left: computeLeft(0.7), width: computeWidth(0.7) }}
+          style={{
+            left: computeLeft(0.85),
+            width: computeWidth(0.85),
+          }}
         >
           {questions.map((question, index) => (
             <TinderCard
               onCardLeftScreen={(dir) => onCardLeftScreen(dir, question)}
-              onSwipe={(dir) => onSwipe()}
               className="swipe-card"
               key={question.id}
               ref={cardRefs[index]}
             >
-              <div className="swipe-card-content">
+              <div
+                className="swipe-card-content"
+                style={{
+                  height: computeHeight(0.85, 1.2),
+                }}
+              >
                 <h2>{question.questionText}</h2>
                 <img src={`../${IMAGES_URL}/${ICONS_IMAGES_URL}/${question.thumbnail}`} />
               </div>
@@ -89,7 +108,12 @@ export const Swipe = ({
       {questions.length ? (
         <div
           id="swipe-buttons-container"
-          style={{ left: computeLeft(0.7), width: computeWidth(0.7) }}
+          style={{
+            left: computeLeft(0.85),
+            width: computeWidth(0.85),
+            top: computeTop(25),
+            // FACTORISER !!!
+          }}
         >
           <button
             id="swipe-left-action"

@@ -1,11 +1,20 @@
-export const computeWidth = (wantedHTMLElementProportion) => {
+export const computeWidth = (wantedElementWithRegardingWindowWidth) => {
   const windowWidth = window.innerWidth;
-  const width = windowWidth * wantedHTMLElementProportion;
+  const width = windowWidth * wantedElementWithRegardingWindowWidth;
   return width;
 };
 
-export const computeLeft = (wantedHTMLElementProportion) => {
+export const computeHeight = (
+  wantedElementWithRegardingWindowWidth,
+  wantedElementHeightRegardingElementWidth
+) => {
+  const height =
+    computeWidth(wantedElementWithRegardingWindowWidth) * wantedElementHeightRegardingElementWidth;
+  return height;
+};
+
+export const computeLeft = (wantedElementWithRegardingWindowWidth) => {
   const windowWidth = window.innerWidth;
-  const left = windowWidth / 2 - (windowWidth * wantedHTMLElementProportion) / 2;
+  const left = windowWidth / 2 - (windowWidth * wantedElementWithRegardingWindowWidth) / 2;
   return left;
 };
