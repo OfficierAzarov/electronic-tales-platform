@@ -16,7 +16,6 @@ const Article = ({ match, setCurrentArticle, article }) => {
   useEffect(() => {
     setCurrentArticle(match.params.type, match.params.slug);
   }, []);
-  const history = useHistory();
 
   return (
     <div id="article-container">

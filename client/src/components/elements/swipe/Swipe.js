@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import TinderCard from 'react-tinder-card';
@@ -17,6 +17,8 @@ export const Swipe = ({
   removeAQuestion,
   setInitialLoading,
 }) => {
+  const [disable, setDisable] = useState(false);
+
   const history = useHistory();
 
   useEffect(() => {
@@ -32,21 +34,28 @@ export const Swipe = ({
 
   const cardRefs = Array(questions.length)
     .fill(0)
-    .map(() => React.createRef());
+    .map((emptyElement) => React.createRef());
 
-  const swipeActionFromButton = (direction) => {
+  const swipeActionFromButton = (direction, e) => {
     if (questions.length) {
       const questiontoRemove = questions[questions.length - 1];
       const index = questions.indexOf(questiontoRemove);
-      cardRefs[index].current.swipe(direction);
+      console.log(index);
+
+      if (cardRefs[index].current) cardRefs[index].current.swipe(direction);
     }
+    setDisable(true);
   };
 
   const onCardLeftScreen = (direction, questionToRemove) => {
     removeAQuestion(questionToRemove);
+    setDisable(false);
+    // button.disabled = false;
     if (direction === 'right')
       history.push(`/modern-world/articles/swipe-answers/${questionToRemove.answer.slug}`);
   };
+
+  const onSwipe = () => {};
 
   return (
     <div id="swipe">
@@ -58,6 +67,7 @@ export const Swipe = ({
           {questions.map((question, index) => (
             <TinderCard
               onCardLeftScreen={(dir) => onCardLeftScreen(dir, question)}
+              onSwipe={(dir) => onSwipe()}
               className="swipe-card"
               key={question.id}
               ref={cardRefs[index]}
@@ -84,13 +94,15 @@ export const Swipe = ({
           <button
             id="swipe-left-action"
             className="action-button swipe-button"
-            onClick={() => swipeActionFromButton('left')}
+            disabled={disable}
+            onClick={(e) => swipeActionFromButton('left', e)}
           >
             ❌
           </button>
           <button
             id="swipe-right-action"
             className="action-button swipe-button"
+            disabled={disable}
             onClick={() => swipeActionFromButton('right')}
           >
             ❤️

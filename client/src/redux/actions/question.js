@@ -30,13 +30,8 @@ export const setInitialLoading = (value) => (dispatch) => {
 };
 
 export const removeAQuestion = (questionToRemove) => (dispatch) => {
-  try {
-    dispatch({
-      type: REMOVE_QUESTION,
-      payload: questionToRemove,
-    });
-  } catch (err) {
-    // TO DO : replace by an error reducer
-    console.log(err.message);
-  }
+  dispatch({
+    type: REMOVE_QUESTION,
+    payload: questionToRemove,
+  });
 };

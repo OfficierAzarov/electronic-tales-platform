@@ -2,7 +2,7 @@ import { GET_QUESTIONS, REMOVE_QUESTION, SET_INITIAL_LOADING } from '../actions/
 
 const initialState = {
   questions: [],
-  initialLoading: true
+  initialLoading: true,
 };
 
 export default function (state = initialState, action) {
@@ -16,12 +16,12 @@ export default function (state = initialState, action) {
     case REMOVE_QUESTION:
       return {
         ...state,
-        questions: state.questions.filter(question => question.id !== payload.id)
+        questions: state.questions.filter((question) => question.id !== payload.id),
       };
     case SET_INITIAL_LOADING:
       return {
         ...state,
-        initialLoading: payload
+        initialLoading: payload,
       };
     default:
       return state;

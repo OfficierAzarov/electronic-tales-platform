@@ -55,6 +55,10 @@
   margin: 0 2em;
 }
 
+#swipe #swipe-buttons-container .action-button:disabled {
+  opacity: 0.5;
+}
+
 #swipe #swipe-buttons-container .swipe-button {
   background-color: #333333;
   border-radius: 50%;
