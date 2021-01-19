@@ -32,7 +32,7 @@ export const Swipe = ({
 
   const cardRefs = Array(questions.length)
     .fill(0)
-    .map((emptyElement) => React.createRef());
+    .map(() => React.createRef());
 
   const swipeActionFromButton = (direction) => {
     if (questions.length) {
@@ -45,7 +45,7 @@ export const Swipe = ({
   const onCardLeftScreen = (direction, questionToRemove) => {
     removeAQuestion(questionToRemove);
     if (direction === 'right')
-      history.push(`/modern-world/articles/swipe-answer/${questionToRemove.answer.slug}`);
+      history.push(`/modern-world/articles/swipe-answers/${questionToRemove.answer.slug}`);
   };
 
   return (

@@ -10,7 +10,7 @@ export const setCurrentArticle = (type, slug) => async (dispatch) => {
       case 'regular-articles':
         res = articlesSource.find((article) => article.slug === slug);
         break;
-      case 'swipe-answer':
+      case 'swipe-answers':
         const question = questionsSource.find((question) => question.answer.slug === slug);
         res = question.answer;
         break;
@@ -39,9 +39,9 @@ export const getAllArticlesInfos = () => async (dispatch) => {
     });
   } catch (error) {
     console.log('oups');
-    // dispatch({
-    //   type: ARTICLES_ERROR,
-    //   payload: { msg: error.response.statusText, status: error.response.status },
-    // });
+    dispatch({
+      type: ARTICLES_ERROR,
+      payload: { msg: error.response.statusText, status: error.response.status },
+    });
   }
 };
