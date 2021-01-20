@@ -12,6 +12,7 @@
     "axios": "^0.21.1",
     "dompurify": "^2.1.1",
     "markdown-to-jsx": "^7.0.1",
+    "patch-package": "^6.2.2",
     "react": "^16.13.1",
     "react-animated-css": "^1.2.1",
     "react-animations": "^1.0.0",

@@ -42,7 +42,7 @@ export const Swipe = ({
       const index = questions.indexOf(questiontoRemove);
       console.log(index);
 
-      if (cardRefs[index].current) cardRefs[index].current.swipe(direction);
+      if (cardRefs[index].current) cardRefs[index].current.swipe(direction, 100);
     }
     setDisable(true);
   };
@@ -112,7 +112,6 @@ export const Swipe = ({
             left: computeLeft(0.85),
             width: computeWidth(0.85),
             top: computeTop(25),
-            // FACTORISER !!!
           }}
         >
           <button
