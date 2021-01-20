@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import TinderCard from 'react-tinder-card';
@@ -28,21 +28,37 @@ export const Swipe = ({
     }
   }, []);
 
+  useEffect(() => {
+    const handleUserKeyPress = (event) => {
+      const { keyCode } = event;
+      if (keyCode === 37) {
+        console.log('left pressed');
+        swipeActionFromButton('left');
+      }
+      if (keyCode === 39) {
+        swipeActionFromButton('right');
+        console.log('right pressed');
+      }
+    };
+    window.addEventListener('keydown', handleUserKeyPress);
+    return () => {
+      window.removeEventListener('keydown', handleUserKeyPress);
+    };
+  }, [questions]);
+
   const handleClick = () => {
     setTimeout(() => history.push('/modern-world/swipe/add-question'), 400);
   };
 
   const cardRefs = Array(questions.length)
     .fill(0)
-    .map((emptyElement) => React.createRef());
+    .map(() => React.createRef());
 
-  const swipeActionFromButton = (direction, e) => {
+  const swipeActionFromButton = (direction) => {
     if (questions.length) {
       const questiontoRemove = questions[questions.length - 1];
       const index = questions.indexOf(questiontoRemove);
-      console.log(index);
-
-      if (cardRefs[index].current) cardRefs[index].current.swipe(direction, 100);
+      if (cardRefs[index].current) cardRefs[index].current.swipe(direction, 1500);
     }
     setDisable(true);
   };
@@ -118,7 +134,7 @@ export const Swipe = ({
             id="swipe-left-action"
             className="action-button swipe-button"
             disabled={disable}
-            onClick={(e) => swipeActionFromButton('left', e)}
+            onClick={() => swipeActionFromButton('left')}
           >
             ❌
           </button>
