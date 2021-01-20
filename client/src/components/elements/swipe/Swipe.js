@@ -28,24 +28,6 @@ export const Swipe = ({
     }
   }, []);
 
-  useEffect(() => {
-    const handleUserKeyPress = (event) => {
-      const { keyCode } = event;
-      if (keyCode === 37) {
-        console.log('left pressed');
-        swipeActionFromButton('left');
-      }
-      if (keyCode === 39) {
-        swipeActionFromButton('right');
-        console.log('right pressed');
-      }
-    };
-    window.addEventListener('keydown', handleUserKeyPress);
-    return () => {
-      window.removeEventListener('keydown', handleUserKeyPress);
-    };
-  }, [questions]);
-
   const handleClick = () => {
     setTimeout(() => history.push('/modern-world/swipe/add-question'), 400);
   };
