@@ -1,0 +1,16 @@
+diff --git a/node_modules/react-tinder-card/index.js b/node_modules/react-tinder-card/index.js
+index f2212a4..4103584 100644
+--- a/node_modules/react-tinder-card/index.js
++++ b/node_modules/react-tinder-card/index.js
+@@ -136,9 +136,9 @@ const TinderCard = React.forwardRef(({ flickOnSwipe = true, children, onSwipe, o
+   const element = React.useRef()
+ 
+   React.useImperativeHandle(ref, () => ({
+-    async swipe (dir = 'right') {
++    async swipe (dir = 'right', wantedPower) {
+       if (onSwipe) onSwipe(dir)
+-      const power = 1000
++      const power = wantedPower
+       const disturbance = (Math.random() - 0.5) * 100
+       if (dir === 'right') {
+         await animateOut(element.current, { x: power, y: disturbance }, true)
