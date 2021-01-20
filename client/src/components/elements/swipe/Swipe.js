@@ -8,7 +8,7 @@ import { getQuestions, removeAQuestion, setInitialLoading } from '../../../redux
 import './Swipe.css';
 import ghost from '../../../resources/img/icons/ghost.png';
 import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../utils/urls/urls';
-import { computeLeft, computeWidth, computeHeight } from '../../../utils/display/centerSomething';
+import { computeLeft, computeWidth, computeHeight } from '../../../utils/display/positionning';
 
 export const Swipe = ({
   getQuestions,
@@ -74,7 +74,7 @@ export const Swipe = ({
           id="swipe-cards-container"
           style={{
             left: computeLeft(0.85),
-            width: computeWidth(0.85),
+            width: computeWidth(85),
           }}
         >
           {questions.map((question, index) => (
@@ -87,7 +87,7 @@ export const Swipe = ({
               <div
                 className="swipe-card-content"
                 style={{
-                  height: computeHeight(0.85, 1.2),
+                  height: computeHeight(65),
                 }}
               >
                 <h2>{question.questionText}</h2>
@@ -108,7 +108,7 @@ export const Swipe = ({
           id="swipe-buttons-container"
           style={{
             left: computeLeft(0.85),
-            width: computeWidth(0.85),
+            width: computeWidth(85),
             top: computeTop(25),
           }}
         >
