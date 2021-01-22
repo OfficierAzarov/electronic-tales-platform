@@ -21,7 +21,7 @@ export default function (state = initialState, action) {
     case REMOVE_TOO_LATE_TO_ASK:
       return {
         ...state,
-        questions: state.questions.filter((question) => question.id !== payload.id),
+        questions: state.questions.filter((question) => question._id !== payload._id),
       };
     case SET_INITIAL_LOADING:
       return {
