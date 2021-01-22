@@ -73,9 +73,9 @@ export const Swipe = ({
         >
           {questions.map((question, index) => (
             <TinderCard
+              key={question._id}
               onCardLeftScreen={(dir) => onCardLeftScreen(dir, question)}
               className="swipe-card"
-              key={question.id}
               ref={cardRefs[index]}
             >
               <div
@@ -86,8 +86,8 @@ export const Swipe = ({
                 }}
               >
                 <p className="swipe-card-content-text">
-                  <span className="swipe-card-content-text-title">{question.questionText}</span>
-                  Non, ce n'est pas une onomatopée pour dire à quelqu'un de se taire.
+                  <span className="swipe-card-content-text-title">{question.text}</span>
+                  {question.subtext}
                 </p>
                 {/* <img
                   src={`${process.env.PUBLIC_URL}/${IMAGES_URL}/${TLTA_IMAGES_URL}/${question.thumbnail}`}
