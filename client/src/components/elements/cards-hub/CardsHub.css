@@ -1,3 +1,7 @@
+.cards-hub {
+  width: 90vw;
+}
+
 #category-0 .category-title-wrapper::after,
 #category-0 .w-cat-card-content {
   border-color: rgb(110, 192, 158);
@@ -14,4 +18,28 @@
 
 #category-1 .title {
   color: rgb(124, 88, 170);
+}
+
+.w-cat-card-content.hub-content {
+  display: flex;
+}
+
+/* Let's overwrite swiperjs bullet styles */
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: white;
+}
+.swiper-pagination-bullet {
+  background-color: white;
+}
+
+.swiper-container {
+  padding: 1em 0 2em 0;
+  margin: 0 1em;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 1px;
 }

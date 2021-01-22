@@ -3,7 +3,7 @@ import { Animated } from 'react-animated-css';
 
 import './Fab.css';
 
-import { ReactComponent as AddAction } from '../../../resources/img/icons/add.svg';
+import { ReactComponent as AddAction } from '../../../../resources/img/icons/add.svg';
 
 const Fab = ({ isVisible, delay }) => {
   const [isRotating, setIsRotating] = useState(false);
@@ -20,10 +20,8 @@ const Fab = ({ isVisible, delay }) => {
     }
   };
 
-  const terminate = () => {};
-
   return (
-    <div className={`fab ${isRotating ? 'rotating' : ''}`} onClick={() => handleClick()}>
+    <a className={`fab ${isRotating ? 'rotating' : ''}`} onClick={() => handleClick()}>
       <Animated
         animationIn="bounceInUp"
         animationOut="fadeOut"
@@ -35,7 +33,7 @@ const Fab = ({ isVisible, delay }) => {
       >
         <AddAction />
       </Animated>
-    </div>
+    </a>
   );
 };
 

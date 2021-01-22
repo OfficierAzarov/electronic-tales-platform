@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
@@ -16,7 +16,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
     getAllArticlesInfos();
   }, []);
 
-  const computeCategories = (articles) => {
+  const deduceCategoriesFromArticles = (articles) => {
     if (articles.length != 0) {
       let categories = groupBy(articles, 'category');
       const componentsToReturn = [];
@@ -53,10 +53,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
           </Link>
         </div>
       </div>
-      {computeCategories(articles)}
-      {/* {articles.map((category, index) => {
-        return <CardHub key={category._id} category={category} id={`category-${index}`} />;
-      })} */}
+      {deduceCategoriesFromArticles(articles)}
     </div>
   );
 };

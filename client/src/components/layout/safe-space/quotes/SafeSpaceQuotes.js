@@ -9,7 +9,8 @@ import './SafeSpaceQuotes.css';
 import { getQuotes } from '../../../../redux/actions/quote';
 import Quote from '../../../elements/quote/Quote';
 import MiniNav from '../../../elements/mini-nav/MiniNav';
-import Fab from '../../../elements/fab/Fab';
+import Fab from '../../../elements/buttons/fab/Fab';
+import { Fragment } from 'react';
 
 const SafeSpaceQuotes = ({ quotes, getQuotes }) => {
   const history = useHistory();

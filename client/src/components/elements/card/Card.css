@@ -1,12 +1,11 @@
-/* .card {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #222222;
-  border-radius: 1rem;
-  cursor: pointer;
+.card {
+  background-color: white;
+  width: 35vw;
+  height: 22vh;
 }
 
 .card img {
-  width: 10%;
-} */
+  width: 35vw;
+  height: 22vh;
+  border-radius: 0.5em;
+}

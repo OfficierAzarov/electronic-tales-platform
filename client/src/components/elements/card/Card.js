@@ -9,8 +9,9 @@ const Card = ({ article }) => {
   return (
     <Link to={`/modern-world/articles/regular-articles/${article.slug}`}>
       <div className="card">
-        <img src={`${IMAGES_URL}/${ICONS_IMAGES_URL}/${article.thumbnail}`} />
-        <div id="title">{article.title}</div>
+        {/* <img src={`${IMAGES_URL}/${ICONS_IMAGES_URL}/${article.thumbnail}`} /> */}
+        <img src={`${IMAGES_URL}/mocks/forest.jpg`} />
+        {/* <div id="title">{article.title}</div> */}
       </div>
     </Link>
   );

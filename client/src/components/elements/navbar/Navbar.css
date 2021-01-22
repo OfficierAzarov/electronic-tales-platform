@@ -7,6 +7,7 @@ nav {
   border-top: #6b6a6a 1px solid;
   display: flex;
   justify-content: space-around;
+  z-index: 2;
 }
 
 nav img,
