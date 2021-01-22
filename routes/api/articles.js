@@ -25,7 +25,6 @@ router.post('/', async (req, res) => {
   // }
   // console.log(req.body);
   const { title, slug, content, richLinks, thumbnail, category } = req.body;
-  console.log(req.body);
   try {
     // check if tooLateToAskPost already exists
     // let article = await ArticleEntity.findOne({ question });

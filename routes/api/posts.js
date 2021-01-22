@@ -12,7 +12,6 @@ router.post('/toolatetoaskposts', check('question').not().isEmpty(), async (req,
   if (!validationErrors.isEmpty()) {
     return res.status(400).json({ errors: validationErrors.array() });
   }
-  console.log(req.body);
   const { question, answer, name } = req.body;
   try {
     // check if tooLateToAskPost already exists

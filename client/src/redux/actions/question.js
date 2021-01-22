@@ -17,7 +17,6 @@ export const getQuestions = () => (dispatch) => {
 };
 
 export const setInitialLoading = (value) => (dispatch) => {
-  console.log(value);
   try {
     dispatch({
       type: SET_INITIAL_LOADING,

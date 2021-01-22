@@ -21,7 +21,6 @@ const GoBackButton = ({ timeOut }) => {
           if (timeOut && timeOut !== undefined) {
             setTimeout(() => history.goBack(), timeOut);
           } else {
-            console.log('inside else');
             history.goBack();
           }
         }}
