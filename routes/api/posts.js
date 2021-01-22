@@ -2,12 +2,12 @@ const express = require('express');
 const { check, validationResult } = require('express-validator');
 const router = express.Router();
 
-const TooLateToAskPostEntity = require('../../models/TooLatetoAsk');
+const TooLateToAskPostEntity = require('../../models/TooLatetoAskPost');
 
 // @route   POST api/posts/toolatetoasks
 // @desc    Test route
 // @access  Public
-router.post('/toolatetoasks', check('question').not().isEmpty(), async (req, res) => {
+router.post('/toolatetoaskposts', check('question').not().isEmpty(), async (req, res) => {
   const validationErrors = validationResult(req);
   if (!validationErrors.isEmpty()) {
     return res.status(400).json({ errors: validationErrors.array() });

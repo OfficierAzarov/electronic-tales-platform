@@ -1,15 +1,10 @@
 const mongoose = require('mongoose');
+const ArticleEntity = require('./Article').schema;
 
-const TooLateToAskPostSchema = new mongoose.Schema({
-  question: {
-    type: String,
-    requird: true,
-  },
-  answer: String,
-  name: String,
+const TooLateToAskSchema = new mongoose.Schema({
+  questionText: String,
+  thumbnail: String,
+  answer: { ArticleEntity },
 });
 
-module.exports = TooLateToAskPostEntity = mongoose.model(
-  'tooLateToAskPost',
-  TooLateToAskPostSchema
-);
+module.exports = TooLateToAskEntity = mongoose.model('tooLateToAsk', TooLateToAskSchema);
