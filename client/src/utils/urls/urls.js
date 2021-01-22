@@ -1,4 +1,5 @@
 // IMAGES
 
 export const IMAGES_URL = 'img';
-export const ICONS_IMAGES_URL = 'too-late-to-ask';
+export const ARTICLES_IMAGES_URL = 'articles';
+export const TLTA_IMAGES_URL = 'TLTA';

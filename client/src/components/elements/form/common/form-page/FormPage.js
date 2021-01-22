@@ -47,7 +47,6 @@ const FormPage = ({ children, backgroundImage }) => {
     });
 
   return (
-    // <div id="form-page" style={{ 'background-image': backgroundImage }}>
     <div id="form-page" style={{ backgroundImage: 'url(' + backgroundImage + ')' }}>
       <ToastContainer
         position="top-center"

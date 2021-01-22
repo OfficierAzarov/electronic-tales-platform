@@ -11,7 +11,7 @@ import {
 
 import './Swipe.css';
 import ghost from '../../../resources/img/icons/ghost.png';
-import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../utils/urls/urls';
+import { IMAGES_URL, TLTA_IMAGES_URL, ARTICLES_IMAGES_URL } from '../../../utils/urls/urls';
 import {
   computeLeft,
   computeWidth,
@@ -82,10 +82,19 @@ export const Swipe = ({
                 className="swipe-card-content"
                 style={{
                   height: computeHeight(65),
+                  backgroundImage: `url(${process.env.PUBLIC_URL}/${IMAGES_URL}/${ARTICLES_IMAGES_URL}/forest.jpg)`,
                 }}
               >
-                <h2>{question.questionText}</h2>
-                <img src={`../${IMAGES_URL}/${ICONS_IMAGES_URL}/${question.thumbnail}`} />
+                <p className="swipe-card-content-text">
+                  <span className="swipe-card-content-text-title">{question.questionText}</span>
+                  Non, ce n'est pas une onomatopée pour dire à quelqu'un de se taire.
+                </p>
+                {/* <img
+                  src={`${process.env.PUBLIC_URL}/${IMAGES_URL}/${TLTA_IMAGES_URL}/${question.thumbnail}`}
+                /> */}
+                {/* <img
+                  src={`${process.env.PUBLIC_URL}/${IMAGES_URL}/${ARTICLES_IMAGES_URL}/forest.jpg`}
+                /> */}
               </div>
             </TinderCard>
           ))}
