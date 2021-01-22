@@ -1,18 +1,25 @@
-import { GET_QUESTIONS, REMOVE_QUESTION, SET_INITIAL_LOADING } from './types';
-import { questionsSource } from '../../mocks/questions';
+import {
+  GET_TOO_LATE_TO_ASKS,
+  REMOVE_TOO_LATE_TO_ASK,
+  TOO_LATE_TO_ASK_ERROR,
+  SET_INITIAL_LOADING,
+} from './types';
+import api from '../../utils/urls/api';
 
-export const getQuestions = () => (dispatch) => {
+export const getTooLateToAsks = () => async (dispatch) => {
   try {
-    // TO DO : replace by actual DB source, will be await
-    const res = questionsSource;
+    const res = await api.get('/toolatetoasks');
 
     dispatch({
-      type: GET_QUESTIONS,
-      payload: res,
+      type: GET_TOO_LATE_TO_ASKS,
+      payload: res.data,
     });
-  } catch (err) {
-    // TO DO : replace by an error reducer
-    console.log(err.message);
+  } catch (error) {
+    console.log(error.message);
+    dispatch({
+      type: TOO_LATE_TO_ASK_ERROR,
+      payload: { msg: error.response.statusText, status: error.response.status },
+    });
   }
 };
 
@@ -28,9 +35,10 @@ export const setInitialLoading = (value) => (dispatch) => {
   }
 };
 
-export const removeAQuestion = (questionToRemove) => (dispatch) => {
+export const removeATooLateToAsk = (questionToRemove) => (dispatch) => {
   dispatch({
-    type: REMOVE_QUESTION,
+    type: REMOVE_TOO_LATE_TO_ASK,
     payload: questionToRemove,
   });
+  // TO DO : add error
 };

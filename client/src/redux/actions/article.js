@@ -38,7 +38,6 @@ export const getAllArticlesInfos = () => async (dispatch) => {
       payload: res.data,
     });
   } catch (error) {
-    console.log('oups');
     dispatch({
       type: ARTICLES_ERROR,
       payload: { msg: error.response.statusText, status: error.response.status },

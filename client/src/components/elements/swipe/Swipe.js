@@ -3,18 +3,27 @@ import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import TinderCard from 'react-tinder-card';
 
-import { getQuestions, removeAQuestion, setInitialLoading } from '../../../redux/actions/question';
+import {
+  getTooLateToAsks,
+  removeATooLateToAsk,
+  setInitialLoading,
+} from '../../../redux/actions/question';
 
 import './Swipe.css';
 import ghost from '../../../resources/img/icons/ghost.png';
 import { IMAGES_URL, ICONS_IMAGES_URL } from '../../../utils/urls/urls';
-import { computeLeft, computeWidth, computeHeight } from '../../../utils/display/positionning';
+import {
+  computeLeft,
+  computeWidth,
+  computeHeight,
+  placeElementAtBottomOfSection,
+} from '../../../utils/display/positionning';
 
 export const Swipe = ({
-  getQuestions,
+  getTooLateToAsks,
   initialLoading,
   questions,
-  removeAQuestion,
+  removeATooLateToAsk,
   setInitialLoading,
 }) => {
   const [disable, setDisable] = useState(false);
@@ -23,7 +32,7 @@ export const Swipe = ({
 
   useEffect(() => {
     if (initialLoading) {
-      getQuestions();
+      getTooLateToAsks();
       setInitialLoading(false);
     }
   }, []);
@@ -38,33 +47,18 @@ export const Swipe = ({
 
   const swipeActionFromButton = (direction) => {
     if (questions.length) {
-      const questiontoRemove = questions[questions.length - 1];
-      const index = questions.indexOf(questiontoRemove);
+      const questionToRemove = questions[questions.length - 1];
+      const index = questions.indexOf(questionToRemove);
       if (cardRefs[index].current) cardRefs[index].current.swipe(direction, 1500);
     }
     setDisable(true);
   };
 
   const onCardLeftScreen = (direction, questionToRemove) => {
-    removeAQuestion(questionToRemove);
+    removeATooLateToAsk(questionToRemove);
     setDisable(false);
     if (direction === 'right')
       history.push(`/modern-world/articles/swipe-answers/${questionToRemove.answer.slug}`);
-  };
-
-  const computeTop = (wantedSpaceBetweenButtonsAndNav) => {
-    const windowHeight = window.innerHeight;
-    // onePercentOfWindowHeight = 1 vh
-    const onePercentOfWindowHeight = windowHeight / 100;
-    // navHeight = 10 vh, as defined in css
-    const navHeight = 10 * onePercentOfWindowHeight;
-    // buttonsContainerHeight = 10 vh, as defined in css
-    const buttonsContainerHeight = 10 * onePercentOfWindowHeight;
-    const sectionHeight = windowHeight - navHeight;
-
-    const top = sectionHeight - buttonsContainerHeight - wantedSpaceBetweenButtonsAndNav;
-
-    return top;
   };
 
   return (
@@ -109,7 +103,7 @@ export const Swipe = ({
           style={{
             left: computeLeft(0.85),
             width: computeWidth(85),
-            top: computeTop(25),
+            top: placeElementAtBottomOfSection(25),
           }}
         >
           <button
@@ -150,7 +144,7 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, {
-  getQuestions,
+  getTooLateToAsks,
   setInitialLoading,
-  removeAQuestion,
+  removeATooLateToAsk,
 })(Swipe);
