@@ -18,7 +18,8 @@
   },
   "scripts": {
     "start": "node server",
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "postinstall": "patch-package"
   },
   "repository": {
     "type": "git",
