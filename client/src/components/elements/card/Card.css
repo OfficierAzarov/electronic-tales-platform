@@ -1,11 +1,17 @@
 .card {
-  background-color: white;
-  width: 35vw;
-  height: 22vh;
+  background-color: #121212;
+  width: 50vw;
+  height: 30vh;
 }
 
 .card img {
-  width: 35vw;
-  height: 22vh;
+  width: 60vw;
+  height: 35vh;
   border-radius: 0.5em;
+}
+
+.card .card-title {
+  font-size: 1.3rem;
+  text-align: center;
+  transform: translateY(-2.5em);
 }

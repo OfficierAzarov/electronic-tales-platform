@@ -10,8 +10,9 @@ const Card = ({ article }) => {
     <Link to={`/modern-world/articles/regular-articles/${article.slug}`}>
       <div className="card">
         {/* <img src={`${IMAGES_URL}/${ICONS_IMAGES_URL}/${article.thumbnail}`} /> */}
-        <img src={`${IMAGES_URL}/mocks/forest.jpg`} />
+        <img src={`${process.env.PUBLIC_URL}/${IMAGES_URL}/${ICONS_IMAGES_URL}/forest.jpg`} />
         {/* <div id="title">{article.title}</div> */}
+        <div className="card-title">What is SSH ?</div>
       </div>
     </Link>
   );

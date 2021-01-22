@@ -111,12 +111,12 @@ button:focus {
 /*** WORLD CARD ***/
 
 .w-cat-card-content {
-  padding: 0.5rem;
-  border: 1px solid rgb(204, 134, 161);
+  padding: 0.5rem 0 1.2em 0;
+  /* border: 1px solid rgb(204, 134, 161); */
   border-radius: 1rem;
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 

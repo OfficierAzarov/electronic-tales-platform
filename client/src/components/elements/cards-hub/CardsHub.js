@@ -15,7 +15,7 @@ const CardsHub = ({ categoryName, categoryArticles, id }) => {
       </div>
       <div className="w-cat-card-content">
         <Swiper
-          spaceBetween={55}
+          spaceBetween={70}
           slidesPerView={2}
           loop
           pagination={{ clickable: true }}

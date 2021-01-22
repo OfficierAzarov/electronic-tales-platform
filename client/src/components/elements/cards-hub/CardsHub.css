@@ -26,16 +26,17 @@
 
 /* Let's overwrite swiperjs bullet styles */
 
+.swiper-container {
+  padding: 1em 0 4em 0;
+  /* margin: 0 1em;
+  width: 80%; */
+}
+
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: white;
 }
 .swiper-pagination-bullet {
   background-color: white;
-}
-
-.swiper-container {
-  padding: 1em 0 2em 0;
-  margin: 0 1em;
 }
 
 .swiper-pagination-fraction,
