@@ -1,0 +1,3 @@
+export const MODERN_WORLD = 'MODERN_WORLD';
+export const IMAGINARIUM = 'IMAGINARIUM';
+export const ANCIENT_WORLD = 'ANCIENT_WORLD';

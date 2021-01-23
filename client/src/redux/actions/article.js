@@ -30,9 +30,9 @@ export const setCurrentArticle = (type, slug) => async (dispatch) => {
   }
 };
 
-export const getAllArticlesInfos = () => async (dispatch) => {
+export const getAllArticlesInfos = (world) => async (dispatch) => {
   try {
-    const res = await api.get('/articles/infos');
+    const res = await api.get(`/articles/infos/${world}`);
     dispatch({
       type: GET_ALL_ARTICLES_INFOS,
       payload: res.data,

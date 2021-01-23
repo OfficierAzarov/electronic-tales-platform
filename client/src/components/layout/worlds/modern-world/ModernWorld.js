@@ -11,10 +11,11 @@ import Hands from './../../../../resources/img/icons/swipe-hands.png';
 import { groupBy } from '../../../../utils/data-sorting/groupBy';
 import { getAllArticlesInfos } from '../../../../redux/actions/article';
 import { goUp } from '../../../../utils/display/positionning';
+import { MODERN_WORLD } from '../../../../dictionnary/worlds';
 
 const ModernWorld = ({ articles, getAllArticlesInfos }) => {
   useEffect(() => {
-    getAllArticlesInfos();
+    getAllArticlesInfos(MODERN_WORLD);
   }, []);
 
   useEffect(() => {

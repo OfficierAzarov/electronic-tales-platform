@@ -8,7 +8,7 @@ const Imaginarium = () => {
   return (
     <div>
       <h1>Imaginarium</h1>
-      <InteractiveImage />
+      {/* <InteractiveImage /> */}
     </div>
   );
 };
