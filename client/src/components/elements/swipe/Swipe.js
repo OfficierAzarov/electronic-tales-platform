@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import TinderCard from 'react-tinder-card';
@@ -17,6 +17,7 @@ import {
   computeWidth,
   computeHeight,
   placeElementAtBottomOfSection,
+  goUp,
 } from '../../../utils/display/positionning';
 
 export const Swipe = ({
@@ -35,6 +36,10 @@ export const Swipe = ({
       getTooLateToAsks();
       setInitialLoading(false);
     }
+  }, []);
+
+  useEffect(() => {
+    goUp();
   }, []);
 
   const handleClick = () => {

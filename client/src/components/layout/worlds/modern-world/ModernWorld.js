@@ -10,10 +10,15 @@ import Hands from './../../../../resources/img/icons/swipe-hands.png';
 
 import { groupBy } from '../../../../utils/data-sorting/groupBy';
 import { getAllArticlesInfos } from '../../../../redux/actions/article';
+import { goUp } from '../../../../utils/display/positionning';
 
 const ModernWorld = ({ articles, getAllArticlesInfos }) => {
   useEffect(() => {
     getAllArticlesInfos();
+  }, []);
+
+  useEffect(() => {
+    goUp();
   }, []);
 
   const deduceCategoriesFromArticles = (articles) => {

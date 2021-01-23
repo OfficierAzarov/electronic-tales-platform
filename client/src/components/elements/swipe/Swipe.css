@@ -24,6 +24,7 @@
 
 #swipe .swipe-card-content-text {
   margin: 0em 0 1em 1em;
+  width: 70%;
 }
 
 #swipe .swipe-card-content-text-title {

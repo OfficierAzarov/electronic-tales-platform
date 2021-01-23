@@ -20,13 +20,14 @@ export const computeLeft = (wantedElementWidthRegardingWindowWidth) => {
 
 export const placeElementAtBottomOfSection = (wantedSpaceBetweenElementAndNavInVh) => {
   const windowHeight = window.innerHeight;
-  // onePercentOfWindowHeight = 1 vh
   const vh = windowHeight / 100;
-  // navHeight = 10 vh, as defined in css
   const navHeight = 10 * vh;
-  // buttonsContainerHeight = 10 vh, as defined in css
   const buttonsContainerHeight = 10 * vh;
   const sectionHeight = windowHeight - navHeight;
   const top = sectionHeight - buttonsContainerHeight - wantedSpaceBetweenElementAndNavInVh;
   return top;
+};
+
+export const goUp = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };

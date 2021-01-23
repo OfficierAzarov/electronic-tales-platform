@@ -4,6 +4,16 @@
   height: 30vh;
 }
 
+.card.big {
+  width: 90vw;
+  height: 30vh;
+}
+
+.card.big img {
+  width: 90vw;
+  height: 30vh;
+}
+
 .card img {
   width: 60vw;
   height: 35vh;
