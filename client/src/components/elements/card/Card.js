@@ -7,7 +7,7 @@ import { ARTICLES_IMAGES_URL } from '../../../utils/urls/urls';
 
 const Card = ({ article, size }) => {
   return (
-    <Link to={`/modern-world/articles/regular-articles/${article.slug}`}>
+    <Link to={`/${article.world}/articles/regular-articles/${article.slug}`}>
       <div className={`card ${size != 'big' || 'big'}`}>
         <img
           src={`${process.env.PUBLIC_URL}/${IMAGES_URL}/${ARTICLES_IMAGES_URL}/${article.thumbnail}`}

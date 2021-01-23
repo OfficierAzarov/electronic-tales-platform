@@ -9,6 +9,14 @@ import { Fragment } from 'react';
 
 const CardsHub = ({ categoryName, categoryArticles, id }) => {
   SwiperCore.use([Pagination, A11y]);
+
+  const addArticleCard = {
+    title: 'Wanna add?',
+    thumbnail: '',
+    slug: 'bla',
+    world: 'Nerverland',
+  };
+
   return (
     <div className="cards-hub" id={id}>
       <div className="line-title-wrapper category-title-wrapper">
@@ -17,25 +25,29 @@ const CardsHub = ({ categoryName, categoryArticles, id }) => {
       <div className="w-cat-card-content">
         {categoryArticles.length > 1 ? (
           <Swiper
-            spaceBetween={70}
-            slidesPerView={2}
+            spaceBetween={20}
+            slidesPerView={1.5}
             loop
+            // initialSlide={0}
             pagination={{ clickable: true }}
             a11y={{
               prevSlideMessage: 'Previous article',
               nextSlideMessage: 'Next article',
             }}
           >
-            {categoryArticles.map((article) => (
+            {categoryArticles.map((article, index) => (
               <SwiperSlide key={article._id}>
                 <Card article={article} />
               </SwiperSlide>
             ))}
+            <SwiperSlide>
+              <Card article={addArticleCard} />
+            </SwiperSlide>
           </Swiper>
         ) : (
           <Fragment>
             {categoryArticles.map((article) => (
-              <Card article={article} size="big" />
+              <Card key={article._id} article={article} size="big" />
             ))}
           </Fragment>
         )}

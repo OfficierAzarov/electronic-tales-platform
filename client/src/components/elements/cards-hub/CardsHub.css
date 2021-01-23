@@ -20,9 +20,9 @@
   color: rgb(124, 88, 170);
 }
 
-.w-cat-card-content.hub-content {
+/* .w-cat-card-content.hub-content {
   display: flex;
-}
+} */
 
 /* Let's overwrite swiperjs bullet styles */
 

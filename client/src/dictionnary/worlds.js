@@ -1,3 +1,3 @@
-export const MODERN_WORLD = 'MODERN_WORLD';
-export const IMAGINARIUM = 'IMAGINARIUM';
-export const ANCIENT_WORLD = 'ANCIENT_WORLD';
+export const MODERN_WORLD = 'modern-world';
+export const IMAGINARIUM = 'imaginarium';
+export const ANCIENT_WORLD = 'ancient-world';
