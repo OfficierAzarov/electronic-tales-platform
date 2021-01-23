@@ -13,7 +13,7 @@ import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
 const ModernWorld = ({ articles, getAllArticlesInfos }) => {
   useEffect(() => {
     getAllArticlesInfos(MODERN_WORLD);
-  }, [articles]);
+  }, []);
 
   useEffect(() => {
     goUp();
@@ -26,13 +26,6 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
       </div>
       <div className="image-card">
         <SwipeDoor link="/modern-world/swipe" />
-        {/* <div className="w-cat-card-content"> */}
-        {/* <div className="hot-label">Hot</div> */}
-        {/* <img src={hands} alt="Some hands swiping" loading="lazy" className="w-cat-card-img" />
-          <Link to="/modern-world/swipe" className="w-cat-card-cta">
-            Let's go for a swipe <Emoji symbol="🔥" label="tinder fire" />
-          </Link>
-        </div> */}
       </div>
       {deduceCategoriesFromArticles(articles)}
     </div>

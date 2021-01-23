@@ -25,9 +25,9 @@ const CardsHub = ({ categoryName, categoryArticles, id }) => {
       <div className="w-cat-card-content">
         {categoryArticles.length > 1 ? (
           <Swiper
-            spaceBetween={20}
-            slidesPerView={1.5}
-            loop
+            // spaceBetween={20}
+            slidesPerView={2}
+            // loop
             // initialSlide={0}
             pagination={{ clickable: true }}
             a11y={{
@@ -35,14 +35,14 @@ const CardsHub = ({ categoryName, categoryArticles, id }) => {
               nextSlideMessage: 'Next article',
             }}
           >
-            {categoryArticles.map((article, index) => (
+            {categoryArticles.map((article) => (
               <SwiperSlide key={article._id}>
                 <Card article={article} />
               </SwiperSlide>
             ))}
-            <SwiperSlide>
+            {/* <SwiperSlide>
               <Card article={addArticleCard} />
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
         ) : (
           <Fragment>
