@@ -30,6 +30,7 @@
     "react-tiny-fab": "^4.0.2",
     "react-toastify": "^6.2.0",
     "react-toggle": "^4.1.1",
+    "react-uuid": "^1.0.2",
     "reading-time": "^1.2.1",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",

@@ -8,6 +8,7 @@ import store from './redux/store';
 
 import './App.css';
 
+import ScrollToTop from './components/helpers/ScrollToTop';
 import Navbar from './components/elements/navbar/Navbar';
 import Routes from './components/routes/Routes';
 import Home from './components/layout/home/Home';
@@ -21,6 +22,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <Router>
+        <ScrollToTop />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route component={Routes} />

@@ -1,13 +1,15 @@
 import React from 'react';
-import GoBackButton from '../../../elements/buttons/go-back/GoBackButton';
+import Fade from 'react-reveal/Fade';
 
 import './AncientWorld.css';
 
 const AncientWorld = () => {
   return (
-    <div>
-      <h1>Ancient world</h1>
-    </div>
+    <Fade duration={1500}>
+      <div>
+        <h1>Ancient world</h1>
+      </div>
+    </Fade>
   );
 };
 

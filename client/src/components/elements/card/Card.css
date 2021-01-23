@@ -1,27 +1,33 @@
 .card {
-  background-color: #121212;
+  background-size: cover;
   width: 50vw;
   height: 30vh;
-}
-
-.card.big {
-  /* width: 90vw;
-  height: 30vh; */
-}
-
-.card.big img {
-  /* width: 90vw;
-  height: 30vh; */
-}
-
-.card img {
-  width: 80%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   border-radius: 0.5em;
 }
 
 .card .card-title {
   font-size: 1.4rem;
   text-align: center;
-  transform: translateY(-3.5em);
+  margin: 1em 0;
+  width: 80%;
 }
+
+/* .card.big {
+  width: 90vw;
+  height: 30vh;
+} */
+
+/* .card.big img {
+  width: 90vw;
+  height: 30vh;
+} */
+
+/* .card img {
+  width: 80%;
+  height: 100%;
+  border-radius: 0.5em;
+} */

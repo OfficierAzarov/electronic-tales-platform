@@ -1,18 +1,19 @@
 import React from 'react';
-import SwiperCore, { Pagination, A11y } from 'swiper';
+// import SwiperCore, { Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 
 import './CardsHub.css';
 import Card from '../card/Card';
 import { Fragment } from 'react';
+import SwiperJsHack from '../swiperjs-hack/SwiperJsHack';
 
 const CardsHub = ({ categoryName, categoryArticles, id }) => {
-  SwiperCore.use([Pagination, A11y]);
+  // SwiperCore.use([Pagination, A11y]);
 
   const addArticleCard = {
-    title: 'Wanna add?',
-    thumbnail: '',
+    title: 'Tu veux proposer un contenu ?',
+    thumbnail: 'handpoint-dark.png',
     slug: 'bla',
     world: 'Nerverland',
   };
@@ -24,26 +25,16 @@ const CardsHub = ({ categoryName, categoryArticles, id }) => {
       </div>
       <div className="w-cat-card-content">
         {categoryArticles.length > 1 ? (
-          <Swiper
-            // spaceBetween={20}
-            slidesPerView={2}
-            // loop
-            // initialSlide={0}
-            pagination={{ clickable: true }}
-            a11y={{
-              prevSlideMessage: 'Previous article',
-              nextSlideMessage: 'Next article',
-            }}
-          >
+          <SwiperJsHack>
             {categoryArticles.map((article) => (
               <SwiperSlide key={article._id}>
                 <Card article={article} />
               </SwiperSlide>
             ))}
-            {/* <SwiperSlide>
-              <Card article={addArticleCard} />
-            </SwiperSlide> */}
-          </Swiper>
+            <SwiperSlide>
+              <Card article={addArticleCard} placeText="center" />
+            </SwiperSlide>
+          </SwiperJsHack>
         ) : (
           <Fragment>
             {categoryArticles.map((article) => (

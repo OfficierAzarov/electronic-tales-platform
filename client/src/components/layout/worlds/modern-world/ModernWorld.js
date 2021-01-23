@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
+import Fade from 'react-reveal/Fade';
 
 import './ModernWorld.css';
 
@@ -15,20 +16,18 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
     getAllArticlesInfos(MODERN_WORLD);
   }, []);
 
-  useEffect(() => {
-    goUp();
-  }, []);
-
   return (
-    <div id="modern-world" className="world-page container">
-      <div className="line-title-wrapper world-title-wrapper">
-        <h2 className="world-title">Modern World</h2>
+    <Fade duration={1500}>
+      <div id="modern-world" className="world-page container">
+        <div className="line-title-wrapper world-title-wrapper">
+          <h2 className="world-title">Modern World</h2>
+        </div>
+        <div className="image-card">
+          <SwipeDoor link="/modern-world/swipe" />
+        </div>
+        {deduceCategoriesFromArticles(articles)}
       </div>
-      <div className="image-card">
-        <SwipeDoor link="/modern-world/swipe" />
-      </div>
-      {deduceCategoriesFromArticles(articles)}
-    </div>
+    </Fade>
   );
 };
 
