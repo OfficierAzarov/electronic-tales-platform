@@ -12,6 +12,7 @@ import SafeSpaceChat from '../layout/safe-space/chat/SafeSpaceChat';
 import AddQuote from '../layout/safe-space/add-quote/AddQuote';
 import InteractiveImage from '../interactive-images/InteractiveImage';
 import SwipeAddQuestion from '../elements/swipe/swipe-add-question/SwipeAddQuestion';
+import { Fragment } from 'react';
 
 const Routes = () => {
   return (
