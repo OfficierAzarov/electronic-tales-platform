@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const ArticleEntity = require('./Article').schema;
 
 const TooLateToAskSchema = new mongoose.Schema({
-  questionText: String,
+  text: String,
+  subtext: String,
   thumbnail: String,
   answer: { ArticleEntity },
 });

@@ -5,9 +5,10 @@ const ArticleEntity = require('../../models/Article');
 // @route   GET api/articles
 // @desc    Get all articles
 // @access  Public
-router.get('/infos', async (req, res) => {
+router.get('/infos/:world', async (req, res) => {
   try {
-    const articles = await ArticleEntity.find({}).select('-content -richLinks');
+    const world = req.params.world;
+    const articles = await ArticleEntity.find({ world: world }).select('-content -richLinks');
     res.json(articles);
   } catch (error) {
     console.log(error.message);
