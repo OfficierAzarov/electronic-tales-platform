@@ -1,18 +1,20 @@
-import { GET_QUOTES, ADD_QUOTE } from './types';
+import { GET_QUOTES, QUOTES_ERROR, ADD_QUOTE } from './types';
+import api from '../../utils/urls/api';
 
-import { quotesSource } from '../../mocks/quotes';
-
-export const getQuotes = () => (dispatch) => {
+export const getQuotes = () => async (dispatch) => {
   try {
-    const res = quotesSource;
+    const res = await api.get(`/quotes`);
 
     dispatch({
       type: GET_QUOTES,
-      payload: res,
+      payload: res.data,
     });
-  } catch (err) {
-    // TO DO : replace by an error reducer
-    console.log(err.message);
+  } catch (error) {
+    console.log(error.message);
+    dispatch({
+      type: QUOTES_ERROR,
+      payload: { msg: error.response.statusText, status: error.response.status },
+    });
   }
 };
 
@@ -25,8 +27,8 @@ export const addQuote = (formData) => async (dispatch) => {
       type: ADD_QUOTE,
       payload: res,
     });
-  } catch (err) {
+  } catch (error) {
     // TO DO : replace by an error reducer
-    console.log(err.message);
+    console.log(error.message);
   }
 };

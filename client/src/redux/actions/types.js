@@ -14,3 +14,4 @@ export const TOO_LATE_TO_ASK_ERROR = 'TOO_LATE_TO_ASK_ERROR';
 export const SET_INITIAL_LOADING = 'SET_INITIAL_LOADING';
 export const GET_QUOTES = 'GET_QUOTES';
 export const ADD_QUOTE = 'ADD_QUOTE';
+export const QUOTES_ERROR = 'QUOTES_ERROR';
