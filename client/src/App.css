@@ -78,6 +78,7 @@ button:focus {
   content: '';
   flex: 1 1 auto;
   border-bottom: solid 1px rgb(153, 243, 255);
+  box-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em, rgb(0, 255, 255) 0px 0px 1.6em;
 }
 
 .category-title-wrapper {
@@ -87,7 +88,7 @@ button:focus {
 .category-title-wrapper::after {
   content: '';
   flex: 1 1 auto;
-  border-bottom: solid 1px rgb(204, 134, 161);
+  border-bottom: solid 1px #ec567c;
 }
 
 .world-title {
@@ -96,13 +97,13 @@ button:focus {
   color: rgb(153, 243, 255);
   font-weight: 300;
   font-size: 1.6rem;
-  /* text-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em, rgb(0, 255, 255) 0px 0px 1.6em; */
+  text-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em, rgb(0, 255, 255) 0px 0px 1.6em;
 }
 
 .title {
   flex: 0 1 auto;
   padding-right: 1rem;
-  color: rgb(204, 134, 161);
+  color: #ec567c;
   font-weight: 400;
   font-size: 2.5rem;
   /* text-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em, rgb(0, 255, 255) 0px 0px 1.6em; */

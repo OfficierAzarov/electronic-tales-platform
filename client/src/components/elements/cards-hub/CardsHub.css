@@ -4,11 +4,11 @@
 
 #category-0 .category-title-wrapper::after,
 #category-0 .w-cat-card-content {
-  border-color: rgb(110, 192, 158);
+  border-color: #1ec0d0;
 }
 
 #category-0 .title {
-  color: rgb(110, 192, 158);
+  color: #1ec0d0;
 }
 
 #category-1 .category-title-wrapper::after,
