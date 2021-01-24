@@ -14,11 +14,36 @@ h2,
 h3 {
   font-family: 'Dosis', sans-serif;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 a {
   text-decoration: none;
   color: #e9e9e9;
+}
+
+.neon {
+  text-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em, rgb(0, 255, 255) 0px 0px 1.6em;
+}
+
+.flicker {
+  animation: flicker 6s infinite;
+}
+
+@keyframes flicker {
+  0%,
+  31%,
+  38%,
+  56%,
+  100% {
+    text-shadow: rgb(0, 225, 255) 0px 0px 0.4em,
+      rgb(0, 225, 255) 0px 0px 0.8em, rgb(0, 255, 255) 0px 0px 1.6em;
+  }
+  30%,
+  37%,
+  55% {
+    text-shadow: none;
+  }
 }
 
 section {
@@ -97,7 +122,6 @@ button:focus {
   color: rgb(153, 243, 255);
   font-weight: 300;
   font-size: 1.6rem;
-  text-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em, rgb(0, 255, 255) 0px 0px 1.6em;
 }
 
 .title {

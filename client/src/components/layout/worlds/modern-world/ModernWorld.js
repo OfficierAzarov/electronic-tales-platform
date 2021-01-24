@@ -20,7 +20,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
     <Fade duration={1500}>
       <div id="modern-world" className="world-page container">
         <div className="line-title-wrapper world-title-wrapper">
-          <h2 className="world-title">Modern World</h2>
+          <h2 className="world-title neon flicker">Modern World</h2>
         </div>
         <div className="image-card">
           <SwipeDoor link="/modern-world/swipe" />

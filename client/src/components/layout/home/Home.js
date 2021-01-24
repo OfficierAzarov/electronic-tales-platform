@@ -41,7 +41,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
         </div>
         <Bounce bottom duration="2000">
           <div className="home-door middle" id="home-modern-world">
-            <h2>Modern World</h2>
+            <h2 className="neon flicker">Modern World</h2>
             <p>Apprends à programmer entre les lignes.</p>
             <Link to="/modern-world" className="basic-button">
               Enter
@@ -50,7 +50,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
         </Bounce>
         <Bounce bottom duration="2000">
           <div className="home-door middle" id="home-imaginarium">
-            <h2>Imaginarium</h2>
+            <h2 className="neon flicker">Imaginarium</h2>
             <p>Imprègne-toi des mythes et légendes de la bits generation.</p>
             <Link to="/imaginarium" className="basic-button">
               Enter
@@ -59,7 +59,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
         </Bounce>
         <Bounce bottom duration="2000">
           <div className="home-door" id="home-ancient-world">
-            <h2>Ancient World</h2>
+            <h2 className="neon flicker">Ancient World</h2>
             <p>Plonge dans le monde englouti de la computer science.</p>
             <Link to="/ancient-world" className="basic-button">
               Enter
