@@ -17,7 +17,7 @@ const HomeNavbar = () => {
         spy={true}
         smooth={true}
         duration={500}
-        offset={-50}
+        offset={-60}
       >
         <SafeSpaceIcon />
       </ScrollLink>
@@ -27,7 +27,7 @@ const HomeNavbar = () => {
         spy={true}
         smooth={true}
         duration={500}
-        offset={-50}
+        offset={-60}
       >
         <ModernWorldIcon />
       </ScrollLink>
@@ -37,7 +37,7 @@ const HomeNavbar = () => {
         spy={true}
         smooth={true}
         duration={500}
-        offset={-50}
+        offset={-60}
       >
         <ImaginariumIcon />
       </ScrollLink>
@@ -47,7 +47,7 @@ const HomeNavbar = () => {
         spy={true}
         smooth={true}
         duration={500}
-        offset={-50}
+        offset={-60}
       >
         <AncientWorldIcon />
       </ScrollLink>

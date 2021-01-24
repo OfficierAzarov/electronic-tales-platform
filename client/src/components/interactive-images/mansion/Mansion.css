@@ -1,3 +1,12 @@
+#mansion {
+  background: linear-gradient(
+    180deg,
+    rgba(27, 62, 73, 1) 26%,
+    rgba(82, 119, 130, 1) 65%,
+    rgba(115, 131, 134, 1) 100%
+  );
+}
+
 .st0 {
   enable-background: new;
 }
@@ -13,13 +22,12 @@
 }
 .st3 {
   fill: #ec567c;
-}
-.st4 {
-  fill: #ec567c;
+  opacity: 0.6;
 }
 
-.st6 {
+.st4 {
   fill: #ec567c;
+  opacity: 0.6;
 }
 
 #cloud01 {
@@ -45,7 +53,7 @@
 }
 
 #fatCloud2 {
-  animation: moveALittle 10s ease;
+  animation: moveALittle 12s ease;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
