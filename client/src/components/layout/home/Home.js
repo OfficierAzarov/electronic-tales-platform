@@ -58,7 +58,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
           </div>
         </Bounce>
         <Bounce bottom duration="2000">
-          <div className="home-door middle" id="home-ancient-world">
+          <div className="home-door" id="home-ancient-world">
             <h2>Ancient World</h2>
             <p>Plonge dans le monde englouti de la computer science.</p>
             <Link to="/ancient-world" className="basic-button">
