@@ -13,7 +13,6 @@ export const deduceCategoriesFromArticles = (articles) => {
           key={i}
           categoryName={categoryName}
           categoryArticles={categoryArticles}
-          id={`category-${i}`}
         />
       );
     }

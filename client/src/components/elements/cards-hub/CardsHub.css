@@ -2,24 +2,6 @@
   width: 90vw;
 }
 
-#category-0 .category-title-wrapper::after,
-#category-0 .w-cat-card-content {
-  border-color: #1ec0d0;
-}
-
-#category-0 .title {
-  color: #1ec0d0;
-}
-
-#category-1 .category-title-wrapper::after,
-#category-1 .w-cat-card-content {
-  border-color: rgb(124, 88, 170);
-}
-
-#category-1 .title {
-  color: rgb(124, 88, 170);
-}
-
 /* .w-cat-card-content.hub-content {
   display: flex;
 } */

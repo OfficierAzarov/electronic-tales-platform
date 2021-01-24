@@ -8,7 +8,7 @@ import Card from '../card/Card';
 import { Fragment } from 'react';
 import SwiperJsHack from '../swiperjs-hack/SwiperJsHack';
 
-const CardsHub = ({ categoryName, categoryArticles, id }) => {
+const CardsHub = ({ categoryName, categoryArticles }) => {
   // SwiperCore.use([Pagination, A11y]);
 
   const addArticleCard = {
@@ -19,7 +19,7 @@ const CardsHub = ({ categoryName, categoryArticles, id }) => {
   };
 
   return (
-    <div className="cards-hub" id={id}>
+    <div className="cards-hub">
       <div className="line-title-wrapper category-title-wrapper">
         <h3 className="title">{categoryName}</h3>
       </div>
