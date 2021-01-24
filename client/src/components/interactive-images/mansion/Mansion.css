@@ -1,8 +1,106 @@
-#mansion path {
-  height: 100vh;
+.st0 {
+  enable-background: new;
+}
+.st1 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #303237;
+}
+.st2 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #121212;
+}
+.st3 {
+  fill: #ec567c;
+}
+.st4 {
+  fill: #ec567c;
 }
 
-.cls-1 {
-  fill: #010101;
-  fill-rule: evenodd;
+.st6 {
+  fill: #ec567c;
+}
+
+#cloud01 {
+  animation: move1 20s ease;
+  animation-iteration-count: infinite;
+  /* animation-direction: alternate; */
+}
+
+#cloud02 {
+  animation: move2 20s ease;
+  animation-iteration-count: infinite;
+}
+
+#cloud03 {
+  animation: move1 40s ease;
+  animation-iteration-count: infinite;
+}
+
+#fatCloud1 {
+  animation: moveALittle 10s ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#fatCloud2 {
+  animation: moveALittle 10s ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes move1 {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
+@keyframes move2 {
+  0% {
+    transform: translate(100%, 0);
+  }
+  100% {
+    transform: translate(-85%, 0);
+  }
+}
+
+@keyframes breath {
+  0% {
+    transform: scale(1);
+    transform-origin: center;
+  }
+  100% {
+    transform: scale(1.15);
+    transform-origin: center;
+  }
+}
+
+@keyframes moveALittle {
+  0% {
+    transform: translate(0%, 0);
+  }
+  100% {
+    transform: translate(40%, 0);
+  }
+}
+
+#Fenetre7_1_,
+#Fenetre6_2_,
+#Fenetre6_3_ {
+  animation: blink 2s ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

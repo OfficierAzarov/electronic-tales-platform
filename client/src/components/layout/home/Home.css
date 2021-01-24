@@ -1,30 +1,36 @@
 #home {
-  background-color: #1b3e49;
+  /* background-color: #1b3e49; */
+  background: linear-gradient(
+    180deg,
+    rgba(27, 62, 73, 1) 26%,
+    rgba(82, 119, 130, 1) 65%,
+    rgba(115, 131, 134, 1) 100%
+  );
+  height: 400vh;
 }
 
-#home #header {
+#home .home-door {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-#home #header img {
-  width: 60%;
-}
-
-#home .full-height {
-  height: 100vh;
-}
-
-#home #header img {
-  width: 60%;
-}
-
-/* TO DO : juste a mock, change with actual style */
-#home .temporary-comestics {
-  /* padding-top: 3%;
-  padding-bottom: 3%; */
+  text-align: center;
   width: 80%;
+  background-color: rgba(0, 0, 0, 0.555);
+  border-radius: 0.5em;
+  padding: 2em 0;
+}
+
+#home #home-safe-space {
+  margin: 5em 0 6em 0;
+  display: flex;
+  justify-content: center;
+}
+
+#home #home-safe-space h2 {
+  width: 90%;
+}
+
+#home .middle {
+  margin: 6em 0;
 }
 
 #home .temporary-comestics {
@@ -32,24 +38,71 @@
   padding: 1em;
 }
 
-#home p {
+#home .home-door p {
   width: 80%;
+  margin-top: 2em;
 }
 
 #home #home-worlds-container {
   position: absolute;
   top: 0;
   left: 0;
-  /* transform: translateY(20%); */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#home #home-worlds-container p {
+/* #home #home-modern-world {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(25em);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+/* #home #home-worlds-container p {
   margin-top: 2em;
 }
 
-#home #home-modern-world {
-  /* transform: translateY(20%); */
+#home #cloud-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+} */
+
+/* #home #cloud-1 {
+  animation: move1 10s ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+
+#home #cloud-2 {
+  animation: move2 15s ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+} */
+
+#home #mansion svg {
+  position: absolute;
+}
+
+/* @keyframes move1 {
+  0% {
+    transform: translate(5%, 500%);
+  }
+  100% {
+    transform: translate(100%, 500%);
+  }
+}
+
+@keyframes move2 {
+  0% {
+    transform: translate(110%, 300%);
+  }
+  100% {
+    transform: translate(-5%, 300%);
+  }
+} */
