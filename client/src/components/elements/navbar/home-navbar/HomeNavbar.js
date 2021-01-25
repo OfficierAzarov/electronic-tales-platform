@@ -7,8 +7,11 @@ import { ReactComponent as SafeSpaceIcon } from '../../../../resources/img/icons
 import { ReactComponent as ModernWorldIcon } from '../../../../resources/img/icons/modern-world.svg';
 import { ReactComponent as ImaginariumIcon } from '../../../../resources/img/icons/imaginarium.svg';
 import { ReactComponent as AncientWorldIcon } from '../../../../resources/img/icons/ancient-world.svg';
+import { viewportToPixels } from '../../../../utils/display/converter';
 
 const HomeNavbar = () => {
+  const offset = -1 * viewportToPixels('25vh');
+
   return (
     <Fragment>
       <ScrollLink
@@ -17,7 +20,7 @@ const HomeNavbar = () => {
         spy={true}
         smooth={true}
         duration={500}
-        offset={-60}
+        offset={offset}
       >
         <SafeSpaceIcon />
       </ScrollLink>
@@ -27,7 +30,7 @@ const HomeNavbar = () => {
         spy={true}
         smooth={true}
         duration={500}
-        offset={-60}
+        offset={offset}
       >
         <ModernWorldIcon />
       </ScrollLink>
@@ -37,7 +40,7 @@ const HomeNavbar = () => {
         spy={true}
         smooth={true}
         duration={500}
-        offset={-60}
+        offset={offset}
       >
         <ImaginariumIcon />
       </ScrollLink>
@@ -47,7 +50,7 @@ const HomeNavbar = () => {
         spy={true}
         smooth={true}
         duration={500}
-        offset={-60}
+        offset={offset}
       >
         <AncientWorldIcon />
       </ScrollLink>
