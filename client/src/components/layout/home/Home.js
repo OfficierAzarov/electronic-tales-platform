@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import { connect } from 'react-redux';
 import Bounce from 'react-reveal/Bounce';
 import Emoji from 'a11y-react-emoji';
@@ -38,13 +39,19 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
             <Link to="/safe-space" className="basic-button">
               Viens, on en parle&nbsp;&nbsp;&rarr;
             </Link>
-            <div id="alternative-cta" onClick={() => window.scrollBy(0, viewportToPixels('120vh'))}>
-              <p>
+            <div className="alternative-cta">
+              <ScrollLink
+                to="home-modern-world"
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-1 * viewportToPixels('25vh')}
+              >
                 ...&nbsp;ou bien continue la visite <Emoji symbol="🐾" label="continue the visit" />
-              </p>
-              <div id="chevron-container">
-                <ChevronDown />
-              </div>
+                <div className="chevron-container">
+                  <ChevronDown />
+                </div>
+              </ScrollLink>
             </div>
           </div>
         </div>
@@ -57,6 +64,21 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
               <Link to="/modern-world" className="basic-button">
                 Entrer
               </Link>
+              <div className="alternative-cta">
+                <ScrollLink
+                  to="home-imaginarium"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-1 * viewportToPixels('25vh')}
+                >
+                  ...&nbsp;mmh, qu'est-ce qu'on a d'autre en magasin&nbsp;?
+                  <Emoji symbol="🕵️‍♂️" label="continue the visit" />
+                  <div className="chevron-container">
+                    <ChevronDown />
+                  </div>
+                </ScrollLink>
+              </div>
             </div>
           </div>
         </Bounce>
@@ -68,6 +90,21 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
               <Link to="/imaginarium" className="basic-button">
                 Entrer
               </Link>
+              <div className="alternative-cta">
+                <ScrollLink
+                  to="home-ancient-world"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={-1 * viewportToPixels('25vh')}
+                >
+                  ...&nbsp;toujours pas&nbsp;?
+                  <Emoji symbol="😅" label="continue the visit" />
+                  <div className="chevron-container">
+                    <ChevronDown />
+                  </div>
+                </ScrollLink>
+              </div>
             </div>
           </div>
         </Bounce>
@@ -79,6 +116,21 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
               <Link to="/ancient-world" className="basic-button">
                 Entrer
               </Link>
+              <div
+                className="alternative-cta"
+                onClick={() =>
+                  alert(
+                    "Allons bon ! Tu t'attendais à quoi ? Les neuf cercles de l'enfer ? Le département design n'avait pas assez de budget pour ça."
+                  )
+                }
+              >
+                <a href="">
+                  Encore plus bas ?<Emoji symbol="🧗" label="continue the visit" />
+                  <div className="chevron-container">
+                    <ChevronDown />
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </Bounce>

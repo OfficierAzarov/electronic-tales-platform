@@ -20,6 +20,7 @@
 #home #home-safe-space {
   display: flex;
   justify-content: center;
+  margin-top: 4em;
 }
 
 #home #home-safe-space h2 {
@@ -27,19 +28,15 @@
   margin-bottom: 1em;
 }
 
-#home #home-safe-space #alternative-cta {
+#home .alternative-cta {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 1.5em;
-  width: 100%;
+  width: 80%;
 }
 
-#home #home-safe-space #alternative-cta p {
-  margin-bottom: 0.5em;
-}
-
-#home #chevron-container {
+#home .chevron-container {
   margin-bottom: 0.5em;
   animation-name: stim;
   animation-duration: 3s;
