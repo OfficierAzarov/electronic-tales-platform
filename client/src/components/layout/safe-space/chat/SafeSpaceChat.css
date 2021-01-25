@@ -1,13 +1,61 @@
 #safe-space-chat {
-  min-height: 90vh;
-  background-image: url('../../../../resources//img/mocks/safe-space.jpg');
+  background-color: 121212;
+  /* background-image: url('../../../../resources//img/mocks/safe-space.jpg'); */
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#safe-space-chat p {
+#safe-space-chat h2 {
+  margin: 1em 0 1em;
   text-align: center;
-  width: 70%;
+}
+
+#safe-space-chat #connect {
+  margin: 0 0 1em 0;
+  text-align: center;
+}
+
+#safe-space-chat #connect a {
+  color: #ec567c;
+}
+
+#safe-space-chat h4 {
+  margin: 0 0 1em 0;
+}
+
+#safe-space-chat p {
+  width: 80%;
+}
+
+#safe-space-chat ul {
+  list-style: none;
+  padding: 0;
+}
+
+#safe-space-chat li:first-of-type {
+  margin-top: 2em;
+}
+
+#safe-space-chat li {
+  margin-top: 3em;
+}
+
+#safe-space-chat #swag,
+#safe-space-chat #internet,
+#safe-space-chat #annees-2000 {
+  display: inline-block;
+}
+
+#safe-space-chat #swag {
+  width: 15%;
+}
+
+#safe-space-chat #internet {
+  width: 20%;
+}
+
+#safe-space-chat #annees-2000 {
+  width: 35%;
 }

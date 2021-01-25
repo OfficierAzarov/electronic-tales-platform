@@ -47,7 +47,8 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                 duration={500}
                 offset={-1 * viewportToPixels('25vh')}
               >
-                ...&nbsp;ou bien continue la visite <Emoji symbol="🐾" label="continue the visit" />
+                ...&nbsp;ou bien continue la visite&nbsp;
+                <Emoji symbol="🐾" label="continue the visit" />
                 <div className="chevron-container">
                   <ChevronDown />
                 </div>
@@ -72,7 +73,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                   duration={500}
                   offset={-1 * viewportToPixels('25vh')}
                 >
-                  ...&nbsp;mmh, qu'est-ce qu'on a d'autre en magasin&nbsp;?
+                  ...&nbsp;mmh, qu'est-ce qu'on a d'autre en magasin&nbsp;?&nbsp;
                   <Emoji symbol="🕵️‍♂️" label="continue the visit" />
                   <div className="chevron-container">
                     <ChevronDown />
@@ -98,7 +99,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                   duration={500}
                   offset={-1 * viewportToPixels('25vh')}
                 >
-                  ...&nbsp;toujours pas&nbsp;?
+                  ...&nbsp;toujours pas&nbsp;?&nbsp;
                   <Emoji symbol="😅" label="continue the visit" />
                   <div className="chevron-container">
                     <ChevronDown />
@@ -125,7 +126,8 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                 }
               >
                 <a href="">
-                  Encore plus bas ?<Emoji symbol="🧗" label="continue the visit" />
+                  Encore plus bas ?&nbsp;
+                  <Emoji symbol="🧗" label="continue the visit" />
                   <div className="chevron-container">
                     <ChevronDown />
                   </div>

@@ -23,7 +23,8 @@ a {
 }
 
 .neon {
-  text-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em, rgb(0, 255, 255) 0px 0px 1.6em;
+  text-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em,
+    rgb(0, 255, 255) 0px 0px 1.6em;
 }
 
 .flicker {
@@ -36,8 +37,8 @@ a {
   38%,
   56%,
   100% {
-    text-shadow: rgb(0, 225, 255) 0px 0px 0.4em,
-      rgb(0, 225, 255) 0px 0px 0.8em, rgb(0, 255, 255) 0px 0px 1.6em;
+    text-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em,
+      rgb(0, 255, 255) 0px 0px 1.6em;
   }
   30%,
   37%,
@@ -47,7 +48,7 @@ a {
 }
 
 section {
-  padding-bottom: 4em;
+  padding-bottom: 12vh;
 }
 
 button {
@@ -103,7 +104,8 @@ button:focus {
   content: '';
   flex: 1 1 auto;
   border-bottom: solid 1px rgb(153, 243, 255);
-  box-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em, rgb(0, 255, 255) 0px 0px 1.6em;
+  box-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em,
+    rgb(0, 255, 255) 0px 0px 1.6em;
 }
 
 .category-title-wrapper {
