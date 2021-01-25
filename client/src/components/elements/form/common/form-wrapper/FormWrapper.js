@@ -7,8 +7,6 @@ import './FormWrapper.css';
 
 import GoBackButton from '../../../buttons/go-back/GoBackButton';
 
-import { ReactComponent as GoBack } from '../../../../../resources/img/icons/left-arrow.svg';
-
 const Add = ({ children, isVisible, tellVisibilityChange }) => {
   // const history = useHistory();
 

@@ -1,6 +1,75 @@
-#home {
-  /* background-color: #1b3e49; */
-  /* height: 400vh; */
+#home #mansion svg {
+  background: linear-gradient(
+    180deg,
+    rgba(27, 62, 73, 1) 26%,
+    rgba(82, 119, 130, 1) 65%,
+    rgba(115, 131, 134, 1) 100%
+  );
+}
+
+#home #home-worlds-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#home #home-worlds-container img {
+  padding-top: 2em;
+}
+
+#home #home-safe-space {
+  display: flex;
+  justify-content: center;
+}
+
+#home #home-safe-space h2 {
+  width: 90%;
+  margin-bottom: 1em;
+}
+
+#home #home-safe-space #alternative-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.5em;
+  width: 100%;
+}
+
+#home #home-safe-space #alternative-cta p {
+  margin-bottom: 0.5em;
+}
+
+#home #chevron-container {
+  margin-bottom: 0.5em;
+  animation-name: stim;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transition: opacity 2s ease-in-out;
+  cursor: pointer;
+}
+
+@keyframes stim {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#home #spacer {
+  height: 45vh;
+}
+
+#home .home-door-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #home .home-door {
@@ -11,86 +80,12 @@
   background-color: rgba(0, 0, 0, 0.555);
   border-radius: 0.5em;
   padding: 2em 0;
-
-}
-
-#home #home-safe-space {
-  margin: 2.5em 0 20em 0;
-  display: flex;
-  justify-content: center;
-}
-
-#home #home-safe-space h2 {
-  width: 90%;
-}
-
-/* #home #home-modern-world {
-  margin: 4em 0 10em;
-} */
-
-#home .middle {
-  /* margin: 4em 0; */
-  margin: 4em 0 10em;
-}
-
-#home .temporary-comestics {
-  text-align: center;
-  padding: 1em;
 }
 
 #home .home-door p {
   width: 80%;
-  margin-top: 2em;
 }
 
-#home #home-worlds-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* #home #home-modern-world {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translateY(25em);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
-/* #home #home-worlds-container p {
-  margin-top: 2em;
-}
-
-#home #cloud-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-} */
-
-/* #home #cloud-1 {
-  animation: move1 10s ease;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#home #cloud-2 {
-  animation: move2 15s ease;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-} */
-
-#home #mansion svg {
-  position: absolute;
-  background: linear-gradient(
-    180deg,
-    rgba(27, 62, 73, 1) 26%,
-    rgba(82, 119, 130, 1) 65%,
-    rgba(115, 131, 134, 1) 100%
-  );
+#home #spacer-small {
+  height: 10vh;
 }

@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import Toggle from 'react-toggle';
 import 'react-toggle/style.css';
-import Emoji from 'a11y-react-emoji';
 
 const AddTLTAQuestion = ({ tellResult }) => {
   const [formData, setFormData] = useState({
