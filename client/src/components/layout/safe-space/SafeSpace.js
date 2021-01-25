@@ -77,7 +77,7 @@ const SafeSpace = () => {
         Convaincu·e&nbsp;?
         <br />
         <br />
-        Jete un œil à <Link to="/safe-space/quotes">Micro-vécus</Link>, le florilège collaboratif
+        Jette un œil à <Link to="/safe-space/quotes">Micro-vécus</Link>, le florilège collaboratif
         des situations toxiques du milieu du dév.
         <br />
         <br />
