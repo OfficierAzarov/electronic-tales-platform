@@ -12,12 +12,12 @@ const SafeSpaceChat = () => {
   return (
     <div id="safe-space-chat">
       <MiniNav />
-      <h2 className="neon flicker">
+      <h2 className="neon">
         Rejoins le safe space <br />
         d'Electronic Tales
       </h2>
       <p id="connect">
-        Nous créé un{' '}
+        Nous avons créé un{' '}
         <a
           href="https://join.slack.com/t/electronictales/shared_invite/zt-kox8itw1-tveUHRe8QSTtjs0Bb172BA"
           target="_blank"

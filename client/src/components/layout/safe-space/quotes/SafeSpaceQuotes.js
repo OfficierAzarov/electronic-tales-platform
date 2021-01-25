@@ -25,6 +25,14 @@ const SafeSpaceQuotes = ({ quotes, getQuotes }) => {
   return (
     <div id="safe-space-quotes">
       <MiniNav isVisible={true} />
+      <h2 className="neon">Micro-vécus</h2>
+      <p id="subtitle">
+        Florilège des situations de tous les jours qu'on ne devrait jamais vivre dans le monde du
+        dév. <br />
+        <br />
+        Tu as un micro-vécu à partager&nbsp;? N'hésite pas, nous la publierons anonymement ou sous
+        pseudonyme.
+      </p>
       {quotes.map((quote, index) => (
         // index * x => just a stupid hack to make a delay of X ms for each quote
         <Quote quote={quote} key={quote.id} delay={index * 200} />

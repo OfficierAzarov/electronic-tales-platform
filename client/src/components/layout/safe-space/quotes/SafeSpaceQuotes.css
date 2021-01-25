@@ -1,6 +1,5 @@
 #safe-space-quotes {
   background-color: 121212;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,4 +8,14 @@
 
 #safe-space-quotes.visible {
   display: block;
+}
+
+#safe-space-quotes h2 {
+  margin: 1em 0 1em 0;
+}
+
+#safe-space-quotes #subtitle {
+  margin: 1em 0 1em 0;
+  text-align: center;
+  width: 75%;
 }
