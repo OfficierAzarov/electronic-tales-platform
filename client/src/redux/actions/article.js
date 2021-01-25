@@ -4,29 +4,29 @@ import { questionsSource } from '../../mocks/questions';
 import api from '../../utils/urls/api';
 
 export const setCurrentArticle = (type, slug) => async (dispatch) => {
-  let res;
   try {
+    let res;
     switch (type) {
       case 'regular-articles':
-        res = articlesSource.find((article) => article.slug === slug);
+        res = await api.get(`/articles/${slug}`);
         break;
       case 'swipe-answers':
-        const question = questionsSource.find((question) => question.answer.slug === slug);
-        res = question.answer;
+        res = await api.get(`/toolatetoasks/${slug}`);
         break;
       default:
         console.log(
           'Aouch, looks like you did not provide a suitable type to find the right article.'
         );
     }
-
     dispatch({
       type: SET_CURRENT_ARTICLE,
       payload: res,
     });
   } catch (error) {
-    // TO DO : replace by an error reducer
-    console.log(error.message);
+    dispatch({
+      type: ARTICLES_ERROR,
+      payload: { msg: error.response.statusText, status: error.response.status },
+    });
   }
 };
 
