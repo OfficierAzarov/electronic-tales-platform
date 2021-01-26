@@ -15,4 +15,18 @@ router.get('/', async (req, res) => {
   }
 });
 
+// @route   POST api/toolatetoasks
+// @desc    Test route
+// @access  Public
+router.get('/:slug', async (req, res) => {
+  try {
+    const slug = req.params.slug;
+    const tooLateToAsks = await TooLateToAskEntity.find({ 'answer.slug': slug });
+    res.json(tooLateToAsks);
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).send('Server error');
+  }
+});
+
 module.exports = router;

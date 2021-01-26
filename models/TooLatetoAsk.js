@@ -5,7 +5,17 @@ const TooLateToAskSchema = new mongoose.Schema({
   text: String,
   subtext: String,
   thumbnail: String,
-  answer: { ArticleEntity },
+  answer: {
+    title: String,
+    slug: String,
+    content: String,
+    richLinks: {
+      reference: String,
+      name: String,
+      content: String,
+      needsASpaceAfter: Boolean,
+    },
+  },
 });
 
 module.exports = TooLateToAskEntity = mongoose.model('tooLateToAsk', TooLateToAskSchema);

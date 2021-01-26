@@ -1,9 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const QuoteEntity = require('../../models/Quotes');
 
-// @route   GET api/articles
-// @desc    Test route
+// @route   GET api/quotes
+// @desc    Get all quotes
 // @access  Public
-router.get('/', (req, res) => res.send('Quotes route'));
+router.get('/', async (req, res) => {
+  try {
+    const quotes = await QuoteEntity.find();
+    res.json(quotes);
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).send('Server error');
+  }
+});
 
 module.exports = router;

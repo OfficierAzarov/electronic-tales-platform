@@ -10,14 +10,14 @@ const TooLateToAskPostEntity = require('../../models/TooLatetoAskPost');
 router.post('/toolatetoaskposts', check('question').not().isEmpty(), async (req, res) => {
   const validationErrors = validationResult(req);
   if (!validationErrors.isEmpty()) {
-    return res.status(400).json({ errors: validationErrors.array() });
+    res.status(400).json({ errors: validationErrors.array() });
   }
   const { question, answer, name } = req.body;
   try {
     // check if tooLateToAskPost already exists
     let tooLateToAskPost = await TooLateToAskPostEntity.findOne({ question });
     if (tooLateToAskPost) {
-      return res.status(400).json({ errors: [{ msg: 'The question has already been posted' }] });
+      res.status(400).json({ errors: [{ msg: 'The question has already been posted' }] });
     }
 
     // create the new tooLateToAskPost
