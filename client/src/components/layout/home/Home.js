@@ -21,6 +21,8 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
     };
   }, []);
 
+  const offset = -1 * viewportToPixels('20vh');
+
   return (
     <div id="home">
       <div id="mansion">
@@ -45,7 +47,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                offset={-1 * viewportToPixels('25vh')}
+                offset={offset}
               >
                 ...&nbsp;ou bien continue la visite&nbsp;
                 <Emoji symbol="🐾" label="continue the visit" />
@@ -71,7 +73,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={-1 * viewportToPixels('25vh')}
+                  offset={offset}
                 >
                   ...&nbsp;mmh, qu'est-ce qu'on a d'autre en magasin&nbsp;?&nbsp;
                   <Emoji symbol="🕵️‍♂️" label="continue the visit" />
@@ -97,7 +99,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={-1 * viewportToPixels('25vh')}
+                  offset={offset}
                 >
                   ...&nbsp;toujours pas&nbsp;?&nbsp;
                   <Emoji symbol="😅" label="continue the visit" />

@@ -65,9 +65,11 @@ const SafeSpace = () => {
           <Emoji symbol="💪" label="progress" />
         </li>
         <li>
-          entamer ensemble un mouvement de détox&nbsp;
-          <Emoji symbol="🌱" label="detox" /> d'un milieu parfois toxique&nbsp;
-          <Emoji symbol="☢️" label="toxic" />
+          Entamer ensemble un mouvement de détox&nbsp;
+          <Emoji symbol="🌱" label="detox plant" />
+          <Emoji symbol="🍵" label="detox tea" /> d'un milieu parfois toxique&nbsp;
+          <Emoji symbol="🤢" label="nausea emoji" />
+          <Emoji symbol="☢️" label="radioactive sign" />
         </li>
       </ul>
       <div className="line-title-wrapper category-title-wrapper">
@@ -77,8 +79,8 @@ const SafeSpace = () => {
         Convaincu·e&nbsp;?
         <br />
         <br />
-        Jette un œil à <Link to="/safe-space/quotes">Micro-vécus</Link>, le florilège collaboratif
-        des situations toxiques du milieu du dév.
+        Jette un œil à <Link to="/safe-space/quotes">Micro-vécus</Link>, le recueil collaboratif des
+        situations toxiques du milieu du dév.
         <br />
         <br />
         Viens discuter avec d'autres devs sur notre <Link to="/safe-space/chat">Slack</Link>.

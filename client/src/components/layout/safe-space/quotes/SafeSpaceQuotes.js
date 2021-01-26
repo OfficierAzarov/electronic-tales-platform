@@ -27,10 +27,10 @@ const SafeSpaceQuotes = ({ quotes, getQuotes }) => {
       <MiniNav isVisible={true} />
       <h2 className="neon">Micro-vécus</h2>
       <p id="subtitle">
-        Florilège des situations de tous les jours qu'on ne devrait jamais vivre dans le monde du
+        Florilège de situations de tous les jours qu'on ne devrait jamais vivre dans le monde du
         dév. <br />
         <br />
-        Tu as un micro-vécu à partager&nbsp;? N'hésite pas, nous la publierons anonymement ou sous
+        Tu as un micro-vécu à partager&nbsp;? N'hésite pas, nous le publierons anonymement ou sous
         pseudonyme.
       </p>
       {quotes.map((quote, index) => (

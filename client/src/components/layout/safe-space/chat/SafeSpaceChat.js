@@ -24,7 +24,8 @@ const SafeSpaceChat = () => {
         >
           Slack
         </a>{' '}
-        pour permettre aux membres de notre communauté de... <br />
+        pour permettre aux devs de discuter à cœur ouvert des problèmes qu'ils peuvent vivre dans la
+        tech. <br />
         <br />
         Pour le bien-être de tous·tes, nous te demandons de suivre deux grands principes :
       </p>
@@ -34,8 +35,8 @@ const SafeSpaceChat = () => {
             <Emoji symbol="😎" label="pseudonym" />
             &nbsp;Utilise un pseudo
           </h4>
-          Laissons de côté les vrais noms, lieux de travail et noms d'entrprises – retrouvons le{' '}
-          <img src={wordartSwag} alt="le mot swag en wordart" id="swag" /> de
+          Laissons de côté les vrais noms, lieux de travail et appellations d'entreprises –
+          retrouvons le <img src={wordartSwag} alt="le mot swag en wordart" id="swag" /> de
           <img src={wordartInternet} alt="le mot internet en wordart" id="internet" /> du début des{' '}
           <img
             src={wordartAnnees2000}
@@ -48,13 +49,13 @@ const SafeSpaceChat = () => {
         <li>
           <h4>
             <Emoji symbol="🤗" label="respect" />
-            &nbsp;N'oublie jamais le respect
+            &nbsp;N'oublie jamais l'inclusion et le respect
           </h4>
-          Pas de racisme, de sexisme, d'homophobie, de transphobie, de body shaming et tous autres{' '}
-          <i>-&nbsp;ismes</i>, <i>-&nbsp;ing</i> et <i>-&nbsp;phobies</i> susceptibles de mettre
-          quelqu'un mal à l'aise. Cela demande beaucoup d'énergie et de courage pour parler, même
-          anonymement dans un recoin éloigné d'internet, donc on sera intransigeant·e·s sur la
-          question.
+          Pas de racisme, de validisme, de sexisme, d'homophobie, de transphobie, de body shaming et
+          tous autres <i>-&nbsp;ismes</i>, <i>-&nbsp;ing</i> et <i>-&nbsp;phobies</i> susceptibles
+          de mettre quelqu'un mal à l'aise. Cela demande beaucoup d'énergie et de courage pour
+          parler, même anonymement dans un recoin éloigné d'internet, donc on sera intransigeant·e·s
+          sur la question.
         </li>
       </ul>
       <a
