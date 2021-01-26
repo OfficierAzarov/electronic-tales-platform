@@ -3,29 +3,29 @@ import { NavLink } from 'react-router-dom';
 
 import './DefaultNavbar.css';
 
-import { ReactComponent as SafeSpace } from '../../../../resources/img/icons/safe-space.svg';
-import { ReactComponent as Home } from '../../../../resources/img/icons/home.svg';
-import { ReactComponent as ModernWorld } from '../../../../resources/img/icons/modern-world.svg';
-import { ReactComponent as Imaginarium } from '../../../../resources/img/icons/imaginarium.svg';
-import { ReactComponent as AncientWorld } from '../../../../resources/img/icons/ancient-world.svg';
+import { ReactComponent as SafeSpaceIcon } from '../../../../resources/img/icons/v2/safespace-opt.svg';
+import HomeIcon from '../../../../resources/img/icons/v2/HomeSVG';
+import { ReactComponent as ModernWorldIcon } from '../../../../resources/img/icons/v2/modernworld-screen-original.svg';
+import { ReactComponent as ImaginariumIcon } from '../../../../resources/img/icons/imaginarium.svg';
+import { ReactComponent as AncientWorldIcon } from '../../../../resources/img/icons/ancient-world.svg';
 
 const DefaultNavbar = () => {
   return (
     <Fragment>
       <NavLink exact to="/" activeClassName="active-navbar-icon">
-        <Home />
+        <HomeIcon />
       </NavLink>
       <NavLink exact to="/safe-space" activeClassName="active-navbar-icon">
-        <SafeSpace />
+        <SafeSpaceIcon />
       </NavLink>
       <NavLink exact to="/modern-world" activeClassName="active-navbar-icon">
-        <ModernWorld />
+        <ModernWorldIcon />
       </NavLink>
       <NavLink exact to="/imaginarium" activeClassName="active-navbar-icon">
-        <Imaginarium />
+        <ImaginariumIcon />
       </NavLink>
       <NavLink exact to="/ancient-world" activeClassName="active-navbar-icon">
-        <AncientWorld />
+        <AncientWorldIcon />
       </NavLink>
     </Fragment>
   );

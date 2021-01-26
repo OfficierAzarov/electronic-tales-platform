@@ -12,8 +12,8 @@ nav {
 
 nav img,
 nav svg {
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
+  height: 2em;
   padding: 1em 0.8em;
   cursor: pointer;
 }

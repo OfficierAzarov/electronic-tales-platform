@@ -3,9 +3,9 @@ import { Link as ScrollLink } from 'react-scroll';
 
 import './HomeNavbar.css';
 
-import { ReactComponent as SafeSpaceIcon } from '../../../../resources/img/icons/safe-space.svg';
-import { ReactComponent as ModernWorldIcon } from '../../../../resources/img/icons/modern-world.svg';
-import { ReactComponent as ImaginariumIcon } from '../../../../resources/img/icons/imaginarium.svg';
+import { ReactComponent as SafeSpaceIcon } from '../../../../resources/img/icons/v2/safespace-opt.svg';
+import { ReactComponent as ModernWorldIcon } from '../../../../resources/img/icons/v2/modernworld-screen-original.svg';
+import ImaginariumSVG from '../../../../resources/img/icons/v2/ImaginariumSVG';
 import { ReactComponent as AncientWorldIcon } from '../../../../resources/img/icons/ancient-world.svg';
 import { viewportToPixels } from '../../../../utils/display/converter';
 
@@ -42,7 +42,7 @@ const HomeNavbar = () => {
         duration={500}
         offset={offset}
       >
-        <ImaginariumIcon />
+        <ImaginariumSVG />
       </ScrollLink>
       <ScrollLink
         activeClass="active-navbar-icon"
