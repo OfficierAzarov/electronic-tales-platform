@@ -19,7 +19,7 @@ const Add = ({ children, isVisible, tellVisibilityChange }) => {
         animationInDuration={600}
         animationOutDelay={300}
         isVisible={isVisible}
-        className="flex-start"
+        // style={}
       >
         <div
           id="actions-container"
@@ -36,7 +36,7 @@ const Add = ({ children, isVisible, tellVisibilityChange }) => {
         animationInDuration={600}
         animationInDelay={0}
         isVisible={isVisible}
-        className="flex"
+        className="flex-center"
       >
         {children}
       </Animated>

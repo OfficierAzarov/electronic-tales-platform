@@ -45,7 +45,26 @@
 
 #swipe #no-cards-left img {
   width: 40%;
-  margin: 30% 0;
+  margin: 1em;
+}
+
+#swipe #no-cards-left #go-back-button {
+  align-self: flex-start;
+}
+
+#swipe #no-cards-left h3 {
+  text-align: center;
+  width: 80%;
+  margin-bottom: 1em;
+}
+
+#swipe #no-cards-left p {
+  text-align: center;
+  width: 80%;
+}
+
+#swipe #no-cards-left p .small-text {
+  font-size: 1.2rem;
 }
 
 #swipe #swipe-buttons-container {
@@ -76,8 +95,4 @@
 #swipe #no-swipe-buttons-container {
   display: flex;
   justify-content: space-evenly;
-}
-
-#swipe #no-swipe-buttons-container #suggest-a-question {
-  /* width: 30%; */
 }

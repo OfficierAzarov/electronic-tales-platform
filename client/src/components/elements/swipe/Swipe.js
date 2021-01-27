@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import TinderCard from 'react-tinder-card';
 import { PropTypes } from 'prop-types';
 import Fade from 'react-reveal/Fade';
+import Emoji from 'a11y-react-emoji';
 
 import {
   getTooLateToAsks,
@@ -21,6 +22,7 @@ import {
   placeElementAtBottomOfSection,
 } from '../../../utils/display/positionning';
 import { Fragment } from 'react';
+import GoBackButton from '../buttons/go-back/GoBackButton';
 
 export const Swipe = ({
   match,
@@ -124,16 +126,31 @@ export const Swipe = ({
       ) : (
         <Fade duration={1500}>
           <div id="no-cards-left">
-            <h2>There's no cards left!</h2>
+            <GoBackButton />
             <img src={ghost} alt="no cards left" />
+            <h3 className="neon flicker">
+              Il n'y plus de questions à matcher dans ta région pour le moment.
+            </h3>
+            <p>
+              <Emoji symbol="✨" label="paillettes de fausse offre premium" />
+              Souscris à l'offre premium pour désactiver ta géolocalisation et voir des questions du
+              monde entier
+              <Emoji symbol="✨" label="paillettes de fausse offre premium" />
+              <br />
+              <br />
+              Non, on plaisante.
+              <br />{' '}
+              <span className="small-text">
+                Enfin, cela dit, tu devrais peut-être désactiver ta géolocalisation si tu veux
+                économiser de la batterie. Et en même temps, tu fais bien ce que tu veux avec ton
+                téléphone. Et puis, c'est pratique, le GPS, quand même. Je me souviens de cette fois
+                où je devais aller rendre visiter à ma tante Léonie dans le Perche, et... Bref.
+              </span>
+            </p>
           </div>
           <div id="no-swipe-buttons-container">
-            <button className="basic-button" onClick={() => history.goBack()}>
-              Go back
-            </button>
             <button id="suggest-a-question" className="basic-button" onClick={handleClick}>
-              Suggest
-              <br /> a&nbsp;new question
+              J'aide la communauté, je propose une nouvelle question&nbsp;!
             </button>
           </div>
         </Fade>
@@ -145,10 +162,10 @@ export const Swipe = ({
 Swipe.propTypes = {
   match: PropTypes.object.isRequired,
   getTooLateToAsks: PropTypes.func.isRequired,
-  initialLoading: PropTypes.bool.isRequired,
+  hasAlreadyBeenLoaded: PropTypes.bool.isRequired,
   questions: PropTypes.array.isRequired,
   removeATooLateToAsk: PropTypes.func.isRequired,
-  setInitialLoading: PropTypes.func.isRequired,
+  setHasAlreadyBeenLoaded: PropTypes.array.isRequired,
 };
 
 const mapStateToProps = (state) => ({

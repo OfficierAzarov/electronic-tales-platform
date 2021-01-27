@@ -9,10 +9,15 @@ const AddTLTAQuestion = ({ tellResult }) => {
   const [formData, setFormData] = useState({
     name: '',
     question: '',
-    answer: '',
+    answer: {
+      simpleDefinition: '',
+      analogy: '',
+      realWorldExample: '',
+    },
   });
 
   const [iHaveAnswer, setIHaveAnswer] = useState(false);
+  const [iWantToGiveMyName, setIWantToGiveMyName] = useState(false);
 
   const { name, question, answer } = formData;
 
@@ -38,11 +43,19 @@ const AddTLTAQuestion = ({ tellResult }) => {
     setIHaveAnswer(!iHaveAnswer);
   };
 
+  const handleIWantToGiveMyName = () => {
+    setIWantToGiveMyName(!iWantToGiveMyName);
+  };
+
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         <label htmlFor="question">
-          Tu as une question too late to ask à partager&nbsp;?
+          Toi aussi, tu as une question que tu n'oses plus poser parce que tu es censé·e déjà
+          connaître la réponse&nbsp;?
+          <br />
+          <br />
+          N'hésite plus et partage-la&nbsp;!
           <textarea
             name="question"
             value={question}
@@ -64,33 +77,53 @@ const AddTLTAQuestion = ({ tellResult }) => {
               checked: '',
               unchecked: '',
             }}
-            // icons are ugly positioned, so I leave it this way for now
-            // icons={{
-            //   checked: <Emoji symbol="🕑" label="clock" />,
-            //   unchecked: <Emoji symbol="🕑" label="clock" />,
-            // }}
           />
           <span style={{ fontWeight: iHaveAnswer ? '700' : '300' }}>
             Je veux proposer une réponse
           </span>
         </label>
-        <label htmlFor="answer" className={iHaveAnswer ? '' : 'optional-input-is-not-visible'}>
-          <textarea
-            name="answer"
-            value={answer}
-            onChange={handleChange}
-            placeholder="En fait, c'est simple ! C'est juste..."
-            required
-          />
-        </label>
+        <div className={iHaveAnswer ? '' : 'optional-input-is-not-visible'}>
+          <label htmlFor="simpleDefinition">
+            Tu as une définition simple&nbsp;? <br />
+            Super&nbsp;! Écris-la ici&nbsp;:
+            <textarea
+              name="simpleDefinition"
+              value={answer.simpleDefinition}
+              onChange={handleChange}
+              placeholder="Exemple&nbsp;: En fait, c'est juste une façon de..."
+              required
+            />
+          </label>
+          <label htmlFor="analogy">
+            Si tu as une analogie ou une métaphore, c'est par là&nbsp;:
+            <textarea
+              name="analogy"
+              value={answer.analogy}
+              onChange={handleChange}
+              placeholder="Exemple&nbsp;: C'est comme dans un restaurant où il y aurait..."
+              required
+            />
+          </label>
+          <label htmlFor="realWorldExample">
+            Un petit exemple concret, pour finir&nbsp;? Go&nbsp;:
+            <textarea
+              name="realWorldExample"
+              value={answer.realWorldExample}
+              onChange={handleChange}
+              placeholder='Exemple&nbsp;: Pour afficher "J&apos;aime Electronic Tales" sur mon écran, je peux taper...'
+              required
+            />
+          </label>
+        </div>
         <label htmlFor="name">
-          Ton nom ?
+          Ton petit nom&nbsp;?
           <input
             type="text"
             name="name"
             value={name}
             onChange={handleChange}
-            placeholder="Ton nom préferé"
+            placeholder="Captain Anonymouse"
+            id="leave-a-name"
           />
         </label>
         <input type="submit" value="Partager" className="basic-button" />

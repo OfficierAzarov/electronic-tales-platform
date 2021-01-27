@@ -14,7 +14,6 @@ import GoBackButton from '../buttons/go-back/GoBackButton';
 
 const Article = ({ match, setCurrentArticle, article }) => {
   useEffect(() => {
-    console.log('article fired');
     setCurrentArticle(match.params.slug);
   }, []);
 

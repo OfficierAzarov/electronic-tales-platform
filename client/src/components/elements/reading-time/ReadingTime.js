@@ -59,8 +59,8 @@ const ReadingTime = ({ articleContent }) => {
       return (
         <Fragment>
           <p>
-            <Emoji symbol="🕑" label="clock" /> Lecture&nbsp;:{' '}
-            {displayTimeInAReadableWay(stats.minutes)}, <br /> soit le temps de{' '}
+            <Emoji symbol="🕑" label="clock" />
+            Lecture&nbsp;: {displayTimeInAReadableWay(stats.minutes)}, <br /> soit le temps de{' '}
             {funnyThing.consumingAction} {percentageOfTheFunActionDuration} % d'
             {funnyThing.gender === 'feminin' ? 'une' : 'un '}{' '}
             <Emoji symbol={funnyThing.emoji} label={funnyThing.name} />
