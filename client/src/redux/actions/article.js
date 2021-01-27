@@ -7,18 +7,6 @@ export const setCurrentArticle = (slug) => async (dispatch) => {
   try {
     console.log(slug);
     const res = await api.get(`/articles/${slug}`);
-    // switch (type) {
-    //   case 'regular-articles':
-    //     res = await api.get(`/articles/${slug}`);
-    //     break;
-    //   case 'swipe-answers':
-    //     res = await api.get(`/toolatetoasks/${slug}`);
-    //     break;
-    //   default:
-    //     console.log(
-    //       'Aouch, looks like you did not provide a suitable type to find the right article.'
-    //     );
-    // }
     dispatch({
       type: SET_CURRENT_ARTICLE,
       payload: res.data,
@@ -26,7 +14,7 @@ export const setCurrentArticle = (slug) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: ARTICLES_ERROR,
-      payload: { msg: error.response.statusText, status: error.response.status },
+      payload: { error },
     });
   }
 };

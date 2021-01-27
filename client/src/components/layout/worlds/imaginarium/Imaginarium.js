@@ -16,7 +16,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
   }, []);
 
   return (
-    <Fade duration={1500}>
+    <Fade duration={800}>
       <div id="modern-world" className="world-page container">
         <div className="line-title-wrapper world-title-wrapper">
           <h2 className="world-title">Imaginarium</h2>

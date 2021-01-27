@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import TinderCard from 'react-tinder-card';
 import { PropTypes } from 'prop-types';
+import Fade from 'react-reveal/Fade';
 
 import {
   getTooLateToAsks,
@@ -30,7 +31,6 @@ export const Swipe = ({
   setHasAlreadyBeenLoaded,
 }) => {
   const [disable, setDisable] = useState(false);
-  const [imageUrl, setImageUrl] = useState('');
 
   const history = useHistory();
 
@@ -122,7 +122,7 @@ export const Swipe = ({
           </div>
         </div>
       ) : (
-        <Fragment>
+        <Fade duration={1500}>
           <div id="no-cards-left">
             <h2>There's no cards left!</h2>
             <img src={ghost} alt="no cards left" />
@@ -136,7 +136,7 @@ export const Swipe = ({
               <br /> a&nbsp;new question
             </button>
           </div>
-        </Fragment>
+        </Fade>
       )}
     </div>
   );
