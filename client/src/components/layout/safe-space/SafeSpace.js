@@ -23,7 +23,7 @@ const SafeSpace = () => {
         différents, et c'est tant mieux&nbsp;!
         <br />
         <br />
-        Cependant, une fois en entreprise, ces personnes sentent qu'un{' '}
+        Cependant, une fois en entreprise, ces personnes sentent parfois qu'un{' '}
         <strong>«&nbsp;mur de verre&nbsp;»</strong> les sépare de leurs collègues issu·e·s de
         parcours plus traditionnels. Un mur bâti sur des{' '}
         <strong>références culturelles ou techniques</strong> qu'ils n'ont pas&nbsp;

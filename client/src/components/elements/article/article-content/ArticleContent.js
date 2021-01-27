@@ -7,9 +7,6 @@ import RichLink from '../../rich-link/RichLink';
 import HtmlContent from '../../html-content/HtmlContent';
 
 const ArticleContent = ({ articleContent }) => {
-  // TO DO : solve it
-  // content is undefined first, then it has the right value. Why?
-
   const processContent = (content) => {
     if (content && content !== undefined) {
       const splittedContent = content.split(/\|(.*?)\|/);

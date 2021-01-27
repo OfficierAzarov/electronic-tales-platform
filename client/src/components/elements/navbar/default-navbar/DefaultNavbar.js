@@ -6,7 +6,7 @@ import './DefaultNavbar.css';
 import { ReactComponent as SafeSpaceIcon } from '../../../../resources/img/icons/v2/safespace-opt.svg';
 import HomeIcon from '../../../../resources/img/icons/v2/HomeSVG';
 import { ReactComponent as ModernWorldIcon } from '../../../../resources/img/icons/v2/modernworld-screen-original.svg';
-import { ReactComponent as ImaginariumIcon } from '../../../../resources/img/icons/imaginarium.svg';
+import ImaginariumIcon from '../../../../resources/img/icons/v2/ImaginariumSVG';
 import { ReactComponent as AncientWorldIcon } from '../../../../resources/img/icons/ancient-world.svg';
 
 const DefaultNavbar = () => {

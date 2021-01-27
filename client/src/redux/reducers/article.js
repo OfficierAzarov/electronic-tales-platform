@@ -19,7 +19,7 @@ export default function (state = initialState, action) {
     case SET_CURRENT_ARTICLE:
       return {
         ...state,
-        currentArticle: payload,
+        currentArticle: payload[0],
       };
     case GET_ALL_ARTICLES_INFOS:
       return {

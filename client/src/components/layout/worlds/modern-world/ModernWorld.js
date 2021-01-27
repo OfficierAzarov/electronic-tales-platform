@@ -6,7 +6,6 @@ import Fade from 'react-reveal/Fade';
 import './ModernWorld.css';
 
 import { getAllArticlesInfos } from '../../../../redux/actions/article';
-import { goUp } from '../../../../utils/display/positionning';
 import { deduceCategoriesFromArticles } from '../../../../utils/data-sorting/sorts';
 import { MODERN_WORLD } from '../../../../dictionnary/worlds';
 import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';

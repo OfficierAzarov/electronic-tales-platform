@@ -2,13 +2,13 @@ import {
   GET_TOO_LATE_TO_ASKS,
   REMOVE_TOO_LATE_TO_ASK,
   TOO_LATE_TO_ASK_ERROR,
-  SET_INITIAL_LOADING,
+  SET_HAS_ALREADY_BEEN_LOADED,
 } from './types';
 import api from '../../utils/urls/api';
 
-export const getTooLateToAsks = () => async (dispatch) => {
+export const getTooLateToAsks = (world) => async (dispatch) => {
   try {
-    const res = await api.get('/toolatetoasks');
+    const res = await api.get(`/toolatetoasks/${world}`);
     dispatch({
       type: GET_TOO_LATE_TO_ASKS,
       payload: res.data,
@@ -22,10 +22,10 @@ export const getTooLateToAsks = () => async (dispatch) => {
   }
 };
 
-export const setInitialLoading = (value) => (dispatch) => {
+export const setHasAlreadyBeenLoaded = (TooLateToAskOfAWorld) => (dispatch) => {
   dispatch({
-    type: SET_INITIAL_LOADING,
-    payload: value,
+    type: SET_HAS_ALREADY_BEEN_LOADED,
+    payload: TooLateToAskOfAWorld,
   });
 };
 

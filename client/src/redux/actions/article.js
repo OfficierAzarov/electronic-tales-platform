@@ -3,24 +3,25 @@ import { articlesSource } from '../../mocks/articles';
 import { questionsSource } from '../../mocks/questions';
 import api from '../../utils/urls/api';
 
-export const setCurrentArticle = (type, slug) => async (dispatch) => {
+export const setCurrentArticle = (slug) => async (dispatch) => {
   try {
-    let res;
-    switch (type) {
-      case 'regular-articles':
-        res = await api.get(`/articles/${slug}`);
-        break;
-      case 'swipe-answers':
-        res = await api.get(`/toolatetoasks/${slug}`);
-        break;
-      default:
-        console.log(
-          'Aouch, looks like you did not provide a suitable type to find the right article.'
-        );
-    }
+    console.log(slug);
+    const res = await api.get(`/articles/${slug}`);
+    // switch (type) {
+    //   case 'regular-articles':
+    //     res = await api.get(`/articles/${slug}`);
+    //     break;
+    //   case 'swipe-answers':
+    //     res = await api.get(`/toolatetoasks/${slug}`);
+    //     break;
+    //   default:
+    //     console.log(
+    //       'Aouch, looks like you did not provide a suitable type to find the right article.'
+    //     );
+    // }
     dispatch({
       type: SET_CURRENT_ARTICLE,
-      payload: res,
+      payload: res.data,
     });
   } catch (error) {
     dispatch({

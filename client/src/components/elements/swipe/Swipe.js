@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import TinderCard from 'react-tinder-card';
+import { PropTypes } from 'prop-types';
 
 import {
   getTooLateToAsks,
   removeATooLateToAsk,
-  setInitialLoading,
+  setHasAlreadyBeenLoaded,
 } from '../../../redux/actions/question';
 
 import './Swipe.css';
@@ -21,20 +22,21 @@ import {
 } from '../../../utils/display/positionning';
 
 export const Swipe = ({
+  match,
   getTooLateToAsks,
-  initialLoading,
+  hasAlreadyBeenLoaded,
   questions,
   removeATooLateToAsk,
-  setInitialLoading,
+  setHasAlreadyBeenLoaded,
 }) => {
   const [disable, setDisable] = useState(false);
 
   const history = useHistory();
 
   useEffect(() => {
-    if (initialLoading) {
-      getTooLateToAsks();
-      setInitialLoading(false);
+    if (!hasAlreadyBeenLoaded.includes(match.params.world)) {
+      getTooLateToAsks(match.params.world);
+      setHasAlreadyBeenLoaded(match.params.world);
     }
   }, []);
 
@@ -63,7 +65,7 @@ export const Swipe = ({
     removeATooLateToAsk(questionToRemove);
     setDisable(false);
     if (direction === 'right')
-      history.push(`/modern-world/articles/swipe-answers/${questionToRemove.answer.slug}`);
+      history.push(`/${match.params.world}/articles/${questionToRemove.answerSlug}`);
   };
 
   return (
@@ -94,12 +96,6 @@ export const Swipe = ({
                   <span className="swipe-card-content-text-title">{question.text}</span>
                   {question.subtext}
                 </p>
-                {/* <img
-                  src={`${process.env.PUBLIC_URL}/${IMAGES_URL}/${TLTA_IMAGES_URL}/${question.thumbnail}`}
-                /> */}
-                {/* <img
-                  src={`${process.env.PUBLIC_URL}/${IMAGES_URL}/${ARTICLES_IMAGES_URL}/forest.jpg`}
-                /> */}
               </div>
             </TinderCard>
           ))}
@@ -152,13 +148,22 @@ export const Swipe = ({
   );
 };
 
+Swipe.propTypes = {
+  match: PropTypes.object.isRequired,
+  getTooLateToAsks: PropTypes.func.isRequired,
+  initialLoading: PropTypes.bool.isRequired,
+  questions: PropTypes.array.isRequired,
+  removeATooLateToAsk: PropTypes.func.isRequired,
+  setInitialLoading: PropTypes.func.isRequired,
+};
+
 const mapStateToProps = (state) => ({
   questions: state.question.questions,
-  initialLoading: state.question.initialLoading,
+  hasAlreadyBeenLoaded: state.question.hasAlreadyBeenLoaded,
 });
 
 export default connect(mapStateToProps, {
   getTooLateToAsks,
-  setInitialLoading,
+  setHasAlreadyBeenLoaded,
   removeATooLateToAsk,
 })(Swipe);

@@ -2,12 +2,12 @@ import {
   GET_TOO_LATE_TO_ASKS,
   REMOVE_TOO_LATE_TO_ASK,
   TOO_LATE_TO_ASK_ERROR,
-  SET_INITIAL_LOADING,
+  SET_HAS_ALREADY_BEEN_LOADED,
 } from '../actions/types';
 
 const initialState = {
   questions: [],
-  initialLoading: true,
+  hasAlreadyBeenLoaded: [],
 };
 
 export default function (state = initialState, action) {
@@ -23,10 +23,10 @@ export default function (state = initialState, action) {
         ...state,
         questions: state.questions.filter((question) => question._id !== payload._id),
       };
-    case SET_INITIAL_LOADING:
+    case SET_HAS_ALREADY_BEEN_LOADED:
       return {
         ...state,
-        initialLoading: payload,
+        hasAlreadyBeenLoaded: [...state.hasAlreadyBeenLoaded, payload],
       };
     case TOO_LATE_TO_ASK_ERROR:
       return {

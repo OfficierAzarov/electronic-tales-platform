@@ -5,11 +5,9 @@ import Fade from 'react-reveal/Fade';
 
 import './Imaginarium.css';
 
-import InteractiveImage from '../../../interactive-images/InteractiveImage';
 import { getAllArticlesInfos } from '../../../../redux/actions/article';
 import { IMAGINARIUM } from '../../../../dictionnary/worlds';
 import { deduceCategoriesFromArticles } from '../../../../utils/data-sorting/sorts';
-import { goUp } from '../../../../utils/display/positionning';
 import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
 
 const Imaginarium = ({ articles, getAllArticlesInfos }) => {
@@ -23,7 +21,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
         <div className="line-title-wrapper world-title-wrapper">
           <h2 className="world-title">Imaginarium</h2>
         </div>
-        <SwipeDoor />
+        <SwipeDoor link={`/${IMAGINARIUM}/swipe`} />
         {deduceCategoriesFromArticles(articles)}
       </div>
     </Fade>

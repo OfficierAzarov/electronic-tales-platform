@@ -7,7 +7,7 @@ import { ARTICLES_IMAGES_URL } from '../../../utils/urls/urls';
 
 const Card = ({ article, size, placeText }) => {
   return (
-    <Link to={`/${article.world}/articles/regular-articles/${article.slug}`}>
+    <Link to={`/${article.world}/articles/${article.slug}`}>
       <div
         className={`card ${size == 'big' ? 'big' : ''}`}
         style={{

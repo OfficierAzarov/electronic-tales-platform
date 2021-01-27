@@ -5,9 +5,10 @@ const TooLateToAskEntity = require('../../models/TooLateToAsk');
 // @route   POST api/toolatetoasks
 // @desc    Test route
 // @access  Public
-router.get('/', async (req, res) => {
+router.get('/:world', async (req, res) => {
   try {
-    const tooLateToAsks = await TooLateToAskEntity.find({});
+    const world = req.params.world;
+    const tooLateToAsks = await TooLateToAskEntity.find({ world: world });
     res.json(tooLateToAsks);
   } catch (error) {
     console.log(error.message);

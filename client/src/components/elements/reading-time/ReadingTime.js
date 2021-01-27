@@ -50,22 +50,24 @@ const ReadingTime = ({ articleContent }) => {
   };
 
   const generateReadingTimeSentence = () => {
-    const stats = readingTime(articleContent);
-    const funnyThing = randomlyPickAFunnyThing(funnyThingsList);
-    const percentageOfTheFunActionDuration =
-      (stats.minutes / funnyThing.timeToConsumeTheFunThingInMinutes).toFixed(1) * 100;
+    if (articleContent) {
+      const stats = readingTime(articleContent);
+      const funnyThing = randomlyPickAFunnyThing(funnyThingsList);
+      const percentageOfTheFunActionDuration =
+        (stats.minutes / funnyThing.timeToConsumeTheFunThingInMinutes).toFixed(1) * 100;
 
-    return (
-      <Fragment>
-        <p>
-          <Emoji symbol="🕑" label="clock" /> Lecture&nbsp;:{' '}
-          {displayTimeInAReadableWay(stats.minutes)}, <br /> soit le temps de{' '}
-          {funnyThing.consumingAction} {percentageOfTheFunActionDuration} % d'
-          {funnyThing.gender === 'feminin' ? 'une' : 'un '}{' '}
-          <Emoji symbol={funnyThing.emoji} label={funnyThing.name} />
-        </p>
-      </Fragment>
-    );
+      return (
+        <Fragment>
+          <p>
+            <Emoji symbol="🕑" label="clock" /> Lecture&nbsp;:{' '}
+            {displayTimeInAReadableWay(stats.minutes)}, <br /> soit le temps de{' '}
+            {funnyThing.consumingAction} {percentageOfTheFunActionDuration} % d'
+            {funnyThing.gender === 'feminin' ? 'une' : 'un '}{' '}
+            <Emoji symbol={funnyThing.emoji} label={funnyThing.name} />
+          </p>
+        </Fragment>
+      );
+    }
   };
 
   return <div id="reading-time">{generateReadingTimeSentence()}</div>;
