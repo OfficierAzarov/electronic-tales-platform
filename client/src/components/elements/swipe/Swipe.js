@@ -12,14 +12,14 @@ import {
 
 import './Swipe.css';
 import ghost from '../../../resources/img/icons/ghost.png';
-import { IMAGES_URL, TLTA_IMAGES_URL, ARTICLES_IMAGES_URL } from '../../../utils/urls/urls';
+import { IMAGES_URL, TLTA_IMAGES_URL } from '../../../utils/urls/urls';
 import {
   computeLeft,
   computeWidth,
   computeHeight,
   placeElementAtBottomOfSection,
-  goUp,
 } from '../../../utils/display/positionning';
+import { Fragment } from 'react';
 
 export const Swipe = ({
   match,
@@ -30,6 +30,7 @@ export const Swipe = ({
   setHasAlreadyBeenLoaded,
 }) => {
   const [disable, setDisable] = useState(false);
+  const [imageUrl, setImageUrl] = useState('');
 
   const history = useHistory();
 
@@ -38,10 +39,6 @@ export const Swipe = ({
       getTooLateToAsks(match.params.world);
       setHasAlreadyBeenLoaded(match.params.world);
     }
-  }, []);
-
-  useEffect(() => {
-    goUp();
   }, []);
 
   const handleClick = () => {
@@ -89,7 +86,7 @@ export const Swipe = ({
                 className="swipe-card-content"
                 style={{
                   height: computeHeight(65),
-                  backgroundImage: `url(${process.env.PUBLIC_URL}/${IMAGES_URL}/${ARTICLES_IMAGES_URL}/forest.jpg)`,
+                  backgroundImage: `url(${process.env.PUBLIC_URL}/${IMAGES_URL}/${TLTA_IMAGES_URL}/forest.jpg)`,
                 }}
               >
                 <p className="swipe-card-content-text">
@@ -99,50 +96,47 @@ export const Swipe = ({
               </div>
             </TinderCard>
           ))}
+          <div
+            id="swipe-buttons-container"
+            style={{
+              width: computeWidth(85),
+              top: placeElementAtBottomOfSection(55),
+            }}
+          >
+            <button
+              id="swipe-left-action"
+              className="action-button swipe-button"
+              disabled={disable}
+              onClick={() => swipeActionFromButton('left')}
+            >
+              ❌
+            </button>
+            <button
+              id="swipe-right-action"
+              className="action-button swipe-button"
+              disabled={disable}
+              onClick={() => swipeActionFromButton('right')}
+            >
+              ❤️
+            </button>
+          </div>
         </div>
       ) : (
-        <div id="no-cards-left">
-          <h2>There's no cards left!</h2>
-          <img src={ghost} alt="no cards left" />
-        </div>
-      )}
-
-      {questions.length ? (
-        <div
-          id="swipe-buttons-container"
-          style={{
-            left: computeLeft(0.85),
-            width: computeWidth(85),
-            top: placeElementAtBottomOfSection(25),
-          }}
-        >
-          <button
-            id="swipe-left-action"
-            className="action-button swipe-button"
-            disabled={disable}
-            onClick={() => swipeActionFromButton('left')}
-          >
-            ❌
-          </button>
-          <button
-            id="swipe-right-action"
-            className="action-button swipe-button"
-            disabled={disable}
-            onClick={() => swipeActionFromButton('right')}
-          >
-            ❤️
-          </button>
-        </div>
-      ) : (
-        <div id="no-swipe-buttons-container">
-          <button className="basic-button" onClick={() => history.goBack()}>
-            Go back
-          </button>
-          <button id="suggest-a-question" className="basic-button" onClick={handleClick}>
-            Suggest
-            <br /> a&nbsp;new question
-          </button>
-        </div>
+        <Fragment>
+          <div id="no-cards-left">
+            <h2>There's no cards left!</h2>
+            <img src={ghost} alt="no cards left" />
+          </div>
+          <div id="no-swipe-buttons-container">
+            <button className="basic-button" onClick={() => history.goBack()}>
+              Go back
+            </button>
+            <button id="suggest-a-question" className="basic-button" onClick={handleClick}>
+              Suggest
+              <br /> a&nbsp;new question
+            </button>
+          </div>
+        </Fragment>
       )}
     </div>
   );
