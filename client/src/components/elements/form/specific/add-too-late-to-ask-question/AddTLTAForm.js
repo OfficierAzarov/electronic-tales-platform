@@ -7,7 +7,7 @@ import 'react-toggle/style.css';
 
 import { suggestTLTA } from '../../../../../redux/actions/tooLateToAsk';
 
-const AddTLTAQuestion = ({ suggestTLTA, tellResult }) => {
+const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
   const initialForm = {
     question: '',
     answer: {
@@ -70,7 +70,7 @@ const AddTLTAQuestion = ({ suggestTLTA, tellResult }) => {
         </label>
         {/* For design, see : http://aaronshaf.github.io/react-toggle/ */}
         <label className="toggle-label">
-          <span style={{ fontWeight: iHaveAnswer ? '300' : '700' }}>
+          <span style={{ fontWeight: iHaveAnswer ? '400' : '700' }}>
             Je veux que la team d'Electronic Tales réponde
           </span>
           <Toggle
@@ -82,7 +82,7 @@ const AddTLTAQuestion = ({ suggestTLTA, tellResult }) => {
               unchecked: '',
             }}
           />
-          <span style={{ fontWeight: iHaveAnswer ? '700' : '300' }}>
+          <span style={{ fontWeight: iHaveAnswer ? '700' : '400' }}>
             Je veux proposer une réponse
           </span>
         </label>
@@ -136,8 +136,8 @@ const AddTLTAQuestion = ({ suggestTLTA, tellResult }) => {
   );
 };
 
-AddTLTAQuestion.propTypes = {
+AddTLTAForm.propTypes = {
   tellResult: PropTypes.func.isRequired,
 };
 
-export default connect(null, { suggestTLTA })(AddTLTAQuestion);
+export default connect(null, { suggestTLTA })(AddTLTAForm);

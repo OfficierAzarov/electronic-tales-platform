@@ -1,6 +1,5 @@
 import React from 'react';
 import { Animated } from 'react-animated-css';
-import { useHistory } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 
 import './FormWrapper.css';
@@ -19,7 +18,6 @@ const Add = ({ children, isVisible, tellVisibilityChange }) => {
         animationInDuration={600}
         animationOutDelay={300}
         isVisible={isVisible}
-        // style={}
       >
         <div
           id="actions-container"

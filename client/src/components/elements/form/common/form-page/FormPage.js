@@ -8,7 +8,7 @@ import './FormPage.css';
 
 import FormWrapper from '../form-wrapper/FormWrapper';
 
-const FormPage = ({ children, backgroundImage }) => {
+const FormPage = ({ children }) => {
   const [isFormVisible, setIsFormVisible] = useState(true);
 
   const history = useHistory();
@@ -47,7 +47,7 @@ const FormPage = ({ children, backgroundImage }) => {
     });
 
   return (
-    <div id="form-page" style={{ backgroundImage: 'url(' + backgroundImage + ')' }}>
+    <div id="form-page">
       <ToastContainer
         position="top-center"
         autoClose={5000}
@@ -67,7 +67,7 @@ const FormPage = ({ children, backgroundImage }) => {
 };
 
 FormPage.propTypes = {
-  backgroundImage: PropTypes.string,
+  children: PropTypes.element,
 };
 
 export default FormPage;
