@@ -10,7 +10,7 @@ import {
   getTooLateToAsks,
   removeATooLateToAsk,
   setHasAlreadyBeenLoaded,
-} from '../../../redux/actions/question';
+} from '../../../redux/actions/tooLateToAsk';
 
 import './Swipe.css';
 import ghost from '../../../resources/img/icons/ghost.png';
@@ -149,9 +149,9 @@ export const Swipe = ({
             </p>
           </div>
           <div id="no-swipe-buttons-container">
-            <button id="suggest-a-question" className="basic-button" onClick={handleClick}>
+            <a id="suggest-a-question" className="basic-button" onClick={handleClick}>
               J'aide la communauté, je propose une nouvelle question&nbsp;!
-            </button>
+            </a>
           </div>
         </Fade>
       )}

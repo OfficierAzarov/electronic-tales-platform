@@ -16,3 +16,7 @@ export const sanitizeWithExceptionsForVideos = (unsanitizedHtml) => {
     ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'scrolling'],
   });
 };
+
+export const sanitize = (unsanitizedHtml) => {
+  return DOMPurify.sanitize(unsanitizedHtml);
+};

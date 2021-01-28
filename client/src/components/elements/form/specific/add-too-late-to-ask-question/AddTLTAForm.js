@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { sanitizeWithExceptionsForVideos } from '../../../../../utils/data-processing/sanitize';
+import { sanitize } from '../../../../../utils/data-processing/sanitize';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import Toggle from 'react-toggle';
@@ -24,7 +24,7 @@ const AddTLTAQuestion = ({ tellResult }) => {
   const handleChange = (event) => {
     setFormData({
       ...formData,
-      [event.target.name]: sanitizeWithExceptionsForVideos(event.target.value),
+      [event.target.name]: sanitize(event.target.value),
     });
   };
 
@@ -32,6 +32,7 @@ const AddTLTAQuestion = ({ tellResult }) => {
     event.preventDefault();
     // TO DO : add redux
     // addQuote(formData).then(onSucces);
+
     onSuccess();
   };
 
@@ -49,18 +50,23 @@ const AddTLTAQuestion = ({ tellResult }) => {
 
   return (
     <div className="form-container">
+      <h3 className="neon">Je me suis toujours demandé·e...</h3>
+      <p>
+        {' '}
+        Toi aussi, tu as une question que tu n'oses plus poser parce que tu es censé·e déjà
+        connaître la réponse&nbsp;?
+        <br />
+        <br />
+        N'hésite plus et partage-la&nbsp;!
+      </p>
       <form onSubmit={handleSubmit}>
         <label htmlFor="question">
-          Toi aussi, tu as une question que tu n'oses plus poser parce que tu es censé·e déjà
-          connaître la réponse&nbsp;?
-          <br />
-          <br />
-          N'hésite plus et partage-la&nbsp;!
+          Ta question (obligatoire)&nbsp;:
           <textarea
             name="question"
             value={question}
             onChange={handleChange}
-            placeholder="Je me suis toujours demandé·e..."
+            placeholder="Écris ta question ici."
             required
           />
         </label>

@@ -1,6 +1,6 @@
 import { SET_CURRENT_ARTICLE, GET_ALL_ARTICLES_INFOS, ARTICLES_ERROR } from './types';
-import { articlesSource } from '../../mocks/articles';
-import { questionsSource } from '../../mocks/questions';
+// import { articlesSource } from '../../mocks/articles';
+// import { questionsSource } from '../../mocks/questions';
 import api from '../../utils/urls/api';
 
 export const setCurrentArticle = (slug) => async (dispatch) => {

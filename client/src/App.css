@@ -68,6 +68,7 @@ button:focus {
   padding: 1em;
   margin-top: 2em;
   width: 70%;
+  text-align: center;
 }
 
 .home-door {
@@ -177,6 +178,15 @@ button:focus {
   width: 70%;
 }
 
+.form-container h3,
+.form-container p {
+  text-align: center;
+}
+
+.form-container p {
+  margin: 1em;
+}
+
 .form-container form {
   display: flex;
   flex-direction: column;
@@ -211,12 +221,18 @@ button:focus {
 .form-container form input {
   padding: 0.5em 1em;
   margin-top: 1em;
+  outline: none;
+}
+
+.form-container form input:focus {
+  outline: none;
 }
 
 .form-container form input[type='submit'] {
   margin-top: 2em;
   padding: 0.8em 1.2em;
   border-radius: 2em;
+  border: none;
 }
 
 .form-container .optional-input-is-not-visible {
