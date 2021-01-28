@@ -44,7 +44,7 @@ export const Swipe = ({
   }, []);
 
   const handleClick = () => {
-    setTimeout(() => history.push('/modern-world/swipe/add-question'), 400);
+    setTimeout(() => history.push(`/${match.params.world}/swipe/add-question`), 400);
   };
 
   const cardRefs = Array(questions.length)
@@ -162,10 +162,10 @@ export const Swipe = ({
 Swipe.propTypes = {
   match: PropTypes.object.isRequired,
   getTooLateToAsks: PropTypes.func.isRequired,
-  hasAlreadyBeenLoaded: PropTypes.bool.isRequired,
+  hasAlreadyBeenLoaded: PropTypes.array.isRequired,
   questions: PropTypes.array.isRequired,
   removeATooLateToAsk: PropTypes.func.isRequired,
-  setHasAlreadyBeenLoaded: PropTypes.array.isRequired,
+  setHasAlreadyBeenLoaded: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({

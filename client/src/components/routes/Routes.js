@@ -26,10 +26,8 @@ const Routes = () => {
         <Route exact path="/:world/swipe" component={Swipe}></Route>
         <Route exact path="/roadmap" component={InteractiveImage}></Route>
         <Route exact path="/modern-world" component={ModernWorld}></Route>
-        {/* <Route exact path="/modern-world/articles/:slug" component={Article}></Route> */}
         <Route exact path="/:world/articles/:slug" component={Article}></Route>
-        {/* <Route exact path="/modern-world/swipe" component={Swipe}></Route> */}
-        <Route exact path="/modern-world/swipe/add-question" component={SwipeAddQuestion}></Route>
+        <Route exact path="/:world/swipe/add-question" component={SwipeAddQuestion}></Route>
         <Route exact path="/ancient-world" component={AncientWorld}></Route>
       </Switch>
     </section>

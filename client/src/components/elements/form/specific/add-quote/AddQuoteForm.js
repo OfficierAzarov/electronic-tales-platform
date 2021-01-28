@@ -57,4 +57,9 @@ const AddQuoteForm = ({ addQuote, tellResult }) => {
   );
 };
 
+AddQuoteForm.propTypes = {
+  addQuote: PropTypes.func.isRequired,
+  tellResult: PropTypes.func.isRequired,
+};
+
 export default connect(null, { addQuote })(AddQuoteForm);

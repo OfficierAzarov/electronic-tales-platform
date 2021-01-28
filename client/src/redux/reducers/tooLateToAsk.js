@@ -3,11 +3,13 @@ import {
   REMOVE_TOO_LATE_TO_ASK,
   TOO_LATE_TO_ASK_ERROR,
   SET_HAS_ALREADY_BEEN_LOADED,
+  SUGGEST_A_TOO_LATE_TO_ASK,
 } from '../actions/types';
 
 const initialState = {
   questions: [],
   hasAlreadyBeenLoaded: [],
+  suggestedTLTA: [],
 };
 
 export default function (state = initialState, action) {
@@ -32,6 +34,12 @@ export default function (state = initialState, action) {
       return {
         ...state,
         error: payload,
+      };
+    // This case won't be useful in version 0 of Electronic Tales, but could be later
+    case SUGGEST_A_TOO_LATE_TO_ASK:
+      return {
+        ...state,
+        suggestedTLTA: [payload, ...state.suggestedTLTA],
       };
     default:
       return state;

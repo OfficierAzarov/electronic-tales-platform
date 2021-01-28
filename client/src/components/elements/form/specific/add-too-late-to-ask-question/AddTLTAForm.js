@@ -5,19 +5,22 @@ import { PropTypes } from 'prop-types';
 import Toggle from 'react-toggle';
 import 'react-toggle/style.css';
 
-const AddTLTAQuestion = ({ tellResult }) => {
-  const [formData, setFormData] = useState({
-    name: '',
+import { suggestTLTA } from '../../../../../redux/actions/tooLateToAsk';
+
+const AddTLTAQuestion = ({ suggestTLTA, tellResult }) => {
+  const initialForm = {
     question: '',
     answer: {
       simpleDefinition: '',
       analogy: '',
       realWorldExample: '',
     },
-  });
+    name: '',
+  };
+
+  const [formData, setFormData] = useState(initialForm);
 
   const [iHaveAnswer, setIHaveAnswer] = useState(false);
-  const [iWantToGiveMyName, setIWantToGiveMyName] = useState(false);
 
   const { name, question, answer } = formData;
 
@@ -30,9 +33,8 @@ const AddTLTAQuestion = ({ tellResult }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // TO DO : add redux
-    // addQuote(formData).then(onSucces);
-
+    suggestTLTA(formData).then(onSuccess);
+    setFormData(initialForm);
     onSuccess();
   };
 
@@ -42,10 +44,6 @@ const AddTLTAQuestion = ({ tellResult }) => {
 
   const handleIHaveAnswerChange = () => {
     setIHaveAnswer(!iHaveAnswer);
-  };
-
-  const handleIWantToGiveMyName = () => {
-    setIWantToGiveMyName(!iWantToGiveMyName);
   };
 
   return (
@@ -142,4 +140,4 @@ AddTLTAQuestion.propTypes = {
   tellResult: PropTypes.func.isRequired,
 };
 
-export default connect(null)(AddTLTAQuestion);
+export default connect(null, { suggestTLTA })(AddTLTAQuestion);
