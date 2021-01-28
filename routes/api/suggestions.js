@@ -10,9 +10,13 @@ const SuggestedTLTASEntity = require('../../models/SuggestedTooLatetoAsk');
 // @access  Public
 router.post(
   '/too-late-to-asks',
-  check('name').isAlphanumeric().trim().escape(),
-  check('question').not().isEmpty().isAlphanumeric().trim().escape(),
-  check('answer.*').isAlphanumeric().trim().escape(),
+  [
+    check('question').not().isEmpty().trim().escape(),
+    check('simpleDefinition').trim().escape(),
+    check('analogy').trim().escape(),
+    check('realWorldExample').trim().escape(),
+    check('name').trim().escape(),
+  ],
   async (req, res) => {
     const validationErrors = validationResult(req);
 
@@ -20,15 +24,13 @@ router.post(
       res.status(400).json({ errors: validationErrors.array() });
     }
 
-    const { question, answer, name } = req.body;
+    const { question, simpleDefinition, analogy, realWorldExample, name } = req.body;
 
     // Let's sanitize!
     const sanitizedQuestion = xss(question);
-    const sanitizedAnswer = {
-      sanitizedSimpleDefinition: xss(answer.simpleDefinition),
-      sanitizedAnalogy: xss(answer.analogy),
-      sanitizedRealWorldExample: xss(answer.realWorldExample),
-    };
+    const sanitizedSimpleDefinition = xss(simpleDefinition);
+    const sanitizedAnalogy = xss(analogy);
+    const sanitizedRealWorldExample = xss(realWorldExample);
     const sanitizedName = xss(name);
 
     try {
@@ -39,9 +41,13 @@ router.post(
       }
 
       // create the new tooLateToAskPost
-      suggestedTLTAS = new TooLateToAskPostEntity({
+      suggestedTLTAS = new SuggestedTLTASEntity({
         question: sanitizedQuestion,
-        answer: sanitizedAnswer,
+        answer: {
+          simpleDefinition: sanitizedSimpleDefinition,
+          analogy: sanitizedAnalogy,
+          realWorldExample: sanitizedRealWorldExample,
+        },
         name: sanitizedName,
       });
 

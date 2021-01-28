@@ -10,11 +10,9 @@ import { suggestTLTA } from '../../../../../redux/actions/tooLateToAsk';
 const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
   const initialForm = {
     question: '',
-    answer: {
-      simpleDefinition: '',
-      analogy: '',
-      realWorldExample: '',
-    },
+    simpleDefinition: '',
+    analogy: '',
+    realWorldExample: '',
     name: '',
   };
 
@@ -22,7 +20,7 @@ const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
 
   const [iHaveAnswer, setIHaveAnswer] = useState(false);
 
-  const { name, question, answer } = formData;
+  const { question, simpleDefinition, analogy, realWorldExample, name } = formData;
 
   const handleChange = (event) => {
     setFormData({
@@ -92,30 +90,36 @@ const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
             Super&nbsp;! Écris-la ici&nbsp;:
             <textarea
               name="simpleDefinition"
-              value={answer.simpleDefinition}
+              value={simpleDefinition}
               onChange={handleChange}
               placeholder="Exemple&nbsp;: En fait, c'est juste une façon de..."
-              required
             />
           </label>
+          {/* <label htmlFor="simpledef">
+            Tu
+            <textarea
+              name="simpledef"
+              value={simpleDefinition}
+              onChange={handleChange}
+              placeholder="Exemple..."
+            />
+          </label> */}
           <label htmlFor="analogy">
             Si tu as une analogie ou une métaphore, c'est par là&nbsp;:
             <textarea
               name="analogy"
-              value={answer.analogy}
+              value={analogy}
               onChange={handleChange}
               placeholder="Exemple&nbsp;: C'est comme dans un restaurant où il y aurait..."
-              required
             />
           </label>
           <label htmlFor="realWorldExample">
             Un petit exemple concret, pour finir&nbsp;? Go&nbsp;:
             <textarea
               name="realWorldExample"
-              value={answer.realWorldExample}
+              value={realWorldExample}
               onChange={handleChange}
               placeholder='Exemple&nbsp;: Pour afficher "J&apos;aime Electronic Tales" sur mon écran, je peux taper...'
-              required
             />
           </label>
         </div>
