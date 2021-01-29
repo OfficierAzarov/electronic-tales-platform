@@ -6,6 +6,11 @@
   padding: 2em;
 }
 
-#article-head {
+#article-container #article-head {
   width: 100%;
+}
+
+#article-container h1 {
+  text-align: center;
+  margin-bottom: 1em;
 }

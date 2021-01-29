@@ -6,9 +6,9 @@ import Fade from 'react-reveal/Fade';
 import './ModernWorld.css';
 
 import { getAllArticlesInfos } from '../../../../redux/actions/article';
-import { deduceCategoriesFromArticles } from '../../../../utils/data-sorting/sorts';
 import { MODERN_WORLD } from '../../../../dictionnary/worlds';
 import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
+import AllArticlesofTheWorld from '../../../elements/article/all-articles/AllArticlesofTheWorld';
 
 const ModernWorld = ({ articles, getAllArticlesInfos }) => {
   useEffect(() => {
@@ -24,7 +24,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
         <div className="image-card">
           <SwipeDoor link="/modern-world/swipe" />
         </div>
-        {deduceCategoriesFromArticles(articles)}
+        <AllArticlesofTheWorld articles={articles} />
       </div>
     </Fade>
   );

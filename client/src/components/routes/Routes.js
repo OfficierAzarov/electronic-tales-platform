@@ -23,11 +23,15 @@ const Routes = () => {
         <Route exact path="/safe-space/add-quote" component={AddQuote}></Route>
         <Route exact path="/safe-space/chat" component={SafeSpaceChat}></Route>
         <Route exact path="/imaginarium" component={Imaginarium}></Route>
-        <Route exact path="/:world/swipe" component={Swipe}></Route>
+        <Route exact path="/:world/too-late-to-ask" component={Swipe}></Route>
         <Route exact path="/roadmap" component={InteractiveImage}></Route>
         <Route exact path="/modern-world" component={ModernWorld}></Route>
         <Route exact path="/:world/articles/:slug" component={Article}></Route>
-        <Route exact path="/:world/swipe/add-question" component={SwipeAddQuestion}></Route>
+        <Route
+          exact
+          path="/:world/too-late-to-ask/add-question"
+          component={SwipeAddQuestion}
+        ></Route>
         <Route exact path="/ancient-world" component={AncientWorld}></Route>
       </Switch>
     </section>

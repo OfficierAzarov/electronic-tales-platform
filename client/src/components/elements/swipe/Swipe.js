@@ -44,7 +44,7 @@ export const Swipe = ({
   }, []);
 
   const handleClick = () => {
-    setTimeout(() => history.push(`/${match.params.world}/swipe/add-question`), 400);
+    setTimeout(() => history.push(`/${match.params.world}/too-late-to-ask/add-question`), 400);
   };
 
   const cardRefs = Array(questions.length)
