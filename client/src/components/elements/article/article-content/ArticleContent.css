@@ -1,13 +1,34 @@
-.article-content p {
-  display: inline;
-}
-
 .article-content img {
   display: block;
   margin: 1em auto;
 }
 
 /* Styles for html coming from the database */
+
+.article-content p {
+  display: block;
+  margin: 1em 0;
+}
+
+.article-content h3 {
+  margin: 2em 0;
+}
+
+.article-content ul {
+  width: 65%;
+  margin-left: 2em;
+}
+
+.article-content ul li {
+  margin: 1em 0;
+}
+
+.article-content .small-comment,
+.article-content .small-comment a {
+  font-size: 1.4rem;
+  color: #999999;
+  font-style: italic;
+}
 
 .article-content .part {
   display: block;
@@ -16,7 +37,8 @@
 
 .article-content .part-title {
   display: block;
-  margin-bottom: 1em;
+  margin: 2em 0 1em 0;
+  font-weight: 600;
 }
 
 .article-content .code-block {
