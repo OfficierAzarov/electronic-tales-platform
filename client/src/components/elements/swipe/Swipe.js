@@ -21,8 +21,8 @@ import {
   computeHeight,
   placeElementAtBottomOfSection,
 } from '../../../utils/display/positionning';
-import { Fragment } from 'react';
 import GoBackButton from '../buttons/go-back/GoBackButton';
+import HtmlContent from '../html-content/HtmlContent';
 
 export const Swipe = ({
   match,
@@ -92,8 +92,10 @@ export const Swipe = ({
                 }}
               >
                 <p className="swipe-card-content-text">
-                  <span className="swipe-card-content-text-title">{question.text}</span>
-                  {question.subtext}
+                  <span className="swipe-card-content-text-title">
+                    <HtmlContent content={question.text} />
+                  </span>
+                  <HtmlContent content={question.subtext} />
                 </p>
               </div>
             </TinderCard>

@@ -21,7 +21,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
         <div className="line-title-wrapper world-title-wrapper">
           <h2 className="world-title">Imaginarium</h2>
         </div>
-        <SwipeDoor link={`/${IMAGINARIUM}/swipe`} />
+        <SwipeDoor link={`/${IMAGINARIUM}/too-late-to-ask`} />
         {deduceCategoriesFromArticles(articles)}
       </div>
     </Fade>

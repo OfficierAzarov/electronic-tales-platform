@@ -5,7 +5,6 @@ import api from '../../utils/urls/api';
 
 export const setCurrentArticle = (slug) => async (dispatch) => {
   try {
-    console.log(slug);
     const res = await api.get(`/articles/${slug}`);
     dispatch({
       type: SET_CURRENT_ARTICLE,

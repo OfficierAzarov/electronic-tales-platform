@@ -1,9 +1,70 @@
 .article-content p {
   display: inline;
-  white-space: pre-wrap;
 }
 
 .article-content img {
   display: block;
-  margin: 0.5em auto;
+  margin: 1em auto;
+}
+
+/* Styles for html coming from the database */
+
+.article-content .part {
+  display: block;
+  margin: 2em 0;
+}
+
+.article-content .part-title {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.article-content .code-block {
+  display: block;
+  background-color: #333333;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  margin: 1em 0;
+  font-size: 1.3rem;
+}
+
+.article-content .inline-code {
+  display: inline;
+  color: #ec567c;
+}
+
+.article-content .hljs-comment {
+  color: #adadad;
+}
+
+.article-content .hljs-comment::after {
+  content: '\A';
+  white-space: pre;
+}
+
+/* .article-content .hljs-function {
+  display: block;
+} */
+
+.article-content .hljs-keyword,
+.article-content .hljs-tag {
+  color: #ec567c;
+}
+
+.article-content .hljs-title,
+.article-content .hljs-template-variable {
+  color: #bbff00;
+}
+
+.article-content .hljs-params {
+  color: #ff8800;
+}
+
+.article-content .hljs-string {
+  color: #ffee00da;
+}
+
+.article-content .code-bracket::after {
+  content: '\A';
+  white-space: pre;
 }

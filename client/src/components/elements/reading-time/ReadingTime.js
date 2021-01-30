@@ -21,14 +21,14 @@ const ReadingTime = ({ articleContent }) => {
       name: 'café',
       emoji: '☕',
       gender: 'masculin',
-      timeToConsumeTheFunThingInMinutes: 1,
+      timeToConsumeTheFunThingInMinutes: 2,
     },
     {
       consumingAction: 'glouper',
       name: 'doughnut',
       emoji: '🍩',
       gender: 'masculin',
-      timeToConsumeTheFunThingInMinutes: 2,
+      timeToConsumeTheFunThingInMinutes: 3,
     },
     {
       consumingAction: 'crisper',
@@ -46,7 +46,13 @@ const ReadingTime = ({ articleContent }) => {
 
   const displayTimeInAReadableWay = (readingTime) => {
     if (readingTime < 1) return `moins d'une minute`;
-    return `${readingTime} minutes`;
+    return convertMinutesToMinutesAndSeconds(readingTime);
+  };
+
+  const convertMinutesToMinutesAndSeconds = (readingTimeinMinutes) => {
+    const min = Math.floor(Math.abs(readingTimeinMinutes));
+    // const sec = Math.floor((Math.abs(readingTimeinMinutes) * 60) % 60);
+    return min + ' min';
   };
 
   const generateReadingTimeSentence = () => {
@@ -60,7 +66,7 @@ const ReadingTime = ({ articleContent }) => {
         <Fragment>
           <p>
             <Emoji symbol="🕑" label="clock" />
-            Lecture&nbsp;: {displayTimeInAReadableWay(stats.minutes)}, <br /> soit le temps de{' '}
+            &nbsp;Lecture&nbsp;: {displayTimeInAReadableWay(stats.minutes)}, <br /> soit le temps de{' '}
             {funnyThing.consumingAction} {percentageOfTheFunActionDuration} % d'
             {funnyThing.gender === 'feminin' ? 'une' : 'un '}{' '}
             <Emoji symbol={funnyThing.emoji} label={funnyThing.name} />

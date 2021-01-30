@@ -46,7 +46,7 @@ const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
 
   return (
     <div className="form-container">
-      <h3 className="neon">Je me suis toujours demandé·e...</h3>
+      <h3 className="neon">Je me suis toujours demandé...</h3>
       <p>
         {' '}
         Toi aussi, tu as une question que tu n'oses plus poser parce que tu es censé·e déjà

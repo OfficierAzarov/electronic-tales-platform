@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import './Card.css';
 import { IMAGES_URL } from '../../../utils/urls/urls';
 import { ARTICLES_IMAGES_URL } from '../../../utils/urls/urls';
+import HtmlContent from '../html-content/HtmlContent';
 
 const Card = ({ article, size, placeText }) => {
   return (
@@ -15,7 +16,9 @@ const Card = ({ article, size, placeText }) => {
           justifyContent: placeText == 'center' ? 'center' : 'flex-end',
         }}
       >
-        <div className="card-title">{article.title}</div>
+        <div className="card-title">
+          <HtmlContent content={article.title} />
+        </div>
       </div>
     </Link>
   );

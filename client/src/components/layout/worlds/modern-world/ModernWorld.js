@@ -22,7 +22,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
           <h2 className="world-title neon flicker">Modern World</h2>
         </div>
         <div className="image-card">
-          <SwipeDoor link="/modern-world/swipe" />
+          <SwipeDoor link="/modern-world/too-late-to-ask" />
         </div>
         <AllArticlesofTheWorld articles={articles} />
       </div>
