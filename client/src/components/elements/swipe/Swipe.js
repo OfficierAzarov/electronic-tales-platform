@@ -88,7 +88,7 @@ export const Swipe = ({
                 className="swipe-card-content"
                 style={{
                   height: computeHeight(65),
-                  backgroundImage: `url(${process.env.PUBLIC_URL}/${IMAGES_URL}/${TLTA_IMAGES_URL}/forest.jpg)`,
+                  backgroundImage: `url(${question.thumbnail})`,
                 }}
               >
                 <p className="swipe-card-content-text">

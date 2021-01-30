@@ -6,7 +6,8 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  border-radius: 0.5em;
+  border-radius: 1em;
+  margin: 1em 0;
 }
 
 .card .card-title {

@@ -12,7 +12,7 @@ const Card = ({ article, size, placeText }) => {
       <div
         className={`card ${size == 'big' ? 'big' : ''}`}
         style={{
-          backgroundImage: `url(${process.env.PUBLIC_URL}/${IMAGES_URL}/${ARTICLES_IMAGES_URL}/${article.thumbnail})`,
+          backgroundImage: `url(${article.thumbnail})`,
           justifyContent: placeText == 'center' ? 'center' : 'flex-end',
         }}
       >
