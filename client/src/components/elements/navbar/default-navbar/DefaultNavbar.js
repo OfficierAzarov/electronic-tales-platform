@@ -16,19 +16,19 @@ const DefaultNavbar = () => {
         <HomeIcon />
         <sub>Accueil</sub>
       </NavLink>
-      <NavLink exact to="/safe-space" activeClassName="active-navbar-icon">
+      <NavLink to="/safe-space" activeClassName="active-navbar-icon">
         <SafeSpaceIcon />
         <sub>Safe space</sub>
       </NavLink>
-      <NavLink exact to="/modern-world" activeClassName="active-navbar-icon">
+      <NavLink to="/modern-world" activeClassName="active-navbar-icon">
         <ModernWorldIcon />
         <sub>Modern world</sub>
       </NavLink>
-      <NavLink exact to="/imaginarium" activeClassName="active-navbar-icon">
+      <NavLink to="/imaginarium" activeClassName="active-navbar-icon">
         <ImaginariumIcon />
         <sub>Imaginarium</sub>
       </NavLink>
-      <NavLink exact to="/ancient-world" activeClassName="active-navbar-icon">
+      <NavLink to="/ancient-world" activeClassName="active-navbar-icon">
         <AncientWorldIcon />
         <sub>Ancient world</sub>
       </NavLink>
