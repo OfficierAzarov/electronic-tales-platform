@@ -81,6 +81,10 @@ button:focus {
   fill: #ec567c;
 }
 
+.active-navbar-icon sub {
+  color: #ec567c;
+}
+
 /*============= LAYOUT =============*/
 
 .container {

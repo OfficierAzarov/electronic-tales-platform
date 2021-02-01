@@ -81,6 +81,7 @@ export const Swipe = ({
             <TinderCard
               key={question._id}
               onCardLeftScreen={(dir) => onCardLeftScreen(dir, question)}
+              preventSwipe={['up', 'down']}
               className="swipe-card"
               ref={cardRefs[index]}
             >

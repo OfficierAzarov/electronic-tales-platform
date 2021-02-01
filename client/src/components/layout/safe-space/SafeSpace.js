@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Emoji from 'a11y-react-emoji';
 
 import './SafeSpace.css';
+import MiniNav from '../../elements/mini-nav/MiniNav';
 
 const SafeSpace = () => {
   useEffect(() => {
@@ -14,7 +15,7 @@ const SafeSpace = () => {
       <div className="line-title-wrapper world-title-wrapper">
         <h2 className="world-title neon flicker">Safe space</h2>
       </div>
-      {/* <h4>Un safe space, pour quoi faire&nbsp;?</h4> */}
+      <MiniNav />
       <div className="line-title-wrapper category-title-wrapper">
         <h3 className="title">Pourquoi&nbsp;?</h3>
       </div>
