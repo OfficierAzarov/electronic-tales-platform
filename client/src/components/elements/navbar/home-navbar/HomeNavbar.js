@@ -23,6 +23,7 @@ const HomeNavbar = () => {
         offset={offset}
       >
         <SafeSpaceIcon />
+        <sub>Safe space</sub>
       </ScrollLink>
       <ScrollLink
         activeClass="active-navbar-icon"
@@ -33,6 +34,7 @@ const HomeNavbar = () => {
         offset={offset}
       >
         <ModernWorldIcon />
+        <sub>Modern world</sub>
       </ScrollLink>
       <ScrollLink
         activeClass="active-navbar-icon"
@@ -43,6 +45,7 @@ const HomeNavbar = () => {
         offset={offset}
       >
         <ImaginariumSVG />
+        <sub>Imaginarium</sub>
       </ScrollLink>
       <ScrollLink
         activeClass="active-navbar-icon"
@@ -53,6 +56,7 @@ const HomeNavbar = () => {
         offset={offset}
       >
         <AncientWorldIcon />
+        <sub>Ancient world</sub>
       </ScrollLink>
     </Fragment>
   );

@@ -10,11 +10,10 @@ nav {
   z-index: 2;
 }
 
-nav img,
 nav svg {
-  width: 2em;
-  height: 2em;
-  padding: 1em 0.8em;
+  width: 1.7em;
+  height: 1.7em;
+  padding: 0.2em 0;
   cursor: pointer;
 }
 
@@ -22,6 +21,17 @@ nav svg {
   fill: whitesmoke;
 }
 
-nav .worlds {
-  justify-self: center;
+nav a {
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+nav a sub {
+  font-size: 1rem;
+}
+
+/* nav .worlds {
+  justify-self: center;
+} */
