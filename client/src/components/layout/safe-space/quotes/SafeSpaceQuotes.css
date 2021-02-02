@@ -6,16 +6,7 @@
   justify-content: space-between;
 }
 
-#safe-space-quotes.visible {
-  display: block;
-}
-
-#safe-space-quotes h2 {
-  margin: 1em 0 1em 0;
-}
-
 #safe-space-quotes #subtitle {
-  margin: 1em 0 1em 0;
-  text-align: center;
+  margin: 1em 0;
   width: 75%;
 }

@@ -1,26 +1,23 @@
 const mongoose = require('mongoose');
 
 const QuoteSchema = new mongoose.Schema({
-  title: {
+  text: {
     type: String,
     required: true,
   },
-  slug: {
+  emotion: {
     type: String,
     required: true,
   },
-  content: {
+  author: {
     type: String,
     required: true,
+    default: "Ann O'Nymous",
   },
-  richLinks: [
-    {
-      reference: String,
-      name: String,
-      content: String,
-      needsASpaceAfter: Boolean,
-    },
-  ],
+  date: {
+    type: Date,
+    default: Date.now,
+  },
   thumbnail: String,
   category: String,
 });

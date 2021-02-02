@@ -1,4 +1,4 @@
-import { GET_QUOTES, QUOTES_ERROR, ADD_QUOTE } from './types';
+import { GET_QUOTES, QUOTES_ERROR, SUGGEST_QUOTE } from './types';
 import api from '../../utils/urls/api';
 
 export const getQuotes = () => async (dispatch) => {
@@ -18,17 +18,20 @@ export const getQuotes = () => async (dispatch) => {
   }
 };
 
-export const addQuote = (formData) => async (dispatch) => {
+export const suggestQuote = (formData) => async (dispatch) => {
   try {
-    // TO DO : replace by actual DB source, will be await
-    const res = await fetch('dumbFetch');
+    const res = await api.post('/suggestions/quotes', formData);
 
     dispatch({
-      type: ADD_QUOTE,
-      payload: res,
+      type: SUGGEST_QUOTE,
+      payload: res.data,
     });
   } catch (error) {
     // TO DO : replace by an error reducer
     console.log(error.message);
+    dispatch({
+      type: QUOTES_ERROR,
+      payload: { msg: error.response.statusText, status: error.response.status },
+    });
   }
 };

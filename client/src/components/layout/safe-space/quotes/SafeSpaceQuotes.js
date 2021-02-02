@@ -23,9 +23,14 @@ const SafeSpaceQuotes = ({ quotes, getQuotes }) => {
   };
 
   return (
-    <div id="safe-space-quotes">
-      <MiniNav isVisible={true} />
-      <h2 className="neon">Micro-vécus</h2>
+    <div id="safe-space-quotes" className="container">
+      <div className="line-title-wrapper world-title-wrapper">
+        <h2 className="world-title neon flicker">Safe space</h2>
+      </div>
+      <MiniNav />
+      <div className="line-title-wrapper category-title-wrapper">
+        <h3 className="title">Micro-vécus</h3>
+      </div>
       <p id="subtitle">
         Florilège de situations de tous les jours qu'on ne devrait jamais vivre dans le monde du
         dév. <br />

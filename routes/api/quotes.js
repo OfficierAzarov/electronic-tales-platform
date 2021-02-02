@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const QuoteEntity = require('../../models/Quotes');
+const QuoteEntity = require('../../models/Quote');
 
 // @route   GET api/quotes
 // @desc    Get all quotes

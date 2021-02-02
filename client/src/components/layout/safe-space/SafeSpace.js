@@ -84,7 +84,8 @@ const SafeSpace = () => {
         situations toxiques du milieu du dév.
         <br />
         <br />
-        Viens discuter avec d'autres devs sur notre <Link to="/safe-space/chat">Slack</Link>.
+        Viens discuter de tes problèmes avec d'autres devs sur notre{' '}
+        <Link to="/safe-space/chat">Slack</Link>.
       </p>
     </div>
   );

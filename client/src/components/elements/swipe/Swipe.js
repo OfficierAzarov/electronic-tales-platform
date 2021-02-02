@@ -136,8 +136,8 @@ export const Swipe = ({
             </h3>
             <p>
               <Emoji symbol="✨" label="paillettes de fausse offre premium" />
-              Souscris à l'offre premium pour désactiver ta géolocalisation et voir des questions du
-              monde entier
+              Souscris à l'offre premium pour désactiver ta géolocalisation et matcher avec des
+              questions du monde entier
               <Emoji symbol="✨" label="paillettes de fausse offre premium" />
               <br />
               <br />

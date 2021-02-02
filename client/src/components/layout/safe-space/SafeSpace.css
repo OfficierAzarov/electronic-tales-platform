@@ -5,16 +5,9 @@
   align-items: center;
 }
 
-/* #safe-space h4 {
-  margin: 1em 0;
-} */
-
-#safe-space h3 {
-  margin: 1em 0;
-}
-
 #safe-space p {
   width: 80%;
+  margin: 1em 0;
 }
 
 #safe-space ul {

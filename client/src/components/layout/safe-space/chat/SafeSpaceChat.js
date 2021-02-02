@@ -10,14 +10,16 @@ import Emoji from 'a11y-react-emoji';
 
 const SafeSpaceChat = () => {
   return (
-    <div id="safe-space-chat">
+    <div id="safe-space-chat" className="container">
+      <div className="line-title-wrapper world-title-wrapper">
+        <h2 className="world-title neon flicker">Safe space</h2>
+      </div>
       <MiniNav />
-      <h2 className="neon">
-        Rejoins le safe space <br />
-        d'Electronic Tales
-      </h2>
+      <div className="line-title-wrapper category-title-wrapper">
+        <h3 className="title">Rejoins notre Slack</h3>
+      </div>
       <p id="connect">
-        Nous avons créé un{' '}
+        Nous avons ouvert un{' '}
         <a
           href="https://join.slack.com/t/electronictales/shared_invite/zt-kox8itw1-tveUHRe8QSTtjs0Bb172BA"
           target="_blank"

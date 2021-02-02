@@ -1,4 +1,4 @@
-import { GET_QUOTES, QUOTES_ERROR, ADD_QUOTE } from '../actions/types';
+import { GET_QUOTES, QUOTES_ERROR, SUGGEST_QUOTE } from '../actions/types';
 
 const initialState = {
   quotes: [],
@@ -12,7 +12,7 @@ export default function (state = initialState, action) {
         ...state,
         quotes: payload,
       };
-    case ADD_QUOTE:
+    case SUGGEST_QUOTE:
       return {
         ...state,
         quotes: [payload, ...state.quotes],

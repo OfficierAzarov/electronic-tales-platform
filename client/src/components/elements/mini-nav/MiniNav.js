@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import './MiniNav.css';
 
 import { ReactComponent as FakeIcon } from '../../../resources/img/icons/safe-space.svg';
+import { ReactComponent as WhyIcon } from '../../../resources/img/icons/lightbulb.svg';
 
 const MiniNav = () => {
   return (
@@ -14,7 +15,7 @@ const MiniNav = () => {
         activeClassName="active-navbar-icon"
         className="mini-nav-link"
       >
-        <FakeIcon />
+        <WhyIcon />
         <sub>Pourquoi</sub>
       </NavLink>
       <NavLink

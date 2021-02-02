@@ -3,12 +3,12 @@ import { sanitizeWithExceptionsForVideos } from '../../../../../utils/data-proce
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
-import { addQuote } from '../../../../../redux/actions/quote';
+import { suggestQuote } from '../../../../../redux/actions/quote';
 
 const AddQuoteForm = ({ addQuote, tellResult }) => {
   const [formData, setFormData] = useState({
-    name: '',
     quote: '',
+    name: '',
   });
 
   const { name, quote } = formData;
@@ -22,7 +22,7 @@ const AddQuoteForm = ({ addQuote, tellResult }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addQuote(formData).then(onSuccess);
+    suggestQuote(formData).then(onSuccess);
   };
 
   const onSuccess = () => {
@@ -33,7 +33,7 @@ const AddQuoteForm = ({ addQuote, tellResult }) => {
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         <label className="label-for-quote" htmlFor="quote">
-          Tu veux partager une expérience ? <br /> Le mic est à toi !
+          Tu as un micro-vécu à partager&nbsp;? Nous serons ravi·e·s de le lire et de le publier.
           <textarea
             name="quote"
             value={quote}
@@ -43,12 +43,13 @@ const AddQuoteForm = ({ addQuote, tellResult }) => {
           />
         </label>
         <label className="label-for-name" htmlFor="name">
+          Ton pseudo&nbsp;?
           <input
             type="text"
             name="name"
             value={name}
             onChange={handleChange}
-            placeholder="Ton nom préferé"
+            placeholder="Captain Ann O'nymous"
           />
         </label>
         <input type="submit" value="Partager" className="basic-button" />
@@ -62,4 +63,4 @@ AddQuoteForm.propTypes = {
   tellResult: PropTypes.func.isRequired,
 };
 
-export default connect(null, { addQuote })(AddQuoteForm);
+export default connect(null, { addQuote: suggestQuote })(AddQuoteForm);

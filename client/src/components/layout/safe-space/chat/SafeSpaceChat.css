@@ -6,14 +6,8 @@
   align-items: center;
 }
 
-#safe-space-chat h2 {
-  margin: 1em 0;
-  text-align: center;
-}
-
 #safe-space-chat #connect {
-  margin: 0 0 1em 0;
-  text-align: center;
+  margin: 2em 0 1em 0;
 }
 
 #safe-space-chat #connect a {
