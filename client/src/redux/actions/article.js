@@ -26,9 +26,10 @@ export const getAllArticlesInfos = (world) => async (dispatch) => {
       payload: res.data,
     });
   } catch (error) {
-    dispatch({
-      type: ARTICLES_ERROR,
-      payload: { msg: error.response.statusText, status: error.response.status },
-    });
+    console.log(error);
+    // dispatch({
+    //   type: ARTICLES_ERROR,
+    //   payload: { msg: error.response.statusText, status: error.response.status },
+    // });
   }
 };

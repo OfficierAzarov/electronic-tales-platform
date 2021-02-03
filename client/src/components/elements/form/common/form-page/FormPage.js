@@ -18,12 +18,11 @@ const FormPage = ({ children }) => {
   }, []);
 
   const handleResultFromChild = (actionResult) => {
+    console.log(actionResult);
     if (actionResult === 'success') {
-      notify("C'est dans la boîte 🥡 Merci !");
+      notifySuccess("C'est dans la boîte 🥡 Merci !");
     } else {
-      notify(
-        "Oops, on dirait qu'il y a un grumeau dans les tuyaux ! On prévient les devs d'Electronic Tales tout de suite !"
-      );
+      notifyFailure("Oops, on dirait qu'il y a un grumeau dans les tuyaux... Peux-tu réessayer ?");
     }
   };
 
@@ -31,11 +30,26 @@ const FormPage = ({ children }) => {
     setIsFormVisible(isVisibleFromChild);
   };
 
-  const notify = (resultMessage) =>
+  const notifySuccess = (resultMessage) =>
     toast.success(resultMessage, {
       position: 'top-center',
       autoClose: 4000,
       hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      onClose: () => {
+        setIsFormVisible(false);
+        setTimeout(() => history.goBack(), 600);
+      },
+    });
+
+  const notifyFailure = (resultMessage) =>
+    toast.warn(resultMessage, {
+      position: 'top-center',
+      autoClose: false,
+      hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,

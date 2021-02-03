@@ -5,7 +5,7 @@ const router = express.Router();
 
 const SuggestedTLTASEntity = require('../../models/SuggestedTooLatetoAsk');
 const SuggestedQuoteEntity = require('../../models/SuggestedQuote');
-const { generateTodayDate } = require('../../utils/date');
+const { generateTodayDateString } = require('../../utils/date');
 
 // @route   POST api/suggestions/toolatetoasks
 // @desc    Test route
@@ -84,21 +84,25 @@ router.post(
     try {
       // check if quote already exists
       let suggestedQuote = await SuggestedQuoteEntity.findOne({ quote: sanitizedQuote });
+
       if (suggestedQuote) {
         res.status(400).json({ errors: [{ msg: 'The quote has already been posted' }] });
       }
 
+      // const today = generateTodayDateString();
+      const today = generateTodayDateString();
+
       // create the new tooLateToAskPost
-      suggestedQuote = new SuggestedQuote({
+      suggestedQuote = new SuggestedQuoteEntity({
         quote: sanitizedQuote,
         name: sanitizedName,
-        date: generateTodayDate().toString(), // TO DO : change when admin backoffice is ready
+        date: today, // TO DO : change to actual date when admin backoffice is ready
       });
 
       await suggestedQuote.save();
       res.json(suggestedQuote);
     } catch (error) {
-      console.log(`Aouch... ${error.msg}`);
+      console.log(`Aouch... ${error}`);
       res.status(500).send('Server error');
     }
   }

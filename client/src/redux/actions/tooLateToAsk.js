@@ -15,11 +15,11 @@ export const getTooLateToAsks = (world) => async (dispatch) => {
       payload: res.data,
     });
   } catch (error) {
-    console.log(error.message);
-    dispatch({
-      type: TOO_LATE_TO_ASK_ERROR,
-      payload: { msg: error.response.statusText, status: error.response.status },
-    });
+    console.log(error);
+    // dispatch({
+    //   type: TOO_LATE_TO_ASK_ERROR,
+    //   payload: { msg: error.response.statusText, status: error.response.status },
+    // });
   }
 };
 
@@ -42,16 +42,15 @@ export const removeATooLateToAsk = (questionToRemove) => (dispatch) => {
 export const suggestTLTA = (formData) => async (dispatch) => {
   try {
     const res = await api.post('/suggestions/too-late-to-asks', formData);
-
-    dispatch({
-      type: SUGGEST_A_TOO_LATE_TO_ASK,
-      payload: res.data,
-    });
+    if (res.status === 200) {
+      dispatch({
+        type: SUGGEST_A_TOO_LATE_TO_ASK,
+        payload: res.data,
+      });
+      return 'success';
+    }
   } catch (error) {
-    console.log(error.message);
-    dispatch({
-      type: TOO_LATE_TO_ASK_ERROR,
-      payload: { msg: error.response.statusText, status: error.response.status },
-    });
+    console.error('The error is ' + error.response.status);
+    return error.response.status;
   }
 };

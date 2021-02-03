@@ -5,11 +5,12 @@ import { PropTypes } from 'prop-types';
 
 import { suggestQuote } from '../../../../../redux/actions/quote';
 
-const AddQuoteForm = ({ addQuote, tellResult }) => {
-  const [formData, setFormData] = useState({
+const AddQuoteForm = ({ suggestQuote, tellResult }) => {
+  const initialForm = {
     quote: '',
     name: '',
-  });
+  };
+  const [formData, setFormData] = useState(initialForm);
 
   const { name, quote } = formData;
 
@@ -22,11 +23,11 @@ const AddQuoteForm = ({ addQuote, tellResult }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    suggestQuote(formData).then(onSuccess);
-  };
-
-  const onSuccess = () => {
-    tellResult('success');
+    suggestQuote(formData)
+      .then((response) => {
+        tellResult(response);
+      })
+      .then(setFormData(initialForm));
   };
 
   return (
@@ -59,8 +60,8 @@ const AddQuoteForm = ({ addQuote, tellResult }) => {
 };
 
 AddQuoteForm.propTypes = {
-  addQuote: PropTypes.func.isRequired,
+  suggestQuote: PropTypes.func.isRequired,
   tellResult: PropTypes.func.isRequired,
 };
 
-export default connect(null, { addQuote: suggestQuote })(AddQuoteForm);
+export default connect(null, { suggestQuote })(AddQuoteForm);

@@ -2,6 +2,7 @@ import { GET_QUOTES, QUOTES_ERROR, SUGGEST_QUOTE } from '../actions/types';
 
 const initialState = {
   quotes: [],
+  suggestedQuote: '',
   error: '',
 };
 
@@ -16,7 +17,7 @@ export default function (state = initialState, action) {
     case SUGGEST_QUOTE:
       return {
         ...state,
-        quotes: [payload, ...state.quotes],
+        suggestedQuote: payload,
       };
     case QUOTES_ERROR:
       return {

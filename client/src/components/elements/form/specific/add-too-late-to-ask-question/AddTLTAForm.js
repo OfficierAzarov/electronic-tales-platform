@@ -31,12 +31,11 @@ const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    suggestTLTA(formData);
-    setFormData(initialForm);
-  };
-
-  const onSuccess = () => {
-    tellResult('success');
+    suggestTLTA(formData)
+      .then((response) => {
+        tellResult(response);
+      })
+      .then(setFormData(initialForm));
   };
 
   const handleIHaveAnswerChange = () => {

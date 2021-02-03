@@ -5,7 +5,10 @@ const SuggestedQuoteSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  name: String,
+  name: {
+    type: String,
+    default: "Ann O'Nymous",
+  },
   date: String, // Change when admin backoffice is ready
 });
 
