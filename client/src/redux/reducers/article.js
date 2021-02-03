@@ -11,6 +11,7 @@ const initialState = {
     thumbnail: '',
     category: '',
   },
+  error: '',
 };
 
 export default function (state = initialState, action) {

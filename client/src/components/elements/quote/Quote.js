@@ -14,8 +14,8 @@ const Quote = ({ delay, quote }) => {
       className="flex"
     >
       <div className="quote">
-        <p>{quote.category}</p>
-        <q>{quote.content}</q>
+        <p>{quote.emotion}</p>
+        <q>{quote.text}</q>
         <p>
           {quote.author}, {quote.date}
         </p>

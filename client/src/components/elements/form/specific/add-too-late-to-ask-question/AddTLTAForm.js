@@ -31,9 +31,8 @@ const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    suggestTLTA(formData).then(onSuccess);
+    suggestTLTA(formData);
     setFormData(initialForm);
-    onSuccess();
   };
 
   const onSuccess = () => {

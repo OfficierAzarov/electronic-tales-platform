@@ -77,6 +77,10 @@ button:focus {
   align-items: center;
 }
 
+a svg {
+  fill: #ffffff;
+}
+
 .active-navbar-icon svg {
   fill: #ec567c;
 }

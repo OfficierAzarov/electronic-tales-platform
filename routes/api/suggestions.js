@@ -5,6 +5,7 @@ const router = express.Router();
 
 const SuggestedTLTASEntity = require('../../models/SuggestedTooLatetoAsk');
 const SuggestedQuoteEntity = require('../../models/SuggestedQuote');
+const { generateTodayDate } = require('../../utils/date');
 
 // @route   POST api/suggestions/toolatetoasks
 // @desc    Test route
@@ -91,6 +92,7 @@ router.post(
       suggestedQuote = new SuggestedQuote({
         quote: sanitizedQuote,
         name: sanitizedName,
+        date: generateTodayDate().toString(), // TO DO : change when admin backoffice is ready
       });
 
       await suggestedQuote.save();

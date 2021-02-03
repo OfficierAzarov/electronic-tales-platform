@@ -3,7 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 import './MiniNav.css';
 
-import { ReactComponent as FakeIcon } from '../../../resources/img/icons/safe-space.svg';
+import { ReactComponent as ChatIcon } from '../../../resources/img/icons/chat.svg';
+import { ReactComponent as QuotesIcon } from '../../../resources/img/icons/notebook.svg';
 import { ReactComponent as WhyIcon } from '../../../resources/img/icons/lightbulb.svg';
 
 const MiniNav = () => {
@@ -24,7 +25,7 @@ const MiniNav = () => {
         activeClassName="active-navbar-icon"
         className="mini-nav-link"
       >
-        <FakeIcon />
+        <QuotesIcon />
         <sub>Micro-vécus</sub>
       </NavLink>
       <NavLink
@@ -33,7 +34,7 @@ const MiniNav = () => {
         activeClassName="active-navbar-icon"
         className="mini-nav-link"
       >
-        <FakeIcon />
+        <ChatIcon />
         <sub>Notre Slack</sub>
       </NavLink>
     </div>

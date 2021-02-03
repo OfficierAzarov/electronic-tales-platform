@@ -2,6 +2,7 @@ import { GET_QUOTES, QUOTES_ERROR, SUGGEST_QUOTE } from '../actions/types';
 
 const initialState = {
   quotes: [],
+  error: '',
 };
 
 export default function (state = initialState, action) {

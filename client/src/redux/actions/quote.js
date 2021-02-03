@@ -21,17 +21,24 @@ export const getQuotes = () => async (dispatch) => {
 export const suggestQuote = (formData) => async (dispatch) => {
   try {
     const res = await api.post('/suggestions/quotes', formData);
-
-    dispatch({
-      type: SUGGEST_QUOTE,
-      payload: res.data,
-    });
+    if (res.status === 'ok') {
+      dispatch({
+        type: SUGGEST_QUOTE,
+        payload: res.data,
+      });
+    } else {
+      console.error(res.error);
+      dispatch({
+        type: QUOTES_ERROR,
+        payload: { msg: res.error.message, status: res.error.status },
+      }); // TO DO : harmonize with the catch
+    }
   } catch (error) {
-    // TO DO : replace by an error reducer
-    console.log(error.message);
+    console.error(error.message);
     dispatch({
       type: QUOTES_ERROR,
       payload: { msg: error.response.statusText, status: error.response.status },
     });
+    return error;
   }
 };

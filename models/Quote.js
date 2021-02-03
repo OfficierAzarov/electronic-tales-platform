@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const QuoteSchema = new mongoose.Schema({
-  text: {
+  emotion: {
     type: String,
     required: true,
   },
-  emotion: {
+  text: {
     type: String,
     required: true,
   },
@@ -15,11 +15,8 @@ const QuoteSchema = new mongoose.Schema({
     default: "Ann O'Nymous",
   },
   date: {
-    type: Date,
-    default: Date.now,
+    type: String, // TO DO : change to date when backoffice is ready
   },
-  thumbnail: String,
-  category: String,
 });
 
 module.exports = QuoteEntity = mongoose.model('quote', QuoteSchema);

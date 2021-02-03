@@ -16,7 +16,7 @@ const SafeSpaceQuotes = ({ quotes, getQuotes }) => {
 
   useEffect(() => {
     getQuotes();
-  });
+  }, []);
 
   const handleClick = () => {
     setTimeout(() => history.push('/safe-space/add-quote'), 400);
@@ -38,10 +38,13 @@ const SafeSpaceQuotes = ({ quotes, getQuotes }) => {
         Tu as un micro-vécu à partager&nbsp;? N'hésite pas, nous le publierons anonymement ou sous
         pseudonyme.
       </p>
-      {quotes.map((quote, index) => (
-        // index * x => just a stupid hack to make a delay of X ms for each quote
-        <Quote quote={quote} key={quote.id} delay={index * 200} />
-      ))}
+      {quotes
+        .slice(0)
+        .reverse()
+        .map((quote, index) => (
+          // index * x => just a stupid hack to make a delay of X ms for each quote
+          <Quote quote={quote} key={quote.id} delay={index * 200} />
+        ))}
       <div onClick={handleClick}>
         <Fab />
       </div>
