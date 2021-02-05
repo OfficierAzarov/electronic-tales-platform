@@ -2,6 +2,7 @@ const express = require('express');
 const connectDB = require('./config/db');
 
 const app = express();
+const PORT = process.env.PORT || 5000;
 
 // Connect Database
 connectDB();
@@ -18,6 +19,8 @@ app.use('/api/categories', require('./routes/api/categories'));
 app.use('/api/quotes', require('./routes/api/quotes'));
 app.use('/api/toolatetoasks', require('./routes/api/toolatetoasks'));
 
-const PORT = process.env.PORT || 5000;
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+}
 
 app.listen(PORT, () => console.log(`Yay, server started on port ${PORT}!`));

@@ -41,7 +41,7 @@ const AddQuoteForm = ({ suggestQuote, tellResult }) => {
     setReCaptchaToken(token);
   };
 
-  // When reCaptchaToken state changes, form data and token are send to server
+  // When reCaptchaToken state changes, form data and token are sent to server
   // The isInitialMount trick prevents sending form data to server on component initial load, before
   // our user has completed the form. It comes from here: https://stackoverflow.com/a/55075818
   const isInitialMount = useRef(true);

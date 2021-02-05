@@ -110,19 +110,19 @@ export const Swipe = ({
           >
             <button
               id="swipe-left-action"
-              className="action-button swipe-button"
+              className="basic-button action-button"
               disabled={disable}
               onClick={() => swipeActionFromButton('left')}
             >
-              ❌
+              Je sais déjà
             </button>
             <button
               id="swipe-right-action"
-              className="action-button swipe-button"
+              className="basic-button action-button"
               disabled={disable}
               onClick={() => swipeActionFromButton('right')}
             >
-              ❤️
+              Je veux savoir
             </button>
           </div>
         </div>
