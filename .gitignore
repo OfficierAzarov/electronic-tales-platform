@@ -18,5 +18,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # our secrets
-config/
+config/default.json
 .env/
