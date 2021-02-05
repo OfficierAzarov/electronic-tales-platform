@@ -19,4 +19,4 @@ yarn-error.log*
 
 # our secrets
 config/
-env/
+.env/

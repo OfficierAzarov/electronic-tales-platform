@@ -3,7 +3,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 import './CustomRecaptcha.css';
 
-import { SITE_KEY } from '../../../../../env/reCaptcha';
+const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
 
 const ReCaptcha = ({ tellReCaptchaResult, shouldIDoCheck }) => {
   const recaptchaRef = React.createRef();
@@ -28,7 +28,7 @@ const ReCaptcha = ({ tellReCaptchaResult, shouldIDoCheck }) => {
         <a href="https://policies.google.com/privacy">Privacy Policy</a> and{' '}
         <a href="https://policies.google.com/terms">Terms of Service</a> apply.
       </sub>
-      <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey={SITE_KEY} />
+      <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey={RECAPTCHA_SITE_KEY} />
     </Fragment>
   );
 };
