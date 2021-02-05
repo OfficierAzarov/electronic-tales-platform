@@ -8,8 +8,6 @@ const ReCaptcha = ({ tellReCaptchaResult, shouldIDoCheck }) => {
   const recaptchaRef = React.createRef();
 
   useEffect(() => {
-    console.log('RECAPTCHA_SITE_KEY', RECAPTCHA_SITE_KEY);
-    console.log('RECAPTCHA_SITE_KEY type is ', typeof RECAPTCHA_SITE_KEY);
     if (shouldIDoCheck) {
       doReCaptchaCheck();
     }
@@ -17,7 +15,6 @@ const ReCaptcha = ({ tellReCaptchaResult, shouldIDoCheck }) => {
 
   const doReCaptchaCheck = async () => {
     const responseToken = await recaptchaRef.current.executeAsync();
-    console.log('responseToken is ', responseToken);
     tellReCaptchaResult(responseToken);
   };
 
