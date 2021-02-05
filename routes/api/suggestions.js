@@ -1,11 +1,12 @@
 const express = require('express');
 const { check, validationResult } = require('express-validator');
-const xss = require('xss');
+
 const router = express.Router();
 
 const SuggestedTLTASEntity = require('../../models/SuggestedTooLatetoAsk');
 const SuggestedQuoteEntity = require('../../models/SuggestedQuote');
 const { generateTodayDateString } = require('../../utils/date');
+const { sanitize } = require('../../utils/sanitization');
 
 // @route   POST api/suggestions/toolatetoasks
 // @desc    Test route
@@ -29,17 +30,17 @@ router.post(
     const { question, simpleDefinition, analogy, realWorldExample, name } = req.body;
 
     // Let's sanitize!
-    const sanitizedQuestion = xss(question);
-    const sanitizedSimpleDefinition = xss(simpleDefinition);
-    const sanitizedAnalogy = xss(analogy);
-    const sanitizedRealWorldExample = xss(realWorldExample);
-    const sanitizedName = xss(name);
+    const sanitizedQuestion = sanitize(question);
+    const sanitizedSimpleDefinition = sanitize(simpleDefinition);
+    const sanitizedAnalogy = sanitize(analogy);
+    const sanitizedRealWorldExample = sanitize(realWorldExample);
+    const sanitizedName = sanitize(name);
 
     try {
       // check if tooLateToAskPost already exists
       let suggestedTLTAS = await SuggestedTLTASEntity.findOne({ question: sanitizedQuestion });
       if (suggestedTLTAS) {
-        res.status(400).json({ errors: [{ msg: 'The question has already been posted' }] });
+        return res.status(400).json({ errors: [{ msg: 'The question has already been posted' }] });
       }
 
       // create the new tooLateToAskPost
@@ -54,10 +55,10 @@ router.post(
       });
 
       await suggestedTLTAS.save();
-      res.json(suggestedTLTAS);
+      return res.json(suggestedTLTAS);
     } catch (error) {
       console.log(`Aouch... ${error.msg}`);
-      res.status(500).send('Server error');
+      return res.status(500).send('Server error');
     }
   }
 );
@@ -77,16 +78,16 @@ router.post(
 
     const { quote, name } = req.body;
 
-    // Let's sanitize!
-    const sanitizedQuote = xss(quote);
-    const sanitizedName = xss(name);
+    // Let's sanitize! Actually, mongoSanitize is redundant with mongoose (which converts input to string and therefore unarms it)... But let's doubleproof.
+    const sanitizedQuote = sanitize(quote);
+    const sanitizedName = sanitize(name);
 
     try {
       // check if quote already exists
       let suggestedQuote = await SuggestedQuoteEntity.findOne({ quote: sanitizedQuote });
 
       if (suggestedQuote) {
-        res.status(400).json({ errors: [{ msg: 'The quote has already been posted' }] });
+        return res.status(400).json({ errors: [{ msg: 'The quote has already been posted' }] });
       }
 
       // const today = generateTodayDateString();

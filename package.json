@@ -8,8 +8,10 @@
     "config": "^3.3.3",
     "enzyme": "^3.11.0",
     "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.0.2",
     "express-validator": "^6.9.2",
     "jsonwebtoken": "^8.5.1",
+    "mongo-sanitize": "^1.1.0",
     "mongoose": "^5.11.11",
     "xss": "^1.0.8"
   },

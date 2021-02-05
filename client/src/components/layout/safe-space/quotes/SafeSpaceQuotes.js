@@ -43,7 +43,7 @@ const SafeSpaceQuotes = ({ quotes, getQuotes }) => {
         .reverse()
         .map((quote, index) => (
           // index * x => just a stupid hack to make a delay of X ms for each quote
-          <Quote quote={quote} key={quote.id} delay={index * 200} />
+          <Quote quote={quote} key={quote._id} delay={index * 200} />
         ))}
       <div onClick={handleClick}>
         <Fab />

@@ -285,3 +285,14 @@ a svg {
   display: flex;
   justify-content: center;
 }
+
+/* Hide reCaptcha */
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.recaptcha-text {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 2em;
+}
