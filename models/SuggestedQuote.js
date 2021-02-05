@@ -12,4 +12,4 @@ const SuggestedQuoteSchema = new mongoose.Schema({
   date: String, // Change when admin backoffice is ready
 });
 
-module.exports = SuggestedQuoteEntity = mongoose.model('suggestedQuote', SuggestedQuoteSchema);
+module.exports = mongoose.model('suggestedQuote', SuggestedQuoteSchema);

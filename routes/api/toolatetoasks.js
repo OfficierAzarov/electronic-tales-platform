@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const TooLateToAskEntity = require('../../models/TooLateToAsk');
+const TooLateToAskEntity = require('../../models/TooLatetoAsk');
 
 // @route   GET api/toolatetoasks/world
 // @desc    Test route

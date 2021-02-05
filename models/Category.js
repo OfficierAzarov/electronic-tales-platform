@@ -10,4 +10,4 @@ const CategorySchema = new mongoose.Schema({
   articles: [{ type: Schema.Types.ObjectId, ref: 'article' }],
 });
 
-module.exports = CategoryEntity = mongoose.model('category', CategorySchema);
+module.exports = mongoose.model('category', CategorySchema);

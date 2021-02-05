@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const ArticleEntity = require('./Article').schema;
 
 const TooLateToAskSchema = new mongoose.Schema({
   text: String,
@@ -9,4 +8,4 @@ const TooLateToAskSchema = new mongoose.Schema({
   answerSlug: String,
 });
 
-module.exports = TooLateToAskEntity = mongoose.model('tooLateToAsk', TooLateToAskSchema);
+module.exports = mongoose.model('tooLateToAsk', TooLateToAskSchema);

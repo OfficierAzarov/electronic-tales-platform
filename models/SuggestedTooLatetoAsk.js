@@ -13,4 +13,4 @@ const SuggestedTLTASchema = new mongoose.Schema({
   name: String,
 });
 
-module.exports = SuggestedTLTASEntity = mongoose.model('suggestedTLTASchema', SuggestedTLTASchema);
+module.exports = mongoose.model('suggestedTLTASchema', SuggestedTLTASchema);

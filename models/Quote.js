@@ -19,4 +19,4 @@ const QuoteSchema = new mongoose.Schema({
   },
 });
 
-module.exports = QuoteEntity = mongoose.model('quote', QuoteSchema);
+module.exports = mongoose.model('quote', QuoteSchema);
