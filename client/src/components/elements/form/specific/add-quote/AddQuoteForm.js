@@ -25,7 +25,7 @@ const AddQuoteForm = ({ suggestQuote, tellResult }) => {
   };
 
   // 1. Ok, let's imagine we've just hit the form's submit button!
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     console.log('submit button hit !');
     tellCaptchaComponentToExecuteCheck();
