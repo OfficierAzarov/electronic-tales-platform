@@ -10,6 +10,7 @@ const ReCaptcha = ({ tellReCaptchaResult, shouldIDoCheck }) => {
 
   useEffect(() => {
     console.log(shouldIDoCheck);
+    console.log(RECAPTCHA_SITE_KEY);
     if (shouldIDoCheck) {
       doReCaptchaCheck();
     }
