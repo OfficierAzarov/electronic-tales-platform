@@ -3,7 +3,7 @@ const { check, validationResult } = require('express-validator');
 const fetch = require('node-fetch');
 const config = require('config');
 
-const recaptchaKey = config.get('recaptchaSecret');
+const recaptchaKey = config.get('RECAPTCHA_SECRET_KEY');
 
 const router = express.Router();
 
