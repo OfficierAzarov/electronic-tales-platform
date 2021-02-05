@@ -18,6 +18,7 @@ const ReCaptcha = ({ tellReCaptchaResult, shouldIDoCheck }) => {
 
   const doReCaptchaCheck = async () => {
     const responseToken = await recaptchaRef.current.executeAsync();
+    console.log(responseToken);
     tellReCaptchaResult(responseToken);
   };
 
