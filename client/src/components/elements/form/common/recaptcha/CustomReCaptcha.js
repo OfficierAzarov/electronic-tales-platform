@@ -4,8 +4,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import './CustomRecaptcha.css';
 
 const ReCaptcha = ({ tellReCaptchaResult, shouldIDoCheck }) => {
-  // const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
-  const RECAPTCHA_SITE_KEY = '6Lfs-UoaAAAAAEDE_PL1XONbsvMWUl-J0KqHMvOf';
+  const RECAPTCHA_SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY;
   const recaptchaRef = React.createRef();
 
   useEffect(() => {
