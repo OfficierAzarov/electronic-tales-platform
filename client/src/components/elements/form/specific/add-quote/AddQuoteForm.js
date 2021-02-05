@@ -27,17 +27,20 @@ const AddQuoteForm = ({ suggestQuote, tellResult }) => {
   // 1. Ok, let's imagine we've just hit the form's submit button!
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log('submit button hit !');
     tellCaptchaComponentToExecuteCheck();
   };
 
   // 2. We tell the recaptcha component (who is our child) to check if we are a human
   const tellCaptchaComponentToExecuteCheck = () => {
+    console.log('inside tellCaptchaComponentToExecuteCheck');
     setShouldReCaptchaDoCheck(true);
   };
 
   // After the captcha component has done its check,
   // it sends the response token to us, and we store this value in state
   const changeReCaptchaTokenStateWithTokenFromChild = (token) => {
+    console.log('inside changeReCaptchaTokenStateWithTokenFromChild');
     setReCaptchaToken(token);
   };
 
@@ -50,6 +53,7 @@ const AddQuoteForm = ({ suggestQuote, tellResult }) => {
       isInitialMount.current = false;
     } else {
       // Send form to the server
+      console.log('inside useEffect');
       suggestQuote(formData, reCaptchaToken).then((response) => {
         tellResult(response);
       });

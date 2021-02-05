@@ -21,7 +21,7 @@ export const getQuotes = () => async (dispatch) => {
 export const suggestQuote = (formData, reCaptchaToken) => async (dispatch) => {
   try {
     const postData = { ...formData, reCaptchaToken };
-    console.log(postData);
+    console.log('postData are', postData);
     const res = await api.post('/suggestions/quotes', postData);
     if (res.status === 200) {
       dispatch({
