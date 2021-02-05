@@ -3,7 +3,13 @@ const { check, validationResult } = require('express-validator');
 const fetch = require('node-fetch');
 const config = require('config');
 
-const recaptchaKey = config.get('RECAPTCHA_SECRET_KEY');
+let RECAPTCHA_SECRET_KEY;
+
+if (process.env.NODE_ENV !== 'production') {
+  RECAPTCHA_SECRET_KEY = config.get('RECAPTCHA_SECRET_KEY');
+} else {
+  RECAPTCHA_SECRET_KEY = process.env.RECAPTCHA_SECRET_KEY;
+}
 
 const router = express.Router();
 
@@ -126,7 +132,7 @@ router.post(
 const checkReCaptcha = async (token) => {
   console.log('inside checkrecaptcha. The token is ', token);
   const res = await fetch(
-    `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaKey}&response=${token}`,
+    `https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET_KEY}&response=${token}`,
     {
       method: 'POST',
     }
