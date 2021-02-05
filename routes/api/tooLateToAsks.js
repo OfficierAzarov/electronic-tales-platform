@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const TooLateToAskEntity = require('../../models/TooLateToAsk');
 
-// @route   POST api/toolatetoasks
+// @route   GET api/toolatetoasks/world
 // @desc    Test route
 // @access  Public
 router.get('/:world', async (req, res) => {
@@ -16,7 +16,7 @@ router.get('/:world', async (req, res) => {
   }
 });
 
-// @route   POST api/toolatetoasks
+// @route   GET api/toolatetoasks/slug
 // @desc    Test route
 // @access  Public
 router.get('/:slug', async (req, res) => {
