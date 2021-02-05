@@ -1,0 +1,19 @@
+/*============= reCAPTCHA =============*/
+
+/* Hide reCaptcha */
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.recaptcha-text {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 2em;
+}
+
+/* Makes reCaptcha pop up (the ones asking you to select some specific images) responsive */
+.captcha,
+#recaptcha_image,
+#recaptcha_image img {
+  width: 100% !important;
+}

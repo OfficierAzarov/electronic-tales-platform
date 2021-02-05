@@ -18,7 +18,6 @@ const FormPage = ({ children }) => {
   }, []);
 
   const handleResultFromChild = (actionResult) => {
-    console.log(actionResult);
     if (actionResult === 'success') {
       notifySuccess("C'est dans la boîte 🥡 Merci !");
     } else {

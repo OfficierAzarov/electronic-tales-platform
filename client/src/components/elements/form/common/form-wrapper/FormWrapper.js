@@ -7,8 +7,6 @@ import './FormWrapper.css';
 import GoBackButton from '../../../buttons/go-back/GoBackButton';
 
 const Add = ({ children, isVisible, tellVisibilityChange }) => {
-  // const history = useHistory();
-
   return (
     <div id="form-wrapper">
       <Animated

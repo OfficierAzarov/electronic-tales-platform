@@ -31,11 +31,9 @@ const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    suggestTLTA(formData)
-      .then((response) => {
-        tellResult(response);
-      })
-      .then(setFormData(initialForm));
+    suggestTLTA(formData).then((response) => {
+      tellResult(response);
+    });
   };
 
   const handleIHaveAnswerChange = () => {
@@ -93,15 +91,6 @@ const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
               placeholder="Exemple&nbsp;: En fait, c'est juste une façon de..."
             />
           </label>
-          {/* <label htmlFor="simpledef">
-            Tu
-            <textarea
-              name="simpledef"
-              value={simpleDefinition}
-              onChange={handleChange}
-              placeholder="Exemple..."
-            />
-          </label> */}
           <label htmlFor="analogy">
             Si tu as une analogie ou une métaphore, c'est par là&nbsp;:
             <textarea

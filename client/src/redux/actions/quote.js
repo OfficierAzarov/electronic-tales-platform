@@ -18,9 +18,11 @@ export const getQuotes = () => async (dispatch) => {
   }
 };
 
-export const suggestQuote = (formData) => async (dispatch) => {
+export const suggestQuote = (formData, reCaptchaToken) => async (dispatch) => {
   try {
-    const res = await api.post('/suggestions/quotes', formData);
+    const postData = { ...formData, reCaptchaToken };
+    console.log(postData);
+    const res = await api.post('/suggestions/quotes', postData);
     if (res.status === 200) {
       dispatch({
         type: SUGGEST_QUOTE,

@@ -1,5 +1,9 @@
 const express = require('express');
 const { check, validationResult } = require('express-validator');
+const fetch = require('node-fetch');
+const config = require('config');
+
+const recaptchaKey = config.get('recaptchaSecret');
 
 const router = express.Router();
 
@@ -21,6 +25,10 @@ router.post(
     check('name').trim().escape(),
   ],
   async (req, res) => {
+    if (!checkReCaptcha(req.body.reCaptchaToken)) {
+      return res.status(400).json({ errors: 'Oh, go away, little bot.' });
+    }
+
     const validationErrors = validationResult(req);
 
     if (!validationErrors.isEmpty()) {
@@ -70,6 +78,12 @@ router.post(
   '/quotes',
   [check('quote').not().isEmpty().trim().escape(), check('name').trim().escape()],
   async (req, res) => {
+    const isHuman = await checkReCaptcha(req.body.reCaptchaToken);
+    console.log(isHuman);
+    if (!isHuman) {
+      return res.status(400).json({ errors: 'Oh, go away, little bot.' });
+    }
+
     const validationErrors = validationResult(req);
 
     if (!validationErrors.isEmpty()) {
@@ -108,5 +122,18 @@ router.post(
     }
   }
 );
+
+const checkReCaptcha = async (token) => {
+  console.log('inside checkrecaptcha. The token is ', token);
+  const res = await fetch(
+    `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaKey}&response=${token}`,
+    {
+      method: 'POST',
+    }
+  );
+  const data = await res.json();
+  console.log(data);
+  return data.success;
+};
 
 module.exports = router;

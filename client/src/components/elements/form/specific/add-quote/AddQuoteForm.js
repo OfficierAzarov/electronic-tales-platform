@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 import { sanitizeWithExceptionsForVideos } from '../../../../../utils/data-processing/sanitize';
 import { suggestQuote } from '../../../../../redux/actions/quote';
-import { SITE_KEY } from '../../../../../env/reCaptcha';
+import CustomReCaptcha from '../../common/recaptcha/CustomReCaptcha';
 
 const AddQuoteForm = ({ suggestQuote, tellResult }) => {
   const initialForm = {
@@ -13,10 +12,10 @@ const AddQuoteForm = ({ suggestQuote, tellResult }) => {
     name: '',
   };
   const [formData, setFormData] = useState(initialForm);
+  const [shouldReCaptchaDoCheck, setShouldReCaptchaDoCheck] = useState(false);
+  const [reCaptchaToken, setReCaptchaToken] = useState(null);
 
   const { name, quote } = formData;
-
-  const recaptchaRef = React.createRef();
 
   const handleChange = (event) => {
     setFormData({
@@ -25,18 +24,37 @@ const AddQuoteForm = ({ suggestQuote, tellResult }) => {
     });
   };
 
+  // 1. Ok, let's imagine we've just hit the form's submit button!
   const handleSubmit = async (event) => {
     event.preventDefault();
-    const token = await recaptchaRef.current.executeAsync();
-    console.log(token);
-    if (token) {
-      suggestQuote(formData)
-        .then((response) => {
-          tellResult(response);
-        })
-        .then(setFormData(initialForm));
-    }
+    tellCaptchaComponentToExecuteCheck();
   };
+
+  // 2. We tell the recaptcha component (who is our child) to check if we are a human
+  const tellCaptchaComponentToExecuteCheck = () => {
+    setShouldReCaptchaDoCheck(true);
+  };
+
+  // After the captcha component has done its check,
+  // it sends the response token to us, and we store this value in state
+  const changeReCaptchaTokenStateWithTokenFromChild = (token) => {
+    setReCaptchaToken(token);
+  };
+
+  // When reCaptchaToken state changes, form data and token are send to server
+  // The isInitialMount trick prevents sending form data to server on component initial load, before
+  // our user has completed the form. It comes from here: https://stackoverflow.com/a/55075818
+  const isInitialMount = useRef(true);
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+    } else {
+      // Send form to the server
+      suggestQuote(formData, reCaptchaToken).then((response) => {
+        tellResult(response);
+      });
+    }
+  }, [reCaptchaToken]);
 
   return (
     <div className="form-container">
@@ -62,13 +80,10 @@ const AddQuoteForm = ({ suggestQuote, tellResult }) => {
           />
         </label>
         <input type="submit" value="Partager" className="basic-button" />
-        <sub className="recaptcha-text">
-          {' '}
-          This site is protected by reCAPTCHA and the Google{' '}
-          <a href="https://policies.google.com/privacy">Privacy Policy</a> and{' '}
-          <a href="https://policies.google.com/terms">Terms of Service</a> apply.
-        </sub>
-        <ReCAPTCHA ref={recaptchaRef} size="invisible" sitekey={SITE_KEY} />
+        <CustomReCaptcha
+          tellReCaptchaResult={changeReCaptchaTokenStateWithTokenFromChild}
+          shouldIDoCheck={shouldReCaptchaDoCheck}
+        />
       </form>
     </div>
   );
