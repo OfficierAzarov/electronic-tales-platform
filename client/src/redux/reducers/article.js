@@ -1,4 +1,9 @@
-import { SET_CURRENT_ARTICLE, GET_ALL_ARTICLES_INFOS, ARTICLES_ERROR } from '../actions/types';
+import {
+  SET_CURRENT_ARTICLE,
+  CLEAN_CURRENT_ARTICLE,
+  GET_ALL_ARTICLES_INFOS,
+  ARTICLES_ERROR,
+} from '../actions/types';
 
 const initialState = {
   allArticles: [],
@@ -21,6 +26,11 @@ export default function (state = initialState, action) {
       return {
         ...state,
         currentArticle: payload[0],
+      };
+    case CLEAN_CURRENT_ARTICLE:
+      return {
+        ...state,
+        currentArticle: initialState.currentArticle,
       };
     case GET_ALL_ARTICLES_INFOS:
       return {

@@ -1,6 +1,10 @@
-import { SET_CURRENT_ARTICLE, GET_ALL_ARTICLES_INFOS, ARTICLES_ERROR } from './types';
-// import { articlesSource } from '../../mocks/articles';
-// import { questionsSource } from '../../mocks/questions';
+import {
+  SET_CURRENT_ARTICLE,
+  CLEAN_CURRENT_ARTICLE,
+  GET_ALL_ARTICLES_INFOS,
+  ARTICLES_ERROR,
+} from './types';
+
 import api from '../../utils/urls/api';
 
 export const setCurrentArticle = (slug) => async (dispatch) => {
@@ -16,6 +20,12 @@ export const setCurrentArticle = (slug) => async (dispatch) => {
       payload: { error },
     });
   }
+};
+
+export const cleanCurrentArticle = () => (dispatch) => {
+  dispatch({
+    type: CLEAN_CURRENT_ARTICLE,
+  });
 };
 
 export const getAllArticlesInfos = (world) => async (dispatch) => {
