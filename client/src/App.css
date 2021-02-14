@@ -251,31 +251,28 @@ a svg {
   text-align: center;
 }
 
-.form-container .toggle-label {
+.toggle-label {
   display: flex;
 }
 
-.form-container .toggle-label span {
+.toggle-label span {
   font-size: 0.7em;
   width: 60%;
 }
-
-.form-container .custom-toggle {
+.custom-toggle {
   margin-right: 0.5em;
 }
 
-.form-container .custom-toggle.react-toggle--checked .react-toggle-track {
+.custom-toggle.react-toggle--checked .react-toggle-track {
   background-color: #ec567c;
 }
 
-.form-container .custom-toggle.react-toggle-track,
-.form-container .custom-toggle.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+.custom-toggle.react-toggle-track,
+.custom-toggle.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
   background-color: #444444;
 }
 
-.form-container
-  .custom-toggle.react-toggle--checked:hover:not(.react-toggle--disabled)
-  .react-toggle-track {
+.custom-toggle.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
   background-color: #ec567c;
 }
 

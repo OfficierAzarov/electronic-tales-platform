@@ -8,25 +8,37 @@ import Card from '../card/Card';
 import { Fragment } from 'react';
 import SwiperJsHack from '../swiperjs-hack/SwiperJsHack';
 
-const CardsHub = ({ categoryName, categoryArticles }) => {
+const CardsHub = ({ categoryName, categoryArticles, text }) => {
   return (
     <div className="cards-hub">
       <div className="line-title-wrapper category-title-wrapper">
         <h3 className="title">{categoryName}</h3>
       </div>
+      <p>{text}</p>
       <div className="w-cat-card-content">
         {categoryArticles.length > 1 ? (
           <SwiperJsHack>
             {categoryArticles.map((article) => (
               <SwiperSlide key={article._id}>
-                <Card article={article} />
+                <Card
+                  key={article._id}
+                  link={`/${article.world}/articles/${article.slug}`}
+                  imageUrl={article.thumbnail}
+                  title={article.title}
+                />
               </SwiperSlide>
             ))}
           </SwiperJsHack>
         ) : (
           <Fragment>
             {categoryArticles.map((article) => (
-              <Card key={article._id} article={article} size="big" />
+              <Card
+                key={article._id}
+                link={`/${article.world}/articles/${article.slug}`}
+                imageUrl={article.thumbnail}
+                title={article.title}
+                size="big"
+              />
             ))}
           </Fragment>
         )}

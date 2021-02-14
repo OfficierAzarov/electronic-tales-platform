@@ -8,3 +8,15 @@
   /* Hey Monday, ceci est un hack temporaire pour que le too late to ask soit de la même taille que les autres cards <3 */
   width: 90vw;
 }
+
+#modern-world #lab-switch-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#modern-world #lab-switch-container span {
+  font-size: 1.4rem;
+  margin-right: 0.3em;
+}

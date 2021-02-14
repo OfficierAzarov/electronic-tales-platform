@@ -2,11 +2,10 @@
   width: 90vw;
 }
 
-/* .w-cat-card-content.hub-content {
-  display: flex;
-} */
-
-/* Let's overwrite swiperjs bullet styles */
+.cards-hub p {
+  margin: 1em 0;
+  font-size: 1.4rem;
+}
 
 .swiper-container {
   padding: 1em 0 4em 0;

@@ -9,6 +9,7 @@ import { getAllArticlesInfos } from '../../../../redux/actions/article';
 import { WORLDS } from '../../../../dictionnary/worlds';
 import { deduceCategoriesFromArticles } from '../../../../utils/data-sorting/sorts';
 import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
+import Lab from '../../../elements/lab/Lab';
 
 const Imaginarium = ({ articles, getAllArticlesInfos }) => {
   useEffect(() => {
@@ -21,6 +22,16 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
         <div className="line-title-wrapper world-title-wrapper">
           <h2 className="world-title">Imaginarium</h2>
         </div>
+        <Lab
+          text="Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus&nbsp;: tu seras emmené·e vers le canal Slack dédié au sujet."
+          cards={[
+            {
+              title: 'Le tourne-disque de mamie Cobol : partageons nos playlists pour coder',
+              slug: '',
+              thumbnail: '',
+            },
+          ]}
+        />
         <SwipeDoor link={`/${WORLDS.IMAGINARIUM}/too-late-to-ask`} />
         {deduceCategoriesFromArticles(articles)}
       </div>
