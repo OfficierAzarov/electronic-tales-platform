@@ -171,8 +171,22 @@ Swipe.propTypes = {
   setHasAlreadyBeenLoaded: PropTypes.func.isRequired,
 };
 
+function toPascalCase(string) {
+  return `${string}`
+    .replace(new RegExp(/[-_]+/, 'g'), ' ')
+    .replace(new RegExp(/[^\w\s]/, 'g'), '')
+    .replace(
+      new RegExp(/\s+(.)(\w+)/, 'g'),
+      ($1, $2, $3) => `${$2.toUpperCase() + $3.toLowerCase()}`
+    )
+    .replace(new RegExp(/\s/, 'g'), '')
+    .replace(new RegExp(/\w/), (s) => s.toUpperCase());
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+
 const mapStateToProps = (state) => ({
-  questions: state.question.questions,
+  questions: state.question.questions + toPascalCase(urlParams.get('world')),
   hasAlreadyBeenLoaded: state.question.hasAlreadyBeenLoaded,
 });
 

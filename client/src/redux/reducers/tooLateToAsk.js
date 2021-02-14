@@ -7,19 +7,26 @@ import {
 } from '../actions/types';
 
 const initialState = {
-  questions: [],
+  questionsModernWorld: [],
+  questionsImaginarium: [],
   hasAlreadyBeenLoaded: [],
   suggestedTLTA: [],
 };
 
 export default function (state = initialState, action) {
-  const { type, payload } = action;
+  const { type, payload, world } = action;
   switch (type) {
     case GET_TOO_LATE_TO_ASKS:
-      return {
-        ...state,
-        questions: payload,
-      };
+      if (world === 'modern-world')
+        return {
+          ...state,
+          questionsModernWorld: payload,
+        };
+      if (world === 'imaginarium')
+        return {
+          ...state,
+          questionsImaginarium: payload,
+        };
     case REMOVE_TOO_LATE_TO_ASK:
       return {
         ...state,

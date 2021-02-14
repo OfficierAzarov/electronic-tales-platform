@@ -13,13 +13,10 @@ export const getTooLateToAsks = (world) => async (dispatch) => {
     dispatch({
       type: GET_TOO_LATE_TO_ASKS,
       payload: res.data,
+      world: world,
     });
   } catch (error) {
     console.log(error);
-    // dispatch({
-    //   type: TOO_LATE_TO_ASK_ERROR,
-    //   payload: { msg: error.response.statusText, status: error.response.status },
-    // });
   }
 };
 
