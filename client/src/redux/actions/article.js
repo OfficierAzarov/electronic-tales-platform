@@ -37,9 +37,5 @@ export const getAllArticlesInfos = (world) => async (dispatch) => {
     });
   } catch (error) {
     console.log(error);
-    // dispatch({
-    //   type: ARTICLES_ERROR,
-    //   payload: { msg: error.response.statusText, status: error.response.status },
-    // });
   }
 };

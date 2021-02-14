@@ -19,7 +19,9 @@ const FormPage = ({ children }) => {
 
   const handleResultFromChild = (actionResult) => {
     if (actionResult === 'success') {
-      notifySuccess("C'est dans la boîte 🥡 Merci !");
+      notifySuccess(
+        "C'est dans la boîte 🥡 Le temps que ta proposition passe dans les tuyaux d'Electronic Tales, elle sera publiée bientôt. Merci !"
+      );
     } else {
       notifyFailure("Oops, on dirait qu'il y a un grumeau dans les tuyaux... Peux-tu réessayer ?");
     }
@@ -32,7 +34,7 @@ const FormPage = ({ children }) => {
   const notifySuccess = (resultMessage) =>
     toast.success(resultMessage, {
       position: 'top-center',
-      autoClose: 4000,
+      autoClose: 6000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,

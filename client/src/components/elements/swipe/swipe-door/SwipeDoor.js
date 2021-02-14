@@ -15,7 +15,11 @@ const SwipeDoor = ({ link }) => {
         {/* <div className="hot-label">Hot</div> */}
         <img src={hands} alt="Some hands swiping" loading="lazy" className="w-cat-card-img" />
         <Link to={link} className="w-cat-card-cta">
-          Let's go for a swipe <Emoji symbol="🔥" label="tinder fire" />
+          <p>
+            Toi aussi, tu te poses encore des questions dont tu devrais déjà connaître les
+            réponses&nbsp;?
+            <Emoji symbol="🔥" label="tinder fire" />
+          </p>
         </Link>
       </div>
     </Fragment>

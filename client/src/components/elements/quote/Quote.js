@@ -1,5 +1,6 @@
 import React from 'react';
 import { Animated } from 'react-animated-css';
+import HtmlContent from '../html-content/HtmlContent';
 
 import './Quote.css';
 
@@ -14,8 +15,8 @@ const Quote = ({ delay, quote }) => {
       className="flex"
     >
       <div className="quote">
-        <p>{quote.emotion}</p>
-        <q>{quote.text}</q>
+        <HtmlContent content={quote.emotion} />
+        <HtmlContent content={quote.text} />
         <p>
           {quote.author}, {quote.date}
         </p>

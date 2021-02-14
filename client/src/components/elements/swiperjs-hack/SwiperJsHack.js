@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import uuid from 'react-uuid';
 import SwiperCore, { Pagination, A11y, Keyboard } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 
 // Workaroung for a to-be-solved issue :
@@ -21,10 +21,6 @@ const SwiperJsHack = ({ children }) => {
         prevSlideMessage: 'Previous article',
         nextSlideMessage: 'Next article',
       }}
-      // add later for desktop
-      // keyboard={{
-      //   enabled: true,
-      // }}
     >
       {children}
     </Swiper>

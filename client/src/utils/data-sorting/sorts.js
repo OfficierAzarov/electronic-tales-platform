@@ -2,18 +2,14 @@ import React from 'react';
 import CardHub from '../../components/elements/cards-hub/CardsHub';
 
 export const deduceCategoriesFromArticles = (articles) => {
-  if (articles.length != 0) {
+  if (articles.length !== 0) {
     let categories = groupBy(articles, 'category');
     const componentsToReturn = [];
     for (let i = 0; i < Object.keys(categories).length; i++) {
       const categoryName = Object.keys(categories)[i];
       const categoryArticles = categories[Object.keys(categories)[i]];
       componentsToReturn.push(
-        <CardHub
-          key={i}
-          categoryName={categoryName}
-          categoryArticles={categoryArticles}
-        />
+        <CardHub key={i} categoryName={categoryName} categoryArticles={categoryArticles} />
       );
     }
     return componentsToReturn;
