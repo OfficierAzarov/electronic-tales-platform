@@ -14,7 +14,7 @@ import {
 
 import './Swipe.css';
 import ghost from '../../../resources/img/icons/ghost.png';
-import { IMAGES_URL, TLTA_IMAGES_URL } from '../../../utils/urls/urls';
+
 import {
   computeLeft,
   computeWidth,
