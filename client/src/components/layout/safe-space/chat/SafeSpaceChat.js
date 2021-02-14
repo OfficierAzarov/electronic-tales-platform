@@ -7,6 +7,7 @@ import wordartSwag from '../../../../resources/img/wordart/wordart.png';
 import wordartInternet from '../../../../resources/img/wordart/internet.png';
 import wordartAnnees2000 from '../../../../resources/img/wordart/annees2000.png';
 import Emoji from 'a11y-react-emoji';
+import { SLACK } from '../../../../dictionnary/externalElectronicTalesLinks';
 
 const SafeSpaceChat = () => {
   return (
@@ -20,10 +21,7 @@ const SafeSpaceChat = () => {
       </div>
       <p id="connect">
         Nous avons ouvert un{' '}
-        <a
-          href="https://join.slack.com/t/electronictales/shared_invite/zt-kox8itw1-tveUHRe8QSTtjs0Bb172BA"
-          target="_blank"
-        >
+        <a href={SLACK} target="_blank">
           Slack
         </a>{' '}
         pour permettre aux devs de discuter à cœur ouvert des problèmes qu'ils peuvent vivre dans la
@@ -60,11 +58,7 @@ const SafeSpaceChat = () => {
           sur la question.
         </li>
       </ul>
-      <a
-        href="https://join.slack.com/t/electronictales/shared_invite/zt-kox8itw1-tveUHRe8QSTtjs0Bb172BA"
-        target="_blank"
-        className="basic-button"
-      >
+      <a href={SLACK} target="_blank" className="basic-button">
         Rejoindre le Slack
       </a>
     </div>
