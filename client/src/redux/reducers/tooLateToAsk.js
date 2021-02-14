@@ -1,3 +1,4 @@
+import { WORLDS } from '../../dictionnary/worlds';
 import {
   GET_TOO_LATE_TO_ASKS,
   REMOVE_TOO_LATE_TO_ASK,
@@ -17,21 +18,31 @@ export default function (state = initialState, action) {
   const { type, payload, world } = action;
   switch (type) {
     case GET_TOO_LATE_TO_ASKS:
-      if (world === 'modern-world')
+      if (world === WORLDS.MODERN_WORLD)
         return {
           ...state,
           questionsModernWorld: payload,
         };
-      if (world === 'imaginarium')
+      if (world === WORLDS.IMAGINARIUM)
         return {
           ...state,
           questionsImaginarium: payload,
         };
     case REMOVE_TOO_LATE_TO_ASK:
-      return {
-        ...state,
-        questions: state.questions.filter((question) => question._id !== payload._id),
-      };
+      if (world === WORLDS.MODERN_WORLD)
+        return {
+          ...state,
+          questionsModernWorld: state.questionsModernWorld.filter(
+            (question) => question._id !== payload._id
+          ),
+        };
+      if (world === WORLDS.IMAGINARIUM)
+        return {
+          ...state,
+          questionsImaginarium: state.questionsImaginarium.filter(
+            (question) => question._id !== payload._id
+          ),
+        };
     case SET_HAS_ALREADY_BEEN_LOADED:
       return {
         ...state,

@@ -21,18 +21,19 @@ export const getTooLateToAsks = (world) => async (dispatch) => {
 };
 
 // A helper actions that prevents reloading TLTA cards every time user comes back to the world
-export const setHasAlreadyBeenLoaded = (TooLateToAskOfAWorld) => (dispatch) => {
+export const setHasAlreadyBeenLoaded = (tooLateToAskOfAWorld) => (dispatch) => {
   dispatch({
     type: SET_HAS_ALREADY_BEEN_LOADED,
-    payload: TooLateToAskOfAWorld,
+    payload: tooLateToAskOfAWorld,
   });
 };
 
 // Remove a question fromm all the questions list when user discards a TLTA card
-export const removeATooLateToAsk = (questionToRemove) => (dispatch) => {
+export const removeATooLateToAsk = (questionToRemove, world) => (dispatch) => {
   dispatch({
     type: REMOVE_TOO_LATE_TO_ASK,
     payload: questionToRemove,
+    world: world,
   });
 };
 

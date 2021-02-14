@@ -6,13 +6,13 @@ import Fade from 'react-reveal/Fade';
 import './ModernWorld.css';
 
 import { getAllArticlesInfos } from '../../../../redux/actions/article';
-import { MODERN_WORLD } from '../../../../dictionnary/worlds';
+import { WORLDS } from '../../../../dictionnary/worlds';
 import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
 import AllArticlesofTheWorld from '../../../elements/article/all-articles/AllArticlesofTheWorld';
 
 const ModernWorld = ({ articles, getAllArticlesInfos }) => {
   useEffect(() => {
-    getAllArticlesInfos(MODERN_WORLD);
+    getAllArticlesInfos(WORLDS.MODERN_WORLD);
   }, []);
 
   return (

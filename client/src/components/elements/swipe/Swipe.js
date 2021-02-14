@@ -23,6 +23,7 @@ import {
 } from '../../../utils/display/positionning';
 import GoBackButton from '../buttons/go-back/GoBackButton';
 import HtmlContent from '../html-content/HtmlContent';
+import { WORLDS } from '../../../dictionnary/worlds';
 
 export const Swipe = ({
   match,
@@ -61,7 +62,7 @@ export const Swipe = ({
   };
 
   const onCardLeftScreen = (direction, questionToRemove) => {
-    removeATooLateToAsk(questionToRemove);
+    removeATooLateToAsk(questionToRemove, match.params.world);
     setDisable(false);
     if (direction === 'right')
       history.push(`/${match.params.world}/articles/${questionToRemove.answerSlug}`);
@@ -171,24 +172,24 @@ Swipe.propTypes = {
   setHasAlreadyBeenLoaded: PropTypes.func.isRequired,
 };
 
-function toPascalCase(string) {
-  return `${string}`
-    .replace(new RegExp(/[-_]+/, 'g'), ' ')
-    .replace(new RegExp(/[^\w\s]/, 'g'), '')
-    .replace(
-      new RegExp(/\s+(.)(\w+)/, 'g'),
-      ($1, $2, $3) => `${$2.toUpperCase() + $3.toLowerCase()}`
-    )
-    .replace(new RegExp(/\s/, 'g'), '')
-    .replace(new RegExp(/\w/), (s) => s.toUpperCase());
-}
+const getWorld = () => {
+  const worldWithSlash = window.location.pathname.replace('/too-late-to-ask', '');
+  const world = worldWithSlash.replace('/', '');
+  return world;
+};
 
-const urlParams = new URLSearchParams(window.location.search);
-
-const mapStateToProps = (state) => ({
-  questions: state.question.questions + toPascalCase(urlParams.get('world')),
-  hasAlreadyBeenLoaded: state.question.hasAlreadyBeenLoaded,
-});
+const mapStateToProps = (state) => {
+  if (getWorld() === WORLDS.MODERN_WORLD)
+    return {
+      questions: state.question.questionsModernWorld,
+      hasAlreadyBeenLoaded: state.question.hasAlreadyBeenLoaded,
+    };
+  if (getWorld() === WORLDS.IMAGINARIUM)
+    return {
+      questions: state.question.questionsImaginarium,
+      hasAlreadyBeenLoaded: state.question.hasAlreadyBeenLoaded,
+    };
+};
 
 export default connect(mapStateToProps, {
   getTooLateToAsks,
