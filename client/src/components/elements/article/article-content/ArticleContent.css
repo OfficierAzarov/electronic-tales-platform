@@ -23,10 +23,17 @@
   margin: 1em 0;
 }
 
+.article-content .small-comment {
+  color: #999999;
+}
+
+.article-content .small-comment a {
+  color: #bbbbbb;
+}
+
 .article-content .small-comment,
 .article-content .small-comment a {
   font-size: 1.4rem;
-  color: #999999;
   font-style: italic;
 }
 
