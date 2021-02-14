@@ -22,17 +22,6 @@ const CardsHub = ({ categoryName, categoryArticles }) => {
                 <Card article={article} />
               </SwiperSlide>
             ))}
-            <SwiperSlide>
-              <Card
-                article={{
-                  title: 'Tu veux proposer un contenu ?',
-                  thumbnail: process.env.PUBLIC_URL + '/img/articles/handpoint-dark.png',
-                  slug: 'add-article',
-                  world: 'neverland',
-                }}
-                placeText="center"
-              />
-            </SwiperSlide>
           </SwiperJsHack>
         ) : (
           <Fragment>
