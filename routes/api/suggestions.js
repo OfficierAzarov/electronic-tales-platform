@@ -13,7 +13,7 @@ if (process.env.NODE_ENV !== 'production') {
 
 const router = express.Router();
 
-const SuggestedTLTASEntity = require('../../models/SuggestedTooLatetoAsk');
+const SuggestedTLTAEntity = require('../../models/SuggestedTooLatetoAsk');
 const SuggestedQuoteEntity = require('../../models/SuggestedQuote');
 const { generateTodayDateString } = require('../../utils/date');
 const { sanitize } = require('../../utils/sanitization');
@@ -31,7 +31,8 @@ router.post(
     check('name').trim().escape(),
   ],
   async (req, res) => {
-    if (!checkReCaptcha(req.body.reCaptchaToken)) {
+    const isHuman = await checkReCaptcha(req.body.reCaptchaToken);
+    if (!isHuman) {
       return res.status(400).json({ errors: 'Oh, go away, little bot.' });
     }
 
@@ -52,13 +53,13 @@ router.post(
 
     try {
       // check if tooLateToAskPost already exists
-      let suggestedTLTAS = await SuggestedTLTASEntity.findOne({ question: sanitizedQuestion });
-      if (suggestedTLTAS) {
+      let suggestedTLTA = await SuggestedTLTAEntity.findOne({ question: sanitizedQuestion });
+      if (suggestedTLTA) {
         return res.status(400).json({ errors: [{ msg: 'The question has already been posted' }] });
       }
 
       // create the new tooLateToAskPost
-      suggestedTLTAS = new SuggestedTLTASEntity({
+      suggestedTLTA = new SuggestedTLTAEntity({
         question: sanitizedQuestion,
         answer: {
           simpleDefinition: sanitizedSimpleDefinition,
@@ -68,8 +69,8 @@ router.post(
         name: sanitizedName,
       });
 
-      await suggestedTLTAS.save();
-      return res.json(suggestedTLTAS);
+      await suggestedTLTA.save();
+      return res.json(suggestedTLTA);
     } catch (error) {
       console.log(`Aouch... ${error.msg}`);
       return res.status(500).send('Server error');
@@ -85,7 +86,6 @@ router.post(
   [check('quote').not().isEmpty().trim().escape(), check('name').trim().escape()],
   async (req, res) => {
     const isHuman = await checkReCaptcha(req.body.reCaptchaToken);
-    console.log(isHuman);
     if (!isHuman) {
       return res.status(400).json({ errors: 'Oh, go away, little bot.' });
     }

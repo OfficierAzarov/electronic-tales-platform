@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const SuggestedTLTASchema = new mongoose.Schema({
+const SuggestedTLTA = new mongoose.Schema({
   question: {
     type: String,
     requird: true,
@@ -13,4 +13,4 @@ const SuggestedTLTASchema = new mongoose.Schema({
   name: String,
 });
 
-module.exports = mongoose.model('suggestedTLTASchema', SuggestedTLTASchema);
+module.exports = mongoose.model('suggestedTLTA', SuggestedTLTA);

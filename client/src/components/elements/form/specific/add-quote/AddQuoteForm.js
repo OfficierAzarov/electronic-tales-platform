@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
-import { sanitizeWithExceptionsForVideos } from '../../../../../utils/data-processing/sanitize';
+import { sanitize } from '../../../../../utils/data-processing/sanitize';
 import { suggestQuote } from '../../../../../redux/actions/quote';
 import CustomReCaptcha from '../../common/recaptcha/CustomReCaptcha';
 
@@ -20,7 +20,7 @@ const AddQuoteForm = ({ suggestQuote, tellResult }) => {
   const handleChange = (event) => {
     setFormData({
       ...formData,
-      [event.target.name]: sanitizeWithExceptionsForVideos(event.target.value),
+      [event.target.name]: sanitize(event.target.value),
     });
   };
 

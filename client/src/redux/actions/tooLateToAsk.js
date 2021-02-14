@@ -37,9 +37,10 @@ export const removeATooLateToAsk = (questionToRemove, world) => (dispatch) => {
   });
 };
 
-export const suggestTLTA = (formData) => async (dispatch) => {
+export const suggestTLTA = (formData, reCaptchaToken) => async (dispatch) => {
   try {
-    const res = await api.post('/suggestions/too-late-to-asks', formData);
+    const postData = { ...formData, reCaptchaToken };
+    const res = await api.post('/suggestions/too-late-to-asks', postData);
     if (res.status === 200) {
       dispatch({
         type: SUGGEST_A_TOO_LATE_TO_ASK,
