@@ -9,15 +9,6 @@ import { Fragment } from 'react';
 import SwiperJsHack from '../swiperjs-hack/SwiperJsHack';
 
 const CardsHub = ({ categoryName, categoryArticles }) => {
-  // SwiperCore.use([Pagination, A11y]);
-
-  const addArticleCard = {
-    title: 'Tu veux proposer un contenu ?',
-    thumbnail: 'handpoint-dark.png',
-    slug: 'bla',
-    world: 'Nerverland',
-  };
-
   return (
     <div className="cards-hub">
       <div className="line-title-wrapper category-title-wrapper">
@@ -32,7 +23,15 @@ const CardsHub = ({ categoryName, categoryArticles }) => {
               </SwiperSlide>
             ))}
             <SwiperSlide>
-              <Card article={addArticleCard} placeText="center" />
+              <Card
+                article={{
+                  title: 'Tu veux proposer un contenu ?',
+                  thumbnail: process.env.PUBLIC_URL + '/img/articles/handpoint-dark.png',
+                  slug: 'add-article',
+                  world: 'neverland',
+                }}
+                placeText="center"
+              />
             </SwiperSlide>
           </SwiperJsHack>
         ) : (
