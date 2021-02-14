@@ -11,6 +11,7 @@ import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
 import AllArticlesofTheWorld from '../../../elements/article/all-articles/AllArticlesofTheWorld';
 import CardsHub from '../../../elements/cards-hub/CardsHub';
 import Lab from '../../../elements/lab/Lab';
+import { SLACK_CHANELS } from '../../../../dictionnary/externalElectronicTalesLinks';
 
 const ModernWorld = ({ articles, getAllArticlesInfos }) => {
   useEffect(() => {
@@ -28,18 +29,18 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
           cards={[
             {
               title: 'Le mur des salaires des devs juniors : partageons les vrais chiffres !',
-              slug: '',
+              externalLink: SLACK_CHANELS.SALARIES,
               thumbnail: process.env.PUBLIC_URL + '/img/articles/salaries.jpg',
             },
             {
               title: "Bouton SOS syndrome de l'imposteur : un outil d'urgence pour se sentir mieux",
-              slug: '',
+              externalLink: SLACK_CHANELS.SOS,
               thumbnail: process.env.PUBLIC_URL + '/img/articles/sos.jpg',
             },
             {
               title:
                 'Le tamagotchi des devs : tracke tes progrès et compare-les à ceux des autres en toute bienveillance',
-              slug: '',
+              externalLink: SLACK_CHANELS.TAMAGOTCHI,
               thumbnail: process.env.PUBLIC_URL + '/img/articles/tamagotchi.jpg',
             },
           ]}

@@ -22,7 +22,10 @@ const CardsHub = ({ categoryName, categoryArticles, text }) => {
               <SwiperSlide key={article._id}>
                 <Card
                   key={article._id}
-                  link={`/${article.world}/articles/${article.slug}`}
+                  articleLink={
+                    article.type === 'regular' && `${article.world}/articles/${article.slug}`
+                  }
+                  externalLink={article.externalLink}
                   imageUrl={article.thumbnail}
                   title={article.title}
                 />
@@ -34,7 +37,8 @@ const CardsHub = ({ categoryName, categoryArticles, text }) => {
             {categoryArticles.map((article) => (
               <Card
                 key={article._id}
-                link={`/${article.world}/articles/${article.slug}`}
+                articleLink={`/${article.world}/articles/${article.slug}`}
+                externalLink={article.externalLink}
                 imageUrl={article.thumbnail}
                 title={article.title}
                 size="big"
