@@ -25,17 +25,12 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
           <h2 className="world-title neon flicker">Modern World</h2>
         </div>
         <Lab
-          text="Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus&nbsp;: tu seras emmené·e vers le canal Slack dédié au sujet."
+          text="Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus&nbsp;: tu seras emmené·e vers notre Slack, où un canal est dédié à chaque contenu."
           cards={[
             {
               title: 'Le mur des salaires des devs juniors : partageons les vrais chiffres !',
               externalLink: SLACK_CHANELS.SALARIES,
               thumbnail: process.env.PUBLIC_URL + '/img/articles/salaries.jpg',
-            },
-            {
-              title: "Bouton SOS syndrome de l'imposteur : un outil d'urgence pour se sentir mieux",
-              externalLink: SLACK_CHANELS.SOS,
-              thumbnail: process.env.PUBLIC_URL + '/img/articles/sos.jpg',
             },
             {
               title:
