@@ -1,0 +1,10 @@
+#lab-switch-container span {
+  display: flex;
+  align-items: center;
+}
+
+#lab-switch-container img {
+  width: 1.2em;
+  display: inline;
+  margin-right: 0.3em;
+}

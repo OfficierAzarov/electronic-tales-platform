@@ -20,7 +20,7 @@ import {
   computeWidth,
   computeHeight,
   placeElementAtBottomOfSection,
-} from '../../../utils/display/positionning';
+} from '../../../utils/display/positioning';
 import GoBackButton from '../buttons/go-back/GoBackButton';
 import HtmlContent from '../html-content/HtmlContent';
 import { WORLDS } from '../../../dictionnary/worlds';

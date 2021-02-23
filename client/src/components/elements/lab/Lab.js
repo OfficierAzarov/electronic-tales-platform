@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import './Lab.css';
 
 import CardsHub from '../cards-hub/CardsHub';
+import testTube from '../../../resources/img/icons/test-tube.png';
 
 const Lab = ({ text, cards }) => {
   const [isLabOpen, setIsLabOpen] = useState(false);
@@ -14,7 +15,14 @@ const Lab = ({ text, cards }) => {
   return (
     <Fragment>
       <div id="lab-switch-container">
-        {isLabOpen ? <span>Fermer le labo&nbsp;🗝️</span> : <span>Ouvrir le labo&nbsp;🧪</span>}
+        {isLabOpen ? (
+          <span>Fermer le labo&nbsp;🗝️</span>
+        ) : (
+          <span>
+            Ouvrir le labo&nbsp;
+            <img src={testTube} alt="open the lab test tube emoji" />{' '}
+          </span>
+        )}
         <Toggle
           defaultChecked={isLabOpen}
           className="custom-toggle"
