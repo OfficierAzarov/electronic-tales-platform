@@ -12,10 +12,10 @@ import { ReactComponent as AncientWorldIcon } from '../../../../resources/img/ic
 const DefaultNavbar = () => {
   return (
     <Fragment>
-      <NavLink exact to="/" activeClassName="active-navbar-icon">
+      {/* <NavLink exact to="/" activeClassName="active-navbar-icon">
         <HomeIcon />
         <sub>Accueil</sub>
-      </NavLink>
+      </NavLink> */}
       <NavLink to="/safe-space" activeClassName="active-navbar-icon">
         <SafeSpaceIcon />
         <sub>Safe space</sub>

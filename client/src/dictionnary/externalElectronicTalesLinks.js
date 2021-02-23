@@ -6,3 +6,8 @@ export const SLACK_CHANELS = {
   SOS: 'https://electronictales.slack.com/archives/C01NF8CCE0H',
   TAMAGOTCHI: 'https://electronictales.slack.com/archives/C01N2RD1B0B',
 };
+
+export const ELECTONIC_TALES_PRESENTS = {
+  BASE: 'https://www.electronictales.io',
+  SIGN_UP: 'https://www.electronictales.io/signup#signup',
+};

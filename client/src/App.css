@@ -48,7 +48,9 @@ a {
 }
 
 section {
-  padding-bottom: 12vh;
+  /* Because we have fixed navbars of 10vh each, we need to add padding so
+      the entire content of the section is visible */
+  padding: 12vh 0;
 }
 
 button {
@@ -79,6 +81,24 @@ button:focus {
 
 a svg {
   fill: #ffffff;
+}
+
+/*============= NAVS =============*/
+
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: #121212;
+  z-index: 2;
+  height: 10vh;
+}
+
+nav svg {
+  width: 1.6em;
+  height: 1.6em;
+  padding: 0.2em 0;
+  cursor: pointer;
+  fill: whitesmoke;
 }
 
 .active-navbar-icon svg {

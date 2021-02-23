@@ -1,37 +1,17 @@
-nav {
-  background-color: #121212;
-  width: 100%;
-  height: 10vh;
-  position: fixed;
+nav#main-nav {
   bottom: 0;
   border-top: #6b6a6a 1px solid;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  z-index: 2;
 }
 
-nav svg {
-  width: 1.6em;
-  height: 1.6em;
-  padding: 0.2em 0;
-  cursor: pointer;
-}
-
-nav svg {
-  fill: whitesmoke;
-}
-
-nav a {
+nav#main-nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-nav a sub {
+nav#main-nav a sub {
   font-size: 1rem;
 }
-
-/* nav .worlds {
-  justify-self: center;
-} */
