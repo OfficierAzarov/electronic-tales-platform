@@ -5,7 +5,10 @@ import './NotYet.css';
 
 import logo from '../../../resources/img/logo-transparent.png';
 import oldCell from '../../../resources/img/illustrations/old-cell.gif';
-import { ELECTONIC_TALES_PRESENTS, SLACK } from '../../../dictionnary/externalElectronicTalesLinks';
+import {
+  ELECTRONIC_TALES_PRESENTS,
+  SLACK,
+} from '../../../dictionnary/externalElectronicTalesLinks';
 import Emoji from 'a11y-react-emoji';
 
 const NotYet = () => {
@@ -24,7 +27,7 @@ const NotYet = () => {
           <br />
           <br />
           Tu peux aussi faire un tour sur{' '}
-          <a href={ELECTONIC_TALES_PRESENTS.BASE}>
+          <a href={ELECTRONIC_TALES_PRESENTS.BASE}>
             notre site de présentation <Emoji symbol="🍿" label="pop corn" />
           </a>
           , rejoindre le{' '}

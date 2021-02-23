@@ -7,7 +7,7 @@ import './SecondaryNavbar.css';
 
 import HomeIcon from '../../../../resources/img/icons/v2/HomeSVG';
 import confetti from '../../../../resources/img/icons/confetti.png';
-import { ELECTONIC_TALES_PRESENTS } from '../../../../dictionnary/externalElectronicTalesLinks';
+import { ELECTRONIC_TALES_PRESENTS } from '../../../../dictionnary/externalElectronicTalesLinks';
 
 const SecondaryNavbar = ({ isCurrentPageHome }) => {
   return (
@@ -20,7 +20,7 @@ const SecondaryNavbar = ({ isCurrentPageHome }) => {
               Retourner <br /> au manoir
             </sub>
           </NavLink>
-          <a href={ELECTONIC_TALES_PRESENTS.SIGN_UP} target="_blank">
+          <a href={ELECTRONIC_TALES_PRESENTS.SIGN_UP} target="_blank">
             <sub>Nous rejoindre</sub>
             <img src={confetti} alt="" />
           </a>
