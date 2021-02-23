@@ -106,7 +106,7 @@ export const Swipe = ({
             id="swipe-buttons-container"
             style={{
               width: computeWidth(85),
-              top: placeElementAtBottomOfSection(55),
+              top: placeElementAtBottomOfSection(90, 10, 10),
             }}
           >
             <button
