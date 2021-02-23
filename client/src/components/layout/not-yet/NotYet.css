@@ -1,0 +1,38 @@
+#not-yet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+#not-yet #logo {
+  width: 25em;
+}
+
+#not-yet p {
+  /* margin: 5em 5em 0 0; */
+  width: 30%;
+  text-align: center;
+}
+
+#not-yet #content {
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#not-yet #content p {
+  padding: 0 2em;
+}
+
+#not-yet #stupid-gif {
+  width: 20em;
+  padding: 0 2em;
+  border-radius: 6em;
+}
+
+#not-yet a {
+  font-weight: 700;
+}

@@ -11,7 +11,7 @@ import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
 import AllArticlesofTheWorld from '../../../elements/article/all-articles/AllArticlesofTheWorld';
 import CardsHub from '../../../elements/cards-hub/CardsHub';
 import Lab from '../../../elements/lab/Lab';
-import { SLACK_CHANELS } from '../../../../dictionnary/externalElectronicTalesLinks';
+import { SLACK } from '../../../../dictionnary/externalElectronicTalesLinks';
 
 const ModernWorld = ({ articles, getAllArticlesInfos }) => {
   useEffect(() => {
@@ -29,13 +29,13 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
           cards={[
             {
               title: 'Le mur des salaires des devs juniors : partageons les vrais chiffres !',
-              externalLink: SLACK_CHANELS.SALARIES,
+              externalLink: SLACK,
               thumbnail: process.env.PUBLIC_URL + '/img/articles/salaries.jpg',
             },
             {
               title:
                 'Le tamagotchi des devs : tracke tes progrès et compare-les à ceux des autres en toute bienveillance',
-              externalLink: SLACK_CHANELS.TAMAGOTCHI,
+              externalLink: SLACK,
               thumbnail: process.env.PUBLIC_URL + '/img/articles/tamagotchi.jpg',
             },
           ]}

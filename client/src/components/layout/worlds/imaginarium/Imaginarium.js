@@ -10,7 +10,7 @@ import { WORLDS } from '../../../../dictionnary/worlds';
 import { deduceCategoriesFromArticles } from '../../../../utils/data-sorting/sorts';
 import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
 import Lab from '../../../elements/lab/Lab';
-import { SLACK_CHANELS } from '../../../../dictionnary/externalElectronicTalesLinks';
+import { SLACK } from '../../../../dictionnary/externalElectronicTalesLinks';
 
 const Imaginarium = ({ articles, getAllArticlesInfos }) => {
   useEffect(() => {
@@ -28,12 +28,12 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
           cards={[
             {
               title: "Bouton SOS syndrome de l'imposteur : un outil d'urgence pour se sentir mieux",
-              externalLink: SLACK_CHANELS.SOS,
+              externalLink: SLACK,
               thumbnail: process.env.PUBLIC_URL + '/img/articles/sos.jpg',
             },
             {
               title: 'Le tourne-disque de mamie Cobol : partageons nos playlists pour coder',
-              slug: '',
+              externalLink: SLACK,
               thumbnail: process.env.PUBLIC_URL + '/img/articles/disks.jpg',
             },
           ]}
