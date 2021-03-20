@@ -5,6 +5,7 @@ import './Mansion.css';
 const Mansion = () => {
   return (
     <svg
+      id="mansion"
       xmlns="http://www.w3.org/2000/svg"
       x="0"
       y="0"

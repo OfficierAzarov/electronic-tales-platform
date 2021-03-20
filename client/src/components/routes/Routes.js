@@ -10,9 +10,14 @@ import Article from '../elements/article/Article';
 import Swipe from '../elements/swipe/Swipe';
 import SafeSpaceChat from '../layout/safe-space/chat/SafeSpaceChat';
 import AddQuote from '../layout/safe-space/add-quote/AddQuote';
-import InteractiveImage from '../interactive-images/InteractiveImage';
 import SwipeAddQuestion from '../elements/swipe/swipe-add-question/SwipeAddQuestion';
-import { Fragment } from 'react';
+import Syntax from '../interactive-images/clean-code/syntax/Syntax';
+import DoesItWork from '../interactive-images/clean-code/does-it-work/DoesItWork';
+import Naming from '../interactive-images/clean-code/naming/Naming';
+import Functions from '../interactive-images/clean-code/functions/Functions';
+import DuplicatedCode from '../interactive-images/clean-code/duplicated-code/DuplicatedCode';
+import UnderstandableCode from '../interactive-images/clean-code/understandable-code/UnderstandableCode';
+import Cleaning from '../interactive-images/cleaning/Cleaning';
 
 const Routes = () => {
   return (
@@ -24,7 +29,6 @@ const Routes = () => {
         <Route exact path="/safe-space/chat" component={SafeSpaceChat}></Route>
         <Route exact path="/imaginarium" component={Imaginarium}></Route>
         <Route exact path="/:world/too-late-to-ask" component={Swipe}></Route>
-        <Route exact path="/roadmap" component={InteractiveImage}></Route>
         <Route exact path="/modern-world" component={ModernWorld}></Route>
         <Route exact path="/:world/articles/:slug" component={Article}></Route>
         <Route
@@ -33,6 +37,19 @@ const Routes = () => {
           component={SwipeAddQuestion}
         ></Route>
         <Route exact path="/ancient-world" component={AncientWorld}></Route>
+
+        {/* Experimental roadmap's routes */}
+        <Route exact path="/roadmap/clean-code/syntax" component={Syntax}></Route>
+        <Route exact path="/roadmap/clean-code/does-it-work" component={DoesItWork}></Route>
+        <Route exact path="/roadmap/clean-code/naming" component={Naming}></Route>
+        <Route exact path="/roadmap/clean-code/functions" component={Functions}></Route>
+        <Route exact path="/roadmap/clean-code/duplicated-code" component={DuplicatedCode}></Route>
+        <Route
+          exact
+          path="/roadmap/clean-code/understandable-code"
+          component={UnderstandableCode}
+        ></Route>
+        <Route exact path="/roadmap/clean-code/cleaning" component={Cleaning}></Route>
       </Switch>
     </section>
   );

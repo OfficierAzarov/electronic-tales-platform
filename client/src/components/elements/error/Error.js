@@ -18,6 +18,7 @@ const Error = ({ title, message }) => {
         <a
           href="https://join.slack.com/t/electronictales/shared_invite/zt-kox8itw1-tveUHRe8QSTtjs0Bb172BA"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <span>Slack</span>
           <Emoji symbol="🙏" label="thank you" />

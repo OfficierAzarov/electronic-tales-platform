@@ -21,7 +21,7 @@ const SafeSpaceChat = () => {
       </div>
       <p id="connect">
         Nous avons ouvert un{' '}
-        <a href={SLACK} target="_blank">
+        <a href={SLACK} target="_blank" rel="noopener noreferrer">
           Slack
         </a>{' '}
         pour permettre aux devs de discuter à cœur ouvert des problèmes qu'ils peuvent vivre dans la
@@ -58,7 +58,7 @@ const SafeSpaceChat = () => {
           sur la question.
         </li>
       </ul>
-      <a href={SLACK} target="_blank" className="basic-button">
+      <a href={SLACK} target="_blank" rel="noopener noreferrer" className="basic-button">
         Rejoindre le Slack
       </a>
     </div>
