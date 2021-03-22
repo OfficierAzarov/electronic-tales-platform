@@ -8,7 +8,7 @@ import './ModernWorld.css';
 import { getAllArticlesInfos } from '../../../../redux/actions/article';
 import { WORLDS } from '../../../../dictionnary/worlds';
 import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
-import AllArticlesofTheWorld from '../../../elements/article/all-articles/AllArticlesofTheWorld';
+import AllArticlesOfTheWorld from '../../../elements/article/all-articles/AllArticlesOfTheWorld';
 import CardsHub from '../../../elements/cards-hub/CardsHub';
 import Lab from '../../../elements/lab/Lab';
 import { SLACK } from '../../../../dictionnary/externalElectronicTalesLinks';
@@ -43,7 +43,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
         <div className="image-card">
           <SwipeDoor link="/modern-world/too-late-to-ask" />
         </div>
-        <AllArticlesofTheWorld articles={articles} />
+        <AllArticlesOfTheWorld articles={articles} />
       </div>
     </Fade>
   );
