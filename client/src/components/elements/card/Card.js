@@ -12,7 +12,6 @@ const Card = ({ articleLink, externalLink, imageUrl, title, size, placeText }) =
       }}
       target={externalLink && '_blank'}
     >
-      {/* <Link to={directLink ? { pathname: directLink } : link}> */}
       <div
         className={`card ${size == 'big' ? 'big' : ''}`}
         style={{

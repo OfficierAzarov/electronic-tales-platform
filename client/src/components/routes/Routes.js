@@ -18,6 +18,7 @@ import Functions from '../interactive-images/clean-code/functions/Functions';
 import DuplicatedCode from '../interactive-images/clean-code/duplicated-code/DuplicatedCode';
 import UnderstandableCode from '../interactive-images/clean-code/understandable-code/UnderstandableCode';
 import Cleaning from '../interactive-images/cleaning/Cleaning';
+import RoadmapCleanCode from '../interactive-images/RoadmapCleanCode';
 
 const Routes = () => {
   return (
@@ -39,6 +40,7 @@ const Routes = () => {
         <Route exact path="/ancient-world" component={AncientWorld}></Route>
 
         {/* Experimental roadmap's routes */}
+        <Route exact path="/roadmap/clean-code" component={RoadmapCleanCode}></Route>
         <Route exact path="/roadmap/clean-code/syntax" component={Syntax}></Route>
         <Route exact path="/roadmap/clean-code/does-it-work" component={DoesItWork}></Route>
         <Route exact path="/roadmap/clean-code/naming" component={Naming}></Route>
