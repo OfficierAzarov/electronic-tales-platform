@@ -17,8 +17,8 @@ import Naming from '../interactive-images/clean-code/naming/Naming';
 import Functions from '../interactive-images/clean-code/functions/Functions';
 import DuplicatedCode from '../interactive-images/clean-code/duplicated-code/DuplicatedCode';
 import UnderstandableCode from '../interactive-images/clean-code/understandable-code/UnderstandableCode';
-import Cleaning from '../interactive-images/cleaning/Cleaning';
-import RoadmapCleanCode from '../interactive-images/RoadmapCleanCode';
+import Cleaning from '../interactive-images/clean-code/cleaning/Cleaning';
+import RoadmapCleanCode from '../interactive-images/clean-code/RoadmapCleanCode';
 
 const Routes = () => {
   return (

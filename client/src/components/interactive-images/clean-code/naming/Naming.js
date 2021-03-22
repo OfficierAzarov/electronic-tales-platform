@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import './Naming.css';
-import GoBackButton from '../../../elements/buttons/go-back/GoBackButton';
+import GoBackWithText from '../../../elements/buttons/go-back/go-back-with-text/GoBackWithText';
 
 const Naming = () => {
   return (
-    <Fragment>
-      <GoBackButton />
+    <div class="roadmap-container">
+      <GoBackWithText text="Retourner à la roadmap" align="flex-start" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         id="clean-code-naming"
@@ -15,6 +15,7 @@ const Naming = () => {
         y="0"
         enableBackground="new 0 0 200 521.7"
         viewBox="0 0 200 521.7"
+        class="roadmap-framed"
       >
         <g id="wires_1_">
           <g id="wires">
@@ -397,7 +398,7 @@ const Naming = () => {
           </a>
         </g>
       </svg>
-    </Fragment>
+    </div>
   );
 };
 

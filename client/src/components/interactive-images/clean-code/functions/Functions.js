@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import './Functions.css';
-import GoBackButton from '../../../elements/buttons/go-back/GoBackButton';
+import GoBackWithText from '../../../elements/buttons/go-back/go-back-with-text/GoBackWithText';
 
 const Functions = () => {
   return (
-    <Fragment>
-      <GoBackButton />
+    <div class="roadmap-container">
+      <GoBackWithText text="Retourner à la roadmap" align="flex-start" />
       <svg
         id="functions"
         xmlns="http://www.w3.org/2000/svg"
@@ -15,6 +15,7 @@ const Functions = () => {
         y="0"
         enableBackground="new 0 0 200 661"
         viewBox="0 0 200 661"
+        class="roadmap-framed"
       >
         <g id="roadmap">
           <g id="bulles">
@@ -723,7 +724,7 @@ const Functions = () => {
           </g>
         </g>
       </svg>
-    </Fragment>
+    </div>
   );
 };
 

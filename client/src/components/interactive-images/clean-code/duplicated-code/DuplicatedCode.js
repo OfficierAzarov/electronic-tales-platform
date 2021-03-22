@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import './DuplicatedCode.css';
-import GoBackButton from '../../../elements/buttons/go-back/GoBackButton';
+import GoBackWithText from '../../../elements/buttons/go-back/go-back-with-text/GoBackWithText';
 
 const DuplicatedCode = () => {
   return (
-    <Fragment>
-      <GoBackButton />
+    <div class="roadmap-container">
+      <GoBackWithText text="Retourner à la roadmap" align="flex-start" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         id="duplicated-code"
@@ -17,6 +17,7 @@ const DuplicatedCode = () => {
         version="1.1"
         viewBox="0 0 200 241.2"
         xmlSpace="preserve"
+        class="roadmap-framed"
       >
         <g id="bulles">
           <path
@@ -448,7 +449,7 @@ const DuplicatedCode = () => {
           ></path>
         </g>
       </svg>
-    </Fragment>
+    </div>
   );
 };
 

@@ -1,13 +1,13 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import './DoesItWork.css';
-import GoBackButton from '../../../elements/buttons/go-back/GoBackButton';
+import GoBackWithText from '../../../elements/buttons/go-back/go-back-with-text/GoBackWithText';
 
 const DoesItWork = () => {
   return (
-    <Fragment>
-      <GoBackButton />
+    <div class="roadmap-container">
+      <GoBackWithText text="Retourner à la roadmap" align="flex-start" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         id="clean-code-does-it-work"
@@ -15,6 +15,7 @@ const DoesItWork = () => {
         y="0"
         enableBackground="new 0 0 200 236"
         viewBox="0 0 200 236"
+        class="roadmap-framed"
       >
         <g id="wires">
           <path
@@ -125,7 +126,7 @@ const DoesItWork = () => {
           </g>
         </g>
       </svg>
-    </Fragment>
+    </div>
   );
 };
 

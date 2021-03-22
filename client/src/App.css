@@ -296,6 +296,26 @@ nav svg {
   background-color: #ec567c;
 }
 
+/*============= ROADMAPS =============*/
+
+.roadmap-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roadmap-container p {
+  padding: 1em 2em;
+  text-align: center;
+}
+
+.roadmap-framed {
+  border-radius: 2em;
+  border: 2px dashed #444444;
+  padding: 1em;
+  margin: 1em;
+}
+
 /*============= GENERAL PURPOSE =============*/
 
 .flex-center {

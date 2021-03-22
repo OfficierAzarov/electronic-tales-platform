@@ -23,7 +23,9 @@ const Add = ({ children, isVisible, tellVisibilityChange }) => {
             tellVisibilityChange(false);
           }}
         >
-          <GoBackButton timeOut={600} />
+          <div id="go-back">
+            <GoBackButton timeOut={600} />
+          </div>
         </div>
       </Animated>
       <Animated
