@@ -8,6 +8,10 @@
   width: 16em;
 }
 
+.quote > * {
+  margin: 0.5em 0;
+}
+
 .quote p:first-of-type {
   align-self: flex-start;
 }

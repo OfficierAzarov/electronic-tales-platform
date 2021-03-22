@@ -1,5 +1,5 @@
 export const SLACK =
-  'https://join.slack.com/t/electronictales/shared_invite/zt-m5dnktbr-dvu83Z4qHtpqjLlLqw66ug';
+  'https://join.slack.com/t/electronictales/shared_invite/zt-o7vdnkg1-X957ZMy87CLZ0qQEk7MiOg';
 
 export const SLACK_CHANELS = {
   SALARIES: 'https://electronictales.slack.com/archives/C01N8P3DJ3E',
