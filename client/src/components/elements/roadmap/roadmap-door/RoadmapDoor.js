@@ -17,7 +17,7 @@ const RoadmapDoor = () => {
       <CardsHub
         categoryName="Roadmaps"
         categoryArticles={card}
-        text="Perdu·e dans le monde du développement ? Nos cartes sont là pour te guider."
+        text="Perdu·e dans le monde du dev ? Nos cartes sont là pour te guider."
       />
     </Fragment>
   );
