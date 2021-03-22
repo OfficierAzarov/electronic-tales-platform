@@ -11,6 +11,7 @@ import { deduceCategoriesFromArticles } from '../../../../utils/data-sorting/sor
 import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
 import Lab from '../../../elements/lab/Lab';
 import { SLACK } from '../../../../dictionnary/externalElectronicTalesLinks';
+import AllArticlesOfTheWorld from '../../../elements/article/all-articles/AllArticlesOfTheWorld';
 
 const Imaginarium = ({ articles, getAllArticlesInfos }) => {
   useEffect(() => {
@@ -39,7 +40,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
           ]}
         />
         <SwipeDoor link={`/${WORLDS.IMAGINARIUM}/too-late-to-ask`} />
-        {deduceCategoriesFromArticles(articles)}
+        <AllArticlesOfTheWorld articles={articles} />
       </div>
     </Fade>
   );
