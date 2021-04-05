@@ -11,6 +11,7 @@ import { setHomeAsCurrentPage, unsetHomeAsCurrentPage } from '../../../redux/act
 import { viewportToPixels } from '../../../utils/display/converter';
 import Mansion from '../../interactive-images/mansion/Mansion';
 import logo from '../../../resources/img/logo-transparent.png';
+import logoSmall from '../../../resources/img/logo-transparent-350.png';
 import { ReactComponent as ChevronDown } from '../../../resources/img/icons/chevron-down.svg';
 
 const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
@@ -29,7 +30,13 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
         <Mansion />
       </div>
       <div id="home-worlds-container">
-        <img src={logo} loading="auto" alt="Electronic Tales logo" />
+        <img
+          src={logo}
+          srcSet={`${logoSmall} 350w, ${logo} 500w`}
+          id="logo"
+          loading="auto"
+          alt="Electronic Tales logo"
+        />
         <div className="home-door-container">
           <div className="home-door" id="home-safe-space">
             <h2>Dégommons le syndrome de l'imposteur ensemble.</h2>

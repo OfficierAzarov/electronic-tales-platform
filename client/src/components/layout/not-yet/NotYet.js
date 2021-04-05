@@ -4,7 +4,7 @@ import Emoji from 'a11y-react-emoji';
 import './NotYet.css';
 
 import logo from '../../../resources/img/logo-transparent.png';
-import oldCell from '../../../resources/img/illustrations/old-cell.gif';
+import logoSmall from '../../../resources/img/logo-transparent-350.png';
 import {
   ELECTRONIC_TALES_PRESENTS,
   SLACK,
@@ -14,7 +14,13 @@ import oldCellVideo from '../../../resources/img/illustrations/old-cell.mp4';
 const NotYet = () => {
   return (
     <div id="not-yet">
-      <img src={logo} id="logo" loading="auto" alt="electronic Tales logo" />
+      <img
+        src={logo}
+        srcSet={`${logoSmall} 350w, ${logo} 500w`}
+        id="logo"
+        loading="auto"
+        alt="electronic Tales logo"
+      />
       <div id="content">
         <p>
           Hey&nbsp;!
