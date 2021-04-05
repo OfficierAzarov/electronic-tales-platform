@@ -322,3 +322,12 @@ nav svg {
   display: flex;
   justify-content: center;
 }
+
+.border-shadow {
+  box-shadow: 0.6rem 0.6rem 1rem 0.5rem rgb(0 0 0 / 41%);
+}
+
+.border-shadow-with-border {
+  border: 1px solid #5a5959;
+  box-shadow: 0.6rem 0.6rem 1rem 0.5rem rgb(0 0 0 / 41%);
+}

@@ -45,7 +45,7 @@ const NotYet = () => {
           </a>{' '}
           ou <a href="mailto:contact@electronictales.io">nous écrire</a>.
         </p>
-        <video autoPlay loop muted src={oldCellVideo}></video>
+        <video autoPlay loop muted src={oldCellVideo} className="border-shadow-with-border"></video>
       </div>
     </div>
   );

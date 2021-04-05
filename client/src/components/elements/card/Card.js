@@ -13,7 +13,7 @@ const Card = ({ articleLink, externalLink, imageUrl, title, size, placeText }) =
       target={externalLink && '_blank'}
     >
       <div
-        className={`card ${size == 'big' ? 'big' : ''}`}
+        className={`card ${size == 'big' ? 'big' : ''} border-shadow`}
         style={{
           backgroundImage: `url(${imageUrl})`,
           justifyContent: placeText == 'center' ? 'center' : 'flex-end',
