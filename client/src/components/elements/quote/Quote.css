@@ -1,8 +1,8 @@
 .quote {
-  margin-top: 1em;
+  margin-top: 1rem;
   background-color: #333333c0;
-  padding: 1.2em;
-  border-radius: 0.5em;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   width: 16em;

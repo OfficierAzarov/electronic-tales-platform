@@ -1,14 +1,14 @@
 .mini-nav {
   margin: 2em 0;
   background-color: #333333c0;
-  padding: 0.8em;
-  border-radius: 2em;
+  padding: 0.8rem;
+  border-radius: 2rem;
   display: flex;
 }
 
 .mini-nav svg {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.5rem;
+  height: 1.5rem;
   padding: 0 1.8em;
 }
 
@@ -16,9 +16,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 0.5em;
+  margin: 0 0.5rem;
 }
 
 .mini-nav-link sub {
-  margin-top: 0.5em;
+  margin-top: 0.5rem;
 }

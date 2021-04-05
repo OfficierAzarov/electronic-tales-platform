@@ -16,7 +16,7 @@
 
 .article-content ul {
   width: 65%;
-  margin-left: 2em;
+  margin-left: 2rem;
 }
 
 .article-content ul li {
@@ -51,8 +51,8 @@
 .article-content .code-block {
   display: block;
   background-color: #333333;
-  padding: 0.5em;
-  border-radius: 0.5em;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
   margin: 1em 0;
   font-size: 1.3rem;
 }

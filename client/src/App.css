@@ -24,7 +24,7 @@ a {
 
 .neon {
   text-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em,
-    rgb(0, 255, 255) 0px 0px 1.6em;
+    rgb(0, 255, 255) 0px 0px 1.6rem;
 }
 
 .flicker {
@@ -38,7 +38,7 @@ a {
   56%,
   100% {
     text-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em,
-      rgb(0, 255, 255) 0px 0px 1.6em;
+      rgb(0, 255, 255) 0px 0px 1.6rem;
   }
   30%,
   37%,
@@ -63,11 +63,11 @@ button:focus {
 }
 
 .basic-button {
-  border-radius: 2em;
+  border-radius: 2rem;
   background-color: #ec567c;
   font-weight: 800;
   color: #e9e9e9;
-  padding: 1em;
+  padding: 1rem;
   margin: 1em 0;
   width: 70%;
   text-align: center;
@@ -94,8 +94,8 @@ nav {
 }
 
 nav svg {
-  width: 1.6em;
-  height: 1.6em;
+  width: 2.5rem;
+  height: 2.5rem;
   padding: 0.2em 0;
   cursor: pointer;
   fill: whitesmoke;
@@ -135,7 +135,7 @@ nav svg {
   flex: 1 1 auto;
   border-bottom: solid 1px rgb(153, 243, 255);
   box-shadow: rgb(0, 225, 255) 0px 0px 0.4em, rgb(0, 225, 255) 0px 0px 0.8em,
-    rgb(0, 255, 255) 0px 0px 1.6em;
+    rgb(0, 255, 255) 0px 0px 1.6rem;
 }
 
 .category-title-wrapper {
@@ -160,15 +160,15 @@ nav svg {
   flex: 0 1 auto;
   padding-right: 1rem;
   color: #ec567c;
-  font-weight: 400;
-  font-size: 2.5rem;
+  font-weight: 500;
+  font-size: 4rem;
 }
 
 /*** WORLD CARD ***/
 
 .w-cat-card-content {
-  padding: 0.5rem 0 1.2em 0;
-  /* border: 1px solid rgb(204, 134, 161); */
+  margin-top: 1rem;
+  padding: 0.5rem 0 1.2rem 0;
   border-radius: 1rem;
   display: flex;
   flex-direction: row-reverse;
@@ -200,8 +200,8 @@ nav svg {
 
 .form-container {
   background-color: #242424;
-  padding: 2.5em 2em;
-  border-radius: 2em;
+  padding: 2.5em 2rem;
+  border-radius: 2rem;
   width: 70%;
 }
 
@@ -211,7 +211,7 @@ nav svg {
 }
 
 .form-container p {
-  margin: 1em;
+  margin: 1rem;
 }
 
 .form-container form {
@@ -222,7 +222,7 @@ nav svg {
 
 .form-container form textarea,
 .form-container form input {
-  border-radius: 1.5em;
+  border-radius: 1.5rem;
 }
 
 .form-container form textarea:focus,
@@ -241,13 +241,13 @@ nav svg {
   width: 90%;
   height: 8em;
   align-self: center;
-  padding: 1em;
+  padding: 1rem;
   margin: 1em 0;
 }
 
 .form-container form input {
-  padding: 0.5em 1em;
-  margin-top: 1em;
+  padding: 0.5em 1rem;
+  margin-top: 1rem;
   outline: none;
 }
 
@@ -257,8 +257,8 @@ nav svg {
 
 .form-container form input[type='submit'] {
   margin: 1em 0;
-  padding: 0.8em 1.2em;
-  border-radius: 2em;
+  padding: 0.8em 1.2rem;
+  border-radius: 2rem;
   border: none;
 }
 
@@ -280,7 +280,7 @@ nav svg {
   width: 60%;
 }
 .custom-toggle {
-  margin-right: 0.5em;
+  margin-right: 0.5rem;
 }
 
 .custom-toggle.react-toggle--checked .react-toggle-track {
@@ -305,15 +305,15 @@ nav svg {
 }
 
 .roadmap-container p {
-  padding: 1em 2em;
+  padding: 1em 2rem;
   text-align: center;
 }
 
 .roadmap-framed {
-  border-radius: 2em;
+  border-radius: 2rem;
   border: 2px dashed #444444;
-  padding: 1em;
-  margin: 1.5em;
+  padding: 1rem;
+  margin: 1.5rem;
 }
 
 /*============= GENERAL PURPOSE =============*/

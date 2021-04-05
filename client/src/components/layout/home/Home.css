@@ -14,7 +14,7 @@
 }
 
 #home #home-worlds-container img {
-  padding-top: 2em;
+  padding-top: 2rem;
 }
 
 #home #home-safe-space {
@@ -25,19 +25,19 @@
 
 #home #home-safe-space h2 {
   width: 90%;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 #home .alternative-cta {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1.5em;
+  margin-top: 1.5rem;
   width: 80%;
 }
 
 #home .chevron-container {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.5rem;
   animation-name: stim;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -75,12 +75,16 @@
   text-align: center;
   width: 85%;
   background-color: rgba(0, 0, 0, 0.555);
-  border-radius: 0.5em;
+  border-radius: 0.5rem;
   padding: 2em 0;
 }
 
 #home .home-door p {
   width: 80%;
+}
+
+#home .home-door h2 {
+  margin-bottom: 1.5rem;
 }
 
 #home #spacer-small {

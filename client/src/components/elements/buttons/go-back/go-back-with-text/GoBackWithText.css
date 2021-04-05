@@ -1,9 +1,9 @@
 .go-back-button-container {
-  margin: 1em;
+  margin: 1rem;
   display: flex;
   align-items: center;
 }
 
 .go-back-button-container sub {
-  margin: 1em;
+  margin: 1rem;
 }

@@ -17,7 +17,8 @@ const SecondaryNavbar = ({ isCurrentPageHome }) => {
           <NavLink exact to="/">
             <HomeIcon />
             <sub id="homepage">
-              Retourner <br /> au manoir
+              Retourner
+              <br /> au manoir
             </sub>
           </NavLink>
           <a href={ELECTRONIC_TALES_PRESENTS.SIGN_UP} target="_blank" rel="noopener noreferrer">

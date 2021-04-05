@@ -1,6 +1,6 @@
 nav#secondary-nav {
   border-bottom: #6b6a6a 1px solid;
-  /* padding-left: 1em; */
+  /* padding-left: 1rem; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10,17 +10,17 @@ nav#secondary-nav a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 0 1em;
+  margin: 0 1rem;
 }
 
 nav#secondary-nav a sub {
-  margin-left: 1em;
-  font-size: 1rem;
+  margin-left: 1rem;
+  font-size: 1.1rem;
 }
 
 nav#secondary-nav a img {
-  width: 1em;
-  margin-left: 0.5em;
+  width: 1rem;
+  margin-left: 0.5rem;
 }
 
 nav#secondary-nav a sub#homepage {
