@@ -22,7 +22,7 @@ const SecondaryNavbar = ({ isCurrentPageHome }) => {
           </NavLink>
           <a href={ELECTRONIC_TALES_PRESENTS.SIGN_UP} target="_blank" rel="noopener noreferrer">
             <sub>Nous rejoindre</sub>
-            <img src={confetti} alt="" />
+            <img src={confetti} loading="auto" alt="join us" />
           </a>
         </nav>
       )}

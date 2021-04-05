@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Emoji from 'a11y-react-emoji';
 
 import './NotYet.css';
 
@@ -9,12 +9,12 @@ import {
   ELECTRONIC_TALES_PRESENTS,
   SLACK,
 } from '../../../dictionnary/externalElectronicTalesLinks';
-import Emoji from 'a11y-react-emoji';
+import oldCellVideo from '../../../resources/img/illustrations/old-cell.mp4';
 
 const NotYet = () => {
   return (
     <div id="not-yet">
-      <img src={logo} id="logo" alt="electronic Tales logo" />
+      <img src={logo} id="logo" loading="auto" alt="electronic Tales logo" />
       <div id="content">
         <p>
           Hey&nbsp;!
@@ -39,7 +39,7 @@ const NotYet = () => {
           </a>{' '}
           ou <a href="mailto:contact@electronictales.io">nous écrire</a>.
         </p>
-        <img src={oldCell} id="stupid-gif" alt="A 90's David Dychovny checking his 90's phone" />
+        <video autoPlay loop muted src={oldCellVideo}></video>
       </div>
     </div>
   );

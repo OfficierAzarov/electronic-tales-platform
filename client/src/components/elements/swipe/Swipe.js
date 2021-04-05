@@ -131,7 +131,7 @@ export const Swipe = ({
         <Fade duration={1500}>
           <div id="no-cards-left">
             <GoBackButton />
-            <img src={ghost} alt="no cards left" />
+            <img src={ghost} loading="auto" alt="no cards left" />
             <h3 className="neon flicker">
               Il n'y plus de questions à matcher dans ta région pour le moment.
             </h3>

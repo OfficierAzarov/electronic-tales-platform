@@ -20,7 +20,7 @@ const Lab = ({ text, cards }) => {
         ) : (
           <span>
             Ouvrir le labo&nbsp;
-            <img src={testTube} alt="open the lab test tube emoji" />{' '}
+            <img src={testTube} loading="auto" alt="open the lab test tube emoji" />{' '}
           </span>
         )}
         <Toggle

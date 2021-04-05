@@ -27,12 +27,12 @@
   padding: 0 2em;
 }
 
-#not-yet #stupid-gif {
-  width: 20em;
-  padding: 0 2em;
-  border-radius: 6em;
-}
-
 #not-yet a {
   font-weight: 700;
+}
+
+#not-yet video {
+  width: 30%;
+  margin-left: 3em;
+  border-radius: 6em;
 }

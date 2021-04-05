@@ -12,7 +12,7 @@ const SwipeDoor = ({ link }) => {
         <h3 className="title">Too late to ask</h3>
       </div>
       <div className="w-cat-card-content">
-        <img src={hands} alt="Some hands swiping" loading="lazy" className="w-cat-card-img" />
+        <img src={hands} alt="Some hands swiping" loading="auto" className="w-cat-card-img" />
         <Link to={link} className="w-cat-card-cta">
           <p>
             Toi aussi, tu te poses encore des questions dont tu devrais déjà connaître les

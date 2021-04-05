@@ -29,7 +29,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
         <Mansion />
       </div>
       <div id="home-worlds-container">
-        <img src={logo} alt="" />
+        <img src={logo} loading="auto" alt="Electronic Tales logo" />
         <div className="home-door-container">
           <div className="home-door" id="home-safe-space">
             <h2>Dégommons le syndrome de l'imposteur ensemble.</h2>
