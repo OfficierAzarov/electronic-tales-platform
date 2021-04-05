@@ -25,7 +25,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
           <h2 className="world-title">Imaginarium</h2>
         </div>
         <Lab
-          text="Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus&nbsp;: tu seras emmené·e vers notre Slack, où un canal est dédié à chaque contenu."
+          text="Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus&nbsp;: tu seras emmené·e vers notre Slack, the place to be du pool de co-création&nbsp;!"
           cards={[
             {
               title: "Bouton SOS syndrome de l'imposteur : un outil d'urgence pour se sentir mieux",
