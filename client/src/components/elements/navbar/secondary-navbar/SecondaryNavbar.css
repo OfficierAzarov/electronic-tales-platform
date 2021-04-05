@@ -1,6 +1,5 @@
 nav#secondary-nav {
   border-bottom: #6b6a6a 1px solid;
-  /* padding-left: 1rem; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,7 +14,7 @@ nav#secondary-nav a {
 
 nav#secondary-nav a sub {
   margin-left: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 nav#secondary-nav a img {

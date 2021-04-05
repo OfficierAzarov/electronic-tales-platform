@@ -8,7 +8,7 @@ const RoadmapDoor = () => {
     {
       title: 'Coder proprement : les bases',
       externalLink: '/roadmap/clean-code',
-      thumbnail: process.env.PUBLIC_URL + '/img/articles/maps.png',
+      thumbnail: process.env.PUBLIC_URL + '/img/articles/maps.jpg',
     },
   ];
 

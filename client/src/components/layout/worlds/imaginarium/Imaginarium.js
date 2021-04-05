@@ -39,7 +39,9 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
             },
           ]}
         />
-        <SwipeDoor link={`/${WORLDS.IMAGINARIUM}/too-late-to-ask`} />
+        <div className="cards-hub">
+          <SwipeDoor link={`/${WORLDS.IMAGINARIUM}/too-late-to-ask`} />
+        </div>
         <AllArticlesOfTheWorld articles={articles} />
       </div>
     </Fade>

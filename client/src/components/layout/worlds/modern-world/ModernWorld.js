@@ -40,7 +40,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
             },
           ]}
         />
-        <div className="image-card">
+        <div className="cards-hub">
           <SwipeDoor link="/modern-world/too-late-to-ask" />
         </div>
         <RoadmapDoor />

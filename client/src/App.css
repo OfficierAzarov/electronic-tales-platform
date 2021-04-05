@@ -287,6 +287,14 @@ nav svg {
   background-color: #ec567c;
 }
 
+.custom-toggle.react-toggle .react-toggle-thumb {
+  box-shadow: rgb(192, 236, 241) 0px 0px 0.4em;
+}
+
+.custom-toggle.react-toggle--checked .react-toggle-thumb {
+  box-shadow: rgb(192, 236, 241) 0px 0px 0.4em;
+}
+
 .custom-toggle.react-toggle-track,
 .custom-toggle.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
   background-color: #444444;
