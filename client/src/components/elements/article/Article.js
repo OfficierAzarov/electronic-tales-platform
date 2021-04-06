@@ -11,8 +11,9 @@ import { setCurrentArticle, cleanCurrentArticle } from '../../../redux/actions/a
 import ReadingTime from '../reading-time/ReadingTime';
 import GoBackButton from '../buttons/go-back/GoBackButton';
 import HtmlContent from '../html-content/HtmlContent';
+import Emoji from 'a11y-react-emoji';
 
-const Article = ({ match, setCurrentArticle, cleanCurrentArticle, article }) => {
+const Article = ({ match, article, setCurrentArticle, cleanCurrentArticle }) => {
   useEffect(() => {
     setCurrentArticle(match.params.slug);
     return () => {
@@ -32,9 +33,9 @@ const Article = ({ match, setCurrentArticle, cleanCurrentArticle, article }) => 
       </div>
       {article && article !== undefined ? (
         <Fragment>
-          <h1>
+          <h2>
             <HtmlContent content={article.title} />
-          </h1>
+          </h2>
           <ArticleContent articleContent={article.content} />
           <Modal />
         </Fragment>

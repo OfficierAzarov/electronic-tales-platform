@@ -6,8 +6,18 @@
   padding: 2rem;
 }
 
+#article-container h2 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin: 3rem 0;
+  text-transform: none;
+}
+
 #article-container #article-head {
   width: 100%;
+  display: flex;
 }
 
 #article-container h1 {

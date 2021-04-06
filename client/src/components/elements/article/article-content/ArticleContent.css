@@ -71,10 +71,6 @@
   white-space: pre;
 }
 
-/* .article-content .hljs-function {
-  display: block;
-} */
-
 .article-content .hljs-keyword,
 .article-content .hljs-tag {
   color: #ec567c;

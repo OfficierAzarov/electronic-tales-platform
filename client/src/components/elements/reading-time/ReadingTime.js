@@ -51,28 +51,56 @@ const ReadingTime = ({ articleContent }) => {
 
   const convertMinutesToMinutesAndSeconds = (readingTimeinMinutes) => {
     const min = Math.floor(Math.abs(readingTimeinMinutes));
-    // const sec = Math.floor((Math.abs(readingTimeinMinutes) * 60) % 60);
     return min + ' min';
+  };
+
+  const returnComponentXTimes = (fraction, funnyThing) => {
+    const times = Math.round(fraction);
+    if (times == 1) {
+      return (
+        <Fragment>
+          un&nbsp;
+          <Emoji symbol={funnyThing.emoji} label={funnyThing.name} />
+        </Fragment>
+      );
+    } else {
+      const componentsToReturn = [];
+      for (let i = 0; i < times; i++) {
+        componentsToReturn.push(<Emoji symbol={funnyThing.emoji} label={funnyThing.name} />);
+      }
+      return componentsToReturn;
+    }
   };
 
   const generateReadingTimeSentence = () => {
     if (articleContent) {
       const stats = readingTime(articleContent);
       const funnyThing = randomlyPickAFunnyThing(funnyThingsList);
-      const percentageOfTheFunActionDuration =
-        (stats.minutes / funnyThing.timeToConsumeTheFunThingInMinutes).toFixed(1) * 100;
+      const fraction = (stats.minutes / funnyThing.timeToConsumeTheFunThingInMinutes).toFixed(1);
 
-      return (
-        <Fragment>
-          <p>
-            <Emoji symbol="🕑" label="clock" />
-            &nbsp;Lecture&nbsp;: {displayTimeInAReadableWay(stats.minutes)}, <br /> soit le temps de{' '}
-            {funnyThing.consumingAction} {percentageOfTheFunActionDuration} % d'
-            {funnyThing.gender === 'feminin' ? 'une' : 'un '}{' '}
-            <Emoji symbol={funnyThing.emoji} label={funnyThing.name} />
-          </p>
-        </Fragment>
-      );
+      if (fraction <= 1) {
+        return (
+          <Fragment>
+            <p>
+              <Emoji symbol="🕑" label="clock" />
+              &nbsp;Lecture&nbsp;: {displayTimeInAReadableWay(stats.minutes)}, <br /> soit le temps
+              de {funnyThing.consumingAction} {fraction * 100}&nbsp;% d'
+              {funnyThing.gender === 'feminin' ? 'une' : 'un '}{' '}
+              <Emoji symbol={funnyThing.emoji} label={funnyThing.name} />.
+            </p>
+          </Fragment>
+        );
+      } else {
+        return (
+          <Fragment>
+            <p>
+              <Emoji symbol="🕑" label="clock" />
+              &nbsp;Lecture&nbsp;: {displayTimeInAReadableWay(stats.minutes)}, <br /> soit le temps
+              de {funnyThing.consumingAction} {returnComponentXTimes(fraction, funnyThing)}.
+            </p>
+          </Fragment>
+        );
+      }
     }
   };
 
