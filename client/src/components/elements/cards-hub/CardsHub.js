@@ -9,6 +9,15 @@ import { Fragment } from 'react';
 import SwiperJsHack from '../swiperjs-hack/SwiperJsHack';
 
 const CardsHub = ({ categoryName, categoryArticles, text }) => {
+  const buildLink = (article) => {
+    if (article.link != null) {
+      return article.link;
+    }
+    if (article.type == 'regular') {
+      return `${article.world}/articles/${article.slug}`;
+    }
+  };
+
   return (
     <div className="cards-hub">
       <div className="line-title-wrapper category-title-wrapper">
@@ -22,10 +31,7 @@ const CardsHub = ({ categoryName, categoryArticles, text }) => {
               <SwiperSlide key={article._id}>
                 <Card
                   key={article._id}
-                  articleLink={
-                    article.type === 'regular' && `${article.world}/articles/${article.slug}`
-                  }
-                  externalLink={article.externalLink}
+                  link={buildLink(article)}
                   imageUrl={article.thumbnail}
                   title={article.title}
                 />
@@ -37,8 +43,7 @@ const CardsHub = ({ categoryName, categoryArticles, text }) => {
             {categoryArticles.map((article) => (
               <Card
                 key={article._id}
-                articleLink={`/${article.world}/articles/${article.slug}`}
-                externalLink={article.externalLink}
+                link={buildLink(article)}
                 imageUrl={article.thumbnail}
                 title={article.title}
                 size="big"

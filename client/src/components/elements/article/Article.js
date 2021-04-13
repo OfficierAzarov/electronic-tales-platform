@@ -11,7 +11,6 @@ import { setCurrentArticle, cleanCurrentArticle } from '../../../redux/actions/a
 import ReadingTime from '../reading-time/ReadingTime';
 import GoBackButton from '../buttons/go-back/GoBackButton';
 import HtmlContent from '../html-content/HtmlContent';
-import Emoji from 'a11y-react-emoji';
 
 const Article = ({ match, article, setCurrentArticle, cleanCurrentArticle }) => {
   useEffect(() => {

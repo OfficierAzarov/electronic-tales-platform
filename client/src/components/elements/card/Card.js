@@ -4,13 +4,20 @@ import { Link } from 'react-router-dom';
 import './Card.css';
 import HtmlContent from '../html-content/HtmlContent';
 
-const Card = ({ articleLink, externalLink, imageUrl, title, size, placeText }) => {
+const Card = ({ link, imageUrl, title, size, placeText }) => {
+  // const howToOpen = (linkType) => {
+  //   switch(linkType) {
+  //     case 'link':
+  //       return linkType
+  //   }
+  // }
+
   return (
     <Link
       to={{
-        pathname: externalLink ? externalLink : articleLink,
+        pathname: link,
       }}
-      target={externalLink && '_blank'}
+      // target={link && '_blank'}
     >
       <div
         className={`card ${size == 'big' ? 'big' : ''} border-shadow`}

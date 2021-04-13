@@ -7,7 +7,7 @@ const RoadmapDoor = () => {
   const card = [
     {
       title: 'Coder proprement : les bases',
-      externalLink: '/roadmap/clean-code',
+      link: '/roadmap/clean-code',
       thumbnail: process.env.PUBLIC_URL + '/img/articles/maps.jpg',
     },
   ];

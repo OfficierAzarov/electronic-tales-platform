@@ -29,9 +29,6 @@ export const placeElementAtBottomOfSection = (
   const secondaryNavHeight = secondaryNavHeightInVh * vh; // mainNavHeight is the nav at the bottom of the page
   const buttonsContainerHeight = 10 * vh;
   const sectionHeight = 100 * vh - (mainNavHeight + secondaryNavHeight);
-  console.log('sectionH', sectionHeight);
-  console.log('buttonsContainerHeight', buttonsContainerHeight);
-  console.log('wantedSpaceBetweenElementAndNavInVh', wantedSpaceBetweenElementAndNavInPx);
   const top = sectionHeight - wantedSpaceBetweenElementAndNavInPx;
   return top;
 };
