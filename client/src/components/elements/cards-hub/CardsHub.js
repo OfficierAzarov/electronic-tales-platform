@@ -11,9 +11,11 @@ const CardsHub = ({ categoryName, categoryArticles, text }) => {
   const buildLink = (article) => {
     if (article.link != null) {
       return article.link;
-    }
-    if (article.type == 'regular') {
-      return `${article.world}/articles/${article.slug}`;
+    } else {
+      return {
+        path: `${article.world}/articles/${article.slug}`,
+        openInNewTab: false,
+      };
     }
   };
 

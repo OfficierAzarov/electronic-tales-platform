@@ -29,13 +29,19 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
           cards={[
             {
               title: 'Le mur des salaires des devs juniors : partageons les vrais chiffres !',
-              link: SLACK,
+              link: {
+                path: SLACK,
+                openInNewTab: true,
+              },
               thumbnail: process.env.PUBLIC_URL + '/img/articles/salaries.jpg',
             },
             {
               title:
                 'Le tamagotchi des devs : tracke tes progrès et compare-les à ceux des autres en toute bienveillance',
-              link: SLACK,
+              link: {
+                path: SLACK,
+                openInNewTab: true,
+              },
               thumbnail: process.env.PUBLIC_URL + '/img/articles/tamagotchi.jpg',
             },
           ]}

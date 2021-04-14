@@ -7,7 +7,10 @@ const SwipeDoor = ({ link }) => {
   const card = [
     {
       title: 'Le tinder du dev 🔥',
-      link: link,
+      link: {
+        path: link,
+        openInNewTab: false,
+      },
       thumbnail: process.env.PUBLIC_URL + '/img/TLTA/cat.jpg',
     },
   ];
@@ -25,7 +28,7 @@ const SwipeDoor = ({ link }) => {
 };
 
 SwipeDoor.propTypes = {
-  link: PropTypes.string.isRequired,
+  link: PropTypes.object.isRequired,
 };
 
 export default SwipeDoor;

@@ -8,9 +8,9 @@ const Card = ({ link, imageUrl, title, size, placeText }) => {
   return (
     <Link
       to={{
-        pathname: link,
+        pathname: link.path,
       }}
-      // target={link && '_blank'}
+      target={link.openInNewTab && '_blank'}
     >
       <div
         className={`card ${size == 'big' ? 'big' : ''} border-shadow`}

@@ -7,7 +7,10 @@ const RoadmapDoor = () => {
   const card = [
     {
       title: 'Coder proprement : les bases',
-      link: '/roadmap/clean-code',
+      link: {
+        path: '/roadmap/clean-code',
+        openInNewTab: false,
+      },
       thumbnail: process.env.PUBLIC_URL + '/img/articles/maps.jpg',
     },
   ];
