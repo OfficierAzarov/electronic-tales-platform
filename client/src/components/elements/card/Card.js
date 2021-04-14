@@ -5,13 +5,6 @@ import './Card.css';
 import HtmlContent from '../html-content/HtmlContent';
 
 const Card = ({ link, imageUrl, title, size, placeText }) => {
-  // const howToOpen = (linkType) => {
-  //   switch(linkType) {
-  //     case 'link':
-  //       return linkType
-  //   }
-  // }
-
   return (
     <Link
       to={{

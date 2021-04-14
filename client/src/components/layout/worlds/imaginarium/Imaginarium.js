@@ -7,7 +7,6 @@ import './Imaginarium.css';
 
 import { getAllArticlesInfos } from '../../../../redux/actions/article';
 import { WORLDS } from '../../../../dictionnary/worlds';
-import { deduceCategoriesFromArticles } from '../../../../utils/data-sorting/sorts';
 import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
 import Lab from '../../../elements/lab/Lab';
 import { SLACK } from '../../../../dictionnary/externalElectronicTalesLinks';

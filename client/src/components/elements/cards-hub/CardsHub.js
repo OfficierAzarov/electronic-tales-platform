@@ -1,5 +1,4 @@
 import React from 'react';
-// import SwiperCore, { Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 
