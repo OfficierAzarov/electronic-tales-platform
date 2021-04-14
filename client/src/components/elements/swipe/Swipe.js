@@ -128,7 +128,7 @@ export const Swipe = ({
           </div>
         </div>
       ) : (
-        <Fade duration={1500}>
+        <Fade duration={2500}>
           <div id="no-cards-left">
             <GoBackButton />
             <img src={ghost} loading="auto" alt="no cards left" />
