@@ -17,7 +17,7 @@ const SafeSpaceChat = () => {
       </div>
       <MiniNav />
       <div className="line-title-wrapper category-title-wrapper">
-        <h3 className="title">Rejoins notre Slack</h3>
+        <h3 className="title">Notre Slack</h3>
       </div>
       <p id="connect">
         Nous avons ouvert un{' '}
