@@ -19,17 +19,17 @@ export const computeLeft = (wantedElementWidthRegardingWindowWidth) => {
 };
 
 export const placeElementAtBottomOfSection = (
-  wantedSpaceBetweenElementAndNavInPx,
+  wantedSpaceBetweenElementAndMainNavInPx,
   mainNavHeightInVh,
   secondaryNavHeightInVh
 ) => {
   const windowHeight = window.innerHeight;
   const vh = windowHeight / 100;
   const mainNavHeight = mainNavHeightInVh * vh; // mainNavHeight is the nav at the bottom of the page
-  const secondaryNavHeight = secondaryNavHeightInVh * vh; // mainNavHeight is the nav at the bottom of the page
+  const secondaryNavHeight = secondaryNavHeightInVh * vh; // secondaryNavHeight is the nav at the top of the page
   const buttonsContainerHeight = 10 * vh;
   const sectionHeight = 100 * vh - (mainNavHeight + secondaryNavHeight);
-  const top = sectionHeight - wantedSpaceBetweenElementAndNavInPx;
+  const top = sectionHeight - wantedSpaceBetweenElementAndMainNavInPx;
   return top;
 };
 
