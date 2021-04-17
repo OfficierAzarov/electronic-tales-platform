@@ -10,6 +10,7 @@ import { WORLDS } from '../../../../dictionnary/worlds';
 import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
 import Lab from '../../../elements/lab/Lab';
 import { SLACK } from '../../../../dictionnary/externalElectronicTalesLinks';
+import { IMAGINARIUM_IMAGES_PATH } from '../../../../dictionnary/internalImagesPathes';
 import AllArticlesOfTheWorld from '../../../elements/article/all-articles/AllArticlesOfTheWorld';
 
 const Imaginarium = ({ articles, getAllArticlesInfos }) => {
@@ -34,7 +35,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
                 path: SLACK,
                 openInNewTab: true,
               },
-              thumbnail: process.env.PUBLIC_URL + '/img/articles/sos.jpg',
+              thumbnail: process.env.PUBLIC_URL + IMAGINARIUM_IMAGES_PATH + 'pills-small.jpg',
             },
             {
               _id: 'tourneDisqueCardId',
@@ -43,7 +44,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
                 path: SLACK,
                 openInNewTab: true,
               },
-              thumbnail: process.env.PUBLIC_URL + '/img/articles/disks.jpg',
+              thumbnail: process.env.PUBLIC_URL + IMAGINARIUM_IMAGES_PATH + 'diskStore-small.jpg',
             },
           ]}
         />

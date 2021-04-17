@@ -11,6 +11,7 @@ import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
 import AllArticlesOfTheWorld from '../../../elements/article/all-articles/AllArticlesOfTheWorld';
 import Lab from '../../../elements/lab/Lab';
 import { SLACK } from '../../../../dictionnary/externalElectronicTalesLinks';
+import { MODERN_WORLD_IMAGES_PATH } from '../../../../dictionnary/internalImagesPathes';
 import RoadmapDoor from '../../../elements/roadmap/roadmap-door/RoadmapDoor';
 
 const ModernWorld = ({ articles, getAllArticlesInfos }) => {
@@ -34,7 +35,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
                 path: SLACK,
                 openInNewTab: true,
               },
-              thumbnail: process.env.PUBLIC_URL + '/img/articles/salaries.jpg',
+              thumbnail: process.env.PUBLIC_URL + MODERN_WORLD_IMAGES_PATH + 'money-small.jpg',
             },
             {
               _id: 'tamagotchiCardId',
@@ -44,7 +45,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
                 path: SLACK,
                 openInNewTab: true,
               },
-              thumbnail: process.env.PUBLIC_URL + '/img/articles/tamagotchi.jpg',
+              thumbnail: process.env.PUBLIC_URL + MODERN_WORLD_IMAGES_PATH + 'tamagotchi-small.jpg',
             },
           ]}
         />

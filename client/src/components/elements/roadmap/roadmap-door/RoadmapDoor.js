@@ -3,6 +3,8 @@ import CardsHub from '../../cards-hub/CardsHub';
 
 import './RoadmapDoor.css';
 
+import { ROADMAP_IMAGES_PATH } from '../../../../dictionnary/internalImagesPathes';
+
 const RoadmapDoor = () => {
   // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
   const card = [
@@ -13,7 +15,7 @@ const RoadmapDoor = () => {
         path: '/roadmap/clean-code',
         openInNewTab: false,
       },
-      thumbnail: process.env.PUBLIC_URL + '/img/articles/maps.jpg',
+      thumbnail: process.env.PUBLIC_URL + ROADMAP_IMAGES_PATH + 'cleanCode.jpg',
     },
   ];
 
