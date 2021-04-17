@@ -26,7 +26,7 @@ const HomeSVG = () => {
           <g id="g2211">
             <path
               id="path957"
-              fill="none"
+              fill="#000"
               stroke="#000"
               strokeDasharray="none"
               strokeLinecap="butt"
@@ -37,7 +37,7 @@ const HomeSVG = () => {
             ></path>
             <path
               id="path959"
-              fill="none"
+              fill="#000"
               stroke="#000"
               strokeDasharray="none"
               strokeLinecap="butt"
@@ -48,7 +48,7 @@ const HomeSVG = () => {
             ></path>
             <path
               id="path959-8"
-              fill="none"
+              fill="#000"
               stroke="#000"
               strokeDasharray="none"
               strokeLinecap="butt"
@@ -59,7 +59,7 @@ const HomeSVG = () => {
             ></path>
             <path
               id="path959-8-8"
-              fill="none"
+              fill="#000"
               stroke="#000"
               strokeDasharray="none"
               strokeLinecap="butt"
