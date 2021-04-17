@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 
 import CardsHub from '../../cards-hub/CardsHub';
 
-const SwipeDoor = ({ link }) => {
+const SwipeDoor = ({ link, text }) => {
   const card = [
     {
       title: 'Le tinder du dev 🔥',
@@ -17,12 +17,7 @@ const SwipeDoor = ({ link }) => {
 
   return (
     <Fragment>
-      <CardsHub
-        categoryName="Too late to ask"
-        categoryArticles={card}
-        text="Toi aussi, tu te poses encore des questions dont tu devrais déjà connaître les
-        réponses&nbsp;?"
-      />
+      <CardsHub categoryName="Too late to ask" categoryArticles={card} text={text} />
     </Fragment>
   );
 };

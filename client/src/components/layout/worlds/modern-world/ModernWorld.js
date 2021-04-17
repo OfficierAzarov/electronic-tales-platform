@@ -46,9 +46,11 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
             },
           ]}
         />
-        <div className="cards-hub">
-          <SwipeDoor link="/modern-world/too-late-to-ask" />
-        </div>
+        <SwipeDoor
+          link="/modern-world/too-late-to-ask"
+          text="Toi aussi, tu te poses encore des questions de programmation dont tu devrais déjà connaître les
+        réponses&nbsp;?"
+        />
         <RoadmapDoor />
         <AllArticlesOfTheWorld articles={articles} />
       </div>

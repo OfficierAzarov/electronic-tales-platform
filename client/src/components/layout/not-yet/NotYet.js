@@ -29,7 +29,15 @@ const NotYet = () => {
           La plateforme Electronic Tales est accessible uniquement en version mobile pour le moment.
           <br />
           <br />
-          Nous t'invitons à utiliser ton téléphone pour commencer à explorer notre manoir.
+          Nous t'invitons à utiliser ton téléphone (ou l'
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Tools/Responsive_Design_Mode"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            inspecteur de ton navigateur
+          </a>
+          , toi-même tu sais) pour commencer à explorer notre manoir.
           <br />
           <br />
           Tu peux aussi faire un tour sur{' '}
