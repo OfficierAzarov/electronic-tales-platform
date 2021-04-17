@@ -89,7 +89,7 @@ export const Swipe = ({
               <div
                 className="swipe-card-content"
                 style={{
-                  height: computeHeight(65),
+                  height: computeHeight(60),
                   backgroundImage: `url(${question.thumbnail})`,
                 }}
               >
@@ -106,7 +106,7 @@ export const Swipe = ({
             id="swipe-buttons-container"
             style={{
               width: computeWidth(85),
-              top: placeElementAtBottomOfSection(90, 10, 10),
+              top: placeElementAtBottomOfSection(100, 10, 10),
             }}
           >
             <button
