@@ -15,7 +15,7 @@ const RoadmapCleanCode = () => {
         <br />
         <br /> Retrouve ici les questions de base à te poser pour commencer à coder plus
         proprement&nbsp;
-        <Emoji symbol="🧹" label="code propre symbolisé par un balais" />
+        <Emoji symbol="🧼" label="code propre symbolisé par un savon" />
       </p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
