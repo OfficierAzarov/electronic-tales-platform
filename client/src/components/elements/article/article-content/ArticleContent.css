@@ -1,17 +1,18 @@
 .article-content img {
   display: block;
-  margin: 1em auto;
+  margin: 5rem auto 1rem;
 }
 
 /* Styles for html coming from the database */
 
 .article-content p {
   display: block;
-  margin: 1em 0;
+  margin: 5rem 0;
 }
 
 .article-content h3 {
-  margin: 2em 0;
+  margin: 2rem 0;
+  font-size: 3rem;
 }
 
 .article-content ul {
@@ -20,11 +21,13 @@
 }
 
 .article-content ul li {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 .article-content .small-comment {
   color: #999999;
+  display: block;
+  text-align: right;
 }
 
 .article-content .small-comment a {
@@ -33,18 +36,18 @@
 
 .article-content .small-comment,
 .article-content .small-comment a {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-style: italic;
 }
 
 .article-content .part {
   display: block;
-  margin: 2em 0;
+  margin: 2rem 0;
 }
 
 .article-content .part-title {
   display: block;
-  margin: 2em 0 1em 0;
+  margin: 2rem 0 1rem 0;
   font-weight: 600;
 }
 
@@ -53,7 +56,7 @@
   background-color: #333333;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  margin: 1em 0;
+  margin: 1rem 0;
   font-size: 1.3rem;
 }
 
