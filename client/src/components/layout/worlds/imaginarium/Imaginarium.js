@@ -25,6 +25,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
         </div>
         <Lab
           text="Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus&nbsp;: tu seras emmené·e vers notre Slack, the place to be du pool de co-création&nbsp;!"
+          // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
           cards={[
             {
               _id: 'sosCardId',
@@ -47,6 +48,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
           ]}
         />
         <SwipeDoor
+          // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
           id={WORLDS.IMAGINARIUM}
           link={`/${WORLDS.IMAGINARIUM}/too-late-to-ask`}
           text="Toi aussi, tu te poses encore des questions de computer culture dont tu devrais déjà connaître les

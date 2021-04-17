@@ -4,6 +4,7 @@ import CardsHub from '../../cards-hub/CardsHub';
 import './RoadmapDoor.css';
 
 const RoadmapDoor = () => {
+  // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
   const card = [
     {
       _id: 'cleanCodeRoadmapId',

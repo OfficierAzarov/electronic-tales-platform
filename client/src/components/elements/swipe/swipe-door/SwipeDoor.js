@@ -4,6 +4,7 @@ import { PropTypes } from 'prop-types';
 import CardsHub from '../../cards-hub/CardsHub';
 
 const SwipeDoor = ({ link, text, id }) => {
+  // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
   const card = [
     {
       _id: `${id}Id`,
