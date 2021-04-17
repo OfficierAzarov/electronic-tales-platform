@@ -10,7 +10,7 @@ const Card = ({ link, imageUrl, title, size, placeText }) => {
       to={{
         pathname: link.path,
       }}
-      target={link.openInNewTab && '_blank'}
+      target={link.openInNewTab ? '_blank' : undefined}
     >
       <div
         className={`card ${size == 'big' ? 'big' : ''} border-shadow`}

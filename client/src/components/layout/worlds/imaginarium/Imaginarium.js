@@ -27,6 +27,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
           text="Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus&nbsp;: tu seras emmené·e vers notre Slack, the place to be du pool de co-création&nbsp;!"
           cards={[
             {
+              _id: 'sosCardId',
               title: "Bouton SOS syndrome de l'imposteur : un outil d'urgence pour se sentir mieux",
               link: {
                 path: SLACK,
@@ -35,6 +36,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
               thumbnail: process.env.PUBLIC_URL + '/img/articles/sos.jpg',
             },
             {
+              _id: 'tourneDisqueCardId',
               title: 'Le tourne-disque de mamie Cobol : partageons nos playlists pour coder',
               link: {
                 path: SLACK,
@@ -45,6 +47,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
           ]}
         />
         <SwipeDoor
+          id={WORLDS.IMAGINARIUM}
           link={`/${WORLDS.IMAGINARIUM}/too-late-to-ask`}
           text="Toi aussi, tu te poses encore des questions de computer culture dont tu devrais déjà connaître les
         réponses&nbsp;?"
