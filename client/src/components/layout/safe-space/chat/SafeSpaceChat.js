@@ -24,8 +24,8 @@ const SafeSpaceChat = () => {
         <a href={SLACK} target="_blank" rel="noopener noreferrer">
           Slack
         </a>{' '}
-        pour permettre aux devs de discuter à cœur ouvert des problèmes qu'ils peuvent vivre dans la
-        tech. <br />
+        pour permettre aux devs de discuter à cœur ouvert des problèmes qu'ils·elles peuvent vivre
+        dans la tech. <br />
         <br />
         Pour le bien-être de tous·tes, nous te demandons de suivre deux grands principes :
       </p>
