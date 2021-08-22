@@ -19,7 +19,7 @@ router.get('/infos/:world', async (req, res) => {
 });
 
 // @route   GET api/articles/:slug
-// @desc    Get ana rticle with its slug
+// @desc    Get an article with its slug
 // @access  Public
 router.get('/:slug', async (req, res) => {
   try {
