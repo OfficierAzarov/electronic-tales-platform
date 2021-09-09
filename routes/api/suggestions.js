@@ -130,7 +130,6 @@ router.post(
 );
 
 const checkReCaptcha = async (token) => {
-  console.log('inside checkrecaptcha. The token is ', token);
   const res = await fetch(
     `https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET_KEY}&response=${token}`,
     {
@@ -138,7 +137,6 @@ const checkReCaptcha = async (token) => {
     }
   );
   const data = await res.json();
-  console.log(data);
   return data.success;
 };
 

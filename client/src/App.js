@@ -22,19 +22,19 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      {isDesktopOrLaptop ? (
+      {/* {isDesktopOrLaptop ? (
         <NotYet />
-      ) : (
-        <Router>
-          <SecondaryNavbar />
-          <ScrollToTop />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route component={Routes} />
-          </Switch>
-          <Navbar />
-        </Router>
-      )}
+      ) : ( */}
+      <Router>
+        <SecondaryNavbar />
+        <ScrollToTop />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route component={Routes} />
+        </Switch>
+        <Navbar />
+      </Router>
+      {/* )} */}
     </Provider>
   );
 };
