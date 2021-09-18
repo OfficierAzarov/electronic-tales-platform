@@ -36,6 +36,10 @@
   width: 80%;
 }
 
+/* #home .alternative-cta p {
+  display: inline-block;
+} */
+
 #home .chevron-container {
   margin-bottom: 0.5rem;
   animation-name: stim;

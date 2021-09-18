@@ -22,9 +22,6 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      {/* {isDesktopOrLaptop ? (
-        <NotYet />
-      ) : ( */}
       <Router>
         <SecondaryNavbar />
         <ScrollToTop />
@@ -34,7 +31,6 @@ const App = () => {
         </Switch>
         <Navbar />
       </Router>
-      {/* )} */}
     </Provider>
   );
 };
