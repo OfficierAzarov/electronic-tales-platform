@@ -29,7 +29,6 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
       </div>
       <div id="home-worlds-container">
         <img
-          src={logo}
           srcSet={`${logoSmall} 350w, ${logo} 500w`}
           id="logo"
           loading="auto"
@@ -50,7 +49,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
             text: { __html: 'Viens, on en parle&nbsp;&nbsp;&rarr;' },
           }}
           alternativeCallToAction={{
-            text: { __html: '...&nbsp;ou bien continue la visite ' },
+            text: { __html: '...&nbsp;ou continue la visite ' },
             emoji: { symbol: '🐾', label: 'continue the visit' },
             whereToScrollTo: 'home-modern-world',
           }}

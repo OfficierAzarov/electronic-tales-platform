@@ -48,8 +48,7 @@ a {
 }
 
 section {
-  /* Because we have fixed navbars of 10vh each, we need to add padding so
-      the entire content of the section is visible */
+  /* Because (in the mobile version) we have fixed navbars of 10vh each, we need to add padding so the entire content of the section is visible */
   padding: 12vh 0;
 }
 
