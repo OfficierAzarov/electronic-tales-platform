@@ -345,3 +345,9 @@ a[href^='tel'] {
     /* Chrome 26+, Opera 23+, Firefox 39+ */ url('resources/fonts/dosis-v18-latin-600.woff')
       format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
+/* Custom properties */
+
+:root {
+  --language-navbar-height: 3rem;
+}
