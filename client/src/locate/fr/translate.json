@@ -1,9 +1,7 @@
 {
-  "translations": {
-    "home": {
-      "homeSafeSpace": {
-        "title": "Dégommons le syndrome de l'imposteur ensemble."
-      }
+  "home": {
+    "homeSafeSpace": {
+      "title": "Dégommons le syndrome de l'imposteur ensemble."
     }
   }
 }

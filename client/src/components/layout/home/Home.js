@@ -42,8 +42,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
         />
         <div className="home-door-container">
           <div className="home-door" id="home-safe-space">
-            <h2>{t('translations.home')}</h2>
-            <h2>Dégommons le syndrome de l'imposteur ensemble.</h2>
+            <h2>{t('home.homeSafeSpace.title')}</h2>
             <p>
               Développeur·euse junior, tu souffres du syndrome de l'imposteur&nbsp;?
               <br />

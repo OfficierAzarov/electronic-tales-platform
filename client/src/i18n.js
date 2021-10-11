@@ -20,19 +20,10 @@ i18n
     },
     resources: {
       en: {
-        translations: {
-          home: "Let's smash impostor syndrom together.",
-        },
+        translation: languageEN,
       },
-
       fr: {
-        translations: {
-          home: {
-            homeSafeSpace: {
-              title: "Dégommons le syndrome de l'imposteur ensemble.",
-            },
-          },
-        },
+        translation: languageFR,
       },
     },
   });
