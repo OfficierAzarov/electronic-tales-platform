@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import { connect } from 'react-redux';
@@ -26,8 +26,6 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
     };
   }, []);
 
-  const offset = -1 * viewportToPixels('20vh');
-
   return (
     <div id="home">
       <div id="mansion">
@@ -35,135 +33,134 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
       </div>
       <div id="home-worlds-container">
         <img
-          src={logo}
           srcSet={`${logoSmall} 350w, ${logo} 500w`}
           id="logo"
           loading="auto"
           alt="Electronic Tales logo"
         />
-        <div className="home-door-container">
-          <div className="home-door" id="home-safe-space">
-            <h2>{t('home.homeSafeSpace.title')}</h2>
-            <p>
-              {t('home.homeSafeSpace.sentence1')}
+        <HomeCard
+          idForScroll="home-safe-space"
+          title="Dégommons le syndrome de l'imposteur ensemble."
+          description={
+            <Fragment>
+              Développeur·euse junior, tu souffres du syndrome de l'imposteur&nbsp;?
               <br />
-              <br />
-              {t('home.homeSafeSpace.sentence2')}
-            </p>
-            <Link
-              to="/safe-space"
-              className="basic-button"
-              dangerouslySetInnerHTML={{
-                __html: sanitize(t('home.homeSafeSpace.callToActionText')),
-              }}
-            ></Link>
-            <div className="alternative-cta">
-              <ScrollLink
-                to="home-modern-world"
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={offset}
-              >
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: sanitize(t('home.homeSafeSpace.alternativeCallToActionText')),
-                  }}
-                ></span>
-                <Emoji symbol="🐾" label="continue the visit" />
-                <div className="chevron-container">
-                  <ChevronDown />
-                </div>
-              </ScrollLink>
-            </div>
-          </div>
-        </div>
+              <br />À Electronic Tales, nous pensons que ce n'est pas une fatalité.
+            </Fragment>
+          }
+          callToAction={{
+            link: '/safe-space',
+            text: { __html: 'Viens, on en parle&nbsp;&nbsp;&rarr;' },
+          }}
+          alternativeCallToAction={{
+            text: { __html: '...&nbsp;ou continue la visite ' },
+            emoji: { symbol: '🐾', label: 'continue the visit' },
+            whereToScrollTo: 'home-modern-world',
+          }}
+        />
         <div id="spacer"></div>
         <Bounce bottom duration={2000}>
-          <div className="home-door-container">
-            <div className="home-door" id="home-modern-world">
-              <h2 className="neon flicker">{t('home.modernWorld.title')}</h2>
-              <p>{t('home.modernWorld.sentence')}</p>
-              <Link to="/modern-world" className="basic-button">
-                {t('home.common.enterButtonText')}
-              </Link>
-              <div className="alternative-cta">
-                <ScrollLink
-                  to="home-imaginarium"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset={offset}
-                >
-                  <span
-                    dangerouslySetInnerHTML={{
-                      __html: sanitize(t('home.modernWorld.alternativeCallToActionText')),
-                    }}
-                  ></span>
-                  <Emoji symbol="🕵️‍♂️" label="continue the visit" />
-                  <div className="chevron-container">
-                    <ChevronDown />
-                  </div>
-                </ScrollLink>
-              </div>
-            </div>
-          </div>
+          <HomeCard
+            idForScroll="home-modern-world"
+            title="Modern World"
+            description={<Fragment>Apprends à programmer entre les lignes.</Fragment>}
+            callToAction={{
+              link: '/modern-world',
+              text: 'Entrer',
+            }}
+            alternativeCallToAction={{
+              text: { __html: "...&nbsp;mmh, qu'est-ce qu'on a d'autre en magasin&nbsp;? " },
+              emoji: { symbol: '🕵️‍♂️', label: 'continue the visit' },
+              whereToScrollTo: 'home-imaginarium',
+            }}
+          />
         </Bounce>
         <Bounce bottom duration={2000}>
-          <div className="home-door-container">
-            <div className="home-door" id="home-imaginarium">
-              <h2 className="neon flicker">{t('home.imaginarium.title')}</h2>
-              <p>Imprègne-toi des mythes et légendes de la bits generation.</p>
-              <Link to="/imaginarium" className="basic-button">
-                Entrer
-              </Link>
-              <div className="alternative-cta">
-                <ScrollLink
-                  to="home-ancient-world"
-                  spy={true}
-                  smooth={true}
-                  duration={500}
-                  offset={offset}
-                >
-                  ...&nbsp;toujours pas&nbsp;?&nbsp;
-                  <Emoji symbol="😅" label="continue the visit" />
-                  <div className="chevron-container">
-                    <ChevronDown />
-                  </div>
-                </ScrollLink>
-              </div>
-            </div>
-          </div>
+          <HomeCard
+            idForScroll="home-imaginarium"
+            title="Imaginarium"
+            description={
+              <Fragment>Imprègne-toi des mythes et légendes de la bits generation.</Fragment>
+            }
+            callToAction={{
+              link: '/imaginarium',
+              text: 'Entrer',
+            }}
+            alternativeCallToAction={{
+              text: { __html: '...&nbsp;toujours pas&nbsp;? ' },
+              emoji: { symbol: '😅', label: 'continue the visit' },
+              whereToScrollTo: 'home-ancient-world',
+            }}
+          />
         </Bounce>
         <Bounce bottom duration={2000}>
-          <div className="home-door-container">
-            <div className="home-door" id="home-ancient-world">
-              <h2 className="neon flicker">Ancient World</h2>
-              <p>Plonge dans le monde englouti de la computer science.</p>
-              <Link to="/ancient-world" className="basic-button">
-                Entrer
-              </Link>
-              <div
-                className="alternative-cta"
-                onClick={() =>
-                  alert(
-                    "Allons bon ! Tu t'attendais à quoi ? Les neuf cercles de l'enfer ? Le département design n'avait pas assez de budget pour ça."
-                  )
-                }
-              >
-                <a href="">
-                  Encore plus bas ?&nbsp;
-                  <Emoji symbol="🧗" label="continue the visit" />
-                  <div className="chevron-container">
-                    <ChevronDown />
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
+          <HomeCard
+            idForScroll="home-ancient-world"
+            title="Ancient World"
+            description={<Fragment>Plonge dans le monde englouti de la computer science.</Fragment>}
+            callToAction={{
+              link: '/ancient-world',
+              text: 'Entrer',
+            }}
+            alternativeCallToAction={{
+              text: { __html: ' Encore plus bas ?&nbsp; ' },
+              emoji: { symbol: '🧗', label: 'continue the visit' },
+              alert:
+                "Allons bon ! Tu t'attendais à quoi ? Les neuf cercles de l'enfer ? Le département design n'avait pas assez de budget pour ça.",
+            }}
+          />
         </Bounce>
       </div>
       <div id="spacer-small"></div>
+    </div>
+  );
+};
+
+const HomeCard = ({ idForScroll, title, description, callToAction, alternativeCallToAction }) => {
+  const offset = -1 * viewportToPixels('20vh');
+
+  const htmlOrText = (textKey) => {
+    return textKey.__html ? (
+      <span dangerouslySetInnerHTML={textKey}></span>
+    ) : (
+      <span>{textKey}</span>
+    );
+  };
+
+  return (
+    <div className="home-door-container">
+      <div className="home-door" id={idForScroll}>
+        <h2 className="neon flicker">{title}</h2>
+        <p>{description}</p>
+        <Link to={callToAction.link} className="basic-button">
+          {htmlOrText(callToAction.text)}
+        </Link>
+        <div className="alternative-cta">
+          {alternativeCallToAction.whereToScrollTo && (
+            <ScrollLink
+              to={alternativeCallToAction.whereToScrollTo}
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={offset}
+            >
+              {htmlOrText(alternativeCallToAction.text)}
+              <Emoji
+                symbol={alternativeCallToAction.emoji.symbol}
+                label={alternativeCallToAction.emoji.label}
+              />
+              <div className="chevron-container">
+                <ChevronDown />
+              </div>
+            </ScrollLink>
+          )}
+          {alternativeCallToAction.alert && (
+            <div className="chevron-container" onClick={() => alert(alternativeCallToAction.alert)}>
+              <ChevronDown />
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
