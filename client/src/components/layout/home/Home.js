@@ -9,7 +9,7 @@ import Emoji from 'a11y-react-emoji';
 import './Home.css';
 
 import { setHomeAsCurrentPage, unsetHomeAsCurrentPage } from '../../../redux/actions/page';
-import { sanitize } from '../../../utils/data-processing/sanitize';
+import { generateSanitizedDangerouslySetInnerHtml } from '../../../utils/data-processing/sanitize';
 import { viewportToPixels } from '../../../utils/display/converter';
 import Mansion from '../../interactive-images/mansion/Mansion';
 import logo from '../../../resources/img/logo-transparent.png';
@@ -40,20 +40,16 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
         />
         <HomeCard
           idForScroll="home-safe-space"
-          title="Dégommons le syndrome de l'imposteur ensemble."
-          description={
-            <Fragment>
-              Développeur·euse junior, tu souffres du syndrome de l'imposteur&nbsp;?
-              <br />
-              <br />À Electronic Tales, nous pensons que ce n'est pas une fatalité.
-            </Fragment>
-          }
+          title={t('home.safeSpace.title')}
+          description={generateSanitizedDangerouslySetInnerHtml(t('home.safeSpace.description'))}
           callToAction={{
             link: '/safe-space',
-            text: { __html: 'Viens, on en parle&nbsp;&nbsp;&rarr;' },
+            text: generateSanitizedDangerouslySetInnerHtml(t('home.safeSpace.callToActionText')),
           }}
           alternativeCallToAction={{
-            text: { __html: '...&nbsp;ou continue la visite ' },
+            text: generateSanitizedDangerouslySetInnerHtml(
+              t('home.safeSpace.alternativeCallToActionText')
+            ),
             emoji: { symbol: '🐾', label: 'continue the visit' },
             whereToScrollTo: 'home-modern-world',
           }}
@@ -62,14 +58,18 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
         <Bounce bottom duration={2000}>
           <HomeCard
             idForScroll="home-modern-world"
-            title="Modern World"
-            description={<Fragment>Apprends à programmer entre les lignes.</Fragment>}
+            title={t('home.modernWorld.title')}
+            description={generateSanitizedDangerouslySetInnerHtml(
+              t('home.modernWorld.description')
+            )}
             callToAction={{
               link: '/modern-world',
-              text: 'Entrer',
+              text: t('home.common.enterButtonText'),
             }}
             alternativeCallToAction={{
-              text: { __html: "...&nbsp;mmh, qu'est-ce qu'on a d'autre en magasin&nbsp;? " },
+              text: generateSanitizedDangerouslySetInnerHtml(
+                t('home.modernWorld.alternativeCallToActionText')
+              ),
               emoji: { symbol: '🕵️‍♂️', label: 'continue the visit' },
               whereToScrollTo: 'home-imaginarium',
             }}
@@ -131,7 +131,7 @@ const HomeCard = ({ idForScroll, title, description, callToAction, alternativeCa
     <div className="home-door-container">
       <div className="home-door" id={idForScroll}>
         <h2 className="neon flicker">{title}</h2>
-        <p>{description}</p>
+        <p>{htmlOrText(description)}</p>
         <Link to={callToAction.link} className="basic-button">
           {htmlOrText(callToAction.text)}
         </Link>

@@ -1,15 +1,19 @@
 {
   "home": {
-    "homeSafeSpace": {
+    "safeSpace": {
       "title": "Dégommons le syndrome de l'imposteur ensemble.",
-      "sentence1": "Développeur·euse junior, tu souffres du syndrome de l'imposteur ?",
-      "sentence2": "À Electronic Tales, nous pensons que ce n'est pas une fatalité.",
+      "description": "Développeur·euse junior, tu souffres du syndrome de l'imposteur&nbsp;?<br /><br />À Electronic Tales, nous pensons que ce n'est pas une fatalité.",
       "callToActionText": "Viens, on en parle&nbsp;&nbsp;&rarr;",
       "alternativeCallToActionText": "...&nbsp;ou bien continue la visite&nbsp;"
     },
     "modernWorld": {
       "title": "Modern World",
-      "sentence": "Apprends à programmer entre les lignes.",
+      "description": "Apprends à programmer entre les lignes.",
+      "alternativeCallToActionText": "...&nbsp;mmh, qu'est-ce qu'on a d'autre en magasin&nbsp;?&nbsp;"
+    },
+    "imaginarium": {
+      "title": "Imaginarium",
+      "description": "Apprends à programmer entre les lignes.",
       "alternativeCallToActionText": "...&nbsp;mmh, qu'est-ce qu'on a d'autre en magasin&nbsp;?&nbsp;"
     },
     "common": {
