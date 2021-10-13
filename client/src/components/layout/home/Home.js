@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import Bounce from 'react-reveal/Bounce';
 import Emoji from 'a11y-react-emoji';
 
@@ -15,6 +16,8 @@ import logoSmall from '../../../resources/img/logo-transparent-350.png';
 import { ReactComponent as ChevronDown } from '../../../resources/img/icons/chevron-down.svg';
 
 const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     setHomeAsCurrentPage();
     return () => {
@@ -39,7 +42,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
         />
         <div className="home-door-container">
           <div className="home-door" id="home-safe-space">
-            <h2>Dégommons le syndrome de l'imposteur ensemble.</h2>
+            <h2>{t('home.homeSafeSpace.title')}</h2>
             <p>
               Développeur·euse junior, tu souffres du syndrome de l'imposteur&nbsp;?
               <br />

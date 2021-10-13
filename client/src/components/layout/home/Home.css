@@ -9,7 +9,7 @@
 
 #home #home-worlds-container {
   position: absolute;
-  top: 0;
+  top: var(--language-navbar-height);
   left: 0;
 }
 
