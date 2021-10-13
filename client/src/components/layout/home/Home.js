@@ -9,6 +9,7 @@ import Emoji from 'a11y-react-emoji';
 import './Home.css';
 
 import { setHomeAsCurrentPage, unsetHomeAsCurrentPage } from '../../../redux/actions/page';
+import { sanitize } from '../../../utils/data-processing/sanitize';
 import { viewportToPixels } from '../../../utils/display/converter';
 import Mansion from '../../interactive-images/mansion/Mansion';
 import logo from '../../../resources/img/logo-transparent.png';
@@ -44,13 +45,18 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
           <div className="home-door" id="home-safe-space">
             <h2>{t('home.homeSafeSpace.title')}</h2>
             <p>
-              Développeur·euse junior, tu souffres du syndrome de l'imposteur&nbsp;?
+              {t('home.homeSafeSpace.sentence1')}
               <br />
-              <br />À Electronic Tales, nous pensons que ce n'est pas une fatalité.
+              <br />
+              {t('home.homeSafeSpace.sentence2')}
             </p>
-            <Link to="/safe-space" className="basic-button">
-              Viens, on en parle&nbsp;&nbsp;&rarr;
-            </Link>
+            <Link
+              to="/safe-space"
+              className="basic-button"
+              dangerouslySetInnerHTML={{
+                __html: sanitize(t('home.homeSafeSpace.callToActionText')),
+              }}
+            ></Link>
             <div className="alternative-cta">
               <ScrollLink
                 to="home-modern-world"
@@ -59,7 +65,11 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                 duration={500}
                 offset={offset}
               >
-                ...&nbsp;ou bien continue la visite&nbsp;
+                <span
+                  dangerouslySetInnerHTML={{
+                    __html: sanitize(t('home.homeSafeSpace.alternativeCallToActionText')),
+                  }}
+                ></span>
                 <Emoji symbol="🐾" label="continue the visit" />
                 <div className="chevron-container">
                   <ChevronDown />
@@ -72,10 +82,10 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
         <Bounce bottom duration={2000}>
           <div className="home-door-container">
             <div className="home-door" id="home-modern-world">
-              <h2 className="neon flicker">Modern World</h2>
-              <p>Apprends à programmer entre les lignes.</p>
+              <h2 className="neon flicker">{t('home.modernWorld.title')}</h2>
+              <p>{t('home.modernWorld.sentence')}</p>
               <Link to="/modern-world" className="basic-button">
-                Entrer
+                {t('home.common.enterButtonText')}
               </Link>
               <div className="alternative-cta">
                 <ScrollLink
@@ -85,7 +95,11 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                   duration={500}
                   offset={offset}
                 >
-                  ...&nbsp;mmh, qu'est-ce qu'on a d'autre en magasin&nbsp;?&nbsp;
+                  <span
+                    dangerouslySetInnerHTML={{
+                      __html: sanitize(t('home.modernWorld.alternativeCallToActionText')),
+                    }}
+                  ></span>
                   <Emoji symbol="🕵️‍♂️" label="continue the visit" />
                   <div className="chevron-container">
                     <ChevronDown />
@@ -98,7 +112,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
         <Bounce bottom duration={2000}>
           <div className="home-door-container">
             <div className="home-door" id="home-imaginarium">
-              <h2 className="neon flicker">Imaginarium</h2>
+              <h2 className="neon flicker">{t('home.imaginarium.title')}</h2>
               <p>Imprègne-toi des mythes et légendes de la bits generation.</p>
               <Link to="/imaginarium" className="basic-button">
                 Entrer
