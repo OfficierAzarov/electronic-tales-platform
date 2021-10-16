@@ -50,7 +50,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
             text: generateSanitizedDangerouslySetInnerHtml(
               t('home.safeSpace.alternativeCallToActionText')
             ),
-            emoji: { symbol: '🐾', label: 'continue the visit' },
+            emoji: { symbol: '🐾' },
             whereToScrollTo: 'home-modern-world',
           }}
         />
@@ -70,7 +70,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
               text: generateSanitizedDangerouslySetInnerHtml(
                 t('home.modernWorld.alternativeCallToActionText')
               ),
-              emoji: { symbol: '🕵️‍♂️', label: 'continue the visit' },
+              emoji: { symbol: '🕵️‍♂️' },
               whereToScrollTo: 'home-imaginarium',
             }}
           />
@@ -88,7 +88,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
             }}
             alternativeCallToAction={{
               text: { __html: '...&nbsp;toujours pas&nbsp;? ' },
-              emoji: { symbol: '😅', label: 'continue the visit' },
+              emoji: { symbol: '😅' },
               whereToScrollTo: 'home-ancient-world',
             }}
           />
@@ -104,7 +104,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
             }}
             alternativeCallToAction={{
               text: { __html: ' Encore plus bas ?&nbsp; ' },
-              emoji: { symbol: '🧗', label: 'continue the visit' },
+              emoji: { symbol: '🧗' },
               alert:
                 "Allons bon ! Tu t'attendais à quoi ? Les neuf cercles de l'enfer ? Le département design n'avait pas assez de budget pour ça.",
             }}
