@@ -17,7 +17,7 @@ import SecondaryNavbar from './components/elements/navbar/secondary-navbar/Secon
 import NotYet from './components/layout/not-yet/NotYet';
 
 const App = () => {
-  const isDesktopOrLaptop = useMediaQuery({
+  const isDesktop = useMediaQuery({
     query: '(min-device-width: 768px)',
   });
 

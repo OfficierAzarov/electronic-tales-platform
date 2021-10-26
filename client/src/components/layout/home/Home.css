@@ -1,3 +1,5 @@
+/* =======  MOBILE VERSION : start ========= */
+
 #home #mansion svg {
   background: linear-gradient(
     180deg,
@@ -15,17 +17,7 @@
 
 #home #home-worlds-container img {
   padding-top: 2rem;
-}
-
-#home #home-safe-space {
-  display: flex;
-  justify-content: center;
-  margin-top: 4em;
-}
-
-#home #home-safe-space h2 {
-  width: 90%;
-  margin-bottom: 1rem;
+  margin-bottom: 4em;
 }
 
 #home .alternative-cta {
@@ -84,9 +76,20 @@
 }
 
 #home .home-door h2 {
+  width: 90%;
   margin-bottom: 1.5rem;
 }
 
 #home #spacer-small {
   height: 10vh;
+}
+
+/* =======  MOBILE VERSION : end ========= */
+
+/* =======  DESKTOP VERSION : start ========= */
+
+@media only screen and (min-width: 768px) {
+  #home #home-worlds-container img {
+    width: 30%;
+  }
 }

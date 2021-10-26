@@ -20,3 +20,7 @@ export const sanitizeWithExceptionsForVideos = (unsanitizedHtml) => {
 export const sanitize = (unsanitizedHtml) => {
   return DOMPurify.sanitize(unsanitizedHtml);
 };
+
+export const generateSanitizedDangerouslySetInnerHtml = (unsanitizedHtml) => {
+  return { __html: DOMPurify.sanitize(unsanitizedHtml) };
+};
