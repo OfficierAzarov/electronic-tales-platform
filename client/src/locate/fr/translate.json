@@ -13,11 +13,20 @@
     },
     "imaginarium": {
       "title": "Imaginarium",
-      "description": "Apprends à programmer entre les lignes.",
-      "alternativeCallToActionText": "...&nbsp;mmh, qu'est-ce qu'on a d'autre en magasin&nbsp;?&nbsp;"
+      "description": "Imprègne-toi des mythes et légendes de la bits generation.",
+      "alternativeCallToActionText": "...&nbsp;toujours pas&nbsp;?"
+    },
+    "ancientWorld": {
+      "title": "Ancient World",
+      "description": "Plonge dans le monde englouti de la computer science.",
+      "alternativeCallToActionText": "Encore plus bas ?&nbsp;",
+      "alert": "Allons bon ! Tu t'attendais à quoi ? Les neuf cercles de l'enfer ? Le département design n'avait pas assez de budget pour ça."
     },
     "common": {
       "enterButtonText": "Entrer"
     }
+  },
+  "secondaryNavbar": {
+    "goBackHome": "Retourner <br /> au manoir"
   }
 }

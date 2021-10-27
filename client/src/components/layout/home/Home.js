@@ -78,16 +78,18 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
         <Bounce bottom duration={2000}>
           <HomeCard
             idForScroll="home-imaginarium"
-            title="Imaginarium"
-            description={
-              <Fragment>Imprègne-toi des mythes et légendes de la bits generation.</Fragment>
-            }
+            title={t('home.imaginarium.title')}
+            description={generateSanitizedDangerouslySetInnerHtml(
+              t('home.imaginarium.description')
+            )}
             callToAction={{
               link: '/imaginarium',
               text: 'Entrer',
             }}
             alternativeCallToAction={{
-              text: { __html: '...&nbsp;toujours pas&nbsp;? ' },
+              text: generateSanitizedDangerouslySetInnerHtml(
+                t('home.imaginarium.alternativeCallToActionText')
+              ),
               emoji: { symbol: '😅' },
               whereToScrollTo: 'home-ancient-world',
             }}
@@ -96,17 +98,20 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
         <Bounce bottom duration={2000}>
           <HomeCard
             idForScroll="home-ancient-world"
-            title="Ancient World"
-            description={<Fragment>Plonge dans le monde englouti de la computer science.</Fragment>}
+            title={t('home.ancientWorld.title')}
+            description={generateSanitizedDangerouslySetInnerHtml(
+              t('home.ancientWorld.description')
+            )}
             callToAction={{
               link: '/ancient-world',
               text: 'Entrer',
             }}
             alternativeCallToAction={{
-              text: { __html: ' Encore plus bas ?&nbsp; ' },
+              text: generateSanitizedDangerouslySetInnerHtml(
+                t('home.ancientWorld.alternativeCallToActionText')
+              ),
               emoji: { symbol: '🧗' },
-              alert:
-                "Allons bon ! Tu t'attendais à quoi ? Les neuf cercles de l'enfer ? Le département design n'avait pas assez de budget pour ça.",
+              alert: t('home.ancientWorld.alert'),
             }}
           />
         </Bounce>
@@ -136,29 +141,26 @@ const HomeCard = ({ idForScroll, title, description, callToAction, alternativeCa
           {htmlOrText(callToAction.text)}
         </Link>
         <div className="alternative-cta">
-          {alternativeCallToAction.whereToScrollTo && (
-            <ScrollLink
-              to={alternativeCallToAction.whereToScrollTo}
-              spy={true}
-              smooth={true}
-              duration={500}
-              offset={offset}
-            >
-              {htmlOrText(alternativeCallToAction.text)}
-              <Emoji
-                symbol={alternativeCallToAction.emoji.symbol}
-                label={alternativeCallToAction.emoji.label}
-              />
-              <div className="chevron-container">
-                <ChevronDown />
-              </div>
-            </ScrollLink>
-          )}
-          {alternativeCallToAction.alert && (
+          <ScrollLink
+            to={alternativeCallToAction.whereToScrollTo}
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={offset}
+          >
+            {htmlOrText(alternativeCallToAction.text)}
+            <Emoji
+              symbol={alternativeCallToAction.emoji.symbol}
+              label={alternativeCallToAction.emoji.label}
+            />
+          </ScrollLink>
+          {alternativeCallToAction.alert ? (
             <div className="chevron-container" onClick={() => alert(alternativeCallToAction.alert)}>
               <ChevronDown />
             </div>
-          )}
+          ) : <div className="chevron-container">
+            <ChevronDown />
+          </div>}
         </div>
       </div>
     </div>
