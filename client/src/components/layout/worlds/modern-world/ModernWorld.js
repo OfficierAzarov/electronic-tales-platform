@@ -25,7 +25,9 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
         <div className="line-title-wrapper world-title-wrapper">
           <h2 className="world-title neon flicker">Modern World</h2>
         </div>
+
         <Lab
+          // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
           text="Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus&nbsp;: tu seras emmené·e vers notre Slack, the place to be du pool de co-création&nbsp;!"
           cards={[
             {
@@ -50,6 +52,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
           ]}
         />
         <SwipeDoor
+          // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
           id={WORLDS.MODERN_WORLD}
           link="/modern-world/too-late-to-ask"
           text="Toi aussi, tu te poses encore des questions de programmation dont tu devrais déjà connaître les

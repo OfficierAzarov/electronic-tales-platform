@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import Fade from 'react-reveal/Fade';
+import { useTranslation } from 'react-i18next';
+import { generateSanitizedDangerouslySetInnerHtml } from '../../../../utils/data-processing/sanitize';
 
 import './Imaginarium.css';
 
@@ -17,6 +19,8 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
   useEffect(() => {
     getAllArticlesInfos(WORLDS.IMAGINARIUM);
   }, []);
+
+  const { t } = useTranslation();
 
   return (
     <Fade duration={800}>

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import { connect } from 'react-redux';
@@ -158,9 +158,11 @@ const HomeCard = ({ idForScroll, title, description, callToAction, alternativeCa
             <div className="chevron-container" onClick={() => alert(alternativeCallToAction.alert)}>
               <ChevronDown />
             </div>
-          ) : <div className="chevron-container">
-            <ChevronDown />
-          </div>}
+          ) : (
+            <div className="chevron-container">
+              <ChevronDown />
+            </div>
+          )}
         </div>
       </div>
     </div>

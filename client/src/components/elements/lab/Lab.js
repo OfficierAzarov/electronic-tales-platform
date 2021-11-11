@@ -3,6 +3,8 @@ import Toggle from 'react-toggle';
 import 'react-toggle/style.css';
 import { Animated } from 'react-animated-css';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'react-i18next';
+import { generateSanitizedDangerouslySetInnerHtml } from '../../../utils/data-processing/sanitize';
 
 import './Lab.css';
 
@@ -12,14 +14,16 @@ import testTube from '../../../resources/img/icons/test-tube.png';
 const Lab = ({ text, cards }) => {
   const [isLabOpen, setIsLabOpen] = useState(false);
 
+  const { t } = useTranslation();
+
   return (
     <Fragment>
       <div id="lab-switch-container">
         {isLabOpen ? (
-          <span>Fermer le labo&nbsp;🗝️</span>
+          <span>{t('common.lab.close')}&nbsp;🗝️</span>
         ) : (
           <span>
-            Ouvrir le labo&nbsp;
+            {t('common.lab.open')}&nbsp;
             <img src={testTube} loading="auto" alt="open the lab test tube emoji" />{' '}
           </span>
         )}

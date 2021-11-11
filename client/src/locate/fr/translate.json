@@ -1,4 +1,14 @@
 {
+  "common": {
+    "secondaryNavbar": {
+      "goBackHome": "Retourner <br /> au manoir",
+      "joinUs": "Nous rejoindre"
+    },
+    "lab": {
+      "open": "Ouvrir le labo",
+      "close": "Fermer le labo"
+    }
+  },
   "home": {
     "safeSpace": {
       "title": "Dégommons le syndrome de l'imposteur ensemble.",
@@ -57,10 +67,5 @@
       }
     }
   },
-  "common": {
-    "secondaryNavbar": {
-      "goBackHome": "Retourner <br /> au manoir",
-      "joinUs": "Nous rejoindre"
-    }
-  }
+  "modernWorld": {}
 }
