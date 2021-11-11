@@ -20,7 +20,11 @@ const MiniNav = () => {
         className="mini-nav-link"
       >
         <WhyIcon />
-        <sub>Pourquoi</sub>
+        <sub
+          dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+            t('safeSpace.miniNavbar.why')
+          )}
+        ></sub>
       </NavLink>
       <NavLink
         exact
@@ -29,9 +33,11 @@ const MiniNav = () => {
         className="mini-nav-link"
       >
         <QuotesIcon />
-        <sub dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
-          t('safeSpace.miniNavbar.microExperiences'))}>
-        </sub>
+        <sub
+          dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+            t('safeSpace.miniNavbar.microExperiences')
+          )}
+        ></sub>
       </NavLink>
       <NavLink
         exact
@@ -40,7 +46,11 @@ const MiniNav = () => {
         className="mini-nav-link"
       >
         <ChatIcon />
-        <sub>Notre Slack</sub>
+        <sub
+          dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+            t('safeSpace.miniNavbar.ourSlack')
+          )}
+        ></sub>
       </NavLink>
     </div>
   );

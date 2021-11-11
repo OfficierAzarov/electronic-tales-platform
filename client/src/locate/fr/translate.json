@@ -28,7 +28,9 @@
   },
   "safeSpace": {
     "miniNavbar": {
-      "microExperiences": "Micro-vécus"
+      "why": "Pourquoi",
+      "microExperiences": "Micro-vécus",
+      "ourSlack": "Notre Slack"
     }
   },
   "common": {
