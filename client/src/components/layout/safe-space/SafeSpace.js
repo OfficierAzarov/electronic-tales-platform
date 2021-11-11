@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Emoji from 'a11y-react-emoji';
+import { useTranslation } from 'react-i18next';
+import { generateSanitizedDangerouslySetInnerHtml } from '../../../utils/data-processing/sanitize';
 
 import './SafeSpace.css';
 import MiniNav from '../../elements/mini-nav/MiniNav';
@@ -10,82 +12,65 @@ const SafeSpace = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <div id="safe-space" className="container">
       <div className="line-title-wrapper world-title-wrapper">
-        <h2 className="world-title neon flicker">Safe space</h2>
+        <h2 className="world-title neon flicker">{t('safeSpace.title')}</h2>
       </div>
       <MiniNav />
       <div className="line-title-wrapper category-title-wrapper">
-        <h3 className="title">Pourquoi&nbsp;?</h3>
+        <h3
+          className="title"
+          dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+            t('safeSpace.body.why.title')
+          )}
+        ></h3>
       </div>
-      <p>
-        Grâce à l'explosion des formations courtes, de plus en plus de devs viennent de milieux
-        différents, et c'est tant mieux&nbsp;!
-        <br />
-        <br />
-        Cependant, une fois en entreprise, ces personnes sentent parfois qu'un{' '}
-        <strong>«&nbsp;mur de verre&nbsp;»</strong> les sépare de leurs collègues issu·e·s de
-        parcours plus traditionnels. Un mur bâti sur des{' '}
-        <strong>références culturelles ou techniques</strong> qu'ils n'ont pas&nbsp;
-        <Emoji symbol="🖖" label="start trek" />
-        &nbsp;
-        <Emoji symbol="🥚" label="easter egg" />
-        &nbsp;
-        <Emoji symbol="❓" label="question" />
-        &nbsp;
-        <Emoji symbol="🚀" label="rocket science" />
-        <br />
-        <br />
-        Ajoutez à cela la <strong>complexité propre au développement</strong> (programmer est dur,
-        les technos évoluent très vite, il est impossible de tout savoir...), et tous les
-        ingrédients sont réunis pour développer un bon{' '}
-        <strong>syndrome de l'imposteur bien tapé</strong>.
-      </p>
+      <p
+        dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+          t('safeSpace.body.why.body')
+        )}
+      ></p>
       <div className="line-title-wrapper category-title-wrapper">
-        <h3 className="title">Débuggons ça&nbsp;!</h3>
+        <h3
+          className="title"
+          dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+            t('safeSpace.body.debug.title')
+          )}
+        ></h3>
       </div>
-      <p>
-        <span className="big-text">
-          Le syndrome de l'imposteur est un mal très répandu chez les développeurs·euses.
-        </span>
-        <br />
-        <br />
-        Le problème, c'est qu'on ose rarement en parler <Emoji symbol="😶" label="silence" />
-        <br />
-        <br />
-        Or, en discuter avec d'autres devs est un premier pas essentiel pour&nbsp;:
-      </p>
-      <ul>
-        <li>
-          Se rendre compte qu'on n'est pas seul·e à galérer&nbsp;
-          <Emoji symbol="🚣🏼" label="struggle" />
-        </li>
-        <li>
-          Progresser techniquement sur des bases plus saines&nbsp;
-          <Emoji symbol="💪" label="progress" />
-        </li>
-        <li>
-          Entamer ensemble un mouvement de détox&nbsp;
-          <Emoji symbol="🌱" label="detox plant" />
-          <Emoji symbol="🍵" label="detox tea" /> d'un milieu parfois toxique&nbsp;
-          <Emoji symbol="🤢" label="nausea emoji" />
-          <Emoji symbol="☢️" label="radioactive sign" />
-        </li>
-      </ul>
+      <p
+        dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+          t('safeSpace.body.debug.body.text')
+        )}
+      ></p>
+      <ul
+        dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+          t('safeSpace.body.debug.body.list')
+        )}
+      ></ul>
       <div className="line-title-wrapper category-title-wrapper">
-        <h3 className="title">Go go go</h3>
+        <h3
+          className="title"
+          dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+            t('safeSpace.body.go.title')
+          )}
+        ></h3>
       </div>
       <p>
-        Convaincu·e&nbsp;?
+        <p
+          dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+            t('safeSpace.body.go.body.text')
+          )}
+        ></p>
+        <Link to="/safe-space/quotes">{t('safeSpace.body.go.body.link1Name')}</Link>,{' '}
+        {t('safeSpace.body.go.body.link1Description')}.
         <br />
         <br />
-        Jette un œil à <Link to="/safe-space/quotes">Micro-vécus</Link>, le recueil collaboratif des
-        situations toxiques du milieu du dév.
-        <br />
-        <br />
-        Viens discuter de tes problèmes avec d'autres devs sur notre{' '}
-        <Link to="/safe-space/chat">Slack</Link>.
+        {t('safeSpace.body.go.body.link2Description')}{' '}
+        <Link to="/safe-space/chat">{t('safeSpace.body.go.body.link2Name')}</Link>.
       </p>
     </div>
   );

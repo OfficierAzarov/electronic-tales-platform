@@ -27,10 +27,34 @@
     }
   },
   "safeSpace": {
+    "title": "Safe space",
     "miniNavbar": {
       "why": "Pourquoi",
       "microExperiences": "Micro-vécus",
       "ourSlack": "Notre Slack"
+    },
+    "body": {
+      "why": {
+        "title": "Pourquoi&nbsp;?",
+        "body": "Grâce à l'explosion des formations courtes, de plus en plus de devs viennent de milieux différents, et c'est tant mieux&nbsp;!<br /><br />Cependant, une fois en entreprise, ces personnes sentent parfois qu'un <strong>«&nbsp;mur de verre&nbsp;»</strong> les sépare de leurs collègues issu·e·s de parcours plus traditionnels. Un mur bâti sur des <strong>références culturelles ou techniques</strong> qu'ils n'ont pas&nbsp;🖖&nbsp;🥚&nbsp;🚀&nbsp;❓&nbsp;🚀<br /><br />Ajoutez à cela la <strong>complexité propre au développement</strong> (programmer est dur, les technos évoluent très vite, il est impossible de tout savoir...), et tous les ingrédients sont réunis pour développer un bon <strong>syndrome de l'imposteur bien tapé</strong>."
+      },
+      "debug": {
+        "title": "Débuggons ça&nbsp;!",
+        "body": {
+          "text": "<span className='big-text'>Le syndrome de l'imposteur est un mal très répandu chez les développeurs·euses.</span><br /><br />Le problème, c'est qu'on ose rarement en parler&nbsp;😶<br /> <br />Or, en discuter avec d'autres devs est un premier pas essentiel pour&nbsp;:",
+          "list": "<li>Se rendre compte qu'on n'est pas seul·e à galérer&nbsp;🚣🏼</li><li>Progresser techniquement sur des bases plus saines&nbsp;💪</li><li>Entamer ensemble un mouvement de détox&nbsp;🌱&nbsp;🍵 d'un milieu parfois toxique&nbsp;🤢&nbsp;☢️</li>"
+        }
+      },
+      "go": {
+        "title": "Go go go",
+        "body": {
+          "text": "Convaincu·e&nbsp;?<br /><br />Jette un œil à ",
+          "link1Name": "Micro-vécus",
+          "link1Description": "le recueil collaboratif des situations toxiques du milieu du dév",
+          "link2Description": "Viens discuter de tes problèmes avec d'autres devs sur notre",
+          "link2Name": "Slack"
+        }
+      }
     }
   },
   "common": {
