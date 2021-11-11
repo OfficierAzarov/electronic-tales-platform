@@ -26,7 +26,15 @@
       "enterButtonText": "Entrer"
     }
   },
-  "secondaryNavbar": {
-    "goBackHome": "Retourner <br /> au manoir"
+  "safeSpace": {
+    "miniNavbar": {
+      "microExperiences": "Micro-vécus"
+    }
+  },
+  "common": {
+    "secondaryNavbar": {
+      "goBackHome": "Retourner <br /> au manoir",
+      "joinUs": "Nous rejoindre"
+    }
   }
 }

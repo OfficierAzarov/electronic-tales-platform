@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { NavLink } from 'react-router-dom';
 
 import './MiniNav.css';
@@ -6,8 +7,10 @@ import './MiniNav.css';
 import { ReactComponent as ChatIcon } from '../../../resources/img/icons/chat.svg';
 import { ReactComponent as QuotesIcon } from '../../../resources/img/icons/notebook.svg';
 import { ReactComponent as WhyIcon } from '../../../resources/img/icons/lightbulb.svg';
+import { generateSanitizedDangerouslySetInnerHtml } from '../../../utils/data-processing/sanitize';
 
 const MiniNav = () => {
+  const { t } = useTranslation();
   return (
     <div className="mini-nav">
       <NavLink
@@ -26,7 +29,9 @@ const MiniNav = () => {
         className="mini-nav-link"
       >
         <QuotesIcon />
-        <sub>Micro-vécus</sub>
+        <sub dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+          t('safeSpace.miniNavbar.microExperiences'))}>
+        </sub>
       </NavLink>
       <NavLink
         exact
