@@ -1,14 +1,17 @@
 import React, { Fragment } from 'react';
 import { PropTypes } from 'prop-types';
+import { useTranslation } from 'react-i18next';
 
 import CardsHub from '../../cards-hub/CardsHub';
 
 const SwipeDoor = ({ link, text, id }) => {
+  const { t } = useTranslation();
+
   // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
   const card = [
     {
       _id: `${id}Id`,
-      title: 'Le tinder du dev 🔥',
+      title: t('common.devTinder.title'),
       link: {
         path: link,
         openInNewTab: false,

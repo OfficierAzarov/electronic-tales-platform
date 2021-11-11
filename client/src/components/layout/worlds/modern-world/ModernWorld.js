@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import Fade from 'react-reveal/Fade';
+import { useTranslation } from 'react-i18next';
 
 import './ModernWorld.css';
 
@@ -19,20 +20,22 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
     getAllArticlesInfos(WORLDS.MODERN_WORLD);
   }, []);
 
+  const { t } = useTranslation();
+
   return (
     <Fade duration={1500}>
       <div id="modern-world" className="world-page container">
         <div className="line-title-wrapper world-title-wrapper">
-          <h2 className="world-title neon flicker">Modern World</h2>
+          <h2 className="world-title neon flicker">{t('modernWorld.title')}</h2>
         </div>
 
         <Lab
           // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
-          text="Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus&nbsp;: tu seras emmené·e vers notre Slack, the place to be du pool de co-création&nbsp;!"
+          text={t('modernWorld.lab.description')}
           cards={[
             {
               _id: 'salaryCardId',
-              title: 'Le mur des salaires des devs juniors : partageons les vrais chiffres !',
+              title: t('modernWorld.lab.cards.salary'),
               link: {
                 path: SLACK,
                 openInNewTab: true,
@@ -41,8 +44,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
             },
             {
               _id: 'tamagotchiCardId',
-              title:
-                'Le tamagotchi des devs : tracke tes progrès et compare-les à ceux des autres en toute bienveillance',
+              title: t('modernWorld.lab.cards.tamagotchi'),
               link: {
                 path: SLACK,
                 openInNewTab: true,
@@ -55,8 +57,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
           // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
           id={WORLDS.MODERN_WORLD}
           link="/modern-world/too-late-to-ask"
-          text="Toi aussi, tu te poses encore des questions de programmation dont tu devrais déjà connaître les
-        réponses&nbsp;?"
+          text={t('modernWorld.swipeDoor')}
         />
         <RoadmapDoor />
         <AllArticlesOfTheWorld articles={articles} />

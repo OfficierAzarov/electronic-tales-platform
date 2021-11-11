@@ -7,6 +7,9 @@
     "lab": {
       "open": "Ouvrir le labo",
       "close": "Fermer le labo"
+    },
+    "devTinder": {
+      "title": "Le tinder du dev 🔥"
     }
   },
   "home": {
@@ -67,5 +70,21 @@
       }
     }
   },
-  "modernWorld": {}
+  "modernWorld": {
+    "title": "Modern World",
+    "lab": {
+      "description": "Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus : tu seras emmené·e vers notre Slack, the place to be du pool de co-création !",
+      "cards": {
+        "salary": "Le mur des salaires des devs juniors : partageons les vrais chiffres !",
+        "tamagotchi": "Le tamagotchi des devs : tracke tes progrès et compare-les à ceux des autres en toute bienveillance"
+      }
+    },
+    "swipeDoor": "Toi aussi, tu te poses encore des questions de programmation dont tu devrais déjà connaître les réponses ?",
+    "roadmap": {
+      "description": "Perdu·e dans le monde du dev ? Nos cartes sont là pour te guider.",
+      "cleanCode": {
+        "title": "Coder proprement : les bases"
+      }
+    }
+  }
 }
