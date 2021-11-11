@@ -22,7 +22,11 @@ const SwipeDoor = ({ link, text, id }) => {
 
   return (
     <Fragment>
-      <CardsHub categoryName="Too late to ask" categoryArticles={card} text={text} />
+      <CardsHub
+        categoryName={t('common.devTinder.categoryTitle')}
+        categoryArticles={card}
+        text={text}
+      />
     </Fragment>
   );
 };

@@ -25,7 +25,7 @@ const RoadmapDoor = () => {
   return (
     <Fragment>
       <CardsHub
-        categoryName="Roadmaps"
+        categoryName={t('modernWorld.roadmap.categoryTitle')}
         categoryArticles={card}
         text={t('modernWorld.roadmap.description')}
       />
