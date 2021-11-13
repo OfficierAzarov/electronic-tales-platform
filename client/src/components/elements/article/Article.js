@@ -7,14 +7,14 @@ import './Article.css';
 import Error from '../error/Error';
 import ArticleContent from './article-content/ArticleContent';
 import Modal from '../modal/Modal';
-import { setCurrentArticle, cleanCurrentArticle } from '../../../redux/actions/article';
+import { getCurrentArticle, cleanCurrentArticle } from '../../../redux/actions/article';
 import ReadingTime from '../reading-time/ReadingTime';
 import GoBackButton from '../buttons/go-back/GoBackButton';
 import HtmlContent from '../html-content/HtmlContent';
 
-const Article = ({ match, article, setCurrentArticle, cleanCurrentArticle }) => {
+const Article = ({ match, article, getCurrentArticle, cleanCurrentArticle }) => {
   useEffect(() => {
-    setCurrentArticle(match.params.slug);
+    getCurrentArticle(match.params.slug);
     return () => {
       cleanCurrentArticle();
     };
@@ -50,7 +50,7 @@ const Article = ({ match, article, setCurrentArticle, cleanCurrentArticle }) => 
 
 Article.propTypes = {
   article: PropTypes.object.isRequired,
-  setCurrentArticle: PropTypes.func.isRequired,
+  getCurrentArticle: PropTypes.func.isRequired,
   cleanCurrentArticle: PropTypes.func.isRequired,
 };
 
@@ -58,4 +58,4 @@ const mapStateToProps = (state) => ({
   article: state.article.currentArticle,
 });
 
-export default connect(mapStateToProps, { setCurrentArticle, cleanCurrentArticle })(Article);
+export default connect(mapStateToProps, { getCurrentArticle, cleanCurrentArticle })(Article);

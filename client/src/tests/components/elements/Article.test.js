@@ -5,7 +5,7 @@ import configureStore from 'redux-mock-store';
 
 import Article from '../../../components/elements/article/Article';
 import { setCurrentArticle } from '../../../redux/actions/article';
-import { SET_CURRENT_ARTICLE } from '../../../redux/actions/types';
+import { GET_CURRENT_ARTICLE } from '../../../redux/actions/types';
 import { articlesSource } from '../../../mocks/articles';
 import { questionsSource } from '../../../mocks/questions';
 
@@ -37,7 +37,7 @@ describe('Article redux', () => {
     const expectedAction = [
       {
         payload: article,
-        type: SET_CURRENT_ARTICLE,
+        type: GET_CURRENT_ARTICLE,
       },
     ];
     store.dispatch(setCurrentArticle('regular-articles', 'what-is-a-port'));
@@ -49,7 +49,7 @@ describe('Article redux', () => {
     const expectedAction = [
       {
         payload: question,
-        type: SET_CURRENT_ARTICLE,
+        type: GET_CURRENT_ARTICLE,
       },
     ];
     store.dispatch(setCurrentArticle('swipe-answers', 'what-is-a-backdoor'));

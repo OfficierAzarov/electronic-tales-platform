@@ -1,5 +1,5 @@
 import {
-  SET_CURRENT_ARTICLE,
+  GET_CURRENT_ARTICLE,
   CLEAN_CURRENT_ARTICLE,
   GET_ALL_ARTICLES_INFOS,
   ARTICLES_ERROR,
@@ -22,7 +22,7 @@ const initialState = {
 export default function (state = initialState, action) {
   const { type, payload } = action;
   switch (type) {
-    case SET_CURRENT_ARTICLE:
+    case GET_CURRENT_ARTICLE:
       return {
         ...state,
         currentArticle: payload[0],

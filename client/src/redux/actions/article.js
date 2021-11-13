@@ -1,5 +1,5 @@
 import {
-  SET_CURRENT_ARTICLE,
+  GET_CURRENT_ARTICLE,
   CLEAN_CURRENT_ARTICLE,
   GET_ALL_ARTICLES_INFOS,
   ARTICLES_ERROR,
@@ -7,11 +7,11 @@ import {
 
 import api from '../../utils/urls/api';
 
-export const setCurrentArticle = (slug) => async (dispatch) => {
+export const getCurrentArticle = (slug) => async (dispatch) => {
   try {
     const res = await api.get(`/articles/${slug}`);
     dispatch({
-      type: SET_CURRENT_ARTICLE,
+      type: GET_CURRENT_ARTICLE,
       payload: res.data,
     });
   } catch (error) {
