@@ -12,7 +12,7 @@ import ReadingTime from '../reading-time/ReadingTime';
 import GoBackButton from '../buttons/go-back/GoBackButton';
 import HtmlContent from '../html-content/HtmlContent';
 
-const Article = ({ match, article, getCurrentArticle, cleanCurrentArticle }) => {
+const Article = ({ match, article, getCurrentArticle, cleanCurrentArticle, preferredLanguage }) => {
   useEffect(() => {
     getCurrentArticle(match.params.slug);
     return () => {
@@ -26,16 +26,16 @@ const Article = ({ match, article, getCurrentArticle, cleanCurrentArticle }) => 
         {article && (
           <Fragment>
             <GoBackButton />
-            <ReadingTime articleContent={article.content} />
+            <ReadingTime articleContent={article.content[preferredLanguage]} />
           </Fragment>
         )}
       </div>
       {article && article !== undefined ? (
         <Fragment>
           <h2>
-            <HtmlContent content={article.title} />
+            <HtmlContent content={article.title[preferredLanguage]} />
           </h2>
-          <ArticleContent articleContent={article.content} />
+          <ArticleContent articleContent={article.content[preferredLanguage]} />
           <Modal />
         </Fragment>
       ) : (
@@ -56,6 +56,7 @@ Article.propTypes = {
 
 const mapStateToProps = (state) => ({
   article: state.article.currentArticle,
+  preferredLanguage: state.language.preferredLanguage,
 });
 
 export default connect(mapStateToProps, { getCurrentArticle, cleanCurrentArticle })(Article);

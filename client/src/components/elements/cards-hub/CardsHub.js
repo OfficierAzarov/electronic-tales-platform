@@ -1,6 +1,7 @@
 import React from 'react';
 import { SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
+import { PropTypes } from 'prop-types';
 
 import './CardsHub.css';
 import Card from '../card/Card';
@@ -46,7 +47,7 @@ const CardsHub = ({ categoryName, categoryArticles, text, preferredLanguage }) =
                 key={article._id}
                 link={buildLink(article)}
                 imageUrl={article.thumbnail}
-                title={article.title}
+                title={article.title[preferredLanguage]}
                 size="big"
               />
             ))}
@@ -55,6 +56,13 @@ const CardsHub = ({ categoryName, categoryArticles, text, preferredLanguage }) =
       </div>
     </div>
   );
+};
+
+CardsHub.propTypes = {
+  categoryName: PropTypes.string.isRequired,
+  categoryArticles: PropTypes.array.isRequired,
+  text: PropTypes.string.isRequired,
+  preferredLanguage: PropTypes.string.isRequired,
 };
 
 export default CardsHub;
