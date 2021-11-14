@@ -4,16 +4,13 @@ const ArticleSchema = new mongoose.Schema({
   world: String,
   type: String,
   title: {
-    type: String,
-    required: true,
+    fr: String,
+    en: String,
   },
-  slug: {
-    type: String,
-    required: true,
-  },
+  slug: String,
   content: {
-    type: String,
-    required: true,
+    fr: String,
+    en: String,
   },
   richLinks: [
     {
@@ -24,7 +21,7 @@ const ArticleSchema = new mongoose.Schema({
     },
   ],
   thumbnail: String,
-  category: String,
+  category: { fr: String, en: String },
 });
 
 module.exports = mongoose.model('article', ArticleSchema);

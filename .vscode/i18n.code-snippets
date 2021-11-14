@@ -1,0 +1,29 @@
+{
+  "i18n dependencies": {
+    "scope": "javascript,typescript",
+    "prefix": "i18nimports",
+    "body": [
+      "import { useTranslation } from 'react-i18next';",
+      "import { generateSanitizedDangerouslySetInnerHtml } from '$0';"
+    ],
+    "description": "Imports for i18n dependencies"
+  },
+  "i18n useTranslation hook": {
+    "scope": "javascript,typescript",
+    "prefix": "useTranslation",
+    "body": ["const { t } = useTranslation();"],
+    "description": "i18n useTranslation hook"
+  },
+  "i18n html": {
+    "scope": "javascript,typescript",
+    "prefix": "i18nHtml",
+    "body": ["dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(t('$0'))}"],
+    "description": "i18n html"
+  },
+  "i18n text": {
+    "scope": "javascript,typescript",
+    "prefix": "i18nText",
+    "body": ["{t('$0')}"],
+    "description": "i18n text"
+  }
+}
