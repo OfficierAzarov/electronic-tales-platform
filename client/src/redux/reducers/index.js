@@ -5,6 +5,7 @@ import page from './page';
 import modal from './modal';
 import question from './tooLateToAsk';
 import quote from './quote';
+import language from './language';
 
 export default combineReducers({
   category,
@@ -13,4 +14,5 @@ export default combineReducers({
   modal,
   question,
   quote,
+  language,
 });

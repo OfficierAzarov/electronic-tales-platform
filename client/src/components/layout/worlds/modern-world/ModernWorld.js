@@ -15,7 +15,7 @@ import { SLACK } from '../../../../dictionnary/externalElectronicTalesLinks';
 import { MODERN_WORLD_IMAGES_PATH } from '../../../../dictionnary/internalImagesPathes';
 import RoadmapDoor from '../../../elements/roadmap/roadmap-door/RoadmapDoor';
 
-const ModernWorld = ({ articles, getAllArticlesInfos }) => {
+const ModernWorld = ({ articles, getAllArticlesInfos, preferredLanguage }) => {
   useEffect(() => {
     getAllArticlesInfos(WORLDS.MODERN_WORLD);
   }, []);
@@ -60,7 +60,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
           text={t('modernWorld.swipeDoor')}
         />
         <RoadmapDoor />
-        <AllArticlesOfTheWorld articles={articles} />
+        <AllArticlesOfTheWorld articles={articles} preferredLanguage={preferredLanguage} />
       </div>
     </Fade>
   );
@@ -73,6 +73,7 @@ ModernWorld.propTypes = {
 
 const mapStateToProps = (state) => ({
   articles: state.article.allArticles,
+  preferredLanguage: state.language.preferredLanguage,
 });
 
 export default connect(mapStateToProps, { getAllArticlesInfos })(ModernWorld);

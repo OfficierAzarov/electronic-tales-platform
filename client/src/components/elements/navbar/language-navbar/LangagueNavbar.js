@@ -1,10 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 import './LangagueNavbar.css';
 
-const LangagueNavbar = () => {
+import { setLanguage } from '../../../../redux/actions/language';
+
+const LangagueNavbar = ({ setLanguage }) => {
   const { t, i18n } = useTranslation();
 
   const languages = {
@@ -15,6 +18,7 @@ const LangagueNavbar = () => {
   const change = (lng) => {
     console.log('lang changed to ' + lng);
     i18n.changeLanguage(lng);
+    setLanguage(lng);
   };
 
   return (
@@ -34,4 +38,4 @@ const LangagueNavbar = () => {
 
 LangagueNavbar.propTypes = {};
 
-export default LangagueNavbar;
+export default connect(null, { setLanguage })(LangagueNavbar);

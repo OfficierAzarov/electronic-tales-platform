@@ -7,7 +7,7 @@ import Card from '../card/Card';
 import { Fragment } from 'react';
 import SwiperJsHack from '../swiperjs-hack/SwiperJsHack';
 
-const CardsHub = ({ categoryName, categoryArticles, text }) => {
+const CardsHub = ({ categoryName, categoryArticles, text, preferredLanguage }) => {
   const buildLink = (article) => {
     if (article.link != null) {
       return article.link;
@@ -34,7 +34,7 @@ const CardsHub = ({ categoryName, categoryArticles, text }) => {
                   key={article._id}
                   link={buildLink(article)}
                   imageUrl={article.thumbnail}
-                  title={article.title}
+                  title={article.title[preferredLanguage]}
                 />
               </SwiperSlide>
             ))}

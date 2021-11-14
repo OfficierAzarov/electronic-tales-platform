@@ -1,8 +1,9 @@
 import React from 'react';
 import { Fragment } from 'react';
+import { PropTypes } from 'prop-types';
 import CardsHub from '../../cards-hub/CardsHub';
 
-const AllArticlesOfTheWorld = ({ articles }) => {
+const AllArticlesOfTheWorld = ({ articles, preferredLanguage }) => {
   const deduceCategoriesFromArticles = (articles) => {
     if (articles.length !== 0) {
       let categories = groupBy(articles, 'category');
@@ -11,7 +12,12 @@ const AllArticlesOfTheWorld = ({ articles }) => {
         const categoryName = Object.keys(categories)[i];
         const categoryArticles = categories[Object.keys(categories)[i]];
         componentsToReturn.push(
-          <CardsHub key={i} categoryName={categoryName} categoryArticles={categoryArticles} />
+          <CardsHub
+            key={i}
+            categoryName={categoryName}
+            categoryArticles={categoryArticles}
+            preferredLanguage={preferredLanguage}
+          />
         );
       }
       return componentsToReturn;
@@ -31,6 +37,11 @@ const AllArticlesOfTheWorld = ({ articles }) => {
   };
 
   return <Fragment>{deduceCategoriesFromArticles(articles)}</Fragment>;
+};
+
+AllArticlesOfTheWorld.propTypes = {
+  articles: PropTypes.array.isRequired,
+  preferredLanguage: PropTypes.string.isRequired,
 };
 
 export default AllArticlesOfTheWorld;
