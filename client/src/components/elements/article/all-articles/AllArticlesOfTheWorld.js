@@ -6,11 +6,17 @@ import CardsHub from '../../cards-hub/CardsHub';
 const AllArticlesOfTheWorld = ({ articles, preferredLanguage }) => {
   const deduceCategoriesFromArticles = (articles) => {
     if (articles.length !== 0) {
-      let categories = groupBy(articles, 'category');
+      let categoryInPreferredLanguage = {
+        firstKey: 'category',
+        secondKey: preferredLanguage,
+      };
+      let articlesGroupedByCategories = groupBy(articles, categoryInPreferredLanguage);
+      console.log(articlesGroupedByCategories);
       const componentsToReturn = [];
-      for (let i = 0; i < Object.keys(categories).length; i++) {
-        const categoryName = Object.keys(categories)[i];
-        const categoryArticles = categories[Object.keys(categories)[i]];
+      for (let i = 0; i < Object.keys(articlesGroupedByCategories).length; i++) {
+        const categoryName = Object.keys(articlesGroupedByCategories)[i];
+        const categoryArticles =
+          articlesGroupedByCategories[Object.keys(articlesGroupedByCategories)[i]];
         componentsToReturn.push(
           <CardsHub
             key={i}
@@ -25,9 +31,10 @@ const AllArticlesOfTheWorld = ({ articles, preferredLanguage }) => {
   };
 
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#grouping_objects_by_a_property
-  const groupBy = (articles, category) => {
+  const groupBy = (articles, propertyToGroupByPath) => {
     return articles.reduce(function (acc, obj) {
-      let key = obj[category];
+      console.log(propertyToGroupByPath);
+      let key = obj[propertyToGroupByPath.firstKey][propertyToGroupByPath.secondKey];
       if (!acc[key]) {
         acc[key] = [];
       }
