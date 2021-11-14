@@ -6,10 +6,25 @@ import CardsHub from '../../cards-hub/CardsHub';
 const AllArticlesOfTheWorld = ({ articles, preferredLanguage }) => {
   const deduceCategoriesFromArticles = (articles) => {
     if (articles.length !== 0) {
+      /**
+       * In the article json, category is an objet with as many properties as there are languages on Electronic Tales Platform. So to access the actual word we want to use as the name of the category, we have to follow a path.
+       * Example :
+       * article : {
+       *    ...other properties
+       *  category : {
+       *    "fr": "Détox",
+       *    "en": "Detox"
+       *  }
+       * }
+       * The path will be article.category.fr or article.category.en
+       * => this is the same as article[category][fr] and article[category][en]
+       * And here : article[category][preferredLanguage]
+       */
       let categoryInPreferredLanguage = {
         firstKey: 'category',
         secondKey: preferredLanguage,
       };
+
       let articlesGroupedByCategories = groupBy(articles, categoryInPreferredLanguage);
       console.log(articlesGroupedByCategories);
       const componentsToReturn = [];
