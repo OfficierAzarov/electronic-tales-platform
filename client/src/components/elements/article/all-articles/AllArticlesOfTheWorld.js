@@ -19,6 +19,7 @@ const AllArticlesOfTheWorld = ({ articles, preferredLanguage }) => {
        * The path will be article.category.fr or article.category.en
        * => this is the same as article[category][fr] and article[category][en]
        * And here : article[category][preferredLanguage]
+       * So we create an object containing all the keys needed to follow the path until we get to the value that we will use as the name of the category (ex: "Détox") :
        */
       let categoryInPreferredLanguage = {
         firstKey: 'category',
@@ -46,10 +47,10 @@ const AllArticlesOfTheWorld = ({ articles, preferredLanguage }) => {
   };
 
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#grouping_objects_by_a_property
-  const groupBy = (articles, propertyToGroupByPath) => {
+  const groupBy = (articles, pathOfGroupingProperty) => {
     return articles.reduce(function (acc, obj) {
-      console.log(propertyToGroupByPath);
-      let key = obj[propertyToGroupByPath.firstKey][propertyToGroupByPath.secondKey];
+      console.log(pathOfGroupingProperty);
+      let key = obj[pathOfGroupingProperty.firstKey][pathOfGroupingProperty.secondKey];
       if (!acc[key]) {
         acc[key] = [];
       }
