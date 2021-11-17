@@ -5,6 +5,7 @@ import TinderCard from 'react-tinder-card';
 import { PropTypes } from 'prop-types';
 import Fade from 'react-reveal/Fade';
 import Emoji from 'a11y-react-emoji';
+import { useTranslation } from 'react-i18next';
 
 import {
   getTooLateToAsks,
@@ -32,7 +33,10 @@ export const Swipe = ({
   questions,
   removeATooLateToAsk,
   setHasAlreadyBeenLoaded,
+  preferredLanguage,
 }) => {
+  const { t } = useTranslation();
+
   const [disable, setDisable] = useState(false);
 
   const history = useHistory();
@@ -95,9 +99,9 @@ export const Swipe = ({
               >
                 <p className="swipe-card-content-text">
                   <span className="swipe-card-content-text-title">
-                    <HtmlContent content={question.text} />
+                    <HtmlContent content={question.text[preferredLanguage]} />
                   </span>
-                  <HtmlContent content={question.subtext} />
+                  <HtmlContent content={question.subtext[preferredLanguage]} />
                 </p>
               </div>
             </TinderCard>
@@ -115,7 +119,7 @@ export const Swipe = ({
               disabled={disable}
               onClick={() => swipeActionFromButton('left')}
             >
-              Je sais déjà
+              {t('common.tooLateToAsks.buttons.iAlreadyKnow')}
             </button>
             <button
               id="swipe-right-action"
@@ -123,7 +127,7 @@ export const Swipe = ({
               disabled={disable}
               onClick={() => swipeActionFromButton('right')}
             >
-              Je veux savoir
+              {t('common.tooLateToAsks.buttons.iWantToKnow')}
             </button>
           </div>
         </div>
@@ -182,12 +186,16 @@ const mapStateToProps = (state) => {
   if (getWorld() === WORLDS.MODERN_WORLD)
     return {
       questions: state.question.questionsModernWorld,
+      // Not changing props:
       hasAlreadyBeenLoaded: state.question.hasAlreadyBeenLoaded,
+      preferredLanguage: state.language.preferredLanguage,
     };
   if (getWorld() === WORLDS.IMAGINARIUM)
     return {
       questions: state.question.questionsImaginarium,
+      // Not changing props:
       hasAlreadyBeenLoaded: state.question.hasAlreadyBeenLoaded,
+      preferredLanguage: state.language.preferredLanguage,
     };
 };
 

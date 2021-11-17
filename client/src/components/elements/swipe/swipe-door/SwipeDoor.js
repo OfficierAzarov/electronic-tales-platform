@@ -11,7 +11,7 @@ const SwipeDoor = ({ link, text, id }) => {
   const card = [
     {
       _id: `${id}Id`,
-      title: t('common.devTinder.title'),
+      title: t('common.tooLateToAsks.title'),
       link: {
         path: link,
         openInNewTab: false,
@@ -23,7 +23,7 @@ const SwipeDoor = ({ link, text, id }) => {
   return (
     <Fragment>
       <CardsHub
-        categoryName={t('common.devTinder.categoryTitle')}
+        categoryName={t('common.tooLateToAsks.categoryTitle')}
         categoryArticles={card}
         text={text}
       />

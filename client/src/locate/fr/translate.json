@@ -8,9 +8,13 @@
       "open": "Ouvrir le labo",
       "close": "Fermer le labo"
     },
-    "devTinder": {
+    "tooLateToAsks": {
       "categoryTitle": "Too late to ask",
-      "title": "Le tinder du dev 🔥"
+      "title": "Le tinder du dev 🔥",
+      "buttons": {
+        "iAlreadyKnow": "Je sais déjà",
+        "iWantToKnow": "Je veux savoir"
+      }
     }
   },
   "home": {

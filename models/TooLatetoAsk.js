@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
 
 const TooLateToAskSchema = new mongoose.Schema({
-  text: String,
-  subtext: String,
+  text: {
+    fr: String,
+    en: String,
+  },
+  subtext: { fr: String, en: String },
   thumbnail: String,
   world: String,
   answerSlug: String,
 });
 
-module.exports = mongoose.model('tooLateToAsk', TooLateToAskSchema);
+module.exports = mongoose.model('tooLateToAsk', TooLateToAskSchema, 'toolatetoasks-2');
