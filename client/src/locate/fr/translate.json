@@ -88,10 +88,7 @@
     "swipeDoor": "Toi aussi, tu te poses encore des questions de programmation dont tu devrais déjà connaître les réponses ?",
     "roadmap": {
       "categoryTitle": "Roadmaps",
-      "description": "Perdu·e dans le monde du dev ? Nos cartes sont là pour te guider.",
-      "cleanCode": {
-        "title": "Coder proprement : les bases"
-      }
+      "description": "Perdu·e dans le monde du dev ? Nos cartes sont là pour te guider."
     }
   },
   "imaginarium": {

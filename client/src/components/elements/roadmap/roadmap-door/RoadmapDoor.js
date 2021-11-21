@@ -13,7 +13,10 @@ const RoadmapDoor = () => {
   const card = [
     {
       _id: 'cleanCodeRoadmapId',
-      title: t('modernWorld.roadmap.cleanCode.title'),
+      title: {
+        fr: 'Coder proprement : les bases',
+        en: 'Clean code fundamentals',
+      },
       link: {
         path: '/roadmap/clean-code',
         openInNewTab: false,
