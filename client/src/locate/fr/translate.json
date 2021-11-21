@@ -14,6 +14,13 @@
       "buttons": {
         "iAlreadyKnow": "Je sais déjà",
         "iWantToKnow": "Je veux savoir"
+      },
+      "noCardsLeftMessage": {
+        "title": "Il n'y plus de questions à matcher dans ta région pour le moment.",
+        "text": "✨&nbsp;Souscris à l'offre premium pour désactiver ta géolocalisation et matcher avec des questions du monde entier&nbsp;✨<br /><br />Non, on plaisante.<br /><span className='small-text'>Enfin, cela dit, tu devrais peut-être désactiver ta géolocalisation si tu veux économiser de la batterie. Et en même temps, tu fais bien ce que tu veux avec ton téléphone. Et puis c'est pratique, le GPS, quand même. Je me souviens de cette fois où je devais aller rendre visiter à ma tante Léonie dans le Perche, et... Bref.</span>",
+        "buttons": {
+          "suggest": "J'aide la communauté, je propose une nouvelle question&nbsp;!"
+        }
       }
     }
   },
