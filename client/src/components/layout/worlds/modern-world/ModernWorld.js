@@ -15,7 +15,7 @@ import { SLACK } from '../../../../dictionnary/externalElectronicTalesLinks';
 import { MODERN_WORLD_IMAGES_PATH } from '../../../../dictionnary/internalImagesPathes';
 import RoadmapDoor from '../../../elements/roadmap/roadmap-door/RoadmapDoor';
 
-const ModernWorld = ({ articles, getAllArticlesInfos, preferredLanguage }) => {
+const ModernWorld = ({ articles, getAllArticlesInfos }) => {
   useEffect(() => {
     getAllArticlesInfos(WORLDS.MODERN_WORLD);
   }, []);
@@ -59,7 +59,6 @@ const ModernWorld = ({ articles, getAllArticlesInfos, preferredLanguage }) => {
               thumbnail: process.env.PUBLIC_URL + MODERN_WORLD_IMAGES_PATH + 'tamagotchi-small.jpg',
             },
           ]}
-          preferredLanguage={preferredLanguage}
         />
         <SwipeDoor
           // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
@@ -68,7 +67,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos, preferredLanguage }) => {
           text={t('modernWorld.swipeDoor')}
         />
         <RoadmapDoor />
-        <AllArticlesOfTheWorld articles={articles} preferredLanguage={preferredLanguage} />
+        <AllArticlesOfTheWorld articles={articles} />
       </div>
     </Fade>
   );
@@ -81,7 +80,6 @@ ModernWorld.propTypes = {
 
 const mapStateToProps = (state) => ({
   articles: state.article.allArticles,
-  preferredLanguage: state.language.preferredLanguage,
 });
 
 export default connect(mapStateToProps, { getAllArticlesInfos })(ModernWorld);

@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Fragment } from 'react';
 import { PropTypes } from 'prop-types';
 import CardsHub from '../../cards-hub/CardsHub';
@@ -34,12 +35,7 @@ const AllArticlesOfTheWorld = ({ articles, preferredLanguage }) => {
         const categoryArticles =
           articlesGroupedByCategories[Object.keys(articlesGroupedByCategories)[i]];
         componentsToReturn.push(
-          <CardsHub
-            key={i}
-            categoryName={categoryName}
-            categoryArticles={categoryArticles}
-            preferredLanguage={preferredLanguage}
-          />
+          <CardsHub key={i} categoryName={categoryName} categoryArticles={categoryArticles} />
         );
       }
       return componentsToReturn;
@@ -67,4 +63,8 @@ AllArticlesOfTheWorld.propTypes = {
   preferredLanguage: PropTypes.string.isRequired,
 };
 
-export default AllArticlesOfTheWorld;
+const mapStateToProps = (state) => ({
+  preferredLanguage: state.language.preferredLanguage,
+});
+
+export default connect(mapStateToProps)(AllArticlesOfTheWorld);

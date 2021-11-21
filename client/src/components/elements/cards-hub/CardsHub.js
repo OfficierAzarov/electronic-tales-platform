@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { PropTypes } from 'prop-types';
@@ -30,9 +31,6 @@ const CardsHub = ({ categoryName, categoryArticles, text, preferredLanguage }) =
         {categoryArticles.length > 1 ? (
           <SwiperJsHack>
             {categoryArticles.map((article) => {
-              console.log(article.title);
-              console.log(article.title[preferredLanguage]);
-              console.log(article.title[preferredLanguage]);
               return (
                 <SwiperSlide key={article._id}>
                   <Card
@@ -70,4 +68,8 @@ CardsHub.propTypes = {
   preferredLanguage: PropTypes.string.isRequired,
 };
 
-export default CardsHub;
+const mapStateToProps = (state) => ({
+  preferredLanguage: state.language.preferredLanguage,
+});
+
+export default connect(mapStateToProps)(CardsHub);

@@ -34,7 +34,10 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
           cards={[
             {
               _id: 'sosCardId',
-              title: "Bouton SOS syndrome de l'imposteur : un outil d'urgence pour se sentir mieux",
+              title: {
+                fr: "Bouton SOS syndrome de l'imposteur : un outil d'urgence pour se sentir mieux",
+                en: 'English title',
+              },
               link: {
                 path: SLACK,
                 openInNewTab: true,
@@ -43,7 +46,10 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
             },
             {
               _id: 'tourneDisqueCardId',
-              title: 'Le tourne-disque de mamie Cobol : partageons nos playlists pour coder',
+              title: {
+                fr: 'Le tourne-disque de mamie Cobol : partageons nos playlists pour coder',
+                en: 'English title',
+              },
               link: {
                 path: SLACK,
                 openInNewTab: true,

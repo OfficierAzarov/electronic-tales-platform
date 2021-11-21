@@ -1,17 +1,17 @@
 import React, { Fragment, useState } from 'react';
+import { connect } from 'react-redux';
 import Toggle from 'react-toggle';
 import 'react-toggle/style.css';
 import { Animated } from 'react-animated-css';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'react-i18next';
-import { generateSanitizedDangerouslySetInnerHtml } from '../../../utils/data-processing/sanitize';
 
 import './Lab.css';
 
 import CardsHub from '../cards-hub/CardsHub';
 import testTube from '../../../resources/img/icons/test-tube.png';
 
-const Lab = ({ text, cards, preferredLanguage }) => {
+const Lab = ({ text, cards }) => {
   const [isLabOpen, setIsLabOpen] = useState(false);
 
   const { t } = useTranslation();
@@ -40,12 +40,7 @@ const Lab = ({ text, cards, preferredLanguage }) => {
       {isLabOpen && (
         <Animated animationIn="bounceInLeft" animationInDuration={1200} isVisible={isLabOpen}>
           <div id="lab-content">
-            <CardsHub
-              text={text}
-              categoryName="Labo"
-              categoryArticles={cards}
-              preferredLanguage={preferredLanguage}
-            />
+            <CardsHub text={text} categoryName="Labo" categoryArticles={cards} />
           </div>
         </Animated>
       )}
@@ -56,7 +51,6 @@ const Lab = ({ text, cards, preferredLanguage }) => {
 Lab.propTypes = {
   text: PropTypes.string,
   cards: PropTypes.array.isRequired,
-  preferredLanguage: PropTypes.string.isRequired,
 };
 
 export default Lab;
