@@ -11,7 +11,7 @@ import './Lab.css';
 import CardsHub from '../cards-hub/CardsHub';
 import testTube from '../../../resources/img/icons/test-tube.png';
 
-const Lab = ({ text, cards }) => {
+const Lab = ({ text, cards, preferredLanguage }) => {
   const [isLabOpen, setIsLabOpen] = useState(false);
 
   const { t } = useTranslation();
@@ -40,7 +40,12 @@ const Lab = ({ text, cards }) => {
       {isLabOpen && (
         <Animated animationIn="bounceInLeft" animationInDuration={1200} isVisible={isLabOpen}>
           <div id="lab-content">
-            <CardsHub text={text} categoryName="Labo" categoryArticles={cards} />
+            <CardsHub
+              text={text}
+              categoryName="Labo"
+              categoryArticles={cards}
+              preferredLanguage={preferredLanguage}
+            />
           </div>
         </Animated>
       )}
@@ -51,6 +56,7 @@ const Lab = ({ text, cards }) => {
 Lab.propTypes = {
   text: PropTypes.string,
   cards: PropTypes.array.isRequired,
+  preferredLanguage: PropTypes.string.isRequired,
 };
 
 export default Lab;

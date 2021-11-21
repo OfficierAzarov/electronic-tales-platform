@@ -29,7 +29,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
           <h2 className="world-title">Imaginarium</h2>
         </div>
         <Lab
-          text="Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus&nbsp;: tu seras emmené·e vers notre Slack, the place to be du pool de co-création&nbsp;!"
+          text={t('common.lab.description')}
           // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
           cards={[
             {

@@ -6,7 +6,8 @@
     },
     "lab": {
       "open": "Ouvrir le labo",
-      "close": "Fermer le labo"
+      "close": "Fermer le labo",
+      "description": "Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus : tu seras emmené·e vers notre Slack, the place to be du pool de co-création !"
     },
     "tooLateToAsks": {
       "categoryTitle": "Too late to ask",
@@ -84,13 +85,6 @@
   },
   "modernWorld": {
     "title": "Modern World",
-    "lab": {
-      "description": "Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus : tu seras emmené·e vers notre Slack, the place to be du pool de co-création !",
-      "cards": {
-        "salary": "Le mur des salaires des devs juniors : partageons les vrais chiffres !",
-        "tamagotchi": "Le tamagotchi des devs : tracke tes progrès et compare-les à ceux des autres en toute bienveillance"
-      }
-    },
     "swipeDoor": "Toi aussi, tu te poses encore des questions de programmation dont tu devrais déjà connaître les réponses ?",
     "roadmap": {
       "categoryTitle": "Roadmaps",
@@ -98,6 +92,25 @@
       "cleanCode": {
         "title": "Coder proprement : les bases"
       }
+    }
+  },
+  "imaginarium": {
+    "title": "Imaginarium",
+    "swipeDoor": "Toi aussi, tu te poses encore des questions de programmation dont tu devrais déjà connaître les réponses ?",
+    "roadmap": {
+      "categoryTitle": "Roadmaps",
+      "description": "Perdu·e dans le monde du dev ? Nos cartes sont là pour te guider.",
+      "cleanCode": {
+        "title": "Coder proprement : les bases"
+      }
+    }
+  },
+  "ancientWorld": {
+    "title": "Ancient World",
+    "temp": {
+      "workinProgress": "Ce monde est encore en fabrication 😅",
+      "comeBackLater": "Pour apprendre les rouages des machines avec mamie Cobol (mais qui est-ce ? Suspense !), repasse un peu plus tard.",
+      "imageAlt": "Mamie Cobol en train de coller du papier peint sur les murs d'Ancient World"
     }
   }
 }

@@ -29,16 +29,21 @@ const CardsHub = ({ categoryName, categoryArticles, text, preferredLanguage }) =
       <div className="w-cat-card-content">
         {categoryArticles.length > 1 ? (
           <SwiperJsHack>
-            {categoryArticles.map((article) => (
-              <SwiperSlide key={article._id}>
-                <Card
-                  key={article._id}
-                  link={buildLink(article)}
-                  imageUrl={article.thumbnail}
-                  title={article.title[preferredLanguage]}
-                />
-              </SwiperSlide>
-            ))}
+            {categoryArticles.map((article) => {
+              console.log(article.title);
+              console.log(article.title[preferredLanguage]);
+              console.log(article.title[preferredLanguage]);
+              return (
+                <SwiperSlide key={article._id}>
+                  <Card
+                    key={article._id}
+                    link={buildLink(article)}
+                    imageUrl={article.thumbnail}
+                    title={article.title[preferredLanguage]}
+                  />
+                </SwiperSlide>
+              );
+            })}
           </SwiperJsHack>
         ) : (
           <Fragment>

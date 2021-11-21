@@ -31,11 +31,14 @@ const ModernWorld = ({ articles, getAllArticlesInfos, preferredLanguage }) => {
 
         <Lab
           // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
-          text={t('modernWorld.lab.description')}
+          text={t('common.lab.description')}
           cards={[
             {
               _id: 'salaryCardId',
-              title: t('modernWorld.lab.cards.salary'),
+              title: {
+                fr: 'Le mur des salaires des devs juniors : partageons les vrais chiffres !',
+                en: 'English title',
+              },
               link: {
                 path: SLACK,
                 openInNewTab: true,
@@ -44,7 +47,11 @@ const ModernWorld = ({ articles, getAllArticlesInfos, preferredLanguage }) => {
             },
             {
               _id: 'tamagotchiCardId',
-              title: t('modernWorld.lab.cards.tamagotchi'),
+              title: {
+                fr:
+                  'Le tamagotchi des devs : tracke tes progrès et compare-les à ceux des autres en toute bienveillance',
+                en: 'English title',
+              },
               link: {
                 path: SLACK,
                 openInNewTab: true,
@@ -52,6 +59,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos, preferredLanguage }) => {
               thumbnail: process.env.PUBLIC_URL + MODERN_WORLD_IMAGES_PATH + 'tamagotchi-small.jpg',
             },
           ]}
+          preferredLanguage={preferredLanguage}
         />
         <SwipeDoor
           // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
