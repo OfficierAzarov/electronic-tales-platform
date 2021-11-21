@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { sanitize } from '../../../../../utils/data-processing/sanitize';
+import {
+  generateSanitizedDangerouslySetInnerHtml,
+  sanitize,
+} from '../../../../../utils/data-processing/sanitize';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
+import { useTranslation } from 'react-i18next';
 import Toggle from 'react-toggle';
 import 'react-toggle/style.css';
 
@@ -9,6 +13,8 @@ import { suggestTLTA } from '../../../../../redux/actions/tooLateToAsk';
 import CustomReCaptcha from '../../common/recaptcha/CustomReCaptcha';
 
 const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
+  const { t } = useTranslation();
+
   const initialForm = {
     question: '',
     simpleDefinition: '',
@@ -70,23 +76,20 @@ const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
 
   return (
     <div className="form-container">
-      <h3 className="neon">Je me suis toujours demandé...</h3>
-      <p>
-        {' '}
-        Toi aussi, tu as une question que tu n'oses plus poser parce que tu es censé·e déjà
-        connaître la réponse&nbsp;?
-        <br />
-        <br />
-        N'hésite plus et partage-la&nbsp;!
-      </p>
+      <h3 className="neon">{t('common.tooLateToAsks.suggestTooLateToAsk.title')}</h3>
+      <p
+        dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+          t('common.tooLateToAsks.suggestTooLateToAsk.description')
+        )}
+      ></p>
       <form onSubmit={handleSubmit}>
         <label htmlFor="question">
-          Ta question (obligatoire)&nbsp;:
+          {t('common.tooLateToAsks.suggestTooLateToAsk.question.label')}
           <textarea
             name="question"
             value={question}
             onChange={handleChange}
-            placeholder="Écris ta question ici."
+            placeholder={t('common.tooLateToAsks.suggestTooLateToAsk.question.placeholder')}
             required
           />
         </label>

@@ -22,6 +22,14 @@
         "buttons": {
           "suggest": "J'aide la communauté, je propose une nouvelle question&nbsp;!"
         }
+      },
+      "suggestTooLateToAsk": {
+        "title": "Je me suis toujours demandé...",
+        "description": "Toi aussi, tu as une question que tu n'oses plus poser parce que tu es censé·e déjà connaître la réponse&nbsp;?<br /><br />N'hésite plus et partage-la&nbsp;!",
+        "question": {
+          "label": "Ta question (obligatoire) :",
+          "placeholder": "Écris ta question ici."
+        }
       }
     }
   },
