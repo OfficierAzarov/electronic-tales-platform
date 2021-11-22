@@ -29,6 +29,29 @@
         "question": {
           "label": "Ta question (obligatoire) :",
           "placeholder": "Écris ta question ici."
+        },
+        "simpleDefinition": {
+          "label": "Tu as une définition simple ? Super ! Écris-la ici :",
+          "placeholder": "Exemple : En fait, c'est juste une façon de..."
+        },
+        "analogy": {
+          "label": "Si tu as une analogie ou une métaphore, c'est par là :",
+          "placeholder": "Exemple : C'est comme dans un restaurant où il y aurait..."
+        },
+        "realWorldExample": {
+          "label": "Un petit exemple concret, pour finir ? Go :",
+          "placeholder": "Exemple : Pour afficher I love Electronic Tales sur mon écran, je peux taper..."
+        },
+        "name": {
+          "label": "Ton petit nom ?",
+          "placeholder": "Captain Anonymouse"
+        },
+        "choice": {
+          "iWantETToAnswer": "Je veux que la team d'Electronic Tales réponde",
+          "iWantToSuggestAnAnswer": "Je veux proposer une réponse"
+        },
+        "buttons": {
+          "share": "Partager"
         }
       }
     },

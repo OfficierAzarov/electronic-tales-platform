@@ -96,7 +96,7 @@ const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
         {/* For design, see : http://aaronshaf.github.io/react-toggle/ */}
         <label className="toggle-label">
           <span style={{ fontWeight: iHaveAnswer ? '400' : '700' }}>
-            Je veux que la team d'Electronic Tales réponde
+            {t('common.tooLateToAsks.suggestTooLateToAsk.choice.iWantETToAnswer')}
           </span>
           <Toggle
             defaultChecked={iHaveAnswer}
@@ -108,51 +108,50 @@ const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
             }}
           />
           <span style={{ fontWeight: iHaveAnswer ? '700' : '400' }}>
-            Je veux proposer une réponse
+            {t('common.tooLateToAsks.suggestTooLateToAsk.choice.iWantToSuggestAnAnswer')}
           </span>
         </label>
         <div className={iHaveAnswer ? '' : 'optional-input-is-not-visible'}>
           <label htmlFor="simpleDefinition">
-            Tu as une définition simple&nbsp;? <br />
-            Super&nbsp;! Écris-la ici&nbsp;:
+            {t('common.tooLateToAsks.suggestTooLateToAsk.simpleDefinition.label')}
             <textarea
               name="simpleDefinition"
               value={simpleDefinition}
               onChange={handleChange}
-              placeholder="Exemple&nbsp;: En fait, c'est juste une façon de..."
+              placeholder={t('common.tooLateToAsks.suggestTooLateToAsk.simpleDefinition.placeholder')}
             />
           </label>
           <label htmlFor="analogy">
-            Si tu as une analogie ou une métaphore, c'est par là&nbsp;:
+            {t('common.tooLateToAsks.suggestTooLateToAsk.analogy.label')}
             <textarea
               name="analogy"
               value={analogy}
               onChange={handleChange}
-              placeholder="Exemple&nbsp;: C'est comme dans un restaurant où il y aurait..."
+              placeholder={t('common.tooLateToAsks.suggestTooLateToAsk.analogy.placeholder')}
             />
           </label>
           <label htmlFor="realWorldExample">
-            Un petit exemple concret, pour finir&nbsp;? Go&nbsp;:
+            {t('common.tooLateToAsks.suggestTooLateToAsk.realWorldExample.label')}
             <textarea
               name="realWorldExample"
               value={realWorldExample}
               onChange={handleChange}
-              placeholder='Exemple&nbsp;: Pour afficher "J&apos;aime Electronic Tales" sur mon écran, je peux taper...'
+              placeholder={t('common.tooLateToAsks.suggestTooLateToAsk.realWorldExample.placeholder')}
             />
           </label>
         </div>
         <label htmlFor="name">
-          Ton petit nom&nbsp;?
+          {t('common.tooLateToAsks.suggestTooLateToAsk.name.label')}
           <input
             type="text"
             name="name"
             value={name}
             onChange={handleChange}
-            placeholder="Captain Anonymouse"
+            placeholder={t('common.tooLateToAsks.suggestTooLateToAsk.name.placeholder')}
             id="leave-a-name"
           />
         </label>
-        <input type="submit" value="Partager" className="basic-button" />
+        <input type="submit" value={t('common.tooLateToAsks.suggestTooLateToAsk.buttons.share')} className="basic-button" />
         <CustomReCaptcha
           tellReCaptchaResult={changeReCaptchaTokenStateWithTokenFromChild}
           shouldIDoCheck={shouldReCaptchaDoCheck}
