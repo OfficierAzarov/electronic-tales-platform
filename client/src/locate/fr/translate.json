@@ -31,6 +31,30 @@
           "placeholder": "Écris ta question ici."
         }
       }
+    },
+    "readingTime": {
+      "readingTime": "Lecture",
+      "justEnoughTimeTo": "soit le temps de",
+      "ofA": "d'",
+      "funnyThingsList": {
+        "consumingActions": {
+          "bite": "croquer",
+          "sip": "siroter",
+          "gloop": "glouper",
+          "crisp": "crisper"
+        },
+        "genders": {
+          "female": "féminin",
+          "male": "masculin"
+        },
+        "names": {
+          "burger": "burger",
+          "coffee": "café",
+          "doughnut": "donut",
+          "fries": "frites"
+        }
+      },
+      "lessThanAMinute": "moins d'une minute"
     }
   },
   "home": {
@@ -101,7 +125,7 @@
   },
   "imaginarium": {
     "title": "Imaginarium",
-    "swipeDoor": "Toi aussi, tu te poses encore des questions de programmation dont tu devrais déjà connaître les réponses ?",
+    "swipeDoor": "Toi aussi, tu te poses encore des questions de computer culture dont tu devrais déjà connaître les réponses ?",
     "roadmap": {
       "categoryTitle": "Roadmaps",
       "description": "Perdu·e dans le monde du dev ? Nos cartes sont là pour te guider.",

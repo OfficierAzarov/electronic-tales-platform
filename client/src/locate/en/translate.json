@@ -1,7 +1,26 @@
 {
-  "home": {
-    "safeSpace": {
-      "title": "Let's smash impostor syndrom together!"
-    }
+  "readingTime": {
+    "readingTime": "Reading time",
+    "justEnoughTimeTo": "just enough time to",
+    "ofA": "of a",
+    "funnyThingsList": {
+      "consumingActions": {
+        "bite": "bite",
+        "sip": "sip",
+        "gloop": "gloop",
+        "crisp": "crisp"
+      },
+      "genders": {
+        "female": "",
+        "male": ""
+      },
+      "names": {
+        "burger": "burger",
+        "coffee": "coffee",
+        "doughnut": "doughnut",
+        "fries": "fries"
+      }
+    },
+    "lessThanAMinute": "less than a minute"
   }
 }

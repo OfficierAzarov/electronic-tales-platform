@@ -1,40 +1,44 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Emoji from 'a11y-react-emoji';
+import { useTranslation } from 'react-i18next';
 import { getRandomIntegerFromAGivenRange } from '../../../utils/maths/maths';
 
 import './ReadingTime.css';
 
 const ReadingTime = ({ articleContent }) => {
+
+  const { t } = useTranslation();
+
   const readingTime = require('reading-time');
 
   const funnyThingsList = [
     {
-      consumingAction: 'croquer',
-      gender: 'masculin',
-      name: 'burger',
+      consumingAction: t('common.readingTime.funnyThingsList.consumingActions.bite'),
+      gender: t('common.readingTime.funnyThingsList.genders.male'),
+      name: t('common.readingTime.funnyThingsList.names.burger'),
       emoji: '🍔',
       timeToConsumeTheFunThingInMinutes: 5,
     },
     {
-      consumingAction: 'siroter',
-      name: 'café',
+      consumingAction: t('common.readingTime.funnyThingsList.consumingActions.sip'),
+      name: t('common.readingTime.funnyThingsList.names.coffee'),
       emoji: '☕',
-      gender: 'masculin',
+      gender: t('common.readingTime.funnyThingsList.genders.male'),
       timeToConsumeTheFunThingInMinutes: 2,
     },
     {
-      consumingAction: 'glouper',
-      name: 'doughnut',
+      consumingAction: t('common.readingTime.funnyThingsList.consumingActions.gloop'),
+      name: t('common.readingTime.funnyThingsList.names.doughnut'),
       emoji: '🍩',
-      gender: 'masculin',
+      gender: t('common.readingTime.funnyThingsList.genders.male'),
       timeToConsumeTheFunThingInMinutes: 3,
     },
     {
-      consumingAction: 'crisper',
-      name: 'frites',
+      consumingAction: t('common.readingTime.funnyThingsList.consumingActions.crisp'),
+      name: t('common.readingTime.funnyThingsList.names.fries'),
       emoji: '🍟',
-      gender: 'feminin',
+      gender: t('common.readingTime.funnyThingsList.genders.female'),
       timeToConsumeTheFunThingInMinutes: 2,
     },
   ];
@@ -45,7 +49,7 @@ const ReadingTime = ({ articleContent }) => {
   };
 
   const displayTimeInAReadableWay = (readingTime) => {
-    if (readingTime < 1) return `moins d'une minute`;
+    if (readingTime < 1) return t('common.readingTime.lessThanAMinute');
     return convertMinutesToMinutesAndSeconds(readingTime);
   };
 
@@ -72,6 +76,18 @@ const ReadingTime = ({ articleContent }) => {
     }
   };
 
+  const defineArticle = (gender) => {
+    // article is only useful in french
+    switch (gender) {
+      case ("féminin"):
+        return 'une';
+      case ("masculin"):
+        return 'un';
+      default:
+        return ''
+    }
+  }
+
   const generateReadingTimeSentence = () => {
     if (articleContent) {
       const stats = readingTime(articleContent);
@@ -82,10 +98,9 @@ const ReadingTime = ({ articleContent }) => {
         return (
           <Fragment>
             <p>
-              <Emoji symbol="🕑" label="clock" />
-              &nbsp;Lecture&nbsp;: {displayTimeInAReadableWay(stats.minutes)}, <br /> soit le temps
-              de {funnyThing.consumingAction} {fraction * 100}&nbsp;% d'
-              {funnyThing.gender === 'feminin' ? 'une' : 'un '}{' '}
+              🕑&nbsp;{t('common.readingTime.readingTime')}&nbsp;: {displayTimeInAReadableWay(stats.minutes)}, <br /> {t('common.readingTime.justEnoughTimeTo')} {funnyThing.consumingAction} {fraction * 100}&nbsp;% {t('common.readingTime.ofA')}
+              {defineArticle(funnyThing.gender)}{' '}
+              {/* {funnyThing.gender === 'féminin' ? 'une' : 'un '}{' '} */}
               <Emoji symbol={funnyThing.emoji} label={funnyThing.name} />.
             </p>
           </Fragment>
@@ -94,9 +109,7 @@ const ReadingTime = ({ articleContent }) => {
         return (
           <Fragment>
             <p>
-              <Emoji symbol="🕑" label="clock" />
-              &nbsp;Lecture&nbsp;: {displayTimeInAReadableWay(stats.minutes)}, <br /> soit le temps
-              de {funnyThing.consumingAction} {returnComponentXTimes(fraction, funnyThing)}.
+              🕑&nbsp;{t('common.readingTime.readingTime')}&nbsp;: {displayTimeInAReadableWay(stats.minutes)}, <br /> {t('common.readingTime.justEnoughTimeTo')} {funnyThing.consumingAction} {returnComponentXTimes(fraction, funnyThing)}.
             </p>
           </Fragment>
         );

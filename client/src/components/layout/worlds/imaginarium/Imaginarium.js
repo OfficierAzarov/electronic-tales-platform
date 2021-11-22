@@ -62,8 +62,7 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
           // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
           id={WORLDS.IMAGINARIUM}
           link={`/${WORLDS.IMAGINARIUM}/too-late-to-ask`}
-          text="Toi aussi, tu te poses encore des questions de computer culture dont tu devrais déjà connaître les
-        réponses&nbsp;?"
+          text={t('imaginarium.swipeDoor')}
         />
         <AllArticlesOfTheWorld articles={articles} />
       </div>
