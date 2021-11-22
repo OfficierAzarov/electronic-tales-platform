@@ -1,136 +1,26 @@
 {
-  "common": {
-    "secondaryNavbar": {
-      "goBackHome": "Retourner <br /> au manoir",
-      "joinUs": "Nous rejoindre"
-    },
-    "lab": {
-      "open": "Ouvrir le labo",
-      "close": "Fermer le labo",
-      "description": "Retrouve ici des contenus d'Electronic Tales à venir. Pour participer à leur création, clique dessus : tu seras emmené·e vers notre Slack, the place to be du pool de co-création !"
-    },
-    "tooLateToAsks": {
-      "categoryTitle": "Too late to ask",
-      "title": "Le tinder du dev 🔥",
-      "buttons": {
-        "iAlreadyKnow": "Je sais déjà",
-        "iWantToKnow": "Je veux savoir"
+  "readingTime": {
+    "readingTime": "Reading time",
+    "justEnoughTimeTo": "just enough time to",
+    "ofA": "of a",
+    "funnyThingsList": {
+      "consumingActions": {
+        "bite": "bite",
+        "sip": "sip",
+        "gloop": "gloop",
+        "crisp": "crisp"
       },
-      "noCardsLeftMessage": {
-        "title": "Il n'y plus de questions à matcher dans ta région pour le moment.",
-        "text": "✨&nbsp;Souscris à l'offre premium pour désactiver ta géolocalisation et matcher avec des questions du monde entier&nbsp;✨<br /><br />Non, on plaisante.<br /><span className='small-text'>Enfin, cela dit, tu devrais peut-être désactiver ta géolocalisation si tu veux économiser de la batterie. Et en même temps, tu fais bien ce que tu veux avec ton téléphone. Et puis c'est pratique, le GPS, quand même. Je me souviens de cette fois où je devais aller rendre visiter à ma tante Léonie dans le Perche, et... Bref.</span>",
-        "buttons": {
-          "suggest": "J'aide la communauté, je propose une nouvelle question&nbsp;!"
-        }
-      }
-    },
-    "readingTime": {
-      "readingTime": "Reading time",
-      "justEnoughTimeTo": "just enough time to",
-      "ofA": "of a",
-      "funnyThingsList": {
-        "consumingActions": {
-          "bite": "bite",
-          "sip": "sip",
-          "gloop": "gloop",
-          "crisp": "crisp"
-        },
-        "genders": {
-          "female": "",
-          "male": ""
-        },
-        "names": {
-          "burger": "burger",
-          "coffee": "coffee",
-          "doughnut": "doughnut",
-          "fries": "fries"
-        }
-      }
-    }
-  },
-  "home": {
-    "safeSpace": {
-      "title": "Dégommons le syndrome de l'imposteur ensemble.",
-      "description": "Développeur·euse junior, tu souffres du syndrome de l'imposteur&nbsp;?<br /><br />À Electronic Tales, nous pensons que ce n'est pas une fatalité.",
-      "callToActionText": "Viens, on en parle&nbsp;&nbsp;&rarr;",
-      "alternativeCallToActionText": "...&nbsp;ou bien continue la visite&nbsp;"
-    },
-    "modernWorld": {
-      "title": "Modern World",
-      "description": "Apprends à programmer entre les lignes.",
-      "alternativeCallToActionText": "...&nbsp;mmh, qu'est-ce qu'on a d'autre en magasin&nbsp;?&nbsp;"
-    },
-    "imaginarium": {
-      "title": "Imaginarium",
-      "description": "Imprègne-toi des mythes et légendes de la bits generation.",
-      "alternativeCallToActionText": "...&nbsp;toujours pas&nbsp;?"
-    },
-    "ancientWorld": {
-      "title": "Ancient World",
-      "description": "Plonge dans le monde englouti de la computer science.",
-      "alternativeCallToActionText": "Encore plus bas ?&nbsp;",
-      "alert": "Allons bon ! Tu t'attendais à quoi ? Les neuf cercles de l'enfer ? Le département design n'avait pas assez de budget pour ça."
-    },
-    "common": {
-      "enterButtonText": "Entrer"
-    }
-  },
-  "safeSpace": {
-    "title": "Safe space",
-    "miniNavbar": {
-      "why": "Pourquoi",
-      "microExperiences": "Micro-vécus",
-      "ourSlack": "Notre Slack"
-    },
-    "body": {
-      "why": {
-        "title": "Pourquoi&nbsp;?",
-        "body": "Grâce à l'explosion des formations courtes, de plus en plus de devs viennent de milieux différents, et c'est tant mieux&nbsp;!<br /><br />Cependant, une fois en entreprise, ces personnes sentent parfois qu'un <strong>«&nbsp;mur de verre&nbsp;»</strong> les sépare de leurs collègues issu·e·s de parcours plus traditionnels. Un mur bâti sur des <strong>références culturelles ou techniques</strong> qu'ils n'ont pas&nbsp;🖖&nbsp;🥚&nbsp;🚀&nbsp;❓&nbsp;🚀<br /><br />Ajoutez à cela la <strong>complexité propre au développement</strong> (programmer est dur, les technos évoluent très vite, il est impossible de tout savoir...), et tous les ingrédients sont réunis pour développer un bon <strong>syndrome de l'imposteur bien tapé</strong>."
+      "genders": {
+        "female": "",
+        "male": ""
       },
-      "debug": {
-        "title": "Débuggons ça&nbsp;!",
-        "body": {
-          "text": "<span className='big-text'>Le syndrome de l'imposteur est un mal très répandu chez les développeurs·euses.</span><br /><br />Le problème, c'est qu'on ose rarement en parler&nbsp;😶<br /> <br />Or, en discuter avec d'autres devs est un premier pas essentiel pour&nbsp;:",
-          "list": "<li>Se rendre compte qu'on n'est pas seul·e à galérer&nbsp;🚣🏼</li><li>Progresser techniquement sur des bases plus saines&nbsp;💪</li><li>Entamer ensemble un mouvement de détox&nbsp;🌱&nbsp;🍵 d'un milieu parfois toxique&nbsp;🤢&nbsp;☢️</li>"
-        }
-      },
-      "go": {
-        "title": "Go go go",
-        "body": {
-          "text": "Convaincu·e&nbsp;?<br /><br />Jette un œil à ",
-          "link1Name": "Micro-vécus",
-          "link1Description": "le recueil collaboratif des situations toxiques du milieu du dév",
-          "link2Description": "Viens discuter de tes problèmes avec d'autres devs sur notre",
-          "link2Name": "Slack"
-        }
+      "names": {
+        "burger": "burger",
+        "coffee": "coffee",
+        "doughnut": "doughnut",
+        "fries": "fries"
       }
-    }
-  },
-  "modernWorld": {
-    "title": "Modern World",
-    "swipeDoor": "Toi aussi, tu te poses encore des questions de programmation dont tu devrais déjà connaître les réponses ?",
-    "roadmap": {
-      "categoryTitle": "Roadmaps",
-      "description": "Perdu·e dans le monde du dev ? Nos cartes sont là pour te guider."
-    }
-  },
-  "imaginarium": {
-    "title": "Imaginarium",
-    "swipeDoor": "Toi aussi, tu te poses encore des questions de computer culture dont tu devrais déjà connaître les réponses ?",
-    "roadmap": {
-      "categoryTitle": "Roadmaps",
-      "description": "Perdu·e dans le monde du dev ? Nos cartes sont là pour te guider.",
-      "cleanCode": {
-        "title": "Coder proprement : les bases"
-      }
-    }
-  },
-  "ancientWorld": {
-    "title": "Ancient World",
-    "temp": {
-      "workinProgress": "Ce monde est encore en fabrication 😅",
-      "comeBackLater": "Pour apprendre les rouages des machines avec mamie Cobol (mais qui est-ce ? Suspense !), repasse un peu plus tard.",
-      "imageAlt": "Mamie Cobol en train de coller du papier peint sur les murs d'Ancient World"
-    }
+    },
+    "lessThanAMinute": "less than a minute"
   }
 }
