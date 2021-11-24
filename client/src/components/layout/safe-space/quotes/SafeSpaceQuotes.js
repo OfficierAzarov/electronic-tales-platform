@@ -27,7 +27,7 @@ const SafeSpaceQuotes = ({ quotes, getQuotes }) => {
   return (
     <div id="safe-space-quotes" className="container">
       <div className="line-title-wrapper world-title-wrapper">
-        <h2 className="world-title neon flicker">Safe space</h2>
+        <h2 className="world-title neon flicker">{t('safeSpace.title')}</h2>
       </div>
       <MiniNav />
       <div className="line-title-wrapper category-title-wrapper">

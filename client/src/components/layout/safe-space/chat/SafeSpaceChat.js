@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import './SafeSpaceChat.css';
 
@@ -8,58 +9,35 @@ import wordartInternet from '../../../../resources/img/wordart/internet.png';
 import wordartAnnees2000 from '../../../../resources/img/wordart/annees2000.png';
 import Emoji from 'a11y-react-emoji';
 import { SLACK } from '../../../../dictionnary/externalElectronicTalesLinks';
+import { generateSanitizedDangerouslySetInnerHtml } from '../../../../utils/data-processing/sanitize';
 
 const SafeSpaceChat = () => {
+
+  const { t } = useTranslation();
+
   return (
     <div id="safe-space-chat" className="container">
       <div className="line-title-wrapper world-title-wrapper">
-        <h2 className="world-title neon flicker">Safe space</h2>
+        <h2 className="world-title neon flicker">{t('safeSpace.title')}</h2>
       </div>
       <MiniNav />
       <div className="line-title-wrapper category-title-wrapper">
-        <h3 className="title">Notre Slack</h3>
+        <h3 className="title">{t('safeSpace.ourChat.title')}</h3>
       </div>
       <p id="connect">
-        Nous avons ouvert un{' '}
+        {t('safeSpace.ourChat.descriptionBeforeLink')}{' '}
         <a href={SLACK} target="_blank" rel="noopener noreferrer">
           Slack
         </a>{' '}
-        pour permettre aux devs de discuter à cœur ouvert des problèmes qu'ils·elles peuvent vivre
-        dans la tech. <br />
+        {t('safeSpace.ourChat.descriptionAfterLink')}
         <br />
-        Pour le bien-être de tous·tes, nous te demandons de suivre deux grands principes :
+        <br />
+        {t('safeSpace.ourChat.rules.intro')}
       </p>
-      <ul>
-        <li>
-          <h4>
-            <Emoji symbol="😎" label="pseudonym" />
-            &nbsp;Utilise un pseudo
-          </h4>
-          Laissons de côté les vrais noms, lieux de travail et appellations d'entreprises –
-          retrouvons le <img src={wordartSwag} alt="le mot swag en wordart" id="swag" /> de
-          <img src={wordartInternet} alt="le mot internet en wordart" id="internet" /> du début des{' '}
-          <img
-            src={wordartAnnees2000}
-            alt="les mots 'années 2000' en wordart"
-            id="swag"
-            id="annees-2000"
-          />{' '}
-          et libérons la parole.
-        </li>
-        <li>
-          <h4>
-            <Emoji symbol="🤗" label="respect" />
-            &nbsp;N'oublie jamais l'inclusion et le respect
-          </h4>
-          Pas de racisme, de validisme, de sexisme, d'homophobie, de transphobie, de body shaming et
-          tous autres <i>-&nbsp;ismes</i>, <i>-&nbsp;ing</i> et <i>-&nbsp;phobies</i> susceptibles
-          de mettre quelqu'un mal à l'aise. Cela demande beaucoup d'énergie et de courage pour
-          parler, même anonymement dans un recoin éloigné d'internet, donc on sera intransigeant·e·s
-          sur la question.
-        </li>
+      <ul dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(t('safeSpace.ourChat.rules.list'))}>
       </ul>
       <a href={SLACK} target="_blank" rel="noopener noreferrer" className="basic-button">
-        Rejoindre le Slack
+        {t('safeSpace.ourChat.join')}
       </a>
     </div>
   );

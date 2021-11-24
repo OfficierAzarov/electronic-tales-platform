@@ -59,3 +59,54 @@
 #safe-space-chat #annees-2000 {
   width: 35%;
 }
+
+
+/*
+* Inspired from: https://www.designpieces.com/2017/03/wordart-css3-text-effects/
+* This classes are used raw html referenced in translate.json
+*/
+
+#safe-space-chat .wordart {
+  display: inline-block;
+  font-weight: bold;
+}
+
+#safe-space-chat .rainbow {
+  font-family: Arial, sans-serif;
+  background: red; 
+  background: -webkit-linear-gradient(left, #b306a9, #ef2667, #f42e2c, #ffa509, #fdfc00, #55ac2f, #0b13fd, #a804af);
+  background: -o-linear-gradient(left, #b306a9, #ef2667, #f42e2c, #ffa509, #fdfc00, #55ac2f, #0b13fd, #a804af);
+  background: -moz-linear-gradient(left, #b306a9, #ef2667, #f42e2c, #ffa509, #fdfc00, #55ac2f, #0b13fd, #a804af);
+  background: linear-gradient(to right, #b306a9, #ef2667, #f42e2c, #ffa509, #fdfc00, #55ac2f, #0b13fd, #a804af); 
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#safe-space-chat .superhero {
+  font-family: Impact;
+  background: #fdea00;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fdea00), color-stop(44%, #fdcf00), color-stop(100%, #fc2700));
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#safe-space-chat .purple {
+  font-family: Impact;
+  background: #4222be;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4222be), color-stop(73%, #a62cc1));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4222be', endColorstr='#a62cc1', GradientType=0);
+  -webkit-text-stroke: 0.01em #B28FFD;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#safe-space-chat .rotate-left {
+  transform: rotate(-12deg);
+}
+
+#safe-space-chat .rotate-right {
+  transform: rotate(12deg);
+}
+
+

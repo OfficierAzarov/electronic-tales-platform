@@ -23,4 +23,4 @@ export const sanitize = (unsanitizedHtml) => {
 
 export const generateSanitizedDangerouslySetInnerHtml = (unsanitizedHtml) => {
   return { __html: DOMPurify.sanitize(unsanitizedHtml) };
-};
+}
