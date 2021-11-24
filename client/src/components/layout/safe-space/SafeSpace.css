@@ -31,3 +31,9 @@
   font-size: 2.3rem;
   font-weight: 400;
 }
+
+/* react-i18next breaks layout, 
+so we have to force <p></p> to be inline */
+#safe-space .inline {
+  display: inline;
+}

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
@@ -10,9 +10,11 @@ import { getQuotes } from '../../../../redux/actions/quote';
 import Quote from '../../../elements/quote/Quote';
 import MiniNav from '../../../elements/mini-nav/MiniNav';
 import Fab from '../../../elements/buttons/fab/Fab';
+import { generateSanitizedDangerouslySetInnerHtml } from '../../../../utils/data-processing/sanitize';
 
 const SafeSpaceQuotes = ({ quotes, getQuotes }) => {
   const history = useHistory();
+  const { t } = useTranslation();
 
   useEffect(() => {
     getQuotes();
@@ -29,14 +31,9 @@ const SafeSpaceQuotes = ({ quotes, getQuotes }) => {
       </div>
       <MiniNav />
       <div className="line-title-wrapper category-title-wrapper">
-        <h3 className="title">Micro-vécus</h3>
+        <h3 className="title"></h3>
       </div>
-      <p id="subtitle">
-        Florilège de situations de tous les jours qu'on ne devrait jamais vivre dans le monde du
-        dév. <br />
-        <br />
-        Tu as un micro-vécu à partager&nbsp;? N'hésite pas, nous le publierons anonymement ou sous
-        pseudonyme.
+      <p id="subtitle" dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(t('safeSpace.microExperiences.description'))}>
       </p>
       {quotes
         .slice(0)

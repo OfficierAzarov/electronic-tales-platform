@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 
@@ -7,6 +8,9 @@ import { suggestQuote } from '../../../../../redux/actions/quote';
 import CustomReCaptcha from '../../common/recaptcha/CustomReCaptcha';
 
 const AddQuoteForm = ({ suggestQuote, tellResult }) => {
+
+  const { t } = useTranslation();
+
   const initialForm = {
     quote: '',
     name: '',
@@ -60,26 +64,26 @@ const AddQuoteForm = ({ suggestQuote, tellResult }) => {
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         <label className="label-for-quote" htmlFor="quote">
-          Tu as un micro-vécu à partager&nbsp;? Nous serons ravi·e·s de le lire et de le publier.
+          {t('safeSpace.microExperiences.share.microExperience.label')}
           <textarea
             name="quote"
             value={quote}
             onChange={handleChange}
-            placeholder="Il était une fois..."
+            placeholder={t('safeSpace.microExperiences.share.microExperience.placeholder')}
             required
           />
         </label>
         <label className="label-for-name" htmlFor="name">
-          Ton pseudo&nbsp;?
+          {t('safeSpace.microExperiences.share.name.label')}
           <input
             type="text"
             name="name"
             value={name}
             onChange={handleChange}
-            placeholder="Captain Ann O'nymous"
+            placeholder={t('safeSpace.microExperiences.share.name.placeholder')}
           />
         </label>
-        <input type="submit" value="Partager" className="basic-button" />
+        <input type="submit" value={t('common.buttons.share')} className="basic-button" />
         <CustomReCaptcha
           tellReCaptchaResult={changeReCaptchaTokenStateWithTokenFromChild}
           shouldIDoCheck={shouldReCaptchaDoCheck}

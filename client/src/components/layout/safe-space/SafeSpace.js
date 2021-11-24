@@ -24,53 +24,53 @@ const SafeSpace = () => {
         <h3
           className="title"
           dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
-            t('safeSpace.body.why.title')
+            t('safeSpace.why.why.title')
           )}
         ></h3>
       </div>
       <p
         dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
-          t('safeSpace.body.why.body')
+          t('safeSpace.why.why.body')
         )}
       ></p>
       <div className="line-title-wrapper category-title-wrapper">
         <h3
           className="title"
           dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
-            t('safeSpace.body.debug.title')
+            t('safeSpace.why.debug.title')
           )}
         ></h3>
       </div>
       <p
         dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
-          t('safeSpace.body.debug.body.text')
+          t('safeSpace.why.debug.body.text')
         )}
       ></p>
       <ul
         dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
-          t('safeSpace.body.debug.body.list')
+          t('safeSpace.why.debug.body.list')
         )}
       ></ul>
       <div className="line-title-wrapper category-title-wrapper">
         <h3
           className="title"
           dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
-            t('safeSpace.body.go.title')
+            t('safeSpace.why.go.title')
           )}
         ></h3>
       </div>
       <p>
         <p
           dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
-            t('safeSpace.body.go.body.text')
+            t('safeSpace.why.go.body.text')
           )}
-        ></p>
-        <Link to="/safe-space/quotes">{t('safeSpace.body.go.body.link1Name')}</Link>,{' '}
-        {t('safeSpace.body.go.body.link1Description')}.
+          className="inline"></p>
+        <Link to="/safe-space/quotes">{t('safeSpace.why.go.body.link1Name')}</Link>,{' '}
+        {t('safeSpace.why.go.body.link1Description')}.
         <br />
         <br />
-        {t('safeSpace.body.go.body.link2Description')}{' '}
-        <Link to="/safe-space/chat">{t('safeSpace.body.go.body.link2Name')}</Link>.
+        {t('safeSpace.why.go.body.link2Description')}{' '}
+        <Link to="/safe-space/chat">{t('safeSpace.why.go.body.link2Name')}</Link>.
       </p>
     </div>
   );

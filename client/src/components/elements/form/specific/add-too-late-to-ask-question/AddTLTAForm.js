@@ -151,7 +151,7 @@ const AddTLTAForm = ({ suggestTLTA, tellResult }) => {
             id="leave-a-name"
           />
         </label>
-        <input type="submit" value={t('common.tooLateToAsks.suggestTooLateToAsk.buttons.share')} className="basic-button" />
+        <input type="submit" value={t('common.buttons.share')} className="basic-button" />
         <CustomReCaptcha
           tellReCaptchaResult={changeReCaptchaTokenStateWithTokenFromChild}
           shouldIDoCheck={shouldReCaptchaDoCheck}

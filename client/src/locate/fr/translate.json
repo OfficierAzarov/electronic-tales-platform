@@ -49,9 +49,6 @@
         "choice": {
           "iWantETToAnswer": "Je veux que la team d'Electronic Tales réponde",
           "iWantToSuggestAnAnswer": "Je veux proposer une réponse"
-        },
-        "buttons": {
-          "share": "Partager"
         }
       }
     },
@@ -78,6 +75,9 @@
         }
       },
       "lessThanAMinute": "moins d'une minute"
+    },
+    "buttons": {
+      "share": "Partager"
     }
   },
   "home": {
@@ -114,7 +114,7 @@
       "microExperiences": "Micro-vécus",
       "ourSlack": "Notre Slack"
     },
-    "body": {
+    "why": {
       "why": {
         "title": "Pourquoi&nbsp;?",
         "body": "Grâce à l'explosion des formations courtes, de plus en plus de devs viennent de milieux différents, et c'est tant mieux&nbsp;!<br /><br />Cependant, une fois en entreprise, ces personnes sentent parfois qu'un <strong>«&nbsp;mur de verre&nbsp;»</strong> les sépare de leurs collègues issu·e·s de parcours plus traditionnels. Un mur bâti sur des <strong>références culturelles ou techniques</strong> qu'ils n'ont pas&nbsp;🖖&nbsp;🥚&nbsp;🚀&nbsp;❓&nbsp;🚀<br /><br />Ajoutez à cela la <strong>complexité propre au développement</strong> (programmer est dur, les technos évoluent très vite, il est impossible de tout savoir...), et tous les ingrédients sont réunis pour développer un bon <strong>syndrome de l'imposteur bien tapé</strong>."
@@ -134,6 +134,19 @@
           "link1Description": "le recueil collaboratif des situations toxiques du milieu du dév",
           "link2Description": "Viens discuter de tes problèmes avec d'autres devs sur notre",
           "link2Name": "Slack"
+        }
+      }
+    },
+    "microExperiences": {
+      "description": "Florilège de situations de tous les jours qu'on ne devrait jamais vivre dans le monde du dév. <br /><br />Tu as un micro-vécu à partager&nbsp;? N'hésite pas, nous le publierons anonymement ou sous pseudonyme.",
+      "share": {
+        "microExperience": {
+          "label": "Tu as un micro-vécu à partager ? Nous serons ravi·e·s de le lire et de le publier.",
+          "placeholder": "Il était une fois..."
+        },
+        "name": {
+          "label": "Ton pseudo ?",
+          "placeholder": "Captain Ann O'nymous"
         }
       }
     }
