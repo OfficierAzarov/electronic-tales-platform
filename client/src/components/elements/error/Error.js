@@ -1,18 +1,23 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { PropTypes } from 'prop-types';
-import Emoji from 'a11y-react-emoji';
 
 import './Error.css';
+import { generateSanitizedDangerouslySetInnerHtml } from '../../../utils/data-processing/sanitize';
 
 const Error = ({ title, message }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="error-container">
       <h1 className="neon flicker">{title}</h1>
-      <p>
-        {message}
-        <br />
-        <br />
-        Si tu as deux minutes, tu peux passer nous signaler le problème (ou nous dire quelle est ta
+      <p>{message}</p>
+      <p
+        dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+          t('common.errors.pleaseReport')
+        )}
+      >
+        {/* Si tu as deux minutes, tu peux passer nous signaler le problème (ou nous dire quelle est ta
         marque de chips préférée, on est toujours preneurs·euses de bons tuyaux à ce sujet) sur
         notre{' '}
         <a
@@ -20,9 +25,8 @@ const Error = ({ title, message }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span>Slack</span>
-          <Emoji symbol="🙏" label="thank you" />
-        </a>
+          <span>Slack</span>&nbsp;🙏
+        </a> */}
       </p>
     </div>
   );

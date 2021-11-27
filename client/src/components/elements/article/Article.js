@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
 import { connect } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 import { PropTypes } from 'prop-types';
 
 import './Article.css';
@@ -13,6 +14,8 @@ import GoBackButton from '../buttons/go-back/GoBackButton';
 import HtmlContent from '../html-content/HtmlContent';
 
 const Article = ({ match, article, getCurrentArticle, cleanCurrentArticle, preferredLanguage }) => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     getCurrentArticle(match.params.slug);
     return () => {
@@ -40,8 +43,8 @@ const Article = ({ match, article, getCurrentArticle, cleanCurrentArticle, prefe
         </Fragment>
       ) : (
         <Error
-          title="Aouch!"
-          message="On dirait que les Talers ont oublié de parler de ce sujet... Pour le moment."
+          title={t('common.errors.noArticle.title')}
+          message={t('common.errors.noArticle.message')}
         />
       )}
     </div>
