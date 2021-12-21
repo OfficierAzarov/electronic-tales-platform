@@ -49,6 +49,10 @@
         "choice": {
           "iWantETToAnswer": "Je veux que la team d'Electronic Tales réponde",
           "iWantToSuggestAnAnswer": "Je veux proposer une réponse"
+        },
+        "notifications": {
+          "success": "C'est dans la boîte 🥡 Le temps que ta proposition passe dans les tuyaux d'Electronic Tales, elle sera publiée bientôt. Merci !",
+          "failure": "Oops, on dirait qu'il y a un grumeau dans les tuyaux... Peux-tu réessayer ? Si ça ne marche toujours pas, contacte l'équipe d'Electronic Tales : contact@electronictales.io - nous t'en serions très reconnaissant·e·s 🙏"
         }
       }
     },

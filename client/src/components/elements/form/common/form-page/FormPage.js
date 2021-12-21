@@ -3,12 +3,14 @@ import { useHistory } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { useTranslation } from 'react-i18next';
 import './FormPage.css';
 
 import FormWrapper from '../form-wrapper/FormWrapper';
 
 const FormPage = ({ children }) => {
+  const { t } = useTranslation();
+
   const [isFormVisible, setIsFormVisible] = useState(true);
 
   const history = useHistory();
@@ -19,11 +21,9 @@ const FormPage = ({ children }) => {
 
   const handleResultFromChild = (actionResult) => {
     if (actionResult === 'success') {
-      notifySuccess(
-        "C'est dans la boîte 🥡 Le temps que ta proposition passe dans les tuyaux d'Electronic Tales, elle sera publiée bientôt. Merci !"
-      );
+      notifySuccess(t('common.tooLateToAsks.suggestTooLateToAsk.notifications.success'));
     } else {
-      notifyFailure("Oops, on dirait qu'il y a un grumeau dans les tuyaux... Peux-tu réessayer ?");
+      notifyFailure(t('common.tooLateToAsks.suggestTooLateToAsk.notifications.failure'));
     }
   };
 
