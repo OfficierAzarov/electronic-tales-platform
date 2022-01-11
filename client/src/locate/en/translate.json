@@ -4,44 +4,44 @@
     "lab": {
       "open": "Open Lab",
       "close": "Close Lab",
-      "description": "Find here some content from Electronic Tales to come. To participate in their creation, click on them: you will be taken to our Slack, the place to be of the co-creation pool!"
+      "description": "Find here some content coming soon. To take a part in their creation, click on them: you will be redirected to our Slack, the place to be of the co-creation pool!"
     },
     "tooLateToAsks": {
       "categoryTitle": "Too late to ask",
-      "title": "The tinder of 🔥 dev",
+      "title": "The tinder of dev 🔥",
       "buttons": { "iAlreadyKnow": "I already know", "iWantToKnow": "I want to know" },
       "noCardsLeftMessage": {
-        "title": "There are no longer any questions in your area for the moment.",
-        "text": "✨&nbsp; Enjoying the premium offer to deactivate your geolocation and quell with questions from around the world &nbsp;✨<br /><br />No, it's fun.<br /><span className='small-text'>Finally, it says, maybe you should turn off your geolocation if you want to save battery. And at the same time, you do well what you want with your phone. And then it's practical, GPS, anyway. I remember this time I had to go to visit my aunt Léonie in the Perche, and ... Anyway.</span>",
-        "buttons": { "suggest": "I'm helping the community, I'm proposing a new question." }
+        "title": "There are no more question for the moment.",
+        "text": "✨&nbsp; Subscribe the premium offer to unable geolocation and match with questions from around the world &nbsp;✨<br /><br />Just kidding.<br /><span className='small-text'>But, seriously, maybe you should turn off your geolocation if you want to save battery. And at the same time, you do well what you want with your phone. And then it's practical, GPS, anyway. I remember this time I had to go to visit my aunt Léonie in the Perche, and... Anyway.</span>",
+        "buttons": { "suggest": "I'm helping the community, I'm suggesting a new question." }
       },
       "suggestTooLateToAsk": {
         "title": "I've always wondered ...",
-        "description": "You also have a question that you no longer dare to ask because you are already supposed to know the answer?<br /><br />Don't hesitate anymore and share it!",
+        "description": "Have a question that you no longer dare to ask because you're supposed to already know the answer?<br /><br />Share it!",
         "question": {
           "label": "Your question (mandatory):",
           "placeholder": "Write your question here."
         },
         "simpleDefinition": {
-          "label": "Do you have a simple definition? Great! Écris-la ici:",
-          "placeholder": "Example: In fact, it's just a way of ..."
+          "label": "Do you have a simple definition? Great! Write it here:",
+          "placeholder": "Example: In fact, it's just a way to..."
         },
         "analogy": {
-          "label": "If you have an analogy or a metaphor, then it is:",
-          "placeholder": "Example: It's like in a restaurant where there would be ..."
+          "label": "If you have an analogy or a metaphor, write it here:",
+          "placeholder": "Example: It's like in a restaurant where there would be..."
         },
         "realWorldExample": {
           "label": "A small concrete example, to finish? Go:",
-          "placeholder": "Example: To display I love Electronic Tales on my screen, I can type ..."
+          "placeholder": "Example: To display I love Electronic Tales on my screen, I can type..."
         },
         "name": { "label": "Your name?", "placeholder": "Captain Anonymouse" },
         "choice": {
           "iWantETToAnswer": "I want the Electronic Tales team to answer",
-          "iWantToSuggestAnAnswer": "I want to propose a response"
+          "iWantToSuggestAnAnswer": "I want to suggest an answer"
         },
         "notifications": {
-          "success": "It's in the box 🥡 The time your proposal goes through the pipes of Electronic Tales, it will be published soon. Thank you.",
-          "failure": "Oops, it looks like there's a grumwater in the pipes ... Can you try again? If it still doesn't work, contact the Electronic Tales team: contact@electronictales.io-we would be very grateful to you 🙏"
+          "success": "It's in the box 🥡 Your proposal is traveling through Electronic Tales pipes and will be published soon. Thank you.",
+          "failure": "Oops, it looks like there's a grumwater in the pipes... Can you try again? If it still doesn't work, contact the Electronic Tales team: contact@electronictales.io-we would be very grateful to you 🙏"
         }
       }
     },
@@ -50,7 +50,7 @@
       "justEnoughTimeTo": "Or the time of",
       "ofA": "Of",
       "funnyThingsList": {
-        "consumingActions": { "bite": "Cross", "sip": "Sip", "gloop": "Glouper", "crisp": "Crisp" },
+        "consumingActions": { "bite": "Bite", "sip": "Sip", "gloop": "Gloop", "crisp": "Crisp" },
         "genders": { "female": "Feminine", "male": "Male" },
         "names": { "burger": "Burger", "coffee": "Coffee", "doughnut": "Donut", "fries": "Fries" }
       },
@@ -58,35 +58,35 @@
     },
     "buttons": { "share": "Share" },
     "errors": {
-      "pleaseReport": "If you have two minutes, you can tell us the problem (or tell us what your favorite brand of chips is, you're always good tips on this topic) on our <a href='https://join.slack.com/t/electronictales/shared_invite/zt-kox8itw1-tveUHRe8QSTtjs0Bb172BA' target='_blank' rel='noopener noreferrer'><span>Slack</span>&nbsp;🙏</a>",
+      "pleaseReport": "If you have two minutes, you can tell us about the problem you're encountering (or tell us what your favorite brand of chips is, we're always curious on this topic) on our <a href='https://join.slack.com/t/electronictales/shared_invite/zt-kox8itw1-tveUHRe8QSTtjs0Bb172BA' target='_blank' rel='noopener noreferrer'><span>Slack</span>&nbsp;🙏</a>",
       "noArticle": {
-        "title": "Aoun!",
-        "message": "It seems that the Talers forgot to talk about this subject ... For the moment."
+        "title": "Aouch!",
+        "message": "Looks like the Talers haven't written on this subject... Yet."
       }
     }
   },
   "home": {
     "safeSpace": {
-      "title": "Let's get the impostor syndrome together.",
-      "description": "A junior developer, you are suffering from the impostor syndrome?<br /><br />At Electronic Tales, we believe that this is not inevitable.",
-      "callToActionText": "Come on, talk about it &nbsp; &rarr;",
-      "alternativeCallToActionText": "... &nbsp; or continues the visit &nbsp;"
+      "title": "Let's smash the impostor syndrome together.",
+      "description": "As a junior developer, you're' suffering from the impostor syndrome?<br /><br />At Electronic Tales, we believe this should not be that way.",
+      "callToActionText": "Let's talk about it &nbsp; &rarr;",
+      "alternativeCallToActionText": "...&nbsp; or continue the visit &nbsp;"
     },
     "modernWorld": {
       "title": "Modern World",
-      "description": "Learn how to program between rows.",
-      "alternativeCallToActionText": "... &nbsp; mmh, what else is in store? &nbsp;"
+      "description": "Learn to program between the lines.",
+      "alternativeCallToActionText": "...&nbsp; mmh, what do you have in store? &nbsp;"
     },
     "imaginarium": {
       "title": "Imaginarium",
-      "description": "Get the myths and legends from the generation bits.",
-      "alternativeCallToActionText": "... &nbsp; still not &nbsp;?"
+      "description": "Absorb the myths and legends of the bits generation.",
+      "alternativeCallToActionText": "...&nbsp; nope&nbsp;?"
     },
     "ancientWorld": {
       "title": "Ancient World",
-      "description": "Immerses in the world engulfed in computer science.",
-      "alternativeCallToActionText": "Even lower? &nbsp;",
-      "alert": "Come on. Did you expect what? The Nine Circles of Hell? The design department didn't have enough budget for that."
+      "description": "Dive into the sunken world of computer science.",
+      "alternativeCallToActionText": "Lower&nbsp;?",
+      "alert": "Come on. What did you expect? The Nine Circles of Hell? The design department didn't have enough budget for that."
     },
     "common": { "enterButtonText": "Enter" }
   },
