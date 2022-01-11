@@ -153,16 +153,19 @@ const HomeCard = ({ idForScroll, title, description, callToAction, alternativeCa
               symbol={alternativeCallToAction.emoji.symbol}
               label={alternativeCallToAction.emoji.label}
             />
+            {alternativeCallToAction.alert ? (
+              <div
+                className="chevron-container"
+                onClick={() => alert(alternativeCallToAction.alert)}
+              >
+                <ChevronDown />
+              </div>
+            ) : (
+              <div className="chevron-container">
+                <ChevronDown />
+              </div>
+            )}
           </ScrollLink>
-          {alternativeCallToAction.alert ? (
-            <div className="chevron-container" onClick={() => alert(alternativeCallToAction.alert)}>
-              <ChevronDown />
-            </div>
-          ) : (
-            <div className="chevron-container">
-              <ChevronDown />
-            </div>
-          )}
         </div>
       </div>
     </div>
