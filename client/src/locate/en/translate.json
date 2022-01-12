@@ -23,7 +23,7 @@
           "placeholder": "Write your question here."
         },
         "simpleDefinition": {
-          "label": "Do you have a simple definition? Great! Write it here:",
+          "label": "Have a simple definition? Great! Write it here:",
           "placeholder": "Example: In fact, it's just a way to..."
         },
         "analogy": {
@@ -95,13 +95,13 @@
     "miniNavbar": { "why": "Why", "microExperiences": "Micro-lived", "ourSlack": "Our Slack" },
     "why": {
       "why": {
-        "title": "Why &nbsp;?",
+        "title": "Why&nbsp;?",
         "body": "Thanks to the explosion of short formations, more and more storefronts come from different backgrounds, and it is so much better.<br /><br />However, once in business, these people sometimes feel that a <strong>\"glass wall\"</strong> separates them from their older colleagues from more traditional routes. A wall built on <strong>cultural or technical references</strong> that they do not have &nbsp;🖖&nbsp;🥚&nbsp;🚀&nbsp;❓🚀🚀<br /><br />Add to this the <strong>development-specific complexity</strong> (program is hard, the technos evolve very quickly, it is impossible to know ...), and all the ingredients are combined to develop a good <strong>well-typed impostor syndrome</strong>."
       },
       "debug": {
-        "title": "Let's look at this!",
+        "title": "Let's fight together!",
         "body": {
-          "text": "<span className='big-text'>Imprest syndrome is a very common problem for developers.</span><br /><br />The problem is that you rarely dare to talk about it &nbsp;😶<br /> <br /> <br />Or, discussing it with other devs is an essential first step:",
+          "text": "<span className='big-text'>Imposter syndrome is a very common problem among developers.</span><br /><br />The thing people rarely dare to speak up about it &nbsp;😶<br /> <br /> <br />But discussing it with other devs is an essential first step:",
           "list": "<li>Be aware that you are not alone in galore &nbsp;🚣🏼</li><li>Technically progress on healthier bases &nbsp;💪</li><li>Teach together a movement of detox &nbsp;🌱&nbsp;🍵 from a sometimes toxic environment &nbsp;🤢&nbsp;☢️</li>"
         }
       },
