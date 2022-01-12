@@ -16,18 +16,7 @@ const Error = ({ title, message }) => {
         dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
           t('common.errors.pleaseReport')
         )}
-      >
-        {/* Si tu as deux minutes, tu peux passer nous signaler le problème (ou nous dire quelle est ta
-        marque de chips préférée, on est toujours preneurs·euses de bons tuyaux à ce sujet) sur
-        notre{' '}
-        <a
-          href="https://join.slack.com/t/electronictales/shared_invite/zt-kox8itw1-tveUHRe8QSTtjs0Bb172BA"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>Slack</span>&nbsp;🙏
-        </a> */}
-      </p>
+      ></p>
     </div>
   );
 };
