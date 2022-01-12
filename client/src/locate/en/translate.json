@@ -40,8 +40,8 @@
           "iWantToSuggestAnAnswer": "I want to suggest an answer"
         },
         "notifications": {
-          "success": "It's in the box 🥡 Your proposal is traveling through Electronic Tales pipes and will be published soon. Thank you.",
-          "failure": "Oops, it looks like there's a grumwater in the pipes... Can you try again? If it still doesn't work, contact the Electronic Tales team: contact@electronictales.io-we would be very grateful to you 🙏"
+          "success": "It's in the box 🥡 Your suggestion is traveling through Electronic Tales pipes and will be published soon. Thank you.",
+          "failure": "Oops, it looks like there's a grumwater in our pipes... Can you try again? If it still doesn't work, contact the Electronic Tales team: contact@electronictales.io-we would be very grateful to you 🙏"
         }
       }
     },
