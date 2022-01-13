@@ -23,11 +23,12 @@ const App = () => {
 
   return (
     <Provider store={store}>
-    {isDesktop ? (
+      {/* {isDesktop ? (
       <NotYet />
-    ) : (
+    ) : ( */}
       <Router>
-        <LanguageNavbar />
+        {/* LanguageNavbar is temporary hidden, let's finish for desktop design to be done to unhide it */}
+        {/* <LanguageNavbar /> */}
         <SecondaryNavbar />
         <ScrollToTop />
         <Switch>
@@ -36,8 +37,8 @@ const App = () => {
         </Switch>
         <Navbar />
       </Router>
-    )}
-  </Provider>
+      ){/* } */}
+    </Provider>
   );
 };
 

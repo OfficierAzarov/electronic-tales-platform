@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import { connect } from 'react-redux';
@@ -16,8 +17,14 @@ import logo from '../../../resources/img/logo-transparent.png';
 import logoSmall from '../../../resources/img/logo-transparent-350.png';
 import { ReactComponent as ChevronDown } from '../../../resources/img/icons/chevron-down.svg';
 
+import MansionDesktop from '../../interactive-images/mansionDesktop/mansionDesktop';
+
 const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
   const { t } = useTranslation();
+
+  const isDesktop = useMediaQuery({
+    query: '(min-device-width: 768px)',
+  });
 
   useEffect(() => {
     setHomeAsCurrentPage();
@@ -28,95 +35,107 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
 
   return (
     <div id="home">
-      <div id="mansion">
-        <Mansion />
-      </div>
-      <div id="home-worlds-container">
-        <img
-          srcSet={`${logoSmall} 350w, ${logo} 500w`}
-          id="logo"
-          loading="auto"
-          alt="Electronic Tales logo"
-        />
-        <HomeCard
-          idForScroll="home-safe-space"
-          title={t('home.safeSpace.title')}
-          description={generateSanitizedDangerouslySetInnerHtml(t('home.safeSpace.description'))}
-          callToAction={{
-            link: '/safe-space',
-            text: generateSanitizedDangerouslySetInnerHtml(t('home.safeSpace.callToActionText')),
-          }}
-          alternativeCallToAction={{
-            text: generateSanitizedDangerouslySetInnerHtml(
-              t('home.safeSpace.alternativeCallToActionText')
-            ),
-            emoji: { symbol: '🐾' },
-            whereToScrollTo: 'home-modern-world',
-          }}
-        />
-        <div id="spacer"></div>
-        <Bounce bottom duration={2000}>
-          <HomeCard
-            idForScroll="home-modern-world"
-            title={t('home.modernWorld.title')}
-            description={generateSanitizedDangerouslySetInnerHtml(
-              t('home.modernWorld.description')
-            )}
-            callToAction={{
-              link: '/modern-world',
-              text: t('home.common.enterButtonText'),
-            }}
-            alternativeCallToAction={{
-              text: generateSanitizedDangerouslySetInnerHtml(
-                t('home.modernWorld.alternativeCallToActionText')
-              ),
-              emoji: { symbol: '🕵️‍♂️' },
-              whereToScrollTo: 'home-imaginarium',
-            }}
-          />
-        </Bounce>
-        <Bounce bottom duration={2000}>
-          <HomeCard
-            idForScroll="home-imaginarium"
-            title={t('home.imaginarium.title')}
-            description={generateSanitizedDangerouslySetInnerHtml(
-              t('home.imaginarium.description')
-            )}
-            callToAction={{
-              link: '/imaginarium',
-              text: 'Entrer',
-            }}
-            alternativeCallToAction={{
-              text: generateSanitizedDangerouslySetInnerHtml(
-                t('home.imaginarium.alternativeCallToActionText')
-              ),
-              emoji: { symbol: '😅' },
-              whereToScrollTo: 'home-ancient-world',
-            }}
-          />
-        </Bounce>
-        <Bounce bottom duration={2000}>
-          <HomeCard
-            idForScroll="home-ancient-world"
-            title={t('home.ancientWorld.title')}
-            description={generateSanitizedDangerouslySetInnerHtml(
-              t('home.ancientWorld.description')
-            )}
-            callToAction={{
-              link: '/ancient-world',
-              text: 'Entrer',
-            }}
-            alternativeCallToAction={{
-              text: generateSanitizedDangerouslySetInnerHtml(
-                t('home.ancientWorld.alternativeCallToActionText')
-              ),
-              emoji: { symbol: '🧗' },
-              alert: t('home.ancientWorld.alert'),
-            }}
-          />
-        </Bounce>
-      </div>
-      <div id="spacer-small"></div>
+      {isDesktop ? (
+        <div id="mansion-desktop">
+          <MansionDesktop />
+        </div>
+      ) : (
+        <Fragment>
+          <div id="mansion">
+            <Mansion />
+          </div>
+          <div id="home-worlds-container">
+            <img
+              srcSet={`${logoSmall} 350w, ${logo} 500w`}
+              id="logo"
+              loading="auto"
+              alt="Electronic Tales logo"
+            />
+            <HomeCard
+              idForScroll="home-safe-space"
+              title={t('home.safeSpace.title')}
+              description={generateSanitizedDangerouslySetInnerHtml(
+                t('home.safeSpace.description')
+              )}
+              callToAction={{
+                link: '/safe-space',
+                text: generateSanitizedDangerouslySetInnerHtml(
+                  t('home.safeSpace.callToActionText')
+                ),
+              }}
+              alternativeCallToAction={{
+                text: generateSanitizedDangerouslySetInnerHtml(
+                  t('home.safeSpace.alternativeCallToActionText')
+                ),
+                emoji: { symbol: '🐾' },
+                whereToScrollTo: 'home-modern-world',
+              }}
+            />
+            <div id="spacer"></div>
+            <Bounce bottom duration={2000}>
+              <HomeCard
+                idForScroll="home-modern-world"
+                title={t('home.modernWorld.title')}
+                description={generateSanitizedDangerouslySetInnerHtml(
+                  t('home.modernWorld.description')
+                )}
+                callToAction={{
+                  link: '/modern-world',
+                  text: t('home.common.enterButtonText'),
+                }}
+                alternativeCallToAction={{
+                  text: generateSanitizedDangerouslySetInnerHtml(
+                    t('home.modernWorld.alternativeCallToActionText')
+                  ),
+                  emoji: { symbol: '🕵️‍♂️' },
+                  whereToScrollTo: 'home-imaginarium',
+                }}
+              />
+            </Bounce>
+            <Bounce bottom duration={2000}>
+              <HomeCard
+                idForScroll="home-imaginarium"
+                title={t('home.imaginarium.title')}
+                description={generateSanitizedDangerouslySetInnerHtml(
+                  t('home.imaginarium.description')
+                )}
+                callToAction={{
+                  link: '/imaginarium',
+                  text: 'Entrer',
+                }}
+                alternativeCallToAction={{
+                  text: generateSanitizedDangerouslySetInnerHtml(
+                    t('home.imaginarium.alternativeCallToActionText')
+                  ),
+                  emoji: { symbol: '😅' },
+                  whereToScrollTo: 'home-ancient-world',
+                }}
+              />
+            </Bounce>
+            <Bounce bottom duration={2000}>
+              <HomeCard
+                idForScroll="home-ancient-world"
+                title={t('home.ancientWorld.title')}
+                description={generateSanitizedDangerouslySetInnerHtml(
+                  t('home.ancientWorld.description')
+                )}
+                callToAction={{
+                  link: '/ancient-world',
+                  text: 'Entrer',
+                }}
+                alternativeCallToAction={{
+                  text: generateSanitizedDangerouslySetInnerHtml(
+                    t('home.ancientWorld.alternativeCallToActionText')
+                  ),
+                  emoji: { symbol: '🧗' },
+                  alert: t('home.ancientWorld.alert'),
+                }}
+              />
+            </Bounce>
+          </div>
+          <div id="spacer-small"></div>
+        </Fragment>
+      )}
     </div>
   );
 };
