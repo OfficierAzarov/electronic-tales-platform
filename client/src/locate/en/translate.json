@@ -4,26 +4,26 @@
     "lab": {
       "open": "Open Lab",
       "close": "Close Lab",
-      "description": "Find here some content coming soon. To take a part in their creation, click on them: you will be redirected to our Slack, the place to be of the co-creation pool!"
+      "description": "Find here some upcoming contents. To take a part in their creation, click on them: you will be redirected to our Slack, the place to be of the co-creation pool!"
     },
     "tooLateToAsks": {
       "categoryTitle": "Too late to ask",
       "title": "The tinder of dev 🔥",
-      "buttons": { "iAlreadyKnow": "I already know", "iWantToKnow": "I want to know" },
+      "buttons": { "iAlreadyKnow": "I already know this", "iWantToKnow": "I want to know" },
       "noCardsLeftMessage": {
-        "title": "There are no more question for the moment.",
-        "text": "✨&nbsp; Subscribe the premium offer to unable geolocation and match with questions from around the world &nbsp;✨<br /><br />Just kidding.<br /><span className='small-text'>But, seriously, maybe you should turn off your geolocation if you want to save battery. And at the same time, you do well what you want with your phone. And then it's practical, GPS, anyway. I remember this time I had to go to visit my aunt Léonie in the Perche, and... Anyway.</span>",
+        "title": "There is no more question for now.",
+        "text": "✨&nbsp; Subscribe to the premium offer to turn off geolocation and match with questions from around the world &nbsp;✨<br /><br />Just kidding.<br /><span className='small-text'>But seriously, maybe you should turn off your geolocation if you want to save battery. That said, you do what you want with your phone. And it's convenient to have a GPS, anyway. I remember this time I had to go visit my aunt Léonie in the Perche, and... Anyway.</span>",
         "buttons": { "suggest": "I'm helping the community, I'm suggesting a new question." }
       },
       "suggestTooLateToAsk": {
         "title": "I've always wondered ...",
-        "description": "Have a question that you no longer dare to ask because you're supposed to already know the answer?<br /><br />Share it!",
+        "description": "Do you have a question that you no longer dare to ask, because you're supposed to already know the answer?<br /><br />Share it!",
         "question": {
           "label": "Your question (mandatory):",
           "placeholder": "Write your question here."
         },
         "simpleDefinition": {
-          "label": "Have a simple definition? Great! Write it here:",
+          "label": "Do you have a simple definition to share? Great! Write it here:",
           "placeholder": "Example: In fact, it's just a way to..."
         },
         "analogy": {
@@ -31,8 +31,8 @@
           "placeholder": "Example: It's like in a restaurant where there would be..."
         },
         "realWorldExample": {
-          "label": "A small concrete example, to finish? Go:",
-          "placeholder": "Example: To display I love Electronic Tales on my screen, I can type..."
+          "label": "A concrete short example, to finish? Go:",
+          "placeholder": "Example: To display \"I love Electronic Tales on my screen\", I can type..."
         },
         "name": { "label": "Your name?", "placeholder": "Captain Anonymouse" },
         "choice": {
@@ -41,12 +41,12 @@
         },
         "notifications": {
           "success": "It's in the box 🥡 Your suggestion is traveling through Electronic Tales pipes and will be published soon. Thank you.",
-          "failure": "Oops, it looks like there's a grumwater in our pipes... Can you try again? If it still doesn't work, contact the Electronic Tales team: contact@electronictales.io-we would be very grateful to you 🙏"
+          "failure": "Oops, it looks like there's a grumwater in our pipes... Can you try again? If it still doesn't work, contact the Electronic Tales team: contact@electronictales.io - We would be very grateful to you 🙏"
         }
       }
     },
     "readingTime": {
-      "readingTime": "Reading",
+      "readingTime": "Reading time estimation",
       "justEnoughTimeTo": "Or the time of",
       "ofA": "Of",
       "funnyThingsList": {
@@ -54,11 +54,11 @@
         "genders": { "female": "Feminine", "male": "Male" },
         "names": { "burger": "Burger", "coffee": "Coffee", "doughnut": "Donut", "fries": "Fries" }
       },
-      "lessThanAMinute": "Less than one minute"
+      "lessThanAMinute": "Less than 1 minute"
     },
     "buttons": { "share": "Share" },
     "errors": {
-      "pleaseReport": "If you have two minutes, you can tell us about the problem you're encountering (or tell us what your favorite brand of chips is, we're always curious on this topic) on our <a href='https://join.slack.com/t/electronictales/shared_invite/zt-kox8itw1-tveUHRe8QSTtjs0Bb172BA' target='_blank' rel='noopener noreferrer'><span>Slack</span>&nbsp;🙏</a>",
+      "pleaseReport": "If you have two minutes, you can tell us about the problem you encountered (or what your favorite brand of potato chips is, we're always curious on this topic) on our <a href='https://join.slack.com/t/electronictales/shared_invite/zt-kox8itw1-tveUHRe8QSTtjs0Bb172BA' target='_blank' rel='noopener noreferrer'><span>Slack</span>&nbsp;🙏</a>",
       "noArticle": {
         "title": "Aouch!",
         "message": "Looks like the Talers haven't written on this subject... Yet."
@@ -68,25 +68,25 @@
   "home": {
     "safeSpace": {
       "title": "Let's smash the impostor syndrome together.",
-      "description": "As a junior developer, you're' suffering from the impostor syndrome?<br /><br />At Electronic Tales, we believe this should not be that way.",
+      "description": "As a junior developer, you're suffering from the impostor syndrome?<br /><br />At Electronic Tales, we believe it doesn't have to be that way.",
       "callToActionText": "Let's talk about it &nbsp; &rarr;",
       "alternativeCallToActionText": "...&nbsp; or continue the visit &nbsp;"
     },
     "modernWorld": {
       "title": "Modern World",
       "description": "Learn to program between the lines.",
-      "alternativeCallToActionText": "...&nbsp; mmh, what do you have in store? &nbsp;"
+      "alternativeCallToActionText": "...&nbsp; mmh, what else do you have in our bag? &nbsp;"
     },
     "imaginarium": {
       "title": "Imaginarium",
-      "description": "Absorb the myths and legends of the bits generation.",
+      "description": "Soak up in the myths and legends of the Bits generation.",
       "alternativeCallToActionText": "...&nbsp; nope&nbsp;?"
     },
     "ancientWorld": {
       "title": "Ancient World",
       "description": "Dive into the sunken world of computer science.",
       "alternativeCallToActionText": "Lower&nbsp;?",
-      "alert": "Come on. What did you expect? The Nine Circles of Hell? The design department didn't have enough budget for that."
+      "alert": "Come on, what did you expect? The Nine Circles of Hell? The design department didn't have enough budget for that."
     },
     "common": { "enterButtonText": "Enter" }
   },
@@ -96,13 +96,13 @@
     "why": {
       "why": {
         "title": "Why&nbsp;?",
-        "body": "Thanks to the explosion of short formations, more and more storefronts come from different backgrounds, and it is so much better.<br /><br />However, once in business, these people sometimes feel that a <strong>\"glass wall\"</strong> separates them from their older colleagues from more traditional routes. A wall built on <strong>cultural or technical references</strong> that they do not have &nbsp;🖖&nbsp;🥚&nbsp;🚀&nbsp;❓🚀🚀<br /><br />Add to this the <strong>development-specific complexity</strong> (program is hard, the technos evolve very quickly, it is impossible to know ...), and all the ingredients are combined to develop a good <strong>well-typed impostor syndrome</strong>."
+        "body": "Thanks to the explosion of short training courses, more and more developers come from different backgrounds, and it is so much better.<br /><br />However, once in business, these people sometimes feel that a <strong>\"glass wall\"</strong> separates them from their colleagues coming from more traditional routes. A wall built on <strong>cultural or technical references</strong> that they do not have &nbsp;🖖&nbsp;🥚&nbsp;🚀&nbsp;❓🚀🚀<br /><br />Add to this the <strong>development-specific complexity</strong> (programming is hard, the technos evolve very quickly, it is impossible to know everything...), and all the ingredients are combined to develop a strong <strong>well-typed impostor syndrome</strong>."
       },
       "debug": {
         "title": "Let's fight together!",
         "body": {
-          "text": "<span className='big-text'>Imposter syndrome is a very common problem among developers.</span><br /><br />The thing people rarely dare to speak up about it &nbsp;😶<br /> <br /> <br />But discussing it with other devs is an essential first step:",
-          "list": "<li>Be aware that you are not alone in galore &nbsp;🚣🏼</li><li>Technically progress on healthier bases &nbsp;💪</li><li>Teach together a movement of detox &nbsp;🌱&nbsp;🍵 from a sometimes toxic environment &nbsp;🤢&nbsp;☢️</li>"
+          "text": "<span className='big-text'>Imposter syndrome is a very common problem among developers.</span><br /><br />The thing is : people rarely dare to speak up about it &nbsp;😶<br /> <br /> <br />But discussing it with other devs is an essential first step to:",
+          "list": "<li>Realise that you are not the only one struggling &nbsp;🚣🏼</li><li>Improve your technical level on sounder basis &nbsp;💪</li><li>Launch a movement of detox all together &nbsp;🌱&nbsp;🍵 from an environment that can sometimes be toxic &nbsp;🤢&nbsp;☢️</li>"
         }
       },
       "go": {
@@ -110,17 +110,17 @@
         "body": {
           "text": "Convinced-e &nbsp;?<br /><br />Take a look at ",
           "link1Name": "Micro-lived",
-          "link1Description": "Collaborative collection of toxic situations in the middle of the dev",
-          "link2Description": "Come and discuss your problems with others over our",
+          "link1Description": "Collaborative collection of toxic situations in the development field",
+          "link2Description": "Come and discuss your problems with others on our",
           "link2Name": "Slack"
         }
       }
     },
     "microExperiences": {
-      "description": "Florilege of everyday situations that you should never live in the world of the dev. <br /><br />You have a micro-lived experience to share? Do not hesitate, we will publish it anonymously or under a pseudonym.",
+      "description": "Florilege of everyday situations that you should never have to experiment in the world of the dev. <br /><br />You have a life short experience to share? Do not hesitate, we will publish it anonymously or under an alias.",
       "share": {
         "microExperience": {
-          "label": "You have a micro-lived to share? We will be delighted to read it and publish it.",
+          "label": "You have a life short experience to share? We will be delighted to read it and publish it.",
           "placeholder": "Once upon a time ..."
         },
         "name": { "label": "Your pseudo?", "placeholder": "Captain Ann O ' nysoft" }
@@ -129,17 +129,17 @@
     "ourChat": {
       "title": "Our Slack",
       "descriptionBeforeLink": "We opened a",
-      "descriptionAfterLink": " To allow the devs to talk to the open heart of the problems that they can live in tech.",
+      "descriptionAfterLink": " To allow the devs to speak from the heart about the problems they can encounter in tech.",
       "rules": {
         "intro": "For the well-being of all, we ask you to follow two main principles:",
-        "list": "<li><h4>😎&nbsp; Uses a Pseudo</h4>Let us leave aside real names, workplaces and business names-find the <span class='wordart rainbow rotate-left'>swag</span> of the<span class='wordart superhero rotate-right'>Internet</span> at the beginning of the <span class='wordart purple'>2000s</span> and liberate the word.</li><li><h4>🤗&nbsp; N ' never forgets inclusion and respect</h4>No racism, validism, sexism, homophobia, transphobia, body shaming and any other <i>- &nbsp; isms</i>, <i>- &nbsp; ing</i> , and <i>- &nbsp; phobias</i> Likely to make someone uncomfortable. It requires a lot of energy and courage to speak, even anonymously in a remote corner of the Internet, so we will be intransigent on the issue.</li>"
+        "list": "<li><h4>😎&nbsp; Use a Pseudo</h4>Let us leave aside real names, workplaces and business names - Let's go back the <span class='wordart rainbow rotate-left'>swag</span> of the<span class='wordart superhero rotate-right'>Internet</span> at the beginning of the <span class='wordart purple'>2000s</span> and freed the voices.</li><li><h4>🤗&nbsp; N ' never forgets inclusion and respect</h4>No racism, validism, sexism, homophobia, transphobia, body shaming and any other <i>- &nbsp; isms</i>, <i>- &nbsp; ing</i> , and <i>- &nbsp; phobias</i> that could make anyone uncomfortable. It requires a lot of energy and courage to speak, even anonymously in a remote corner of the Internet, so we will be intransigent on the issue.</li>"
       },
       "join": "Join Slack"
     }
   },
   "modernWorld": {
     "title": "Modern World",
-    "swipeDoor": "Also, do you still have questions about programming that you should already know about the answers?",
+    "swipeDoor": "Also, do you still have questions about programming for which you should already know the answers?",
     "roadmap": {
       "categoryTitle": "Roadmaps",
       "description": "Lost in the world of dev? Our maps are there to guide you."
@@ -147,7 +147,7 @@
   },
   "imaginarium": {
     "title": "Imaginarium",
-    "swipeDoor": "Also, do you still have questions of computer culture that you should know the answers already?",
+    "swipeDoor": "Also, do you still have questions about computer culture for which you should already know the answers?",
     "roadmap": {
       "categoryTitle": "Roadmaps",
       "description": "Lost in the world of dev? Our maps are there to guide you.",
@@ -158,8 +158,8 @@
     "title": "Ancient World",
     "temp": {
       "workinProgress": "This world is still in manufacturing 😅",
-      "comeBackLater": "To learn the wheels of machines with Mom Cobol (but who is it? Suspense!), goes back a little later.",
-      "imageAlt": "Mamie Cobol pasting wallpaper on Ancient World walls"
+      "comeBackLater": "To learn about the nuts and bolt of machines with Mom Cobol (but who is that? Suspense!), come back a little later.",
+      "imageAlt": "Mamie Cobol applying wallpaper on Ancient World walls"
     }
   }
 }
