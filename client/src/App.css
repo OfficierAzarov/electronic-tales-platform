@@ -347,11 +347,24 @@ nav svg {
 /* =======  DESKTOP VERSION : start ========= */
 
 @media only screen and (min-width: 768px) {
+  section {
+    display: flex;
+    justify-content: center;
+  }
+
+  /*============= LAYOUT =============*/
+
+  .container {
+    width: 60%;
+  }
+
+  /*============= NAV =============*/
+
   nav:not(#secondary-nav) {
     position: fixed;
     height: auto;
     width: auto;
-    top: 50%;
+    top: 25%;
     margin-left: 3rem;
   }
 }
