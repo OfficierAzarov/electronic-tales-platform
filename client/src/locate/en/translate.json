@@ -70,12 +70,12 @@
       "title": "Let's smash the impostor syndrome together.",
       "description": "As a junior developer, you're suffering from the impostor syndrome?<br /><br />At Electronic Tales, we believe it doesn't have to be that way.",
       "callToActionText": "Let's talk about it &nbsp; &rarr;",
-      "alternativeCallToActionText": "...&nbsp; or continue the visit &nbsp;"
+      "alternativeCallToActionText": "...&nbsp; or continue the visit&nbsp;"
     },
     "modernWorld": {
       "title": "Modern World",
       "description": "Learn to program between the lines.",
-      "alternativeCallToActionText": "...&nbsp; mmh, what else do you have in our bag? &nbsp;"
+      "alternativeCallToActionText": "...&nbsp; mmh, what else do you have in your bag?&nbsp;"
     },
     "imaginarium": {
       "title": "Imaginarium",
