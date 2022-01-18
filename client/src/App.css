@@ -83,6 +83,24 @@ a svg {
   fill: #ffffff;
 }
 
+/*============= GENERAL PURPOSE =============*/
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.border-shadow {
+  box-shadow: 0.6rem 0.6rem 1rem 0.5rem rgb(0 0 0 / 41%);
+}
+
+.border-shadow-with-border {
+  border: 1px solid #5a5959;
+  box-shadow: 0.6rem 0.6rem 1rem 0.5rem rgb(0 0 0 / 41%);
+}
+
+/* =======  MOBILE VERSION : start ========= */
+
 /*============= NAVS =============*/
 
 nav {
@@ -324,18 +342,18 @@ nav svg {
   margin: 1.5rem;
 }
 
-/*============= GENERAL PURPOSE =============*/
+/* =======  MOBILE VERSION : end ========= */
 
-.flex-center {
-  display: flex;
-  justify-content: center;
+/* =======  DESKTOP VERSION : start ========= */
+
+@media only screen and (min-width: 768px) {
+  nav:not(#secondary-nav) {
+    position: fixed;
+    height: auto;
+    width: auto;
+    top: 50%;
+    margin-left: 3rem;
+  }
 }
 
-.border-shadow {
-  box-shadow: 0.6rem 0.6rem 1rem 0.5rem rgb(0 0 0 / 41%);
-}
-
-.border-shadow-with-border {
-  border: 1px solid #5a5959;
-  box-shadow: 0.6rem 0.6rem 1rem 0.5rem rgb(0 0 0 / 41%);
-}
+/* =======  DESKTOP VERSION : end ========= */

@@ -6,6 +6,7 @@ nav#main-nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #121212;
 }
 
 nav#main-nav a {
@@ -23,6 +24,12 @@ nav#main-nav a sub {
 /* =======  DESKTOP VERSION : start ========= */
 
 @media only screen and (min-width: 768px) {
+  nav#main-nav {
+    flex-direction: column;
+    border: #6b6a6a 1px solid;
+    border-radius: 0.8rem;
+    padding: 1rem;
+  }
 }
 
 /* =======  DESKTOP VERSION : end ========= */
