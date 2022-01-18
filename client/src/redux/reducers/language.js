@@ -3,7 +3,7 @@ import { SET_LANGUAGE } from '../actions/types';
 /**
  * TODO: adapt to user's browser language
  */
-const initialState = { preferredLanguage: 'fr' };
+const initialState = { preferredLanguage: 'en' };
 
 export default function (state = initialState, action) {
   const { type, payload } = action;

@@ -37,7 +37,7 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
               _id: 'salaryCardId',
               title: {
                 fr: 'Le mur des salaires des devs juniors : partageons les vrais chiffres !',
-                en: 'English title',
+                en: "The junior devs salary wall: let's share the real numbers!",
               },
               link: {
                 path: SLACK,
@@ -50,7 +50,8 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
               title: {
                 fr:
                   'Le tamagotchi des devs : tracke tes progrès et compare-les à ceux des autres en toute bienveillance',
-                en: 'English title',
+                en:
+                  "Dev's tamagotchi: track your progress and compare it to others in a friendly way",
               },
               link: {
                 path: SLACK,
