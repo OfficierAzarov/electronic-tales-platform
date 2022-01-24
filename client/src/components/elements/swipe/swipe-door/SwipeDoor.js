@@ -11,7 +11,10 @@ const SwipeDoor = ({ link, text, id }) => {
   const card = [
     {
       _id: `${id}Id`,
-      title: t('common.tooLateToAsks.title'),
+      title: {
+        fr: t('common.tooLateToAsks.title'),
+        en: t('common.tooLateToAsks.title'),
+      },
       link: {
         path: link,
         openInNewTab: false,
