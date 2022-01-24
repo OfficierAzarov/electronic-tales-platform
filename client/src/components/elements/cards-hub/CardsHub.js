@@ -26,7 +26,7 @@ const CardsHub = ({ categoryName, categoryArticles, text, preferredLanguage }) =
       <div className="line-title-wrapper category-title-wrapper">
         <h3 className="title">{categoryName}</h3>
       </div>
-      <p>{text}</p>
+      {text && <p>{text}</p>}
       <div className="w-cat-card-content">
         {categoryArticles.length > 1 ? (
           <SwiperJsHack>
@@ -64,7 +64,7 @@ const CardsHub = ({ categoryName, categoryArticles, text, preferredLanguage }) =
 CardsHub.propTypes = {
   categoryName: PropTypes.string.isRequired,
   categoryArticles: PropTypes.array.isRequired,
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   preferredLanguage: PropTypes.string.isRequired,
 };
 
