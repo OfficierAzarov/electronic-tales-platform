@@ -32,8 +32,9 @@
 /* =======  DESKTOP VERSION : start ========= */
 
 @media only screen and (min-width: 768px) {
-  .card {
-    width: auto;
+  .card,
+  .card.big {
+    width: 30wh;
   }
 }
 

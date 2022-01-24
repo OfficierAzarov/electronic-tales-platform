@@ -16,7 +16,8 @@ const Card = ({ link, imageUrl, title, size, placeText }) => {
         className={`card ${size == 'big' ? 'big' : ''} border-shadow`}
         style={{
           backgroundImage: `url(${imageUrl})`,
-          justifyContent: placeText == 'center' ? 'center' : 'flex-end',
+          // *TODO: remove because it isn't used anywhere*
+          // justifyContent: placeText == 'center' ? 'center' : 'flex-end',
         }}
       >
         <div className="card-title">
