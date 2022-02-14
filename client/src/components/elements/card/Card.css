@@ -34,7 +34,7 @@
 @media only screen and (min-width: 768px) {
   .card,
   .card.big {
-    width: 30wh;
+    width: 40vw;
   }
 }
 
