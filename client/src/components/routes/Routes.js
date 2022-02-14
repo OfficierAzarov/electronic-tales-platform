@@ -7,10 +7,10 @@ import ModernWorld from '../layout/worlds/modern-world/ModernWorld';
 import Imaginarium from '../layout/worlds/imaginarium/Imaginarium';
 import AncientWorld from '../layout/worlds/ancient-world/AncientWorld';
 import Article from '../elements/article/Article';
-import Swipe from '../elements/swipe/Swipe';
+import Tinder from '../elements/tinder/Tinder';
 import SafeSpaceChat from '../layout/safe-space/chat/SafeSpaceChat';
 import AddQuote from '../layout/safe-space/add-quote/AddQuote';
-import SwipeAddQuestion from '../elements/swipe/swipe-add-question/SwipeAddQuestion';
+import TinderAddQuestion from '../elements/tinder/tinder-add-question/TinderAddQuestion';
 import Syntax from '../interactive-images/clean-code/syntax/Syntax';
 import DoesItWork from '../interactive-images/clean-code/does-it-work/DoesItWork';
 import Naming from '../interactive-images/clean-code/naming/Naming';
@@ -29,13 +29,13 @@ const Routes = () => {
         <Route exact path="/safe-space/add-quote" component={AddQuote}></Route>
         <Route exact path="/safe-space/chat" component={SafeSpaceChat}></Route>
         <Route exact path="/imaginarium" component={Imaginarium}></Route>
-        <Route exact path="/:world/too-late-to-ask" component={Swipe}></Route>
+        <Route exact path="/:world/too-late-to-ask" component={Tinder}></Route>
         <Route exact path="/modern-world" component={ModernWorld}></Route>
         <Route exact path="/:world/articles/:slug" component={Article}></Route>
         <Route
           exact
           path="/:world/too-late-to-ask/add-question"
-          component={SwipeAddQuestion}
+          component={TinderAddQuestion}
         ></Route>
         <Route exact path="/ancient-world" component={AncientWorld}></Route>
 

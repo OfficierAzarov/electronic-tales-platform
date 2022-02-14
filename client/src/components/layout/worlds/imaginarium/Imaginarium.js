@@ -3,13 +3,12 @@ import { connect } from 'react-redux';
 import { PropTypes } from 'prop-types';
 import Fade from 'react-reveal/Fade';
 import { useTranslation } from 'react-i18next';
-import { generateSanitizedDangerouslySetInnerHtml } from '../../../../utils/data-processing/sanitize';
 
 import './Imaginarium.css';
 
 import { getAllArticlesInfos } from '../../../../redux/actions/article';
 import { WORLDS } from '../../../../dictionnary/worlds';
-import SwipeDoor from '../../../elements/swipe/swipe-door/SwipeDoor';
+import SwipeDoor from '../../../elements/tinder/tinder-door/TinderDoor';
 import Lab from '../../../elements/lab/Lab';
 import { SLACK } from '../../../../dictionnary/externalElectronicTalesLinks';
 import { IMAGINARIUM_IMAGES_PATH } from '../../../../dictionnary/internalImagesPathes';
