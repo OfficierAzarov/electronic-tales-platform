@@ -12,9 +12,10 @@ export const computeHeight = (wantedElementHeightInVh) => {
   return height;
 };
 
-export const computeLeft = (wantedElementWidthRegardingWindowWidth) => {
+export const computeLeft = (wantedElementWidthRegardingWindowWidthInFraction) => {
   const windowWidth = window.innerWidth;
-  const left = windowWidth / 2 - (windowWidth * wantedElementWidthRegardingWindowWidth) / 2;
+  const left =
+    windowWidth / 2 - (windowWidth * wantedElementWidthRegardingWindowWidthInFraction) / 2;
   return left;
 };
 

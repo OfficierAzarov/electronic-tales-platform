@@ -350,7 +350,8 @@ nav svg {
   section {
     display: flex;
     justify-content: center;
-    margin: 8rem;
+    margin-left: 10rem;
+    padding: 12vh 0;
   }
 
   /*============= LAYOUT =============*/

@@ -9,7 +9,7 @@
     "tooLateToAsks": {
       "categoryTitle": "Too late to ask",
       "title": "The tinder of dev 🔥",
-      "buttons": { "iAlreadyKnow": "I already know this", "iWantToKnow": "I want to know" },
+      "buttons": { "iAlreadyKnow": "I already know", "iWantToKnow": "I want to know" },
       "noCardsLeftMessage": {
         "title": "There is no more question for now.",
         "text": "✨&nbsp; Subscribe to the premium offer to turn off geolocation and match with questions from around the world &nbsp;✨<br /><br />Just kidding.<br /><span className='small-text'>But seriously, maybe you should turn off your geolocation if you want to save battery. That said, you do what you want with your phone. And it's convenient to have a GPS, anyway. I remember this time I had to go visit my aunt Léonie in the Perche, and... Anyway.</span>",
