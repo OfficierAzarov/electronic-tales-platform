@@ -29,13 +29,33 @@
   height: 50vh;
 }
 
-/* =======  DESKTOP VERSION : start ========= */
+/* =======  TABLET VERSION : start ========= */
 
 @media only screen and (min-width: 768px) {
-  .card,
   .card.big {
     width: 40vw;
   }
+
+  .card {
+    width: 18vw;
+  }
 }
 
-/* =======  DESKTOP VERSION : end ========= */
+/* =======  TABLET VERSION : start ========= */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .card {
+    width: 25vw;
+  }
+}
+
+/* =======  TABLET VERSION : end ========= */
+/* =======  LARGE DESKTOP VERSION : start ========= */
+
+@media only screen and (min-width: 1440px) {
+  .card {
+    width: 17vw;
+  }
+}
+
+/* =======  LARGE DESKTOP VERSION : end ========= */

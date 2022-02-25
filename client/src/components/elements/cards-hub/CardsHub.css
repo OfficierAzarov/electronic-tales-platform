@@ -29,7 +29,7 @@
 
 @media only screen and (min-width: 768px) {
   .cards-hub {
-    width: auto;
+    width: 60vw;
   }
 }
 

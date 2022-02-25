@@ -1,14 +1,12 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { connect } from 'react-redux';
-import { SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
 import { PropTypes } from 'prop-types';
-
 import './CardsHub.css';
 import Card from '../card/Card';
 import { Fragment } from 'react';
-import SwiperJsHack from '../swiperjs-hack/SwiperJsHack';
+import Swiper from '../swipers/Swiper';
 
 const CardsHub = ({ categoryName, categoryArticles, text, preferredLanguage }) => {
   const isDesktop = useMediaQuery({
@@ -34,23 +32,18 @@ const CardsHub = ({ categoryName, categoryArticles, text, preferredLanguage }) =
       {text && <p>{text}</p>}
       <div className="w-cat-card-content">
         {categoryArticles.length > 1 ? (
-          isDesktop ? // TODO: create a component for a Swiper with arrows. See https://codesandbox.io/s/4h1h6?file=/src/App.jsx
-          null : (
-            <SwiperJsHack>
-              {categoryArticles.map((article) => {
-                return (
-                  <SwiperSlide key={article._id}>
-                    <Card
-                      key={article._id}
-                      link={buildLink(article)}
-                      imageUrl={article.thumbnail}
-                      title={article.title[preferredLanguage]}
-                    />
-                  </SwiperSlide>
-                );
-              })}
-            </SwiperJsHack>
-          )
+          <Swiper>
+            {categoryArticles.map((article) => {
+              return (
+                <Card
+                  key={article._id}
+                  link={buildLink(article)}
+                  imageUrl={article.thumbnail}
+                  title={article.title[preferredLanguage]}
+                />
+              );
+            })}
+          </Swiper>
         ) : (
           <Fragment>
             {categoryArticles.map((article) => (
