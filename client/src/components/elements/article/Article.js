@@ -55,6 +55,7 @@ Article.propTypes = {
   article: PropTypes.object.isRequired,
   getCurrentArticle: PropTypes.func.isRequired,
   cleanCurrentArticle: PropTypes.func.isRequired,
+  preferredLanguage: PropTypes.string
 };
 
 const mapStateToProps = (state) => ({

@@ -28,39 +28,6 @@ const ModernWorld = ({ articles, getAllArticlesInfos }) => {
         <div className="line-title-wrapper world-title-wrapper">
           <h2 className="world-title neon flicker">{t('modernWorld.title')}</h2>
         </div>
-
-        <Lab
-          // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
-          text={t('common.lab.description')}
-          cards={[
-            {
-              _id: 'salaryCardId',
-              title: {
-                fr: 'Le mur des salaires des devs juniors : partageons les vrais chiffres !',
-                en: "The junior devs salary wall: let's share the real numbers!",
-              },
-              link: {
-                path: SLACK,
-                openInNewTab: true,
-              },
-              thumbnail: process.env.PUBLIC_URL + MODERN_WORLD_IMAGES_PATH + 'money-small.jpg',
-            },
-            {
-              _id: 'tamagotchiCardId',
-              title: {
-                fr:
-                  'Le tamagotchi des devs : tracke tes progrès et compare-les à ceux des autres en toute bienveillance',
-                en:
-                  "Dev's tamagotchi: track your progress and compare it to others in a friendly way",
-              },
-              link: {
-                path: SLACK,
-                openInNewTab: true,
-              },
-              thumbnail: process.env.PUBLIC_URL + MODERN_WORLD_IMAGES_PATH + 'tamagotchi-small.jpg',
-            },
-          ]}
-        />
         <SwipeDoor
           // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
           id={WORLDS.MODERN_WORLD}

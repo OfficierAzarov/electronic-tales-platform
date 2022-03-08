@@ -10,7 +10,7 @@ import './App.css';
 
 import ScrollToTop from './components/helpers/ScrollToTop';
 import Navbar from './components/elements/navbar/Navbar';
-import LanguageNavbar from './components/elements/navbar/language-navbar/LangagueNavbar';
+import LanguageNavbar from './components/elements/navbar/language-navbar/LanguageNavbar';
 import Routes from './components/routes/Routes';
 import Home from './components/pages/home/Home';
 import SecondaryNavbar from './components/elements/navbar/secondary-navbar/SecondaryNavbar';
@@ -28,7 +28,7 @@ const App = () => {
     ) : ( */}
       <Router>
         {/* LanguageNavbar is temporary hidden, let's wait for desktop design to be done to unhide it */}
-        <LanguageNavbar />
+        {/* <LanguageNavbar /> */}
         <SecondaryNavbar />
         <ScrollToTop />
         <Switch>

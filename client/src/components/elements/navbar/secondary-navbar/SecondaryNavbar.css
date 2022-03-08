@@ -9,21 +9,25 @@ nav#secondary-nav a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin: 0 1rem;
+  margin: 0 1.5rem;
 }
 
 nav#secondary-nav a sub {
   margin-left: 1rem;
-  font-size: calc(1rem + 0.2vw);
+  font-size: var(--medium-text);
 }
 
 nav#secondary-nav a img {
-  width: 1rem;
+  width: var(--medium-text);
   margin-left: 0.5rem;
 }
 
 nav#secondary-nav a sub#homepage {
   width: 60%;
+}
+
+nav#secondary-nav #right-elements-container {
+  display: flex;
 }
 
 /* =======  DESKTOP VERSION : start ========= */

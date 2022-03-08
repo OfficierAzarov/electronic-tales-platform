@@ -1,0 +1,15 @@
+#language-navbar-container {
+  height: var(--language-navbar-height);
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+
+#language-navbar-container button {
+  font-size: var(--medium-text);
+}
+
+#language-navbar-container .selected {
+  border: solid 1px white;
+  border-radius: 0.2rem;
+}

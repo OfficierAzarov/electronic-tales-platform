@@ -27,36 +27,6 @@ const Imaginarium = ({ articles, getAllArticlesInfos }) => {
         <div className="line-title-wrapper world-title-wrapper">
           <h2 className="world-title">Imaginarium</h2>
         </div>
-        <Lab
-          text={t('common.lab.description')}
-          // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
-          cards={[
-            {
-              _id: 'sosCardId',
-              title: {
-                fr: "Bouton SOS syndrome de l'imposteur : un outil d'urgence pour se sentir mieux",
-                en: 'English title',
-              },
-              link: {
-                path: SLACK,
-                openInNewTab: true,
-              },
-              thumbnail: process.env.PUBLIC_URL + IMAGINARIUM_IMAGES_PATH + 'pills-small.jpg',
-            },
-            {
-              _id: 'tourneDisqueCardId',
-              title: {
-                fr: 'Le tourne-disque de mamie Cobol : partageons nos playlists pour coder',
-                en: 'English title',
-              },
-              link: {
-                path: SLACK,
-                openInNewTab: true,
-              },
-              thumbnail: process.env.PUBLIC_URL + IMAGINARIUM_IMAGES_PATH + 'diskStore-small.jpg',
-            },
-          ]}
-        />
         <SwipeDoor
           // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
           id={WORLDS.IMAGINARIUM}

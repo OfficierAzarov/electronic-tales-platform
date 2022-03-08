@@ -12,7 +12,7 @@
 
 .article-content h3 {
   margin: 2rem 0;
-  font-size: calc(1rem + 0.8vw);
+  font-size: var( --h3-text);
 }
 
 .article-content ul {
@@ -36,7 +36,7 @@
 
 .article-content .small-comment,
 .article-content .small-comment a {
-  font-size: 1.2rem;
+  font-size: var(--medium-text);
   font-style: italic;
 }
 
@@ -57,12 +57,13 @@
   padding: 0.5rem;
   border-radius: 0.5rem;
   margin: 1rem 0;
-  font-size: 1.3rem;
+  font-size: var(--medium-text);
 }
 
 .article-content .inline-code {
   display: inline;
   color: #ec567c;
+  font-size: var(--medium-text);
 }
 
 .article-content .hljs-comment {
