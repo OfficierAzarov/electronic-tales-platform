@@ -26,6 +26,18 @@ body {
   line-height: 1.5;
 }
 
+@media (min-width: 0px) {
+  p { font-size: 1rem; }
+}
+
+@media (min-width: 400px) {
+  p { font-size: calc(1rem + 0.8vw); }
+}
+
+@media (min-width: 1001px){
+  p { font-size: 1.75rem; }
+}
+
 /* Set text selection */
 
 ::-moz-selection {

@@ -7,7 +7,7 @@
 }
 
 #article-container h2 {
-  font-size: 3.5rem;
+  font-size: calc(2rem + 0.8vw);
   font-weight: 400;
   font-family: 'Montserrat', sans-serif;
   text-align: center;

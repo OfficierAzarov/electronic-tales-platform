@@ -3,4 +3,10 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 1rem;
+  /*
+  ! Temporary 
+  */
+  position: absolute;
+  top:0;
+  z-index: 200;
 }

@@ -1,15 +1,15 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import SafeSpace from '../layout/safe-space/SafeSpace';
-import SafeSpaceQuotes from '../layout/safe-space/quotes/SafeSpaceQuotes';
-import ModernWorld from '../layout/worlds/modern-world/ModernWorld';
-import Imaginarium from '../layout/worlds/imaginarium/Imaginarium';
-import AncientWorld from '../layout/worlds/ancient-world/AncientWorld';
+import SafeSpace from '../pages/safe-space/SafeSpace';
+import SafeSpaceQuotes from '../pages/safe-space/quotes/SafeSpaceQuotes';
+import ModernWorld from '../pages/worlds/modern-world/ModernWorld';
+import Imaginarium from '../pages/worlds/imaginarium/Imaginarium';
+import AncientWorld from '../pages/worlds/ancient-world/AncientWorld';
 import Article from '../elements/article/Article';
 import Tinder from '../elements/tinder/Tinder';
-import SafeSpaceChat from '../layout/safe-space/chat/SafeSpaceChat';
-import AddQuote from '../layout/safe-space/add-quote/AddQuote';
+import SafeSpaceChat from '../pages/safe-space/chat/SafeSpaceChat';
+import AddQuote from '../pages/safe-space/add-quote/AddQuote';
 import TinderAddQuestion from '../elements/tinder/tinder-add-question/TinderAddQuestion';
 import Syntax from '../interactive-images/clean-code/syntax/Syntax';
 import DoesItWork from '../interactive-images/clean-code/does-it-work/DoesItWork';

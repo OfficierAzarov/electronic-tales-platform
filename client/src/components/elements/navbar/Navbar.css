@@ -16,7 +16,8 @@ nav#main-nav a {
 }
 
 nav#main-nav a sub {
-  font-size: 1rem;
+  /* font-size: 1rem; */
+  font-size: calc(1rem + 0.2vw);
 }
 
 /* =======  MOBILE VERSION : end ========= */
@@ -31,9 +32,20 @@ nav#main-nav a sub {
     border-radius: 0.8rem;
     padding: 1rem;
   }
+  
   nav#main-nav a {
     margin: 1rem 0;
   }
 }
 
 /* =======  DESKTOP VERSION : end ========= */
+
+/* =======  LARGE DESKTOP VERSION : start ========= */
+
+/* @media only screen and (min-width: 1440px) {
+  nav#main-nav a sub {
+    font-size: 1.8rem;
+  }
+} */
+
+/* =======  LARGE DESKTOP VERSION : end ========= */
