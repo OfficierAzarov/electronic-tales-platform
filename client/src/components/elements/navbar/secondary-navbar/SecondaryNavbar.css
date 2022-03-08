@@ -14,7 +14,7 @@ nav#secondary-nav a {
 
 nav#secondary-nav a sub {
   margin-left: 1rem;
-  font-size: 1rem;
+  font-size: calc(1rem + 0.2vw);
 }
 
 nav#secondary-nav a img {

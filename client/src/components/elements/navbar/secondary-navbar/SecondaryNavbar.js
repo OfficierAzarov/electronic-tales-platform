@@ -19,12 +19,6 @@ const SecondaryNavbar = ({ isCurrentPageHome }) => {
         <nav id="secondary-nav">
           <NavLink exact to="/">
             <HomeIcon />
-            <sub
-              id="homepage"
-              dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
-                t('common.secondaryNavbar.goBackHome')
-              )}
-            ></sub>
           </NavLink>
           <a href={ELECTRONIC_TALES_PRESENTS.SIGN_UP} target="_blank" rel="noopener noreferrer">
             <sub
