@@ -18,6 +18,7 @@
 #article-container #article-head {
   width: 100%;
   display: flex;
+  margin-bottom: 5rem;
 }
 
 #article-container h1 {

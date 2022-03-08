@@ -1,6 +1,9 @@
 #reading-time {
-  font-size: 1rem;
   text-align: right;
   margin: 1rem;
   width: 100%;
+}
+
+#reading-time p {
+  font-size: calc(1rem + 0.4vw);
 }

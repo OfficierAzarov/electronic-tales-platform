@@ -34,8 +34,8 @@ body {
   p { font-size: calc(1rem + 0.8vw); }
 }
 
-@media (min-width: 1001px){
-  p { font-size: 1.75rem; }
+@media (min-width: 2560px){
+  p { font-size: 2.8rem; }
 }
 
 /* Set text selection */
