@@ -38,4 +38,45 @@ nav#secondary-nav #right-elements-container {
   }
 }
 
+@media (min-width: 0px) {
+  nav#secondary-nav svg {
+    width: 8vw;
+    height: 8vw;
+  }
+}
+
+@media (min-width: 400px) {
+  nav#secondary-nav svg {
+    width: 6vw;
+    height: 6vw;
+  }
+}
+
+@media (min-width: 768px) {
+  nav#secondary-nav svg {
+    width: 4vw;
+    height: 4vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  nav#secondary-nav svg {
+    width: 3.3vw;
+    height: 3.3vw;
+  }
+}
+
+@media (min-width: 1440px) {
+  nav#secondary-nav svg {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+}
+
+@media (min-width: 2560px) {
+  nav#secondary-nav svg {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
+}
 /* =======  DESKTOP VERSION : end ========= */
