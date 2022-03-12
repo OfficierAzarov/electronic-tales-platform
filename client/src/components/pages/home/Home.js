@@ -15,9 +15,8 @@ import { viewportToPixels } from '../../../utils/display/converter';
 import Mansion from '../../interactive-images/mansion/Mansion';
 import logo from '../../../resources/img/logo-transparent.png';
 import logoSmall from '../../../resources/img/logo-transparent-350.png';
+import elta from '../../../resources/img/illustrations/eltaskyline.svg';
 import { ReactComponent as ChevronDown } from '../../../resources/img/icons/chevron-down.svg';
-
-import MansionDesktop from '../../interactive-images/mansionDesktop/mansionDesktop';
 
 const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
   const { t } = useTranslation();
@@ -36,9 +35,15 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
   return (
     <div id="home">
       {isDesktop ? (
-        <div id="mansion-desktop">
-          <MansionDesktop />
-        </div>
+        <>
+          <div id="mansion-desktop">
+            <img src={logo} id="logo" loading="auto" alt="Electronic Tales logo" />
+            <img src={elta} alt="" />
+          </div>
+          <div id="content-container">
+            <div className="home-card">Actualités</div>
+          </div>
+        </>
       ) : (
         <Fragment>
           <div id="mansion">

@@ -90,6 +90,20 @@
 
 @media only screen and (min-width: 768px) {
   #home #mansion-desktop {
-    background-color: white;
+    background: rgb(91, 145, 158);
+    background-image: linear-gradient(0deg, #5b919e 0%, #0e4654 100%);
+  }
+
+  #home #content-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem;
+  }
+
+  #home .home-card {
+    background-color: #1a1919;
+    border-radius: 3em;
+    width: 50vw;
+    padding: 3rem;
   }
 }
