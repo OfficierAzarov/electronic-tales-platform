@@ -18,6 +18,7 @@ app.use('/api/categories', require('./routes/api/categories'));
 app.use('/api/quotes', require('./routes/api/quotes'));
 app.use('/api/toolatetoasks', require('./routes/api/toolatetoasks'));
 
+// When in production, the backend is responsible for building the frontend
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
   app.get('/*', (req, res) => {
