@@ -10,9 +10,6 @@ import { getAllArticlesInfos } from '../../../../redux/actions/article';
 import { WORLDS } from '../../../../dictionnary/worlds';
 import SwipeDoor from '../../../elements/tinder/tinder-door/TinderDoor';
 import AllArticlesOfTheWorld from '../../../elements/article/all-articles/AllArticlesOfTheWorld';
-import Lab from '../../../elements/lab/Lab';
-import { SLACK } from '../../../../dictionnary/externalElectronicTalesLinks';
-import { MODERN_WORLD_IMAGES_PATH } from '../../../../dictionnary/internalImagesPathes';
 import RoadmapDoor from '../../../elements/roadmap/roadmap-door/RoadmapDoor';
 
 const ModernWorld = ({ articles, getAllArticlesInfos }) => {

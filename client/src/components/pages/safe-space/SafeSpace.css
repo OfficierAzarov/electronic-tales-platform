@@ -1,0 +1,39 @@
+#safe-space {
+  background-color: 121212;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#safe-space p {
+  width: 80%;
+  margin: 1em 0;
+}
+
+#safe-space ul {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0;
+}
+
+#safe-space li {
+  margin-top: 0.5rem;
+  width: 80%;
+}
+
+#safe-space p a {
+  color: #ec567c;
+}
+
+#safe-space .big-text {
+  font-size: 2.3rem;
+  font-weight: 400;
+}
+
+/* react-i18next breaks layout, 
+so we have to force <p></p> to be inline */
+#safe-space .inline {
+  display: inline;
+}

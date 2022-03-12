@@ -1,6 +1,0 @@
-#language-navbar-container {
-  height: var(--language-navbar-height);
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 1rem;
-}

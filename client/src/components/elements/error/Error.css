@@ -13,7 +13,7 @@
 .error-container p span {
   color: pink;
   font-weight: 600;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   display: block;
   margin: 0.2rem;
 }

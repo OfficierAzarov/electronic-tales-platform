@@ -24,7 +24,7 @@ const Article = ({ match, article, getCurrentArticle, cleanCurrentArticle, prefe
   }, []);
 
   return (
-    <div id="article-container">
+    <div id="article-container" className="container">
       <div id="article-head">
         {article && (
           <Fragment>
@@ -55,6 +55,7 @@ Article.propTypes = {
   article: PropTypes.object.isRequired,
   getCurrentArticle: PropTypes.func.isRequired,
   cleanCurrentArticle: PropTypes.func.isRequired,
+  preferredLanguage: PropTypes.string
 };
 
 const mapStateToProps = (state) => ({

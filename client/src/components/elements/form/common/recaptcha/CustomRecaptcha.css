@@ -6,7 +6,7 @@
 }
 
 .recaptcha-text {
-  font-size: 0.8rem;
+  font-size: var(--small-text);
   text-align: center;
   margin-top: 2rem;
 }

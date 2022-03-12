@@ -1,7 +1,6 @@
 {
   "common": {
     "secondaryNavbar": {
-      "goBackHome": "Retourner <br /> au manoir",
       "joinUs": "Nous rejoindre"
     },
     "lab": {

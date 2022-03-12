@@ -10,11 +10,11 @@ import './App.css';
 
 import ScrollToTop from './components/helpers/ScrollToTop';
 import Navbar from './components/elements/navbar/Navbar';
-import LanguageNavbar from './components/elements/navbar/language-navbar/LangagueNavbar';
+import LanguageNavbar from './components/elements/navbar/language-navbar/LanguageNavbar';
 import Routes from './components/routes/Routes';
-import Home from './components/layout/home/Home';
+import Home from './components/pages/home/Home';
 import SecondaryNavbar from './components/elements/navbar/secondary-navbar/SecondaryNavbar';
-import NotYet from './components/layout/not-yet/NotYet';
+import NotYet from './components/pages/not-yet/NotYet';
 
 const App = () => {
   const isDesktop = useMediaQuery({

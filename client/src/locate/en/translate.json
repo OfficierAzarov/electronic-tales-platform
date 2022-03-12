@@ -1,6 +1,8 @@
 {
   "common": {
-    "secondaryNavbar": { "goBackHome": "Return <br /> to the manor", "joinUs": "Join us" },
+    "secondaryNavbar": {
+      "joinUs": "Join us"
+    },
     "lab": {
       "open": "Open Lab",
       "close": "Close Lab",
@@ -9,11 +11,16 @@
     "tooLateToAsks": {
       "categoryTitle": "Too late to ask",
       "title": "The tinder of dev 🔥",
-      "buttons": { "iAlreadyKnow": "I already know", "iWantToKnow": "I want to know" },
+      "buttons": {
+        "iAlreadyKnow": "I already know",
+        "iWantToKnow": "I want to know"
+      },
       "noCardsLeftMessage": {
         "title": "There is no more question for now.",
         "text": "✨&nbsp; Subscribe to the premium offer to turn off geolocation and match with questions from around the world &nbsp;✨<br /><br />Just kidding.<br /><span className='small-text'>But seriously, maybe you should turn off your geolocation if you want to save battery. That said, you do what you want with your phone. And it's convenient to have a GPS, anyway. I remember this time I had to go visit my aunt Léonie in the Perche, and... Anyway.</span>",
-        "buttons": { "suggest": "I'm helping the community, I'm suggesting a new question." }
+        "buttons": {
+          "suggest": "I'm helping the community, I'm suggesting a new question."
+        }
       },
       "suggestTooLateToAsk": {
         "title": "I've always wondered ...",
@@ -34,7 +41,10 @@
           "label": "A concrete short example, to finish? Go:",
           "placeholder": "Example: To display \"I love Electronic Tales on my screen\", I can type..."
         },
-        "name": { "label": "Your name?", "placeholder": "Captain Anonymouse" },
+        "name": {
+          "label": "Your name?",
+          "placeholder": "Captain Anonymouse"
+        },
         "choice": {
           "iWantETToAnswer": "I want the Electronic Tales team to answer",
           "iWantToSuggestAnAnswer": "I want to suggest an answer"
@@ -50,13 +60,28 @@
       "justEnoughTimeTo": "Or the time of",
       "ofA": "Of",
       "funnyThingsList": {
-        "consumingActions": { "bite": "Bite", "sip": "Sip", "gloop": "Gloop", "crisp": "Crisp" },
-        "genders": { "female": "Feminine", "male": "Male" },
-        "names": { "burger": "Burger", "coffee": "Coffee", "doughnut": "Donut", "fries": "Fries" }
+        "consumingActions": {
+          "bite": "Bite",
+          "sip": "Sip",
+          "gloop": "Gloop",
+          "crisp": "Crisp"
+        },
+        "genders": {
+          "female": "Feminine",
+          "male": "Male"
+        },
+        "names": {
+          "burger": "Burger",
+          "coffee": "Coffee",
+          "doughnut": "Donut",
+          "fries": "Fries"
+        }
       },
       "lessThanAMinute": "Less than 1 minute"
     },
-    "buttons": { "share": "Share" },
+    "buttons": {
+      "share": "Share"
+    },
     "errors": {
       "pleaseReport": "If you have two minutes, you can tell us about the problem you encountered (or what your favorite brand of potato chips is, we're always curious on this topic) on our <a href='https://join.slack.com/t/electronictales/shared_invite/zt-kox8itw1-tveUHRe8QSTtjs0Bb172BA' target='_blank' rel='noopener noreferrer'><span>Slack</span>&nbsp;🙏</a>",
       "noArticle": {
@@ -88,11 +113,17 @@
       "alternativeCallToActionText": "Lower&nbsp;?",
       "alert": "Come on, what did you expect? The Nine Circles of Hell? The design department didn't have enough budget for that."
     },
-    "common": { "enterButtonText": "Enter" }
+    "common": {
+      "enterButtonText": "Enter"
+    }
   },
   "safeSpace": {
     "title": "Safe space",
-    "miniNavbar": { "why": "Why", "microExperiences": "Micro-lived", "ourSlack": "Our Slack" },
+    "miniNavbar": {
+      "why": "Why",
+      "microExperiences": "Micro-lived",
+      "ourSlack": "Our Slack"
+    },
     "why": {
       "why": {
         "title": "Why&nbsp;?",
@@ -123,7 +154,10 @@
           "label": "You have a life short experience to share? We will be delighted to read it and publish it.",
           "placeholder": "Once upon a time ..."
         },
-        "name": { "label": "Your pseudo?", "placeholder": "Captain Ann O ' nysoft" }
+        "name": {
+          "label": "Your pseudo?",
+          "placeholder": "Captain Ann O ' nysoft"
+        }
       }
     },
     "ourChat": {
@@ -151,7 +185,9 @@
     "roadmap": {
       "categoryTitle": "Roadmaps",
       "description": "Lost in the world of dev? Our maps are there to guide you.",
-      "cleanCode": { "title": "Coder proper: the databases" }
+      "cleanCode": {
+        "title": "Coder proper: the databases"
+      }
     }
   },
   "ancientWorld": {

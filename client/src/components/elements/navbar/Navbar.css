@@ -16,7 +16,7 @@ nav#main-nav a {
 }
 
 nav#main-nav a sub {
-  font-size: 1rem;
+  font-size: var(--small-text);
 }
 
 /* =======  MOBILE VERSION : end ========= */
@@ -31,6 +31,7 @@ nav#main-nav a sub {
     border-radius: 0.8rem;
     padding: 1rem;
   }
+  
   nav#main-nav a {
     margin: 1rem 0;
   }

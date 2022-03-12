@@ -11,7 +11,7 @@
 }
 
 .card .card-title {
-  font-size: 1.4rem;
+  font-size: var(--medium-text);
   text-align: center;
   margin: 0.5rem 0;
   width: 80%;
@@ -50,6 +50,7 @@
 }
 
 /* =======  TABLET VERSION : end ========= */
+
 /* =======  LARGE DESKTOP VERSION : start ========= */
 
 @media only screen and (min-width: 1440px) {
