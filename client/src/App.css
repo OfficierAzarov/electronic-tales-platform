@@ -112,11 +112,30 @@ nav {
 }
 
 nav svg {
-  width: 2.5vw;
-  height: 2.5vw;
   padding: 0.2em 0;
   cursor: pointer;
   fill: whitesmoke;
+}
+
+@media (min-width: 0px) {
+  nav svg {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+
+@media (min-width: 400px) {
+  nav svg {
+    width: 3vw;
+    height: 3vw;
+  }
+}
+
+@media (min-width: 2560px) {
+  nav svg {
+    width: 2.5vw;
+    height: 2.5vw;
+  }
 }
 
 .active-navbar-icon svg {
