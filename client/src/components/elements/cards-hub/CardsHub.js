@@ -1,18 +1,14 @@
-import React from 'react';
-import { useMediaQuery } from 'react-responsive';
+import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import 'swiper/swiper-bundle.css';
 import { PropTypes } from 'prop-types';
+
 import './CardsHub.css';
+
 import Card from '../card/Card';
-import { Fragment } from 'react';
 import Swiper from '../swipers/Swiper';
 
 const CardsHub = ({ categoryName, categoryArticles, text, preferredLanguage }) => {
-  const isDesktop = useMediaQuery({
-    query: '(min-device-width: 768px)',
-  });
-
   const buildLink = (article) => {
     if (article.link != null) {
       return article.link;

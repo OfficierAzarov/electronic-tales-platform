@@ -19,7 +19,7 @@ const AncientWorld = () => {
           <div class="warning">{t('ancientWorld.temp.workinProgress')}</div>
           <div class="warning">{t('ancientWorld.temp.comeBackLater')}</div>
         </div>
-        <img src={mamieCobol} alt={t('ancientWorld.temp.imageAlt')} />
+        <img id="mamie-cobol" src={mamieCobol} alt={t('ancientWorld.temp.imageAlt')} />
       </div>
     </Fade>
   );

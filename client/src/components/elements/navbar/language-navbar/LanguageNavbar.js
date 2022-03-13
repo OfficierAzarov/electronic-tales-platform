@@ -10,8 +10,6 @@ import { setLanguage } from '../../../../redux/actions/language';
 const LanguageNavbar = ({ setLanguage, preferredLanguage }) => {
   const { t, i18n } = useTranslation();
 
-  const [isSelected, setIsSelected] = useState();
-
   const languages = {
     en: { fullName: 'English', shortName: 'en' },
     fr: { fullName: 'Français', shortName: 'fr' },
@@ -29,7 +27,7 @@ const LanguageNavbar = ({ setLanguage, preferredLanguage }) => {
           key={language}
           aria-label={languages[language].fullName}
           onClick={() => change(language)}
-          className={preferredLanguage === languages[language].shortName && "selected"}
+          className={preferredLanguage === languages[language].shortName && 'selected'}
         >
           {languages[language].shortName}
         </button>
@@ -44,7 +42,7 @@ const mapStateToProps = (state) => ({
 
 LanguageNavbar.propTypes = {
   setLanguage: PropTypes.func.isRequired,
-  preferredLanguage: PropTypes.string
+  preferredLanguage: PropTypes.string,
 };
 
 export default connect(mapStateToProps, { setLanguage })(LanguageNavbar);

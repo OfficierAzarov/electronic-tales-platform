@@ -1,8 +1,6 @@
 import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { MODERN_WORLD_IMAGES_PATH } from '../../../dictionnary/internalImagesPathes';
-import Card from '../card/Card';
 
 import './Swiper.css';
 

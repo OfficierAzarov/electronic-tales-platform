@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import Bounce from 'react-reveal/Bounce';
 import Emoji from 'a11y-react-emoji';
+import 'swiper/swiper-bundle.css';
 
 import './Home.css';
 
@@ -17,6 +18,8 @@ import logo from '../../../resources/img/logo-transparent.png';
 import logoSmall from '../../../resources/img/logo-transparent-350.png';
 import elta from '../../../resources/img/illustrations/eltaskyline.svg';
 import { ReactComponent as ChevronDown } from '../../../resources/img/icons/chevron-down.svg';
+import Swiper from '../../elements/swipers/Swiper';
+import Tabs from '../../elements/tabs/Tabs';
 
 const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
   const { t } = useTranslation();
@@ -41,7 +44,57 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
             <img src={elta} alt="" />
           </div>
           <div id="content-container">
-            <div className="home-card">Actualités</div>
+            <div id="news">Actualités</div>
+            <HomeCard
+              title={t('home.safeSpace.title')}
+              description={generateSanitizedDangerouslySetInnerHtml(
+                t('home.safeSpace.description')
+              )}
+              callToAction={{
+                link: '/safe-space',
+                text: generateSanitizedDangerouslySetInnerHtml(
+                  t('home.safeSpace.callToActionText')
+                ),
+              }}
+            />
+            <Tabs />
+            {/* <div id="desktop-home-worlds-container">
+              <Swiper>
+                <HomeCard
+                  idForScroll="home-modern-world"
+                  title={t('home.modernWorld.title')}
+                  description={generateSanitizedDangerouslySetInnerHtml(
+                    t('home.modernWorld.description')
+                  )}
+                  callToAction={{
+                    link: '/modern-world',
+                    text: t('home.common.enterButtonText'),
+                  }}
+                />
+                <HomeCard
+                  idForScroll="home-imaginarium"
+                  title={t('home.imaginarium.title')}
+                  description={generateSanitizedDangerouslySetInnerHtml(
+                    t('home.imaginarium.description')
+                  )}
+                  callToAction={{
+                    link: '/imaginarium',
+                    text: 'Entrer',
+                  }}
+                />
+                <HomeCard
+                  idForScroll="home-ancient-world"
+                  title={t('home.ancientWorld.title')}
+                  description={generateSanitizedDangerouslySetInnerHtml(
+                    t('home.ancientWorld.description')
+                  )}
+                  callToAction={{
+                    link: '/ancient-world',
+                    text: 'Entrer',
+                  }}
+                />
+              </Swiper>
+            </div> */}
           </div>
         </>
       ) : (
@@ -164,33 +217,35 @@ const HomeCard = ({ idForScroll, title, description, callToAction, alternativeCa
         <Link to={callToAction.link} className="basic-button">
           {htmlOrText(callToAction.text)}
         </Link>
-        <div className="alternative-cta">
-          <ScrollLink
-            to={alternativeCallToAction.whereToScrollTo}
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={offset}
-          >
-            {htmlOrText(alternativeCallToAction.text)}
-            <Emoji
-              symbol={alternativeCallToAction.emoji.symbol}
-              label={alternativeCallToAction.emoji.label}
-            />
-            {alternativeCallToAction.alert ? (
-              <div
-                className="chevron-container"
-                onClick={() => alert(alternativeCallToAction.alert)}
-              >
-                <ChevronDown />
-              </div>
-            ) : (
-              <div className="chevron-container">
-                <ChevronDown />
-              </div>
-            )}
-          </ScrollLink>
-        </div>
+        {alternativeCallToAction && (
+          <div className="alternative-cta">
+            <ScrollLink
+              to={alternativeCallToAction.whereToScrollTo}
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={offset}
+            >
+              {htmlOrText(alternativeCallToAction.text)}
+              <Emoji
+                symbol={alternativeCallToAction.emoji.symbol}
+                label={alternativeCallToAction.emoji.label}
+              />
+              {alternativeCallToAction.alert ? (
+                <div
+                  className="chevron-container"
+                  onClick={() => alert(alternativeCallToAction.alert)}
+                >
+                  <ChevronDown />
+                </div>
+              ) : (
+                <div className="chevron-container">
+                  <ChevronDown />
+                </div>
+              )}
+            </ScrollLink>
+          </div>
+        )}
       </div>
     </div>
   );
