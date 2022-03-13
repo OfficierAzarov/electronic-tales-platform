@@ -8,6 +8,7 @@ import modernWorld from '../../../resources/gifs/modern-world.gif';
 import ancientWorld from '../../../resources/gifs/ancient-world.gif';
 import imaginarium from '../../../resources/gifs/imaginarium.gif';
 import { generateSanitizedDangerouslySetInnerHtml } from '../../../utils/data-processing/sanitize';
+import { Link } from 'react-router-dom';
 
 const Tabs = ({}) => {
   const { t } = useTranslation();
@@ -30,7 +31,7 @@ const Tabs = ({}) => {
       descMobile: t('home.desktopVersion.tracksTabs.worlds.id1.textMobile'),
       baseline: t('home.desktopVersion.tracksTabs.worlds.id1.baseline'),
       imgSrc: modernWorld,
-      imgAlt: 'modern world gif',
+      link: '/modern-world',
     },
     {
       id: 'ancient-world',
@@ -39,7 +40,7 @@ const Tabs = ({}) => {
       descMobile: t('home.desktopVersion.tracksTabs.worlds.id2.textMobile'),
       baseline: t('home.desktopVersion.tracksTabs.worlds.id2.baseline'),
       imgSrc: ancientWorld,
-      imgAlt: 'ancient world gif',
+      link: '/ancient-world',
     },
     {
       id: 'imaginarium',
@@ -48,53 +49,52 @@ const Tabs = ({}) => {
       descMobile: t('home.desktopVersion.tracksTabs.worlds.id3.textMobile'),
       baseline: t('home.desktopVersion.tracksTabs.worlds.id3.baseline'),
       imgSrc: imaginarium,
-      imgAlt: 'imaginarium gif',
+      link: '/imaginarium',
     },
   ];
 
   return (
     <div id="tabs-container">
-      <div id="world">
-        <div>
-          <div id="tabs">
-            {worlds.map((world) => (
-              <div
-                id={world.id}
-                key={world.id}
-                className="tab-title"
-                onClick={() => show(world.id)}
-                style={{
-                  textShadow: shouldIShow(world.id)
-                    ? '0 0 0.4em rgb(0, 225, 255), 0 0 0.8em rgb(0, 225, 255), 0 0 1.6em rgb(0, 255, 255)'
-                    : 'none',
-                }}
-              >
-                {world.title}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {worlds.map((world) => (
-          <div key={world.id}>
+      <div>
+        <div id="tabs">
+          {worlds.map((world) => (
             <div
-              className="content-container"
               id={world.id}
+              key={world.id}
+              className="tab-title"
+              onClick={() => show(world.id)}
               style={{
-                display: shouldIShow(world.id) ? '' : 'none',
+                textShadow: shouldIShow(world.id)
+                  ? '0 0 0.4em rgb(0, 225, 255), 0 0 0.8em rgb(0, 225, 255), 0 0 1.6em rgb(0, 255, 255)'
+                  : 'none',
               }}
             >
-              <img src={world.imgSrc} alt={world.alt} />
-              <div className="text-container">
-                <p
-                  dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(world.desc)}
-                ></p>
-                <p className="baseline">{world.baseline}</p>
-              </div>
+              {world.title}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {worlds.map((world) => (
+        <div key={world.id}>
+          <div
+            className="content-container"
+            id={world.id}
+            style={{
+              display: shouldIShow(world.id) ? '' : 'none',
+            }}
+          >
+            <img src={world.imgSrc} alt="" />
+            <div className="text-container">
+              <p dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(world.desc)}></p>
+              <p className="baseline">{world.baseline}</p>
+              <Link to={world.link} className="basic-button">
+                {t('home.common.enterButtonText')}
+              </Link>
             </div>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

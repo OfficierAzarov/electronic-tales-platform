@@ -58,43 +58,6 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
               }}
             />
             <Tabs />
-            {/* <div id="desktop-home-worlds-container">
-              <Swiper>
-                <HomeCard
-                  idForScroll="home-modern-world"
-                  title={t('home.modernWorld.title')}
-                  description={generateSanitizedDangerouslySetInnerHtml(
-                    t('home.modernWorld.description')
-                  )}
-                  callToAction={{
-                    link: '/modern-world',
-                    text: t('home.common.enterButtonText'),
-                  }}
-                />
-                <HomeCard
-                  idForScroll="home-imaginarium"
-                  title={t('home.imaginarium.title')}
-                  description={generateSanitizedDangerouslySetInnerHtml(
-                    t('home.imaginarium.description')
-                  )}
-                  callToAction={{
-                    link: '/imaginarium',
-                    text: 'Entrer',
-                  }}
-                />
-                <HomeCard
-                  idForScroll="home-ancient-world"
-                  title={t('home.ancientWorld.title')}
-                  description={generateSanitizedDangerouslySetInnerHtml(
-                    t('home.ancientWorld.description')
-                  )}
-                  callToAction={{
-                    link: '/ancient-world',
-                    text: 'Entrer',
-                  }}
-                />
-              </Swiper>
-            </div> */}
           </div>
         </>
       ) : (
@@ -159,7 +122,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                 )}
                 callToAction={{
                   link: '/imaginarium',
-                  text: 'Entrer',
+                  text: t('home.common.enterButtonText'),
                 }}
                 alternativeCallToAction={{
                   text: generateSanitizedDangerouslySetInnerHtml(
@@ -179,7 +142,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                 )}
                 callToAction={{
                   link: '/ancient-world',
-                  text: 'Entrer',
+                  text: t('home.common.enterButtonText'),
                 }}
                 alternativeCallToAction={{
                   text: generateSanitizedDangerouslySetInnerHtml(

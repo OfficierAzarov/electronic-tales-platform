@@ -1,4 +1,4 @@
-#tabs-container #world {
+#tabs-container {
   background-color: #1a1919;
   border-radius: 3em;
   width: 85%;
@@ -42,5 +42,10 @@
 }
 
 #tabs-container .baseline {
-  font-size: 1em;
+  margin: 2rem 0;
+  font-weight: 600;
+}
+
+#tabs-container .basic-button {
+  margin-top: 2rem;
 }
