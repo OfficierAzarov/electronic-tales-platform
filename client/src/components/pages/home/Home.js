@@ -59,6 +59,9 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
             <Mansion />
           </div>
           <div id="home-worlds-container">
+            <div id="language-navbar-wrapper">
+              <LanguageNavbar />
+            </div>
             <img
               srcSet={`${logoSmall} 350w, ${logo} 500w`}
               id="logo"

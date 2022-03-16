@@ -9,6 +9,10 @@
   );
 }
 
+#home #language-navbar-wrapper {
+  padding: 1rem;
+}
+
 #home #home-worlds-container {
   position: absolute;
   top: var(--language-navbar-height);
@@ -89,13 +93,13 @@
 /* =======  DESKTOP VERSION : start ========= */
 
 @media only screen and (min-width: 768px) {
+  #home #language-navbar-wrapper {
+    padding: 2rem;
+  }
+
   #home #mansion-desktop {
     background: rgb(91, 145, 158);
     background-image: linear-gradient(0deg, #5b919e 0%, #0e4654 100%);
-  }
-
-  #home #mansion-desktop #language-navbar-wrapper {
-    padding: 2rem;
   }
 
   #home #content-container {
