@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 const Tabs = ({}) => {
   const { t } = useTranslation();
 
-  const [activeTab, setActiveTab] = useState('modern-world');
+  const [activeTab, setActiveTab] = useState('safe-space');
 
   const show = (worldId) => {
     setActiveTab(worldId);
@@ -25,31 +25,36 @@ const Tabs = ({}) => {
 
   const worlds = [
     {
+      id: 'safe-space',
+      title: 'Safe space',
+      desc: t('home.safeSpace.description'),
+      baseline: t('home.desktopVersion.tracksTabs.worlds.safeSpace.baseline'),
+      imgSrc: modernWorld,
+      link: '/safe-space',
+    },
+    {
       id: 'modern-world',
       title: 'Modern World',
       desc: t('home.desktopVersion.tracksTabs.worlds.id1.text'),
-      descMobile: t('home.desktopVersion.tracksTabs.worlds.id1.textMobile'),
       baseline: t('home.desktopVersion.tracksTabs.worlds.id1.baseline'),
       imgSrc: modernWorld,
       link: '/modern-world',
     },
     {
-      id: 'ancient-world',
-      title: 'Ancient World',
-      desc: t('home.desktopVersion.tracksTabs.worlds.id2.text'),
-      descMobile: t('home.desktopVersion.tracksTabs.worlds.id2.textMobile'),
-      baseline: t('home.desktopVersion.tracksTabs.worlds.id2.baseline'),
-      imgSrc: ancientWorld,
-      link: '/ancient-world',
-    },
-    {
       id: 'imaginarium',
       title: 'Imaginarium',
       desc: t('home.desktopVersion.tracksTabs.worlds.id3.text'),
-      descMobile: t('home.desktopVersion.tracksTabs.worlds.id3.textMobile'),
       baseline: t('home.desktopVersion.tracksTabs.worlds.id3.baseline'),
       imgSrc: imaginarium,
       link: '/imaginarium',
+    },
+    {
+      id: 'ancient-world',
+      title: 'Ancient World',
+      desc: t('home.desktopVersion.tracksTabs.worlds.id2.text'),
+      baseline: t('home.desktopVersion.tracksTabs.worlds.id2.baseline'),
+      imgSrc: ancientWorld,
+      link: '/ancient-world',
     },
   ];
 
@@ -88,9 +93,11 @@ const Tabs = ({}) => {
             <div className="text-container">
               <p dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(world.desc)}></p>
               <p className="baseline">{world.baseline}</p>
-              <Link to={world.link} className="basic-button">
-                {t('home.common.enterButtonText')}
-              </Link>
+              <div className="button-wrapper">
+                <Link to={world.link} className="basic-button">
+                  {t('home.common.enterButtonText')}
+                </Link>
+              </div>
             </div>
           </div>
         </div>

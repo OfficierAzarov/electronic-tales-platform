@@ -18,8 +18,8 @@ import logo from '../../../resources/img/logo-transparent.png';
 import logoSmall from '../../../resources/img/logo-transparent-350.png';
 import elta from '../../../resources/img/illustrations/eltaskyline.svg';
 import { ReactComponent as ChevronDown } from '../../../resources/img/icons/chevron-down.svg';
-import Swiper from '../../elements/swipers/Swiper';
 import Tabs from '../../elements/tabs/Tabs';
+import LanguageNavbar from '../../elements/navbar/language-navbar/LanguageNavbar';
 
 const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
   const { t } = useTranslation();
@@ -40,24 +40,17 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
       {isDesktop ? (
         <>
           <div id="mansion-desktop">
+            <div id="language-navbar-wrapper">
+              <LanguageNavbar />
+            </div>
             <img src={logo} id="logo" loading="auto" alt="Electronic Tales logo" />
             <img src={elta} alt="" />
           </div>
           <div id="content-container">
             <div id="news">Actualités</div>
-            <HomeCard
-              title={t('home.safeSpace.title')}
-              description={generateSanitizedDangerouslySetInnerHtml(
-                t('home.safeSpace.description')
-              )}
-              callToAction={{
-                link: '/safe-space',
-                text: generateSanitizedDangerouslySetInnerHtml(
-                  t('home.safeSpace.callToActionText')
-                ),
-              }}
-            />
-            <Tabs />
+            <div id="tabs-wrapper">
+              <Tabs />
+            </div>
           </div>
         </>
       ) : (
