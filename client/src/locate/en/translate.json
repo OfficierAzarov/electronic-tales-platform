@@ -114,6 +114,14 @@
       "alert": "Come on, what did you expect? The Nine Circles of Hell? The design department didn't have enough budget for that."
     },
     "desktopVersion": {
+      "presentation": {
+        "title": "As a junior developer, have you ever found it difficult to...",
+        "question1": "Feel legitimate in the tech world?",
+        "question2": "Assess your real level?",
+        "question3": "Express your insecurities at work?",
+        "question4": "Get motivated to keep developing your skills?",
+        "button": "Grumpf, yes!"
+      },
       "tracksTabs": {
         "worlds": {
           "id1": {
@@ -138,7 +146,8 @@
       }
     },
     "common": {
-      "enterButtonText": "Enter"
+      "enterButtonText": "Enter",
+      "grumpftext": "Grumpf, yes!"
     }
   },
   "safeSpace": {

@@ -97,6 +97,10 @@
     padding: 2rem;
   }
 
+  #home #logo {
+    padding-bottom: 2vh;
+  }
+
   #home #mansion-desktop {
     background: rgb(91, 145, 158);
     background-image: linear-gradient(0deg, #5b919e 0%, #0e4654 100%);
@@ -109,15 +113,15 @@
     margin-top: 8rem;
   }
 
-  #home #news {
-    background-color: #1a1919;
-    border-radius: 3em;
-    width: 50vw;
-    padding: 3rem;
-  }
-
   #home .home-door {
     background-color: #1a1919;
+  }
+
+  #home #presentation {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   #home #desktop-home-worlds-container .home-door {

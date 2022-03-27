@@ -35,6 +35,13 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
     };
   }, []);
 
+  const sentences = [
+    t('home.desktopVersion.presentation.question1'),
+    t('home.desktopVersion.presentation.question2'),
+    t('home.desktopVersion.presentation.question3'),
+    t('home.desktopVersion.presentation.question4'),
+  ];
+
   return (
     <div id="home">
       {isDesktop ? (
@@ -46,8 +53,22 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
             <img src={logo} id="logo" loading="auto" alt="Electronic Tales logo" />
             <img src={elta} alt="" />
           </div>
+
           <div id="content-container">
-            <div id="news">Actualités</div>
+            <div id="presentation">
+              <h2>{t('home.desktopVersion.presentation.title')}</h2>
+              <ul>
+                {sentences.map((sentence, i) => (
+                  <li key={i}>{sentence}</li>
+                ))}
+              </ul>
+              <div id="animation-wrapper">
+                <Link to="" className="basic-button">
+                  {t('home.common.grumpftext')}
+                </Link>
+              </div>
+            </div>
+
             <div id="tabs-wrapper">
               <Tabs />
             </div>

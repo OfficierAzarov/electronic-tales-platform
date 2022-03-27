@@ -114,6 +114,14 @@
       "alert": "Allons bon ! Tu t'attendais à quoi ? Les neuf cercles de l'enfer ? Le département design n'avait pas assez de budget pour ça."
     },
     "desktopVersion": {
+      "presentation": {
+        "title": "Développeur·euse junior, il t'est déjà arrivé d'avoir des difficultés pour...",
+        "question1": "Te sentir légitime dans le monde de la tech\u00A0?",
+        "question2": "Évaluer ton niveau réel\u00A0?",
+        "question3": "Exprimer tes insécurités au travail\u00A0?",
+        "question4": "Te motiver pour continuer à monter en compétences\u00A0?",
+        "button": "Grumpf, oui\u00A0!"
+      },
       "tracksTabs": {
         "worlds": {
           "id1": {
@@ -138,7 +146,8 @@
       }
     },
     "common": {
-      "enterButtonText": "Entrer"
+      "enterButtonText": "Entrer",
+      "grumpftext": "Grumpf, oui !"
     }
   },
   "safeSpace": {
