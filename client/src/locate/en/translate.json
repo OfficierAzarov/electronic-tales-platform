@@ -91,6 +91,14 @@
     }
   },
   "home": {
+    "presentation": {
+      "title": "Developer,<br/> have you ever felt out of place&nbsp;?",
+      "text": "Our goal is to help tech minorities (women, queer, racialized, disabled, seniors...), who are often coming from bootcamps or self-taught, bridge the technical and cultural gap with developers who have followed classical paths (engineering schools, universities...).",
+      "buttons": {
+        "knowMore": "Read more 📚",
+        "enterPlatform": "Enter platform 🗝️"
+      }
+    },
     "safeSpace": {
       "title": "Let's smash the impostor syndrome together.",
       "description": "As a junior developer, you're suffering from the impostor syndrome?<br /><br />At Electronic Tales, we believe it doesn't have to be that way.",
@@ -123,6 +131,7 @@
         "button": "Grumpf, yes!"
       },
       "tracksTabs": {
+        "heading": "Our tracks",
         "worlds": {
           "id1": {
             "text": "🐞&nbsp;Debug.<br/>🔬&nbsp;Learn how to read other people’s code.<br/>⛱️&nbsp;Automate.<br/>👔&nbsp;Survive job interviews.<br/>⌨️&nbsp;Write clean code.<br/>✊&nbsp;Munch crisps without dropping crumbs on your keyboard.",

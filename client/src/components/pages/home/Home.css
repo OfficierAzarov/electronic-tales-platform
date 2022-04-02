@@ -88,6 +88,11 @@
   height: 10vh;
 }
 
+#home #buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
 /* =======  MOBILE VERSION : end ========= */
 
 /* =======  DESKTOP VERSION : start ========= */
@@ -150,6 +155,7 @@
     margin: 2.5rem 0;
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     opacity: 0;
     animation: fadeIn 1.5s;

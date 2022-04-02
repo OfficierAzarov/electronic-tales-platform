@@ -91,6 +91,14 @@
     }
   },
   "home": {
+    "presentation": {
+      "title": "Développeur·euse,<br/> il t'est déjà arrivé de ne pas te sentir à ta place&nbsp;?",
+      "text": "Notre objectif est d'aider les minorités de la tech (femmes, queer, racisé·e·s, handi, seniors...), souvent issues de bootcamps ou autodidactes à combler le gap technique et culturel avec les développeurs·euses ayant suivi des parcours classiques (écoles d'ingénieur, universités...).",
+      "buttons": {
+        "knowMore": "En savoir plus 📚",
+        "enterPlatform": "Entrer dans la plateforme 🗝️"
+      }
+    },
     "safeSpace": {
       "title": "Dégommons le syndrome de l'imposteur ensemble.",
       "description": "Développeur·euse, tu souffres du syndrome de l'imposteur&nbsp;?<br /><br />À Electronic Tales, nous pensons que ce n'est pas une fatalité.",
@@ -114,15 +122,8 @@
       "alert": "Allons bon ! Tu t'attendais à quoi ? Les neuf cercles de l'enfer ? Le département design n'avait pas assez de budget pour ça."
     },
     "desktopVersion": {
-      "presentation": {
-        "title": "Développeur·euse,<br/> il t'est déjà arrivé de ne pas te sentir à ta place&nbsp;?",
-        "question1": "Te sentir légitime dans le monde de la tech\u00A0?",
-        "question2": "Évaluer ton niveau réel\u00A0?",
-        "question3": "Exprimer tes insécurités au travail\u00A0?",
-        "question4": "Te motiver pour continuer à monter en compétences\u00A0?",
-        "button": "Grumpf, oui\u00A0!"
-      },
       "tracksTabs": {
+        "heading": "Nos tracks",
         "worlds": {
           "id1": {
             "text": "🐞&nbsp;Débugue.<br/>🔬&nbsp;Apprends à lire le code des autres.<br/>⛱️&nbsp;Automatise.<br/>👔&nbsp;Survis aux entretiens.<br/>⌨️&nbsp;Écris du code propre.<br/>✊&nbsp;Croque des chips sans mettre de miettes sur ton clavier.",

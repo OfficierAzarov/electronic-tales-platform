@@ -19,9 +19,7 @@ const Quote = ({ delay, quote, preferredLanguage }) => {
       <div className="quote">
         <HtmlContent content={quote.emotion[preferredLanguage]} />
         <HtmlContent content={quote.text[preferredLanguage]} />
-        <p>
-          {quote.author}, {quote.date}
-        </p>
+        <p>{quote.author}</p>
       </div>
     </Animated>
   );

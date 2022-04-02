@@ -27,6 +27,8 @@ import { ELECTRONIC_TALES_PRESENTS } from '../../../dictionnary/externalElectron
  * This file contains Home and HomeCard (a subcomponent, scroll down to see it)
  */
 
+const offset = -1 * viewportToPixels('20vh');
+
 const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
   const { t } = useTranslation();
 
@@ -52,23 +54,17 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
             <img src={logo} id="logo" loading="auto" alt="Electronic Tales logo" />
             <img src={elta} alt="" />
           </div>
-
           <div id="content-container">
             <div id="presentation">
               <h2
                 dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
-                  t('home.desktopVersion.presentation.title')
+                  t('home.presentation.title')
                 )}
               ></h2>
-              <p>
-                Notre objectif est d'aider les minorités de la tech (femmes, queer, racisé·e·s,
-                handi, seniors...), souvent issues de bootcamps ou autodidactes, à combler le gap
-                technique et culturel avec les développeurs·euses ayant suivi des parcours
-                classiques (écoles d'ingénieur, universités...).
-              </p>
+              <p>{t('home.presentation.text')}</p>
               <div id="buttons-container">
                 <a href={ELECTRONIC_TALES_PRESENTS.WHY} className="basic-button" target="_blank">
-                  En savoir plus&nbsp;📚
+                  {t('home.presentation.buttons.knowMore')}
                 </a>
                 <ScrollLink
                   to="tabs-wrapper"
@@ -77,13 +73,13 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                   duration={500}
                   className="basic-button"
                 >
-                  Entrer dans la plateforme&nbsp;🗝️
+                  {t('home.presentation.buttons.enterPlatform')}
                 </ScrollLink>
               </div>
             </div>
             <FootPrints />
             <div id="tabs-wrapper">
-              <h2>Nos tracks</h2>
+              <h2>{t('home.desktopVersion.tracksTabs.heading')}</h2>
               <Tabs />
             </div>
           </div>
@@ -103,6 +99,34 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
               loading="auto"
               alt="Electronic Tales logo"
             />
+
+            <div id="presentation" className="home-door-container">
+              <div className="home-door">
+                <h2
+                  dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+                    t('home.presentation.title')
+                  )}
+                  className="neon flicker"
+                ></h2>
+                <p>{t('home.presentation.text')}</p>
+                <div id="buttons-container">
+                  <a href={ELECTRONIC_TALES_PRESENTS.WHY} className="basic-button" target="_blank">
+                    {t('home.presentation.buttons.knowMore')}
+                  </a>
+                  <ScrollLink
+                    to="home-safe-space"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    offset={offset}
+                    className="basic-button"
+                  >
+                    {t('home.presentation.buttons.enterPlatform')}
+                  </ScrollLink>
+                </div>
+              </div>
+            </div>
+
             <HomeCard
               idForScroll="home-safe-space"
               title={t('home.safeSpace.title')}
@@ -123,7 +147,7 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                 whereToScrollTo: 'home-modern-world',
               }}
             />
-            <div id="spacer"></div>
+            {/* <div id="spacer"></div> */}
             <Bounce bottom duration={2000}>
               <HomeCard
                 idForScroll="home-modern-world"
@@ -193,7 +217,6 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
 };
 
 const HomeCard = ({ idForScroll, title, description, callToAction, alternativeCallToAction }) => {
-  const offset = -1 * viewportToPixels('20vh');
   const htmlOrText = (textKey) => {
     return textKey.__html ? (
       <span dangerouslySetInnerHTML={textKey}></span>
