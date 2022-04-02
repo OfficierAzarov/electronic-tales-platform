@@ -9,5 +9,6 @@ export const SLACK_CHANELS = {
 
 export const ELECTRONIC_TALES_PRESENTS = {
   BASE: 'https://www.electronictales.io',
+  WHY: 'https://www.electronictales.io/why',
   SIGN_UP: 'https://www.electronictales.io/signup#signup',
 };

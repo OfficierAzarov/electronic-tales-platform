@@ -27,8 +27,6 @@ const App = () => {
       <NotYet />
     ) : ( */}
       <Router>
-        {/* LanguageNavbar is temporary hidden, let's wait for desktop design to be done to unhide it */}
-        {/* <LanguageNavbar /> */}
         <SecondaryNavbar />
         <ScrollToTop />
         <Switch>

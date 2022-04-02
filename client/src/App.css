@@ -67,9 +67,8 @@ button:focus {
   background-color: #ec567c;
   font-weight: 800;
   color: #e9e9e9;
-  padding: 1rem;
+  padding: 1rem 2rem;
   margin: 1em 0;
-  width: 70%;
   text-align: center;
 }
 

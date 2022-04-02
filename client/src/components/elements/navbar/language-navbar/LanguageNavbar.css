@@ -2,7 +2,7 @@
   height: var(--language-navbar-height);
   display: flex;
   justify-content: flex-end;
-  padding-right: 1rem;
+  padding: 0.5rem;
 }
 
 #language-navbar-container button {

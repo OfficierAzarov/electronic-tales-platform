@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
@@ -18,8 +18,14 @@ import logo from '../../../resources/img/logo-transparent.png';
 import logoSmall from '../../../resources/img/logo-transparent-350.png';
 import elta from '../../../resources/img/illustrations/eltaskyline.svg';
 import { ReactComponent as ChevronDown } from '../../../resources/img/icons/chevron-down.svg';
+import { ReactComponent as FootPrints } from '../../../resources/img/footprints.svg';
 import Tabs from '../../elements/tabs/Tabs';
 import LanguageNavbar from '../../elements/navbar/language-navbar/LanguageNavbar';
+import { ELECTRONIC_TALES_PRESENTS } from '../../../dictionnary/externalElectronicTalesLinks';
+
+/**
+ * This file contains Home and HomeCard (a subcomponent, scroll down to see it)
+ */
 
 const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
   const { t } = useTranslation();
@@ -35,13 +41,6 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
     };
   }, []);
 
-  const sentences = [
-    t('home.desktopVersion.presentation.question1'),
-    t('home.desktopVersion.presentation.question2'),
-    t('home.desktopVersion.presentation.question3'),
-    t('home.desktopVersion.presentation.question4'),
-  ];
-
   return (
     <div id="home">
       {isDesktop ? (
@@ -56,20 +55,36 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
 
           <div id="content-container">
             <div id="presentation">
-              <h2>{t('home.desktopVersion.presentation.title')}</h2>
-              <ul>
-                {sentences.map((sentence, i) => (
-                  <li key={i}>{sentence}</li>
-                ))}
-              </ul>
-              <div id="animation-wrapper">
-                <Link to="" className="basic-button">
-                  {t('home.common.grumpftext')}
-                </Link>
+              <h2
+                dangerouslySetInnerHTML={generateSanitizedDangerouslySetInnerHtml(
+                  t('home.desktopVersion.presentation.title')
+                )}
+              ></h2>
+              <p>
+                Notre objectif est d'aider les minorités de la tech (femmes, queer, racisé·e·s,
+                handi, seniors...), souvent issues de bootcamps ou autodidactes, à combler le gap
+                technique et culturel avec les développeurs·euses ayant suivi des parcours
+                classiques (écoles d'ingénieur, universités...).
+              </p>
+              <div id="buttons-container">
+                <a href={ELECTRONIC_TALES_PRESENTS.WHY} className="basic-button" target="_blank">
+                  En savoir plus&nbsp;📚
+                </a>
+                <ScrollLink
+                  to="tabs-wrapper"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  offset={0}
+                  className="basic-button"
+                >
+                  Entrer dans la plateforme&nbsp;🗝️
+                </ScrollLink>
               </div>
             </div>
-
+            <FootPrints />
             <div id="tabs-wrapper">
+              <h2>Nos tracks</h2>
               <Tabs />
             </div>
           </div>
@@ -180,7 +195,6 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
 
 const HomeCard = ({ idForScroll, title, description, callToAction, alternativeCallToAction }) => {
   const offset = -1 * viewportToPixels('20vh');
-
   const htmlOrText = (textKey) => {
     return textKey.__html ? (
       <span dangerouslySetInnerHTML={textKey}></span>

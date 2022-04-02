@@ -9,9 +9,9 @@
   );
 }
 
-#home #language-navbar-wrapper {
+/* #home #language-navbar-wrapper {
   padding: 1rem;
-}
+} */
 
 #home #home-worlds-container {
   position: absolute;
@@ -98,7 +98,8 @@
   }
 
   #home #logo {
-    padding-bottom: 2vh;
+    width: 40%;
+    padding-bottom: 1rem;
   }
 
   #home #mansion-desktop {
@@ -110,7 +111,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 5rem;
   }
 
   #home .home-door {
@@ -118,10 +119,94 @@
   }
 
   #home #presentation {
+    text-align: center;
     width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 7rem;
+  }
+
+  #home h2 {
+    margin: 0 0 2.5rem 0;
+  }
+
+  #home #presentation h2 {
+    opacity: 0;
+    animation: fadeIn 1.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+  }
+
+  #home #presentation p {
+    margin: 2.5rem 0;
+    opacity: 0;
+    animation: fadeIn 1.5s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  #home #buttons-container {
+    margin: 2.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    animation: fadeIn 1.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInLoop {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  #home #footprints {
+    margin: 2rem 0;
+    width: 15%;
+  }
+
+  #home #footprints .footprint {
+    animation: fadeInLoop 7s infinite;
+    animation-fill-mode: both;
+  }
+
+  #home #footprints #footprint2 {
+    animation-delay: 1s;
+  }
+
+  #home #footprints #footprint3 {
+    animation-delay: 2s;
+  }
+
+  #home #footprints #footprint4 {
+    animation-delay: 3s;
+  }
+  #home #footprints #footprint5 {
+    animation-delay: 4s;
+  }
+  #home #footprints #footprint6 {
+    animation-delay: 5s;
+  }
+  #home #footprints #footprint7 {
+    animation-delay: 6s;
   }
 
   #home #desktop-home-worlds-container .home-door {
@@ -136,8 +221,9 @@
 
   #home #tabs-wrapper {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     width: 90%;
-    margin: 5rem 0;
+    margin: 4rem 0;
   }
 }

@@ -93,7 +93,7 @@
   "home": {
     "safeSpace": {
       "title": "Dégommons le syndrome de l'imposteur ensemble.",
-      "description": "Développeur·euse junior, tu souffres du syndrome de l'imposteur&nbsp;?<br /><br />À Electronic Tales, nous pensons que ce n'est pas une fatalité.",
+      "description": "Développeur·euse, tu souffres du syndrome de l'imposteur&nbsp;?<br /><br />À Electronic Tales, nous pensons que ce n'est pas une fatalité.",
       "callToActionText": "Viens, on en parle&nbsp;&nbsp;&rarr;",
       "alternativeCallToActionText": "...&nbsp;ou bien continue la visite&nbsp;"
     },
@@ -115,7 +115,7 @@
     },
     "desktopVersion": {
       "presentation": {
-        "title": "Développeur·euse junior, il t'est déjà arrivé d'avoir des difficultés pour...",
+        "title": "Développeur·euse,<br/> il t'est déjà arrivé de ne pas te sentir à ta place&nbsp;?",
         "question1": "Te sentir légitime dans le monde de la tech\u00A0?",
         "question2": "Évaluer ton niveau réel\u00A0?",
         "question3": "Exprimer tes insécurités au travail\u00A0?",
@@ -146,8 +146,7 @@
       }
     },
     "common": {
-      "enterButtonText": "Entrer",
-      "grumpftext": "Grumpf, oui !"
+      "enterButtonText": "Entrer"
     }
   },
   "safeSpace": {

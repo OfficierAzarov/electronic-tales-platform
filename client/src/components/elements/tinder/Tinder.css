@@ -74,6 +74,7 @@
 
 #tinder #tinder-buttons-container .action-button {
   padding: 0.6em 0.4em;
+  width: 70%;
   cursor: pointer;
   margin: 0.5rem;
   font-weight: 500;
