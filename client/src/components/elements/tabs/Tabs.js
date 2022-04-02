@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import './Tabs.css';
 
+import safeSpace from '../../../resources/gifs/cat.gif';
 import modernWorld from '../../../resources/gifs/modern-world.gif';
 import ancientWorld from '../../../resources/gifs/ancient-world.gif';
 import imaginarium from '../../../resources/gifs/imaginarium.gif';
@@ -13,7 +14,7 @@ import { Link } from 'react-router-dom';
 const Tabs = ({}) => {
   const { t } = useTranslation();
 
-  const [activeTab, setActiveTab] = useState('safe-space');
+  const [activeTab, setActiveTab] = useState('modern-world');
 
   const show = (worldId) => {
     setActiveTab(worldId);
@@ -24,14 +25,6 @@ const Tabs = ({}) => {
   };
 
   const worlds = [
-    {
-      id: 'safe-space',
-      title: 'Safe space',
-      desc: t('home.safeSpace.description'),
-      baseline: t('home.desktopVersion.tracksTabs.worlds.safeSpace.baseline'),
-      imgSrc: modernWorld,
-      link: '/safe-space',
-    },
     {
       id: 'modern-world',
       title: 'Modern World',
@@ -55,6 +48,14 @@ const Tabs = ({}) => {
       baseline: t('home.desktopVersion.tracksTabs.worlds.id2.baseline'),
       imgSrc: ancientWorld,
       link: '/ancient-world',
+    },
+    {
+      id: 'safe-space',
+      title: 'Safe space',
+      desc: t('home.safeSpace.description'),
+      baseline: t('home.desktopVersion.tracksTabs.worlds.safeSpace.baseline'),
+      imgSrc: safeSpace,
+      link: '/safe-space',
     },
   ];
 

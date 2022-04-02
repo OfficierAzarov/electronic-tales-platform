@@ -75,7 +75,6 @@ const Home = ({ setHomeAsCurrentPage, unsetHomeAsCurrentPage }) => {
                   spy={true}
                   smooth={true}
                   duration={500}
-                  offset={0}
                   className="basic-button"
                 >
                   Entrer dans la plateforme&nbsp;🗝️
