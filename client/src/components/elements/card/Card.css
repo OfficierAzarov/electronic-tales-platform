@@ -32,24 +32,30 @@
 /* =======  TABLET VERSION : start ========= */
 
 @media only screen and (min-width: 768px) {
-  .card.big {
-    width: 40vw;
-  }
-
-  .card {
-    width: 18vw;
-  }
-}
-
-/* =======  TABLET VERSION : start ========= */
-
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .card {
     width: 25vw;
   }
+
+  .card.big {
+    width: 35vw;
+  }
+
 }
 
+
+
 /* =======  TABLET VERSION : end ========= */
+
+/* =======  DESKTOP VERSION : start ========= */
+
+@media only screen and (min-width: 1024px) {
+  .card.big {
+    width: 25vw;
+  }
+
+}
+
+/* =======  DESKTOP VERSION : end ========= */
 
 /* =======  LARGE DESKTOP VERSION : start ========= */
 

@@ -1,28 +1,50 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { PropTypes } from 'prop-types';
 import Fade from 'react-reveal/Fade';
 import { useTranslation } from 'react-i18next';
 
 import './AncientWorld.css';
 
-import mamieCobol from '../../../../resources/img/illustrations/mcsorrycut.png';
+import { getAllArticlesInfos } from '../../../../redux/actions/article';
+import { WORLDS } from '../../../../dictionnary/worlds';
+import TinderDoor from '../../../elements/tinder/tinder-door/TinderDoor';
+import AllArticlesOfTheWorld from '../../../elements/article/all-articles/AllArticlesOfTheWorld';
 
-const AncientWorld = () => {
+const AncientWorld = ({ articles, getAllArticlesInfos }) => {
+
+  useEffect(() => {
+    getAllArticlesInfos(WORLDS.ANCIENT_WORLD);
+  }, []);
+
   const { t } = useTranslation();
 
   return (
     <Fade duration={1500}>
       <div id="ancient-world" className="world-page container">
         <div className="line-title-wrapper world-title-wrapper">
-          <h2 className="world-title">{t('ancientWorld.title')}</h2>
+          <h2 className="world-title">Ancient World</h2>
         </div>
-        <div id="warning-wrapper">
-          <div class="warning">{t('ancientWorld.temp.workinProgress')}</div>
-          <div class="warning">{t('ancientWorld.temp.comeBackLater')}</div>
-        </div>
-        <img id="mamie-cobol" src={mamieCobol} alt={t('ancientWorld.temp.imageAlt')} />
+        <TinderDoor
+          // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
+          id={WORLDS.ANCIENT_WORLD}
+          link={`/${WORLDS.ANCIENT_WORLD}/too-late-to-ask`}
+          text={t('ancientWorld.swipeDoor')}
+          imageFileName="cat3"
+        />
+        <AllArticlesOfTheWorld articles={articles} />
       </div>
-    </Fade>
+    </Fade >
   );
 };
 
-export default AncientWorld;
+AncientWorld.propTypes = {
+  articles: PropTypes.array.isRequired,
+  getAllArticlesInfos: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  articles: state.article.allArticles,
+});
+
+export default connect(mapStateToProps, { getAllArticlesInfos })(AncientWorld);

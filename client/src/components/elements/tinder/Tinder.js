@@ -36,8 +36,13 @@ export const Tinder = ({
   setHasAlreadyBeenLoaded,
   preferredLanguage,
 }) => {
-  const isDesktop = useMediaQuery({
+
+  const isTablet = useMediaQuery({
     query: '(min-device-width: 768px)',
+  });
+
+  const isDesktop = useMediaQuery({
+    query: '(min-device-width: 1024px)',
   });
 
   const { t } = useTranslation();
@@ -77,9 +82,30 @@ export const Tinder = ({
       history.push(`/${match.params.world}/articles/${questionToRemove.answerSlug}`);
   };
 
+
+  const computeElementLeftPosition = () => {
+    if (isTablet) {
+      return computeLeft(0.3);
+    }
+    if (isDesktop) {
+      return computeLeft(0.85);
+    }
+    return computeLeft(0.85);
+  }
+
+  const computeElementWidth = () => {
+    if (isTablet) {
+      return computeWidth(45);
+    }
+    if (isDesktop) {
+      return computeWidth(30);
+    }
+    return computeWidth(85);
+  }
+
   return (
     <div className="container">
-      {isDesktop && (
+      {isTablet && (
         <div className="line-title-wrapper world-title-wrapper">
           <h2 className="world-title neon flicker">Too Late To Ask</h2>
         </div>
@@ -89,8 +115,8 @@ export const Tinder = ({
           <div
             id="tinder-cards-container"
             style={{
-              left: isDesktop ? computeLeft(0.3) : computeLeft(0.85),
-              width: isDesktop ? computeWidth(30) : computeWidth(85),
+              left: computeElementLeftPosition(),
+              width: computeElementWidth()
             }}
           >
             {questions.map((question, index) => (
@@ -120,7 +146,7 @@ export const Tinder = ({
             <div
               id="tinder-buttons-container"
               style={{
-                width: isDesktop ? computeWidth(30) : computeWidth(85),
+                width: computeElementWidth(),
                 top: placeElementAtBottomOfSection(100, 10, 10),
               }}
             >
