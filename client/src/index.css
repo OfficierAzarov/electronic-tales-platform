@@ -367,6 +367,4 @@ a[href^='tel'] {
   --big-text: calc(1rem + 0.7vw);
   --h2-text: calc(2rem + 0.8vw);
   --h3-text: calc(1rem + 0.6vw);
-
-  /* --icons:  */
 }

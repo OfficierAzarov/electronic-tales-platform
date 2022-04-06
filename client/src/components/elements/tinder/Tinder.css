@@ -56,12 +56,9 @@
 }
 
 #tinder #no-cards-left p {
+  font-size: var(--medium-text);
   text-align: center;
   width: 80%;
-}
-
-#tinder #no-cards-left p .small-text {
-  font-size: var(--small-text);
 }
 
 #tinder #tinder-buttons-container {

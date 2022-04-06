@@ -3,6 +3,7 @@
   position: fixed;
   bottom: 12vh;
   right: 5vw;
+  cursor: pointer;
 }
 
 .fab svg {
@@ -23,6 +24,7 @@
     transform: rotate(0);
     opacity: 1;
   }
+
   100% {
     transform: rotate(180deg);
     opacity: 0;
