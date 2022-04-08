@@ -12,7 +12,6 @@ import TinderDoor from '../../../elements/tinder/tinder-door/TinderDoor';
 import AllArticlesOfTheWorld from '../../../elements/article/all-articles/AllArticlesOfTheWorld';
 
 const AncientWorld = ({ articles, getAllArticlesInfos }) => {
-
   useEffect(() => {
     getAllArticlesInfos(WORLDS.ANCIENT_WORLD);
   }, []);
@@ -25,16 +24,19 @@ const AncientWorld = ({ articles, getAllArticlesInfos }) => {
         <div className="line-title-wrapper world-title-wrapper">
           <h2 className="world-title">Ancient World</h2>
         </div>
-        <TinderDoor
-          // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
-          id={WORLDS.ANCIENT_WORLD}
-          link={`/${WORLDS.ANCIENT_WORLD}/too-late-to-ask`}
-          text={t('ancientWorld.swipeDoor')}
-          imageFileName="cat3"
-        />
+        <p id="warning">COMING SOON</p>
+        <div id="coming-soon-overlay">
+          <TinderDoor
+            // This should normally come from the DB. We hardcode it here because it's still experimental. Please forgive us. With love, Electronic Tales Team.
+            id={WORLDS.ANCIENT_WORLD}
+            link={`/${WORLDS.ANCIENT_WORLD}/too-late-to-ask`}
+            text={t('ancientWorld.swipeDoor')}
+            imageFileName="cat3"
+          />
+        </div>
         <AllArticlesOfTheWorld articles={articles} />
       </div>
-    </Fade >
+    </Fade>
   );
 };
 

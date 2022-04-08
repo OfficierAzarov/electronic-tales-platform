@@ -223,17 +223,11 @@
   },
   "imaginarium": {
     "title": "Imaginarium",
-    "swipeDoor": "Still have questions about computer culture for which you should already know the answers?",
-    "roadmap": {
-      "categoryTitle": "Roadmaps",
-      "description": "Lost in the world of dev? Our maps are there to guide you.",
-      "cleanCode": {
-        "title": "Coder proper: the databases"
-      }
-    }
+    "swipeDoor": "Still have questions about computer culture for which you should already know the answers?"
   },
   "ancientWorld": {
     "title": "Ancient World",
+    "swipeDoor": "Still have questions about computer science fundamentals for which you should already know the answers?",
     "temp": {
       "workinProgress": "This world is still in manufacturing 😅",
       "comeBackLater": "To learn about the nuts and bolt of machines with Mom Cobol (but who is that? Suspense!), come back a little later.",

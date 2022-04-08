@@ -1,0 +1,11 @@
+#coming-soon-overlay {
+  filter: grayscale(0.7) blur(0.2rem);
+}
+
+#warning {
+  color: red;
+  border: 1px solid red;
+  padding: 1rem;
+  border-radius: 1rem;
+  transform: rotate(5deg);
+}
