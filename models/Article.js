@@ -24,4 +24,4 @@ const ArticleSchema = new mongoose.Schema({
   category: { fr: String, en: String },
 });
 
-module.exports = mongoose.model('article', ArticleSchema, 'articles-2');
+module.exports = mongoose.model('article', ArticleSchema, 'articles');

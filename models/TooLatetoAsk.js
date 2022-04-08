@@ -11,4 +11,4 @@ const TooLateToAskSchema = new mongoose.Schema({
   answerSlug: String,
 });
 
-module.exports = mongoose.model('tooLateToAsk', TooLateToAskSchema, 'toolatetoasks-2');
+module.exports = mongoose.model('tooLateToAsk', TooLateToAskSchema, 'toolatetoasksdoors');
