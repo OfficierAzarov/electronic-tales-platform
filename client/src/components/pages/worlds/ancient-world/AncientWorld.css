@@ -1,5 +1,6 @@
 #coming-soon-overlay {
   filter: grayscale(0.7) blur(0.2rem);
+  pointer-events: none;
 }
 
 #warning {
