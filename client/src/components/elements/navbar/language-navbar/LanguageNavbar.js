@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 import './LanguageNavbar.css';
 
-import logo from '../../../../resources/img/logo-transparent.png';
 import { setLanguage } from '../../../../redux/actions/language';
 
 const LanguageNavbar = ({ setLanguage, preferredLanguage }) => {
