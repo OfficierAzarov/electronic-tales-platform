@@ -4,6 +4,15 @@ import 'react-multi-carousel/lib/styles.css';
 
 import './Swiper.css';
 
+/**
+ * The function takes in a children prop and returns a carousel with the children prop as the carousel
+ * items
+ * @returns A carousel with the children prop as the carousel items.
+ */
+/**
+ * The function takes in a children prop and returns a carousel with the children prop as the carousel
+ * items.
+ */
 const Swiper = ({ children }) => {
   const responsive = {
     desktop: {

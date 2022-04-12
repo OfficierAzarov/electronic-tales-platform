@@ -8,7 +8,11 @@ import './CardsHub.css';
 import Card from '../card/Card';
 import Swiper from '../swipers/Swiper';
 
-const CardsHub = ({ categoryName, categoryArticles, text, preferredLanguage }) => {
+/**
+ * It takes in a category name, articles of the category, category description, and preferred language. 
+ * It returns a cards hub, aka a big element containing a card for each article.
+ */
+const CardsHub = ({ categoryName, categoryArticles, categoryDescription, preferredLanguage }) => {
   const buildLink = (article) => {
     if (article.link != null) {
       return article.link;
@@ -25,7 +29,7 @@ const CardsHub = ({ categoryName, categoryArticles, text, preferredLanguage }) =
       <div className="line-title-wrapper category-title-wrapper">
         <h3 className="title">{categoryName}</h3>
       </div>
-      {text && <p>{text}</p>}
+      {categoryDescription && <p>{categoryDescription}</p>}
       <div className="w-cat-card-content">
         {categoryArticles.length > 1 ? (
           <Swiper>
