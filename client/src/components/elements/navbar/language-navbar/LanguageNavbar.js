@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import PropTypes from 'prop-types';
 
 import './LanguageNavbar.css';
 
-import logo from '../../../../resources/img/logo-transparent.png';
 import { setLanguage } from '../../../../redux/actions/language';
 
 const LanguageNavbar = ({ setLanguage, preferredLanguage }) => {

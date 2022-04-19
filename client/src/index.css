@@ -27,15 +27,24 @@ body {
 }
 
 @media (min-width: 0px) {
-  p { font-size: 1.2rem; }
+  p,
+  ul {
+    font-size: 1.2rem;
+  }
 }
 
 @media (min-width: 400px) {
-  p { font-size: calc(1rem + 0.8vw); }
+  p,
+  ul {
+    font-size: calc(1rem + 0.8vw);
+  }
 }
 
-@media (min-width: 2560px){
-  p { font-size: 2.8rem; }
+@media (min-width: 2560px) {
+  p,
+  ul {
+    font-size: 2.8rem;
+  }
 }
 
 /* Set text selection */
