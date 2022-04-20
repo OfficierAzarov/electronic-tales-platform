@@ -36,7 +36,7 @@ body {
 @media (min-width: 400px) {
   p,
   ul {
-    font-size: calc(1rem + 0.8vw);
+    font-size: calc(1rem + 0.6vw);
   }
 }
 
