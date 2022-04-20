@@ -7,7 +7,7 @@
 
 .article-content h3 {
   margin: 2rem 0;
-  font-size: var(--h3-text);
+  font-size: var(--medium-text);
 }
 
 .article-content p {
@@ -49,6 +49,7 @@
   display: block;
   margin: 1rem 0;
   font-weight: 600;
+  font-size: var(--big-text);
 }
 
 .article-content .inline-code {

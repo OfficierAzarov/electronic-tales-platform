@@ -372,8 +372,6 @@ a[href^='tel'] {
 :root {
   --language-navbar-height: 3rem;
   --small-text: calc(1rem + 0.2vw);
-  --medium-text: calc(1rem + 0.5vw);
-  --big-text: calc(1rem + 0.7vw);
-  --h2-text: calc(2rem + 0.8vw);
-  --h3-text: calc(1rem + 0.6vw);
+  --medium-text: calc(1rem + 0.6vw);
+  --big-text: calc(1rem + 0.8vw);
 }
