@@ -6,13 +6,13 @@
 /* Styles for html coming from the database */
 
 .article-content h3 {
-  margin: 2rem 0;
+  margin: 2.5rem 0;
   font-size: var(--medium-text);
 }
 
 .article-content p {
   display: block;
-  margin: 5rem 0;
+  margin: 2.5rem 0;
 }
 
 .article-content ul {
@@ -40,14 +40,9 @@
   font-style: italic;
 }
 
-/* .article-content .part {
-  display: block;
-  margin: 2rem 0;
-} */
-
 .article-content h4 {
   display: block;
-  margin: 1rem 0;
+  margin: 2.5rem 0;
   font-weight: 600;
   font-size: var(--big-text);
 }
@@ -63,7 +58,7 @@
   background-color: #333333;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  margin: 1rem 0;
+  margin: 2.5rem 0;
   font-size: var(--medium-text);
 }
 
