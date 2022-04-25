@@ -17,9 +17,8 @@ const Quote = ({ delay, quote, preferredLanguage }) => {
       className="flex"
     >
       <div className="quote">
-        <HtmlContent content={quote.emotion[preferredLanguage]} />
-        <HtmlContent content={quote.text[preferredLanguage]} />
-        <p>{quote.author}</p>
+        <p><HtmlContent content={quote.text[preferredLanguage]} /></p>
+        <br /><br /><p>{quote.author}</p>
       </div>
     </Animated>
   );

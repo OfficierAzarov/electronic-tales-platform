@@ -9,7 +9,7 @@ import Card from '../card/Card';
 import Swiper from '../swipers/Swiper';
 
 /**
- * It takes in a category name, articles of the category, category description, and preferred language. 
+ * It takes in a category name, a list of the articles of the category, a category description, and preferred language. 
  * It returns a cards hub, aka a big element containing a card for each article.
  */
 const CardsHub = ({ categoryName, categoryArticles, categoryDescription, preferredLanguage }) => {
