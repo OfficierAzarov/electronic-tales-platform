@@ -7,8 +7,8 @@
 }
 
 #article-container h2 {
-  font-size: var(--h2-text);
-  font-weight: 400;
+  font-size: var(--big-text);
+  font-weight: 600;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   margin: 3rem 0;
